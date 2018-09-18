@@ -3,7 +3,7 @@
 *.qws
 *.rpt
 *.bak
-Lab4/db/
-Lab4/incremental_db/
-Lab4/output_files/
-Lab4/simulation/
+*/db/
+*/incremental_db/
+*/output_files/
+*/simulation/
