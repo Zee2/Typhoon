@@ -1,4 +1,4 @@
-module testbench();
+module testbench_8();
 
 timeunit 10ns;	// Half clock cycle at 50 MHz
 			// This is the amount of time represented by #1 
