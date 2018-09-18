@@ -49,7 +49,7 @@ module Processor (input logic   Clk,     // Internal
                         .B_out(opB),
                         .A(A),
                         .B(B) );
-    compute          compute_unit (
+    compute          	_unit (
 								.F(F_S),
                         .A_In(opA),
                         .B_In(opB),

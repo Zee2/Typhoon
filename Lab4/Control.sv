@@ -6,7 +6,7 @@ module control (input  logic Clk, Reset, LoadA, LoadB, Execute,
     // Declare signals curr_state, next_state of type enum
     // with enum values of A, B, ..., F as the state values
 	 // Note that the length implies a max of 8 states, so you will need to bump this up for 8-bits
-    enum logic [2:0] {A, B, C, D, E, F}   curr_state, next_state; 
+    enum logic [3:0] {A, B, C, D, E, F, G, H, I, J}   curr_state, next_state; 
 
 	//updates flip flop, current state is the only one
     always_ff @ (posedge Clk)  
@@ -30,7 +30,11 @@ module control (input  logic Clk, Reset, LoadA, LoadB, Execute,
             C :    next_state = D;
             D :    next_state = E;
             E :    next_state = F;
-            F :    if (~Execute) 
+				F :    next_state = G;
+				G :    next_state = H;
+				H :    next_state = I;
+				I :    next_state = J;
+            J :    if (~Execute) 
                        next_state = A;
 							  
         endcase
