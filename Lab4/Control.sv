@@ -47,7 +47,7 @@ module control (input  logic Clk, Reset, LoadA, LoadB, Execute,
                 Ld_B = LoadB;
                 Shift_En = 1'b0;
 		      end
-	   	   F: 
+	   	   J: 
 		      begin
                 Ld_A = 1'b0;
                 Ld_B = 1'b0;
