@@ -1,0 +1,287 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/finnn/Documents/385/385_FPGA/Lab4/simulation/modelsim
+vcompute
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1537317234
+!i10b 1
+!s100 i=]6932U1_OWO<5E?3HbR1
+I=nTT0HRIKS5DU7MXjD]S00
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 compute_sv_unit
+S1
+R0
+Z4 w1537217010
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4/compute.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4/compute.sv
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1537317234.000000
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/compute.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/compute.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4
+Z9 tCvgOpt 0
+vcontrol
+R1
+R2
+!i10b 1
+!s100 zA>KJEaR;hifiMGk<O7m^0
+I6R]_;HTgkWIAbOc2Om9JF0
+R3
+!s105 Control_sv_unit
+S1
+R0
+w1537317177
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4/Control.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4/Control.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/Control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/Control.sv|
+!i113 1
+R7
+R8
+R9
+vHexDriver
+R1
+R2
+!i10b 1
+!s100 ^DddjRd7Wla]U<SlP;mT@0
+I4ZPC<Z`AzG@f8c0b0dHB90
+R3
+!s105 HexDriver_sv_unit
+S1
+R0
+R4
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4/HexDriver.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4/HexDriver.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/HexDriver.sv|
+!i113 1
+R7
+R8
+R9
+n@hex@driver
+vProcessor
+R1
+R2
+!i10b 1
+!s100 QVF6LcHP5lQ_N46i5SE9e1
+I`8nSKfh8Y7f<1hmRFkWkD3
+R3
+!s105 Processor_sv_unit
+S1
+R0
+Z10 w1537310503
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4/Processor.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4/Processor.sv
+L0 8
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/Processor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/Processor.sv|
+!i113 1
+R7
+R8
+R9
+n@processor
+vreg_8
+R1
+R2
+!i10b 1
+!s100 AXDzj?_?eZ4hKcKof@=bm2
+IEhkN[XG5N8QK^RB?^Gmd02
+R3
+!s105 Reg_8_sv_unit
+S1
+R0
+R10
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4/Reg_8.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4/Reg_8.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/Reg_8.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/Reg_8.sv|
+!i113 1
+R7
+R8
+R9
+vregister_unit
+R1
+R2
+!i10b 1
+!s100 2ffML3jhY4aCKKX2f;m:<1
+Iaeg97Xg;ZFJ=eV@?ng=]=3
+R3
+!s105 Register_unit_sv_unit
+S1
+R0
+R10
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4/Register_unit.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4/Register_unit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/Register_unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/Register_unit.sv|
+!i113 1
+R7
+R8
+R9
+vrouter
+R1
+R2
+!i10b 1
+!s100 lIdD9@`9>^lYia[Dkg2aV0
+IOdSWZV0bLXW?PiBJNDL332
+R3
+!s105 Router_sv_unit
+S1
+R0
+R4
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4/Router.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4/Router.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/Router.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/Router.sv|
+!i113 1
+R7
+R8
+R9
+vsync
+R1
+R2
+!i10b 1
+!s100 2W5Vz0:F6ckE2`eJOTK5l1
+IBl6o3R7TdeIKF68N?B4ld3
+R3
+Z11 !s105 Synchronizers_sv_unit
+S1
+R0
+R4
+Z12 8C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv
+Z13 FC:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv
+L0 4
+R5
+r1
+!s85 0
+31
+R6
+Z14 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv|
+Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv|
+!i113 1
+R7
+R8
+R9
+vsync_r0
+R1
+R2
+!i10b 1
+!s100 IGd9f_F;JNjVBLQ@DAnD10
+I9Wg6MZo`P84:Z8221C59N1
+R3
+R11
+S1
+R0
+R4
+R12
+R13
+L0 18
+R5
+r1
+!s85 0
+31
+R6
+R14
+R15
+!i113 1
+R7
+R8
+R9
+vsync_r1
+R1
+R2
+!i10b 1
+!s100 1CXiH1DYDbAUS69Ee2j060
+IMJK1>a9K@71>?Zha<idBH3
+R3
+R11
+S1
+R0
+R4
+R12
+R13
+L0 39
+R5
+r1
+!s85 0
+31
+R6
+R14
+R15
+!i113 1
+R7
+R8
+R9
+vtestbench_8
+R1
+R2
+!i10b 1
+!s100 T0BJh0iLc]T:2jkSK6_`l0
+Ib<P@^2cR0@LGX5DZ[V=M>2
+R3
+!s105 testbench_8_sv_unit
+S1
+R0
+w1537242136
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4/testbench_8.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4/testbench_8.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/testbench_8.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/testbench_8.sv|
+!i113 1
+R7
+R8
+R9

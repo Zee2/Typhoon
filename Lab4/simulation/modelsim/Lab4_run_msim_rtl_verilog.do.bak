@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Router.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Reg_4.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/HexDriver.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Control.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/compute.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Register_unit.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Processor.sv}
+
