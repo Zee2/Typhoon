@@ -6,11 +6,23 @@ module ripple_adder
     output  logic           CO
 );
 
-    /* TODO
-     *
-     * Insert code here to implement a ripple adder.
-     * Your code should be completly combinational (don't use always_ff or always_latch).
-     * Feel free to create sub-modules or other files. */
-
-     
+	logic[16:0] carries;
+	
+	
+	
+	genvar i;
+   generate
+		for(i = 0; i < 16; i = i+1) begin : generateLoop
+			full_adder FA_i(A[i], B[i], carries[i], carries[i+1], Sum[i]);
+		end
+	endgenerate
+	
+	
+	
+	always_comb begin
+		carries[0] = 1'b0; // This sets the initial carry-in to be zero.
+		CO = carries[16];
+	end
 endmodule
+
+
