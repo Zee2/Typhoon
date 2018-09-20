@@ -53,8 +53,12 @@ initial begin : Init_Data
 	#2 Run = 1;
 	
 	
-	#10 if(Sum != 16'd50)
+	#10 if(Sum != 16'd55)
 				$display("Failure");
+	
+	else
+		$display("Awesome!");
+		
 end
 
 endmodule
