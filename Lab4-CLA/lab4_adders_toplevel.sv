@@ -113,6 +113,7 @@ module lab4_adders_toplevel
         .CO(CO_comb)
     );
 	 */
+	 /*
     carry_lookahead_adder carry_lookahead_adder_inst
     (
         .A,             // This is shorthand for .A(A) when both wires/registers have the same name
@@ -120,14 +121,14 @@ module lab4_adders_toplevel
         .Sum(Sum_comb), // Connects the Sum_comb wire in this file to the Sum wire in ripple_adder.sv
         .CO(CO_comb)
     );
-
-//    carry_select_adder carry_select_adder_inst
-//    (
-//        .A,             // This is shorthand for .A(A) when both wires/registers have the same name
-//        .B,
-//        .Sum(Sum_comb), // Connects the Sum_comb wire in this file to the Sum wire in ripple_adder.sv
-//        .CO(CO_comb)
-//    );
+	*/
+    carry_select_adder carry_select_adder_inst
+    (
+        .A,             // This is shorthand for .A(A) when both wires/registers have the same name
+        .B,
+        .Sum(Sum_comb), // Connects the Sum_comb wire in this file to the Sum wire in ripple_adder.sv
+        .CO(CO_comb)
+    );
     
     HexDriver Ahex0_inst
     (
