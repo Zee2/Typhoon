@@ -1,5 +1,5 @@
 Flow report for lab4_adders_toplevel
-Thu Sep 20 20:09:59 2018
+Fri Sep 21 02:20:46 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 20 20:09:59 2018       ;
+; Flow Status                        ; Successful - Fri Sep 21 02:20:46 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab4_adders_toplevel                        ;
 ; Top-level Entity Name              ; lab4_adders_toplevel                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 128                                         ;
-;     Total combinational functions  ; 112                                         ;
+; Total logic elements               ; 142                                         ;
+;     Total combinational functions  ; 126                                         ;
 ;     Dedicated logic registers      ; 105                                         ;
 ; Total registers                    ; 105                                         ;
 ; Total pins                         ; 93                                          ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 09/20/2018 20:09:47  ;
+; Start date & time ; 09/21/2018 02:20:34  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; lab4_adders_toplevel ;
 +-------------------+----------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 108223642620545.153749218712036        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 108223642620545.153751443413992        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                              ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -103,8 +103,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4789 MB             ; 00:00:25                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:25                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4790 MB             ; 00:00:25                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

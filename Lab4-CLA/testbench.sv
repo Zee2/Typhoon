@@ -22,7 +22,8 @@ logic[6:0]      Bhex1;
 logic[6:0]      Bhex2;
 logic[6:0]      Bhex3;
 
-
+logic[15:0] valA = $urandom_range(0,255);
+logic[15:0] valB = $urandom_range(0,255);
 
 // Toggle the clock
 // #1 means wait for a delay of 1 timeunit
@@ -36,29 +37,36 @@ end
 
 lab4_adders_toplevel testing(.*);
 
-initial begin : Init_Data
+initial begin : testLoop
+	for(int i = 0; i < 100; i = i+1) begin: testloop
+	
+		valA = $urandom_range(0,255);
+		valB = $urandom_range(0,255);
 
-	Reset = 0;
-	LoadB = 1;
-	Run = 1;
-	SW = 16'd25;
-	
-	#4 Reset = 1;
-	
-	#2 LoadB = 0;
-	#2 LoadB = 1;
-	SW = 16'd30;
-	
-	#4 Run = 0;
-	#2 Run = 1;
-	
-	
-	#10 if(Sum != 16'd55)
-				$display("Failure");
-	
-	else
-		$display("Awesome!");
+		#4
+		Reset = 0;
+		LoadB = 1;
+		Run = 1;
+		SW = valA;
 		
+		#4 Reset = 1;
+		
+		#2 LoadB = 0;
+		#2 LoadB = 1;
+		SW = valB;
+		
+		#4 Run = 0;
+		#2 Run = 1;
+		
+		
+		#10 if(Sum != valA + valB) begin
+					$display("Failure");
+					$display(valA);
+					$display(valB);
+		end
+		else
+			$display("Awesome!");
+	end
 end
 
 endmodule

@@ -16,7 +16,7 @@ module carry_select_adder
 	logic[4:0] carries;
 	logic dummies[2];
 	
-	CLA_4bit unit_0(A[3:0], B[3:0], 1'b0, carries[0], Sum[3:0], dummies[0], dummies[1]);
+	CRA_4bit unit_0(A[3:0], B[3:0], carries[0], carries[1], Sum[3:0]);
 	
 	genvar i;
 	generate
@@ -26,5 +26,8 @@ module carry_select_adder
 		end
 	endgenerate
 	
-	assign CO = carries[3];
+	always_comb begin
+	carries[0] = 1'b0;
+	CO = carries[4];
+	end
 endmodule

@@ -12,87 +12,76 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/HexDriver.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:10:50 on Sep 20,2018
+# Start time: 02:21:44 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA" C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/HexDriver.sv 
 # -- Compiling module HexDriver
 # 
 # Top level modules:
 # 	HexDriver
-# End time: 20:10:51 on Sep 20,2018, Elapsed time: 0:00:01
+# End time: 02:21:44 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_select_adder.sv}
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_lookahead_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:10:51 on Sep 20,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA" C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_select_adder.sv 
-# -- Compiling module carry_select_adder
+# Start time: 02:21:44 on Sep 21,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA" C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_lookahead_adder.sv 
+# -- Compiling module carry_lookahead_adder
 # 
 # Top level modules:
-# 	carry_select_adder
-# End time: 20:10:51 on Sep 20,2018, Elapsed time: 0:00:00
+# 	carry_lookahead_adder
+# End time: 02:21:45 on Sep 21,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder_pg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:10:51 on Sep 20,2018
+# Start time: 02:21:45 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA" C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder_pg.sv 
 # -- Compiling module full_adder_pg
 # 
 # Top level modules:
 # 	full_adder_pg
-# End time: 20:10:51 on Sep 20,2018, Elapsed time: 0:00:00
+# End time: 02:21:45 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CLA_4bit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:10:51 on Sep 20,2018
+# Start time: 02:21:45 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA" C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CLA_4bit.sv 
 # -- Compiling module CLA_4bit
 # 
 # Top level modules:
 # 	CLA_4bit
-# End time: 20:10:51 on Sep 20,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CSA_unit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:10:51 on Sep 20,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA" C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CSA_unit.sv 
-# -- Compiling module CSA_unit
-# 
-# Top level modules:
-# 	CSA_unit
-# End time: 20:10:51 on Sep 20,2018, Elapsed time: 0:00:00
+# End time: 02:21:45 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/lab4_adders_toplevel.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:10:51 on Sep 20,2018
+# Start time: 02:21:45 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA" C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/lab4_adders_toplevel.sv 
 # -- Compiling module lab4_adders_toplevel
 # 
 # Top level modules:
 # 	lab4_adders_toplevel
-# End time: 20:10:51 on Sep 20,2018, Elapsed time: 0:00:00
+# End time: 02:21:45 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/testbench.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:10:51 on Sep 20,2018
+# Start time: 02:21:45 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA" C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 20:10:51 on Sep 20,2018, Elapsed time: 0:00:00
+# End time: 02:21:45 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 20:10:51 on Sep 20,2018
+# Start time: 02:21:46 on Sep 21,2018
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.lab4_adders_toplevel
-# Loading work.carry_select_adder
-# Loading work.CLA_4bit
+# Loading work.carry_lookahead_adder
 # Loading work.HexDriver
+# Loading work.CLA_4bit
 # Loading work.full_adder_pg
-# Loading work.CSA_unit
 # 
 # add wave *
 # view structure
@@ -100,6 +89,45 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
-# Failure
-# End time: 20:11:28 on Sep 20,2018, Elapsed time: 0:00:37
+# Awesome!
+# Awesome!
+# Awesome!
+restart -f
+run 10000ns
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# Awesome!
+# End time: 02:24:29 on Sep 21,2018, Elapsed time: 0:02:43
 # Errors: 0, Warnings: 0

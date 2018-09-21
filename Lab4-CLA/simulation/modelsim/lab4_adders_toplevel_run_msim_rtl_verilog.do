@@ -6,10 +6,9 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/HexDriver.sv}
-vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_select_adder.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_lookahead_adder.sv}
 vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder_pg.sv}
 vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CLA_4bit.sv}
-vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CSA_unit.sv}
 vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/lab4_adders_toplevel.sv}
 
 vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA {C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/testbench.sv}

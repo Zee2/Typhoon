@@ -11,35 +11,31 @@ module CSA_unit(
 	
 );
 
-	logic[1:0] carries;
+	logic carry0;
+	logic carry1;
 
 	logic[3:0] sum0;
 	logic[3:0] sum1;
-	logic dummies[3:0];
 
-	CLA_4bit adder0(
+	CRA_4bit adder0(
 		.A(A),
 		.B(B),
 		.Cin(1'b0),
-		.Cout(carries[0]),
-		.Sum(sum0),
-		.Pg(),
-		.Gg()
+		.Cout(carry0),
+		.Sum(sum0)
 	);
 
-	CLA_4bit adder1(
+	CRA_4bit adder1(
 		.A(A),
 		.B(B),
 		.Cin(1'b1),
-		.Cout(carries[1]),
-		.Sum(sum1),
-		.Pg(),
-		.Gg()
+		.Cout(carry1),
+		.Sum(sum1)
 	);
 	
 	always_comb begin
 	
-	Cout = (carries[1] & Cin) | carries[0];
+	Cout = (carry1 & Cin) | carry0;
 	
 	case(Cin)
 		1'b0: sum = sum0;

@@ -309,7 +309,7 @@ Bhex3[5] <= Bhex3[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Bhex3[6] <= Bhex3[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -342,26 +342,26 @@ B[12] => B[12].IN1
 B[13] => B[13].IN1
 B[14] => B[14].IN1
 B[15] => B[15].IN1
-Sum[0] <= CLA_4bit:unit_0.port4
-Sum[1] <= CLA_4bit:unit_0.port4
-Sum[2] <= CLA_4bit:unit_0.port4
-Sum[3] <= CLA_4bit:unit_0.port4
-Sum[4] <= CSA_unit:genloop[1].unit_i.port3
-Sum[5] <= CSA_unit:genloop[1].unit_i.port3
-Sum[6] <= CSA_unit:genloop[1].unit_i.port3
-Sum[7] <= CSA_unit:genloop[1].unit_i.port3
-Sum[8] <= CSA_unit:genloop[2].unit_i.port3
-Sum[9] <= CSA_unit:genloop[2].unit_i.port3
-Sum[10] <= CSA_unit:genloop[2].unit_i.port3
-Sum[11] <= CSA_unit:genloop[2].unit_i.port3
-Sum[12] <= CSA_unit:genloop[3].unit_i.port3
-Sum[13] <= CSA_unit:genloop[3].unit_i.port3
-Sum[14] <= CSA_unit:genloop[3].unit_i.port3
-Sum[15] <= CSA_unit:genloop[3].unit_i.port3
-CO <= carries[3].DB_MAX_OUTPUT_PORT_TYPE
+Sum[0] <= CLA_4bit:generateLoop[0].FApg_i.port4
+Sum[1] <= CLA_4bit:generateLoop[0].FApg_i.port4
+Sum[2] <= CLA_4bit:generateLoop[0].FApg_i.port4
+Sum[3] <= CLA_4bit:generateLoop[0].FApg_i.port4
+Sum[4] <= CLA_4bit:generateLoop[1].FApg_i.port4
+Sum[5] <= CLA_4bit:generateLoop[1].FApg_i.port4
+Sum[6] <= CLA_4bit:generateLoop[1].FApg_i.port4
+Sum[7] <= CLA_4bit:generateLoop[1].FApg_i.port4
+Sum[8] <= CLA_4bit:generateLoop[2].FApg_i.port4
+Sum[9] <= CLA_4bit:generateLoop[2].FApg_i.port4
+Sum[10] <= CLA_4bit:generateLoop[2].FApg_i.port4
+Sum[11] <= CLA_4bit:generateLoop[2].FApg_i.port4
+Sum[12] <= CLA_4bit:generateLoop[3].FApg_i.port4
+Sum[13] <= CLA_4bit:generateLoop[3].FApg_i.port4
+Sum[14] <= CLA_4bit:generateLoop[3].FApg_i.port4
+Sum[15] <= CLA_4bit:generateLoop[3].FApg_i.port4
+CO <= CO.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CLA_4bit:unit_0
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -380,7 +380,7 @@ Pg <= Pg.DB_MAX_OUTPUT_PORT_TYPE
 Gg <= Gg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CLA_4bit:unit_0|full_adder_pg:generateLoop[0].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i|full_adder_pg:generateLoop[0].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -396,7 +396,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CLA_4bit:unit_0|full_adder_pg:generateLoop[1].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i|full_adder_pg:generateLoop[1].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -412,7 +412,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CLA_4bit:unit_0|full_adder_pg:generateLoop[2].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i|full_adder_pg:generateLoop[2].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -428,7 +428,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CLA_4bit:unit_0|full_adder_pg:generateLoop[3].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i|full_adder_pg:generateLoop[3].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -444,25 +444,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i
-A[0] => A[0].IN2
-A[1] => A[1].IN2
-A[2] => A[2].IN2
-A[3] => A[3].IN2
-B[0] => B[0].IN2
-B[1] => B[1].IN2
-B[2] => B[2].IN2
-B[3] => B[3].IN2
-Cin => Cout.IN1
-Cin => Decoder0.IN0
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i|CLA_4bit:adder0
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[1].FApg_i
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -481,7 +463,7 @@ Pg <= Pg.DB_MAX_OUTPUT_PORT_TYPE
 Gg <= Gg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[0].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[1].FApg_i|full_adder_pg:generateLoop[0].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -497,7 +479,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[1].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[1].FApg_i|full_adder_pg:generateLoop[1].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -513,7 +495,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[2].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[1].FApg_i|full_adder_pg:generateLoop[2].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -529,7 +511,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[3].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[1].FApg_i|full_adder_pg:generateLoop[3].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -545,7 +527,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i|CLA_4bit:adder1
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[2].FApg_i
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -564,7 +546,7 @@ Pg <= Pg.DB_MAX_OUTPUT_PORT_TYPE
 Gg <= Gg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[0].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[2].FApg_i|full_adder_pg:generateLoop[0].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -580,7 +562,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[1].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[2].FApg_i|full_adder_pg:generateLoop[1].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -596,7 +578,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[2].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[2].FApg_i|full_adder_pg:generateLoop[2].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -612,7 +594,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[1].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[3].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[2].FApg_i|full_adder_pg:generateLoop[3].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -628,25 +610,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i
-A[0] => A[0].IN2
-A[1] => A[1].IN2
-A[2] => A[2].IN2
-A[3] => A[3].IN2
-B[0] => B[0].IN2
-B[1] => B[1].IN2
-B[2] => B[2].IN2
-B[3] => B[3].IN2
-Cin => Cout.IN1
-Cin => Decoder0.IN0
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i|CLA_4bit:adder0
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[3].FApg_i
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -665,7 +629,7 @@ Pg <= Pg.DB_MAX_OUTPUT_PORT_TYPE
 Gg <= Gg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[0].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[3].FApg_i|full_adder_pg:generateLoop[0].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -681,7 +645,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[1].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[3].FApg_i|full_adder_pg:generateLoop[1].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -697,7 +661,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[2].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[3].FApg_i|full_adder_pg:generateLoop[2].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
@@ -713,274 +677,7 @@ p <= s.DB_MAX_OUTPUT_PORT_TYPE
 g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[3].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i|CLA_4bit:adder1
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-Cin => carries[0].IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-Sum[0] <= full_adder_pg:generateLoop[0].FApg_i.port4
-Sum[1] <= full_adder_pg:generateLoop[1].FApg_i.port4
-Sum[2] <= full_adder_pg:generateLoop[2].FApg_i.port4
-Sum[3] <= full_adder_pg:generateLoop[3].FApg_i.port4
-Pg <= Pg.DB_MAX_OUTPUT_PORT_TYPE
-Gg <= Gg.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[0].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[1].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[2].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[2].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[3].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i
-A[0] => A[0].IN2
-A[1] => A[1].IN2
-A[2] => A[2].IN2
-A[3] => A[3].IN2
-B[0] => B[0].IN2
-B[1] => B[1].IN2
-B[2] => B[2].IN2
-B[3] => B[3].IN2
-Cin => Cout.IN1
-Cin => Decoder0.IN0
-sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i|CLA_4bit:adder0
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-Cin => carries[0].IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-Sum[0] <= full_adder_pg:generateLoop[0].FApg_i.port4
-Sum[1] <= full_adder_pg:generateLoop[1].FApg_i.port4
-Sum[2] <= full_adder_pg:generateLoop[2].FApg_i.port4
-Sum[3] <= full_adder_pg:generateLoop[3].FApg_i.port4
-Pg <= Pg.DB_MAX_OUTPUT_PORT_TYPE
-Gg <= Gg.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[0].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[1].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[2].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i|CLA_4bit:adder0|full_adder_pg:generateLoop[3].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i|CLA_4bit:adder1
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-Cin => carries[0].IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-Sum[0] <= full_adder_pg:generateLoop[0].FApg_i.port4
-Sum[1] <= full_adder_pg:generateLoop[1].FApg_i.port4
-Sum[2] <= full_adder_pg:generateLoop[2].FApg_i.port4
-Sum[3] <= full_adder_pg:generateLoop[3].FApg_i.port4
-Pg <= Pg.DB_MAX_OUTPUT_PORT_TYPE
-Gg <= Gg.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[0].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[1].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[2].FApg_i
-a => s.IN0
-a => Cout.IN0
-a => Cout.IN0
-b => s.IN1
-b => Cout.IN1
-b => Cout.IN0
-Cin => s.IN1
-Cin => Cout.IN1
-Cin => Cout.IN1
-Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
-p <= s.DB_MAX_OUTPUT_PORT_TYPE
-g <= Cout.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|lab4_adders_toplevel|carry_select_adder:carry_select_adder_inst|CSA_unit:genloop[3].unit_i|CLA_4bit:adder1|full_adder_pg:generateLoop[3].FApg_i
+|lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[3].FApg_i|full_adder_pg:generateLoop[3].FApg_i
 a => s.IN0
 a => Cout.IN0
 a => Cout.IN0
