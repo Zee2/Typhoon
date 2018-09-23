@@ -8,78 +8,104 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/simulation/modelsim
-vcarry_lookahead_adder
+vcarry_select_adder
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1537514504
+Z2 !s110 1537567951
 !i10b 1
-!s100 :Fm>]j@@iTRFY[QhE6N:O1
-I<a9_k66oP2g3]aoK9PmE`1
+!s100 fWo68AF80:5K]1:0C1TVF0
+IQO_AUB5BZYPUU0h81;J1;1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 carry_lookahead_adder_sv_unit
+!s105 carry_select_adder_sv_unit
 S1
 R0
-w1537489715
-8C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_lookahead_adder.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_lookahead_adder.sv
+w1537563878
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_select_adder.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_select_adder.sv
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1537514504.000000
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_lookahead_adder.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA|C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_lookahead_adder.sv|
+Z5 !s108 1537567951.000000
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_select_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA|C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_select_adder.sv|
 !i113 1
 Z6 o-sv -work work
 Z7 !s92 -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA
 Z8 tCvgOpt 0
-vCLA_4bit
+vCRA_4bit
 R1
-Z9 !s110 1537514505
+R2
 !i10b 1
-!s100 fGl1>=5=8Z[=lM:6_IC]P3
-IX:nR_7bK?j1RC_4e<3Q0c3
+!s100 D1GG;fbT`X2:L;IzCK?Zk2
+Ie>=j`5SVe4e:SCJf9=?ff3
 R3
-!s105 CLA_4bit_sv_unit
+!s105 CRA_4bit_sv_unit
 S1
 R0
-w1537481930
-8C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CLA_4bit.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CLA_4bit.sv
+w1537564540
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CRA_4bit.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CRA_4bit.sv
 L0 1
 R4
 r1
 !s85 0
 31
-Z10 !s108 1537514505.000000
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CLA_4bit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA|C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CLA_4bit.sv|
+R5
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CRA_4bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA|C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CRA_4bit.sv|
 !i113 1
 R6
 R7
 R8
-n@c@l@a_4bit
-vfull_adder_pg
+n@c@r@a_4bit
+vCSA_unit
 R1
-R9
+R2
 !i10b 1
-!s100 lgXJ=`Y1Nm@XIk31eHj`71
-IEiMzJ7hjAmCaMYNZ1loYA2
+!s100 <Y>mZfE]L::oJ>1fRLgz;2
+IW9e`X^c1Oz7UA11:e1@AN2
 R3
-!s105 full_adder_pg_sv_unit
+!s105 CSA_unit_sv_unit
 S1
 R0
-w1537481252
-8C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder_pg.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder_pg.sv
+w1537564437
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CSA_unit.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CSA_unit.sv
 L0 1
 R4
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder_pg.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA|C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder_pg.sv|
+R5
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CSA_unit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA|C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CSA_unit.sv|
+!i113 1
+R6
+R7
+R8
+n@c@s@a_unit
+vfull_adder
+R1
+R2
+!i10b 1
+!s100 ?e@lZN09:5ealfCzZ8jHP1
+IM[l^_idohMCGfgXFh@jJM3
+R3
+!s105 full_adder_sv_unit
+S1
+R0
+w1537564041
+8C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA|C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/full_adder.sv|
 !i113 1
 R6
 R7
@@ -112,15 +138,15 @@ R8
 n@hex@driver
 vlab4_adders_toplevel
 R1
-R9
+R2
 !i10b 1
-!s100 3oQ5S[]E@4R?PH>F4hcC=3
-I>MFmP>MQOCJ1_7kAe;Zb<2
+!s100 VA<><UF9LcO2mD1Nb5lJ91
+IlZzXQfdK^A_zO_dX5G3nj1
 R3
 !s105 lab4_adders_toplevel_sv_unit
 S1
 R0
-w1537514432
+w1537563428
 8C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/lab4_adders_toplevel.sv
 FC:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/lab4_adders_toplevel.sv
 L0 17
@@ -128,7 +154,7 @@ R4
 r1
 !s85 0
 31
-R10
+R5
 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/lab4_adders_toplevel.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA|C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/lab4_adders_toplevel.sv|
 !i113 1
@@ -137,15 +163,15 @@ R7
 R8
 vtestbench
 R1
-R9
+R2
 !i10b 1
-!s100 D8IcZ3bKZQ^Ii=5ADDhNQ1
-IUWFeb46Xe_WK`S3E3Z^Z11
+!s100 Ec0WB25J4;P`OiZLT;c?=2
+I^QP?DZRAeGV>@2VN>NMK72
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1537511980
+w1537564114
 8C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/testbench.sv
 FC:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/testbench.sv
 L0 1
@@ -153,7 +179,7 @@ R4
 r1
 !s85 0
 31
-R10
+R5
 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA|C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/testbench.sv|
 !i113 1

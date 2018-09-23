@@ -12,7 +12,7 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:54 on Sep 18,2018
+# Start time: 17:28:41 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4" C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv 
 # -- Compiling module sync
 # -- Compiling module sync_r0
@@ -22,93 +22,93 @@
 # 	sync
 # 	sync_r0
 # 	sync_r1
-# End time: 19:33:54 on Sep 18,2018, Elapsed time: 0:00:00
+# End time: 17:28:41 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Router.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:54 on Sep 18,2018
+# Start time: 17:28:42 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4" C:/Users/finnn/Documents/385/385_FPGA/Lab4/Router.sv 
 # -- Compiling module router
 # 
 # Top level modules:
 # 	router
-# End time: 19:33:54 on Sep 18,2018, Elapsed time: 0:00:00
+# End time: 17:28:42 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/HexDriver.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:54 on Sep 18,2018
+# Start time: 17:28:42 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4" C:/Users/finnn/Documents/385/385_FPGA/Lab4/HexDriver.sv 
 # -- Compiling module HexDriver
 # 
 # Top level modules:
 # 	HexDriver
-# End time: 19:33:54 on Sep 18,2018, Elapsed time: 0:00:00
+# End time: 17:28:42 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Control.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:54 on Sep 18,2018
+# Start time: 17:28:42 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4" C:/Users/finnn/Documents/385/385_FPGA/Lab4/Control.sv 
 # -- Compiling module control
 # 
 # Top level modules:
 # 	control
-# End time: 19:33:54 on Sep 18,2018, Elapsed time: 0:00:00
+# End time: 17:28:42 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/compute.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:54 on Sep 18,2018
+# Start time: 17:28:42 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4" C:/Users/finnn/Documents/385/385_FPGA/Lab4/compute.sv 
 # -- Compiling module compute
 # 
 # Top level modules:
 # 	compute
-# End time: 19:33:54 on Sep 18,2018, Elapsed time: 0:00:00
+# End time: 17:28:42 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Reg_8.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:54 on Sep 18,2018
+# Start time: 17:28:42 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4" C:/Users/finnn/Documents/385/385_FPGA/Lab4/Reg_8.sv 
 # -- Compiling module reg_8
 # 
 # Top level modules:
 # 	reg_8
-# End time: 19:33:54 on Sep 18,2018, Elapsed time: 0:00:00
+# End time: 17:28:42 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Register_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:54 on Sep 18,2018
+# Start time: 17:28:42 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4" C:/Users/finnn/Documents/385/385_FPGA/Lab4/Register_unit.sv 
 # -- Compiling module register_unit
 # 
 # Top level modules:
 # 	register_unit
-# End time: 19:33:54 on Sep 18,2018, Elapsed time: 0:00:00
+# End time: 17:28:42 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/Processor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:54 on Sep 18,2018
+# Start time: 17:28:42 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4" C:/Users/finnn/Documents/385/385_FPGA/Lab4/Processor.sv 
 # -- Compiling module Processor
 # 
 # Top level modules:
 # 	Processor
-# End time: 19:33:54 on Sep 18,2018, Elapsed time: 0:00:00
+# End time: 17:28:42 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4 {C:/Users/finnn/Documents/385/385_FPGA/Lab4/testbench_8.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:33:54 on Sep 18,2018
+# Start time: 17:28:42 on Sep 21,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4" C:/Users/finnn/Documents/385/385_FPGA/Lab4/testbench_8.sv 
 # -- Compiling module testbench_8
 # 
 # Top level modules:
 # 	testbench_8
-# End time: 19:33:54 on Sep 18,2018, Elapsed time: 0:00:00
+# End time: 17:28:42 on Sep 21,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench_8
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench_8 
-# Start time: 19:33:54 on Sep 18,2018
+# Start time: 17:28:42 on Sep 21,2018
 # Loading sv_std.std
 # Loading work.testbench_8
 # Loading work.Processor
@@ -137,5 +137,5 @@
 # ** Warning: (vsim-8315) C:/Users/finnn/Documents/385/385_FPGA/Lab4/Control.sv(25): No condition is true in the unique/priority if/case statement.
 #    Time: 10 ns  Iteration: 2  Instance: /testbench_8/processor0/control_unit
 # Success!
-# End time: 19:34:19 on Sep 18,2018, Elapsed time: 0:00:25
+# End time: 17:31:43 on Sep 21,2018, Elapsed time: 0:03:01
 # Errors: 0, Warnings: 5

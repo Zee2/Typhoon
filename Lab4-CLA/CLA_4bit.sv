@@ -10,13 +10,13 @@ module CLA_4bit(
 
 );
 
-	logic[3:0] carries;
-	logic[3:0] dummyCouts;
+	logic[3:0] carries; //Internal carries
+	logic[3:0] dummyCouts; //Dummy signals to 
 	logic[3:0] Ps;
 	logic[3:0] Gs;
 	
 	genvar i;
-	
+	// Loop to instantiate the full adders with propagate/generate support.
 	generate
 		for(i = 0; i < 4; i = i+1) begin : generateLoop
 			full_adder_pg FApg_i(A[i], B[i], carries[i], dummyCouts[i], Sum[i], Ps[i], Gs[i]);

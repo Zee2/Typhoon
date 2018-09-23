@@ -1,0 +1,9 @@
+module adder_9(
+	input logic[7:0] A,
+	input logic[7:0] B,
+	output logic X,
+	output logic[7:0] sum,
+	
+);
+
+endmodule

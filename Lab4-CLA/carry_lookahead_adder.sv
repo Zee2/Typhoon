@@ -12,15 +12,16 @@ module carry_lookahead_adder
      * Your code should be completly combinational (don't use always_ff or always_latch).
      * Feel free to create sub-modules or other files. */
 	  
-	logic[3:0] carries;
-	logic[3:0] Ps;
-	logic[3:0] Gs;
-	logic[3:0] dummyCouts;
-	logic Cin = 1'b0;
+	logic[3:0] carries; // Internal carry signals
+	logic[3:0] Ps; //Group propagate signals
+	logic[3:0] Gs; //Group generate signals
+	logic[3:0] dummyCouts; //Dummy signals to connect the useless CLA Couts
+	logic Cin = 1'b0; // Set Cin to be zero.
 	
 	
+	
+	// This loop generates all of the 4bit CLA units that make up the carry lookahead adder.
 	genvar i;
-	
 	generate
 		for(i = 0; i < 4; i = i+1) begin : generateLoop
 			CLA_4bit FApg_i(A[4*i+3:4*i], B[4*i+3:4*i], carries[i], dummyCouts[i], Sum[4*i+3:4*i], Ps[i], Gs[i]);
@@ -41,7 +42,7 @@ module carry_lookahead_adder
 		
 		carries[3] = (Cin & Ps[0] & Ps[1] & Ps[2]) | (Gs[0] & Ps[1] & Ps[2]) | (Gs[1] & Ps[2]) | Gs[2];
 		
-		CO = (Cin & Ps[0] & Ps[1] & Ps[2] & Ps[3]) | (Gs[0] & Ps[1] & Ps[2] & Ps[3]) | (Gs[1] & Ps[2] & Ps[3]) | (Gs[2] & Ps[3]);
+		CO = (Cin & Ps[0] & Ps[1] & Ps[2] & Ps[3]) | (Gs[0] & Ps[1] & Ps[2] & Ps[3]) | (Gs[1] & Ps[2] & Ps[3]) | (Gs[2] & Ps[3]) | (Gs[3]);
 		
 		
 		

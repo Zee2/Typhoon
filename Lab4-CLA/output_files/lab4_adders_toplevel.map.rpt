@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab4_adders_toplevel
-Fri Sep 21 02:20:46 2018
+Fri Sep 21 17:46:10 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -51,13 +51,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 21 02:20:46 2018       ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 21 17:46:10 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab4_adders_toplevel                        ;
 ; Top-level Entity Name              ; lab4_adders_toplevel                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 142                                         ;
-;     Total combinational functions  ; 126                                         ;
+; Total logic elements               ; 143                                         ;
+;     Total combinational functions  ; 127                                         ;
 ;     Dedicated logic registers      ; 105                                         ;
 ; Total registers                    ; 105                                         ;
 ; Total pins                         ; 93                                          ;
@@ -189,16 +189,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 142       ;
+; Estimated Total logic elements              ; 143       ;
 ;                                             ;           ;
-; Total combinational functions               ; 126       ;
+; Total combinational functions               ; 127       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 89        ;
-;     -- 3 input functions                    ; 12        ;
+;     -- 4 input functions                    ; 87        ;
+;     -- 3 input functions                    ; 15        ;
 ;     -- <=2 input functions                  ; 25        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 126       ;
+;     -- normal mode                          ; 127       ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 105       ;
@@ -211,7 +211,7 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
 ; Maximum fan-out                             ; 105       ;
-; Total fan-out                               ; 884       ;
+; Total fan-out                               ; 885       ;
 ; Average fan-out                             ; 2.12      ;
 +---------------------------------------------+-----------+
 
@@ -221,7 +221,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Entity Name           ; Library Name ;
 +-------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |lab4_adders_toplevel                                 ; 126 (19)            ; 105 (105)                 ; 0           ; 0            ; 0       ; 0         ; 93   ; 0            ; |lab4_adders_toplevel                                                                                                                       ; lab4_adders_toplevel  ; work         ;
+; |lab4_adders_toplevel                                 ; 127 (19)            ; 105 (105)                 ; 0           ; 0            ; 0       ; 0         ; 93   ; 0            ; |lab4_adders_toplevel                                                                                                                       ; lab4_adders_toplevel  ; work         ;
 ;    |HexDriver:Ahex0_inst|                             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|HexDriver:Ahex0_inst                                                                                                  ; HexDriver             ; work         ;
 ;    |HexDriver:Ahex1_inst|                             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|HexDriver:Ahex1_inst                                                                                                  ; HexDriver             ; work         ;
 ;    |HexDriver:Ahex2_inst|                             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|HexDriver:Ahex2_inst                                                                                                  ; HexDriver             ; work         ;
@@ -230,7 +230,7 @@ refer to the applicable agreement for further details.
 ;    |HexDriver:Bhex1_inst|                             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|HexDriver:Bhex1_inst                                                                                                  ; HexDriver             ; work         ;
 ;    |HexDriver:Bhex2_inst|                             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|HexDriver:Bhex2_inst                                                                                                  ; HexDriver             ; work         ;
 ;    |HexDriver:Bhex3_inst|                             ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|HexDriver:Bhex3_inst                                                                                                  ; HexDriver             ; work         ;
-;    |carry_lookahead_adder:carry_lookahead_adder_inst| ; 51 (9)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst                                                                      ; carry_lookahead_adder ; work         ;
+;    |carry_lookahead_adder:carry_lookahead_adder_inst| ; 52 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst                                                                      ; carry_lookahead_adder ; work         ;
 ;       |CLA_4bit:generateLoop[0].FApg_i|               ; 11 (6)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i                                      ; CLA_4bit              ; work         ;
 ;          |full_adder_pg:generateLoop[0].FApg_i|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i|full_adder_pg:generateLoop[0].FApg_i ; full_adder_pg         ; work         ;
 ;          |full_adder_pg:generateLoop[1].FApg_i|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab4_adders_toplevel|carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i|full_adder_pg:generateLoop[1].FApg_i ; full_adder_pg         ; work         ;
@@ -276,8 +276,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 ; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |lab4_adders_toplevel|CO~reg0 ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab4_adders_toplevel|B[9]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab4_adders_toplevel|A[9]    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab4_adders_toplevel|B[13]   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab4_adders_toplevel|A[13]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
@@ -287,7 +287,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; Gg   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -366,14 +365,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     ENA               ; 32                          ;
 ;     ENA SCLR          ; 17                          ;
 ;     plain             ; 56                          ;
-; cycloneiii_lcell_comb ; 126                         ;
-;     normal            ; 126                         ;
+; cycloneiii_lcell_comb ; 127                         ;
+;     normal            ; 127                         ;
 ;         2 data inputs ; 25                          ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 89                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 87                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 2.26                        ;
+; Average LUT depth     ; 2.34                        ;
 +-----------------------+-----------------------------+
 
 
@@ -392,7 +391,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Sep 21 02:20:33 2018
+    Info: Processing started: Fri Sep 21 17:45:59 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4-CLA -c lab4_adders_toplevel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -421,20 +420,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file cra_4bi
     Info (12023): Found entity 1: CRA_4bit File: C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CRA_4bit.sv Line: 1
 Info (12127): Elaborating entity "lab4_adders_toplevel" for the top level hierarchy
 Info (12128): Elaborating entity "carry_lookahead_adder" for hierarchy "carry_lookahead_adder:carry_lookahead_adder_inst" File: C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/lab4_adders_toplevel.sv Line: 123
-Info (12128): Elaborating entity "CLA_4bit" for hierarchy "carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i" File: C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_lookahead_adder.sv Line: 26
+Info (12128): Elaborating entity "CLA_4bit" for hierarchy "carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i" File: C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/carry_lookahead_adder.sv Line: 27
 Info (12128): Elaborating entity "full_adder_pg" for hierarchy "carry_lookahead_adder:carry_lookahead_adder_inst|CLA_4bit:generateLoop[0].FApg_i|full_adder_pg:generateLoop[0].FApg_i" File: C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/CLA_4bit.sv Line: 22
-Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:Ahex0_inst" File: C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/lab4_adders_toplevel.sv Line: 139
+Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:Ahex0_inst" File: C:/Users/finnn/Documents/385/385_FPGA/Lab4-CLA/lab4_adders_toplevel.sv Line: 140
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 251 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 252 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 73 output pins
-    Info (21061): Implemented 158 logic cells
+    Info (21061): Implemented 159 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4790 megabytes
-    Info: Processing ended: Fri Sep 21 02:20:46 2018
-    Info: Elapsed time: 00:00:13
+    Info: Peak virtual memory: 4791 megabytes
+    Info: Processing ended: Fri Sep 21 17:46:10 2018
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:25
 
 

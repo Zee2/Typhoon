@@ -6,10 +6,13 @@ module ripple_adder
     output  logic           CO
 );
 
+	// This is a totally basic ripple adder. It calculates a 4-bit sum, and supports carry out.
+
+	// These are the internal carry signals. The last signal serves as the carry out.
 	logic[16:0] carries;
 	
 	
-	
+	// This loop generates the four full adders that make up the unit.
 	genvar i;
    generate
 		for(i = 0; i < 16; i = i+1) begin : generateLoop

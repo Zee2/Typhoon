@@ -37,14 +37,18 @@ end
 
 lab4_adders_toplevel testing(.*);
 
+//Automated, randomized testbench.
+
 initial begin : testLoop
 	for(int i = 0; i < 100; i = i+1) begin: testloop
 	
-		valA = $urandom_range(0,255);
-		valB = $urandom_range(0,255);
+	
+		// Set valA and valB to pseudorandom integers between 0 and 32768, as to prevent unnecessary overflow
+		valA = $urandom_range(0,32768);
+		valB = $urandom_range(0,32768);
 
 		#4
-		Reset = 0;
+		Reset = 0; // Reset/initialize system
 		LoadB = 1;
 		Run = 1;
 		SW = valA;
@@ -55,11 +59,11 @@ initial begin : testLoop
 		#2 LoadB = 1;
 		SW = valB;
 		
-		#4 Run = 0;
+		#4 Run = 0; //Run
 		#2 Run = 1;
 		
 		
-		#10 if(Sum != valA + valB) begin
+		#10 if(Sum != valA + valB) begin // Check output
 					$display("Failure");
 					$display(valA);
 					$display(valB);

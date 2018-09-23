@@ -10,8 +10,10 @@ module full_adder_pg
 
 );
 
+	// Basic full adder, but this one has support for propagate and generate signals.
+
 	always_comb begin
-	g = a & b;
+	g = a & b; // Compute output signals.
 	p = a ^ b;
 	s = a ^ b ^ Cin;
 	Cout = (a & b) | (a & Cin) | ( b & Cin);
