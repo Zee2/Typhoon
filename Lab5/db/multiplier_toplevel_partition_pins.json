@@ -184,11 +184,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "S[0]",
-					"strict" : false
-				},
-				{
-					"name" : "S[1]",
+					"name" : "S[3]",
 					"strict" : false
 				},
 				{
@@ -196,7 +192,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "S[3]",
+					"name" : "S[0]",
+					"strict" : false
+				},
+				{
+					"name" : "S[1]",
 					"strict" : false
 				},
 				{
@@ -220,11 +220,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Run",
+					"name" : "Reset",
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
+					"name" : "Run",
 					"strict" : false
 				},
 				{

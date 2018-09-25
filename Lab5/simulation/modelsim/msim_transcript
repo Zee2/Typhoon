@@ -12,79 +12,79 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:10:00 on Sep 25,2018
+# Start time: 15:20:34 on Sep 25,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv 
 # -- Compiling module HexDriver
 # 
 # Top level modules:
 # 	HexDriver
-# End time: 15:10:00 on Sep 25,2018, Elapsed time: 0:00:00
+# End time: 15:20:34 on Sep 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:10:00 on Sep 25,2018
+# Start time: 15:20:34 on Sep 25,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv 
 # -- Compiling module adder_9
 # 
 # Top level modules:
 # 	adder_9
-# End time: 15:10:00 on Sep 25,2018, Elapsed time: 0:00:00
+# End time: 15:20:34 on Sep 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:10:00 on Sep 25,2018
+# Start time: 15:20:34 on Sep 25,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv 
 # -- Compiling module reg_8
 # 
 # Top level modules:
 # 	reg_8
-# End time: 15:10:00 on Sep 25,2018, Elapsed time: 0:00:00
+# End time: 15:20:34 on Sep 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:10:00 on Sep 25,2018
+# Start time: 15:20:34 on Sep 25,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv 
 # -- Compiling module full_adder
 # 
 # Top level modules:
 # 	full_adder
-# End time: 15:10:01 on Sep 25,2018, Elapsed time: 0:00:01
+# End time: 15:20:34 on Sep 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:10:01 on Sep 25,2018
+# Start time: 15:20:34 on Sep 25,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv 
 # -- Compiling module control
 # 
 # Top level modules:
 # 	control
-# End time: 15:10:01 on Sep 25,2018, Elapsed time: 0:00:00
+# End time: 15:20:34 on Sep 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:10:01 on Sep 25,2018
+# Start time: 15:20:34 on Sep 25,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv 
 # -- Compiling module multiplier_toplevel
 # 
 # Top level modules:
 # 	multiplier_toplevel
-# End time: 15:10:01 on Sep 25,2018, Elapsed time: 0:00:00
+# End time: 15:20:34 on Sep 25,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:10:01 on Sep 25,2018
+# Start time: 15:20:34 on Sep 25,2018
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 15:10:01 on Sep 25,2018, Elapsed time: 0:00:00
+# End time: 15:20:35 on Sep 25,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 15:10:01 on Sep 25,2018
+# Start time: 15:20:35 on Sep 25,2018
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.multiplier_toplevel
@@ -100,8 +100,341 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
-restart -f; 2000ns
-# invalid command name "2000ns"
 restart -f; run 2000ns
-# End time: 15:12:55 on Sep 25,2018, Elapsed time: 0:02:54
-# Errors: 1, Warnings: 0
+do multiplier_toplevel_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:40 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 15:23:40 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:40 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv 
+# -- Compiling module adder_9
+# 
+# Top level modules:
+# 	adder_9
+# End time: 15:23:40 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:40 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv 
+# -- Compiling module reg_8
+# 
+# Top level modules:
+# 	reg_8
+# End time: 15:23:40 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:40 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 15:23:40 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:40 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv 
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# End time: 15:23:40 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:40 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv 
+# -- Compiling module multiplier_toplevel
+# 
+# Top level modules:
+# 	multiplier_toplevel
+# End time: 15:23:41 on Sep 25,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:23:41 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 15:23:41 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# End time: 15:23:42 on Sep 25,2018, Elapsed time: 0:03:07
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 15:23:42 on Sep 25,2018
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.multiplier_toplevel
+# Loading work.HexDriver
+# Loading work.control
+# Loading work.adder_9
+# Loading work.reg_8
+# Loading work.full_adder
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1000 ns
+add wave -position insertpoint sim:/testbench/testee/controller/*
+restart -f; run 2000ns
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+force -drive sim:/testbench/switches 01111100 2
+# ** Error: (vsim-3458) Cannot use the 'force -drive' command on a register.
+# 
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+do multiplier_toplevel_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/finnn/Documents/385/385_FPGA/Lab5/simulation/modelsim/rtl_work/_lib.qdb".
+# Error 31: Unable to unlink file "C:/Users/finnn/Documents/385/385_FPGA/Lab5/simulation/modelsim/rtl_work/_lib1_0.qdb".
+# Error 31: Unable to unlink file "C:/Users/finnn/Documents/385/385_FPGA/Lab5/simulation/modelsim/rtl_work/_lib1_0.qpg".
+# Error 31: Unable to unlink file "C:/Users/finnn/Documents/385/385_FPGA/Lab5/simulation/modelsim/rtl_work/_lib1_0.qtl".
+# Error 133: Unable to remove directory "C:/Users/finnn/Documents/385/385_FPGA/Lab5/simulation/modelsim/rtl_work".
+# vlib rtl_work
+# ** Error: (vlib-35) Failed to create directory "rtl_work".
+# File exists. (errno = EEXIST)
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:00:15 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 16:00:15 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:00:15 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv 
+# -- Compiling module adder_9
+# 
+# Top level modules:
+# 	adder_9
+# End time: 16:00:16 on Sep 25,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:00:16 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv 
+# -- Compiling module reg_8
+# 
+# Top level modules:
+# 	reg_8
+# End time: 16:00:16 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:00:16 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 16:00:16 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:00:16 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv 
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# End time: 16:00:16 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:00:16 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv 
+# -- Compiling module multiplier_toplevel
+# 
+# Top level modules:
+# 	multiplier_toplevel
+# End time: 16:00:16 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:00:16 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 16:00:16 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# End time: 16:00:18 on Sep 25,2018, Elapsed time: 0:36:36
+# Errors: 12, Warnings: 1
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 16:00:18 on Sep 25,2018
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.multiplier_toplevel
+# Loading work.HexDriver
+# Loading work.control
+# Loading work.adder_9
+# Loading work.reg_8
+# Loading work.full_adder
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1000 ns
+restart -f; run 2000ns
+do multiplier_toplevel_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:09 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 16:02:09 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:09 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv 
+# -- Compiling module adder_9
+# 
+# Top level modules:
+# 	adder_9
+# End time: 16:02:10 on Sep 25,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:10 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv 
+# -- Compiling module reg_8
+# 
+# Top level modules:
+# 	reg_8
+# End time: 16:02:10 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:10 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv 
+# -- Compiling module full_adder
+# 
+# Top level modules:
+# 	full_adder
+# End time: 16:02:10 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:10 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv 
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# End time: 16:02:10 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:10 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv 
+# -- Compiling module multiplier_toplevel
+# 
+# Top level modules:
+# 	multiplier_toplevel
+# End time: 16:02:11 on Sep 25,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5 {C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:02:11 on Sep 25,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5" C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 16:02:11 on Sep 25,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# End time: 16:02:12 on Sep 25,2018, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 16:02:12 on Sep 25,2018
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.multiplier_toplevel
+# Loading work.HexDriver
+# Loading work.control
+# Loading work.adder_9
+# Loading work.reg_8
+# Loading work.full_adder
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1000 ns
+restart -f; run 2000ns
+# End time: 16:02:58 on Sep 25,2018, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 0

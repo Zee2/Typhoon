@@ -1,5 +1,5 @@
 Analysis & Synthesis report for multiplier_toplevel
-Tue Sep 25 15:07:55 2018
+Tue Sep 25 16:01:38 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -50,13 +50,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 25 15:07:55 2018       ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 25 16:01:38 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; multiplier_toplevel                         ;
 ; Top-level Entity Name              ; multiplier_toplevel                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 91                                          ;
-;     Total combinational functions  ; 91                                          ;
+; Total logic elements               ; 86                                          ;
+;     Total combinational functions  ; 86                                          ;
 ;     Dedicated logic registers      ; 29                                          ;
 ; Total registers                    ; 29                                          ;
 ; Total pins                         ; 57                                          ;
@@ -189,16 +189,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 91        ;
+; Estimated Total logic elements              ; 86        ;
 ;                                             ;           ;
-; Total combinational functions               ; 91        ;
+; Total combinational functions               ; 86        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 62        ;
-;     -- 3 input functions                    ; 16        ;
-;     -- <=2 input functions                  ; 13        ;
+;     -- 4 input functions                    ; 59        ;
+;     -- 3 input functions                    ; 17        ;
+;     -- <=2 input functions                  ; 10        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 87        ;
+;     -- normal mode                          ; 82        ;
 ;     -- arithmetic mode                      ; 4         ;
 ;                                             ;           ;
 ; Total registers                             ; 29        ;
@@ -211,8 +211,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
 ; Maximum fan-out                             ; 29        ;
-; Total fan-out                               ; 507       ;
-; Average fan-out                             ; 2.17      ;
+; Total fan-out                               ; 492       ;
+; Average fan-out                             ; 2.15      ;
 +---------------------------------------------+-----------+
 
 
@@ -221,22 +221,23 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Entity Name         ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+---------------------+--------------+
-; |multiplier_toplevel                       ; 91 (3)              ; 29 (1)                    ; 0           ; 0            ; 0       ; 0         ; 57   ; 0            ; |multiplier_toplevel                                                      ; multiplier_toplevel ; work         ;
+; |multiplier_toplevel                       ; 86 (1)              ; 29 (1)                    ; 0           ; 0            ; 0       ; 0         ; 57   ; 0            ; |multiplier_toplevel                                                      ; multiplier_toplevel ; work         ;
 ;    |HexDriver:hdAL|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|HexDriver:hdAL                                       ; HexDriver           ; work         ;
 ;    |HexDriver:hdAU|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|HexDriver:hdAU                                       ; HexDriver           ; work         ;
 ;    |HexDriver:hdBL|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|HexDriver:hdBL                                       ; HexDriver           ; work         ;
 ;    |HexDriver:hdBU|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|HexDriver:hdBU                                       ; HexDriver           ; work         ;
-;    |adder_9:adderUnit|                     ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit                                    ; adder_9             ; work         ;
-;       |full_adder:adderGenLoop[0].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[0].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[1].adder_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[1].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[2].adder_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[2].adder_i ; full_adder          ; work         ;
+;    |adder_9:adderUnit|                     ; 18 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit                                    ; adder_9             ; work         ;
+;       |full_adder:adderGenLoop[0].adder_i| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[0].adder_i ; full_adder          ; work         ;
+;       |full_adder:adderGenLoop[1].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[1].adder_i ; full_adder          ; work         ;
+;       |full_adder:adderGenLoop[2].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[2].adder_i ; full_adder          ; work         ;
 ;       |full_adder:adderGenLoop[3].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[3].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[4].adder_i| ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[4].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[5].adder_i| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[5].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[6].adder_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[6].adder_i ; full_adder          ; work         ;
+;       |full_adder:adderGenLoop[4].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[4].adder_i ; full_adder          ; work         ;
+;       |full_adder:adderGenLoop[5].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[5].adder_i ; full_adder          ; work         ;
+;       |full_adder:adderGenLoop[6].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[6].adder_i ; full_adder          ; work         ;
 ;       |full_adder:adderGenLoop[7].adder_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[7].adder_i ; full_adder          ; work         ;
-;    |control:controller|                    ; 19 (19)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|control:controller                                   ; control             ; work         ;
-;    |reg_8:regA|                            ; 17 (17)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|reg_8:regA                                           ; reg_8               ; work         ;
+;       |full_adder:adderGenLoop[8].adder_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[8].adder_i ; full_adder          ; work         ;
+;    |control:controller|                    ; 20 (20)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|control:controller                                   ; control             ; work         ;
+;    |reg_8:regA|                            ; 10 (10)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|reg_8:regA                                           ; reg_8               ; work         ;
 ;    |reg_8:regB|                            ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|reg_8:regB                                           ; reg_8               ; work         ;
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -344,17 +345,17 @@ Encoding Type:  One-Hot
 ;     ENA               ; 16                          ;
 ;     ENA SCLR          ; 5                           ;
 ;     plain             ; 8                           ;
-; cycloneiii_lcell_comb ; 95                          ;
+; cycloneiii_lcell_comb ; 90                          ;
 ;     arith             ; 4                           ;
 ;         2 data inputs ; 4                           ;
-;     normal            ; 91                          ;
+;     normal            ; 86                          ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 62                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 59                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 2.85                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 3.24                        ;
 +-----------------------+-----------------------------+
 
 
@@ -373,7 +374,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Sep 25 15:07:42 2018
+    Info: Processing started: Tue Sep 25 16:01:26 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multiplier -c multiplier_toplevel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -402,15 +403,15 @@ Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/finnn/Documents/385/385_FPGA/Lab5/output_files/multiplier_toplevel.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 148 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 143 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 91 logic cells
+    Info (21061): Implemented 86 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Tue Sep 25 15:07:55 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Processing ended: Tue Sep 25 16:01:38 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+

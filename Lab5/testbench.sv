@@ -39,17 +39,17 @@ initial begin: testing
 	#2
 	Reset = 0;
 	#2
-	switches = 3;
+	switches = -8'd3;
 	ClearA_LoadB = 1;
 	#2
 	ClearA_LoadB = 0;
 	#4
-	switches = 4;
+	switches = -8'd4;
 	#2
 	Run = 1;
-	#2
+	#60
 	Run = 0;
-	#50
+	#10
 	Run = 1;
 	#3
 	Run = 0;

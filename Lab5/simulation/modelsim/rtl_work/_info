@@ -10,15 +10,15 @@ cModel Technology
 Z0 dC:/Users/finnn/Documents/385/385_FPGA/Lab5/simulation/modelsim
 vadder_9
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1537906200
+Z2 !s110 1537909329
 !i10b 1
-!s100 Y6OBe<hE^nZdif`0BI[<93
-IkT063n8HnVa;=hb<0@I]^3
+!s100 TYL8CAQM_F3PIifcgg:8C3
+ITIWL=ZRn2fD>T1N8S1PDR2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 adder_9_sv_unit
 S1
 R0
-w1537850113
+w1537909087
 8C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv
 FC:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv
 L0 1
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1537906200.000000
+Z5 !s108 1537909329.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv|
 !i113 1
@@ -35,7 +35,7 @@ Z7 !s92 -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5
 Z8 tCvgOpt 0
 vcontrol
 R1
-Z9 !s110 1537906201
+Z9 !s110 1537909330
 !i10b 1
 !s100 <77RzK40oK3TMLg571>1I1
 Il9:T9nO1?PDdOY?Oc7^KW0
@@ -51,7 +51,7 @@ R4
 r1
 !s85 0
 31
-Z10 !s108 1537906201.000000
+Z10 !s108 1537909330.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv|
 !i113 1
@@ -76,7 +76,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv|
 !i113 1
@@ -136,7 +136,7 @@ R7
 R8
 vreg_8
 R1
-R2
+R9
 !i10b 1
 !s100 AXDzj?_?eZ4hKcKof@=bm2
 ISRk64Pi_nMfJM5FRcU3^D2
@@ -152,7 +152,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv|
 !i113 1
@@ -161,15 +161,15 @@ R7
 R8
 vtestbench
 R1
-R9
+!s110 1537909331
 !i10b 1
-!s100 YH^5I:`Heo]SR40:@hkI72
-IJhAbK`0jc1T=jo7:Dj^;c1
+!s100 1b32LZh8Kbl[>E0=5d`HT3
+IQ97z6HXl5YkaeBF:L3<GH1
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1537905549
+w1537909283
 8C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv
 FC:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv
 L0 1
@@ -177,7 +177,7 @@ R4
 r1
 !s85 0
 31
-R10
+!s108 1537909331.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv|
 !i113 1
