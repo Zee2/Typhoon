@@ -4,14 +4,25 @@ module multiplier_toplevel(
 	input logic Reset,
 	input logic Run,
 	input logic ClearA_LoadB,
+	output logic[6:0] AhexU,
+	output logic[6:0] AhexL,
+	output logic[6:0] BhexU,
+	output logic[6:0] BhexL,
+	output logic[7:0] Aval,
+	output logic[7:0] Bval,
 	output logic X
 
 );
 
+	//Hex drivers
+
+	HexDriver hdAU(.In0(Aval[7:4]), .Out0(AhexU));
+	HexDriver hdAL(.In0(Aval[3:0]), .Out0(AhexL));
+	HexDriver hdBU(.In0(Bval[7:4]), .Out0(BhexU));
+	HexDriver hdBL(.In0(Bval[3:0]), .Out0(BhexL));
 
 	// Internal busses
-	logic[7:0] A;
-	logic[7:0] B;
+	
 	logic[7:0] adderToA;
 	
 	// AdderMSB is bound to the MSB of the 9bit adder.
@@ -22,14 +33,13 @@ module multiplier_toplevel(
 	logic adderMSB;
 	
 	// These are controlled by the FSM.
-	logic Clr_Ld, Shift, Add, Sub;
-	
+	logic ClearAX, ClearB, LoadAX, LoadB, Shift, Add, Sub;
 	
 	// Instantiate FSM.
-	control controller(.*);
+	control controller(.M(Bval[0]), .*);
 	
 	// Adder unit
-	adder_9 adderUnit(.A({A[7], A}), .B({S[7], S}), .MSB(adderMSB), .Sum(adderToA));
+	adder_9 adderUnit(.A({Aval[7], Aval}), .B({S[7], S}), .MSB(adderMSB), .Sum(adderToA), .sub(Sub));
 
 
 	
@@ -40,37 +50,35 @@ module multiplier_toplevel(
 	// Load controlled by the ADD signal. In the add state, we save the sum
 	// from the adder to regA in parallel.
 	reg_8 regA(.Clk(Clk),
-					.Reset(Clr_Ld),
+					.Reset(ClearAX),
 					.Shift_In(X),
-					.Load(Add),
+					.Load(LoadAX),
 					.Shift_En(Shift),
 					.D(adderToA),
 					.Shift_Out(),
-					.Data_Out(A));
+					.Data_Out(Aval));
 	
 	// Connecting switches directly to regB.D. Loading/shifting still
 	// controlled by the FSM signals.
 	//
 	// Serial in pin is bound to the LSB of regA. (A[0])
 	reg_8 regB(.Clk(Clk),
-					.Reset(ResetB),
-					.Shift_In(A[0]),
-					.Load(Clr_Ld),
+					.Reset(ClearB),
+					.Shift_In(Aval[0]),
+					.Load(LoadB),
 					.Shift_En(Shift),
 					.D(S),
 					.Shift_Out(),
-					.Data_Out(B));
+					.Data_Out(Bval));
 					
-	
-	
 	// Implementation of the aforementioned X latch.
 	always_ff @ (posedge Clk)
 	begin
 		// Reset X on the FSM's clr_ld signal
-		if(Clr_Ld)
-			X = 1'b0;
+		if(ClearAX)
+			X <= 1'b0;
 		else
-			X = adderMSB;
+			X <= adderMSB;
 		
 	end
 	

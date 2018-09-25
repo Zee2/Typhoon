@@ -11,40 +11,168 @@ Clk => Clk.IN2
 Reset => control:controller.Reset
 Run => control:controller.Run
 ClearA_LoadB => control:controller.ClearA_LoadB
+AhexU[0] <= HexDriver:hdAU.Out0
+AhexU[1] <= HexDriver:hdAU.Out0
+AhexU[2] <= HexDriver:hdAU.Out0
+AhexU[3] <= HexDriver:hdAU.Out0
+AhexU[4] <= HexDriver:hdAU.Out0
+AhexU[5] <= HexDriver:hdAU.Out0
+AhexU[6] <= HexDriver:hdAU.Out0
+AhexL[0] <= HexDriver:hdAL.Out0
+AhexL[1] <= HexDriver:hdAL.Out0
+AhexL[2] <= HexDriver:hdAL.Out0
+AhexL[3] <= HexDriver:hdAL.Out0
+AhexL[4] <= HexDriver:hdAL.Out0
+AhexL[5] <= HexDriver:hdAL.Out0
+AhexL[6] <= HexDriver:hdAL.Out0
+BhexU[0] <= HexDriver:hdBU.Out0
+BhexU[1] <= HexDriver:hdBU.Out0
+BhexU[2] <= HexDriver:hdBU.Out0
+BhexU[3] <= HexDriver:hdBU.Out0
+BhexU[4] <= HexDriver:hdBU.Out0
+BhexU[5] <= HexDriver:hdBU.Out0
+BhexU[6] <= HexDriver:hdBU.Out0
+BhexL[0] <= HexDriver:hdBL.Out0
+BhexL[1] <= HexDriver:hdBL.Out0
+BhexL[2] <= HexDriver:hdBL.Out0
+BhexL[3] <= HexDriver:hdBL.Out0
+BhexL[4] <= HexDriver:hdBL.Out0
+BhexL[5] <= HexDriver:hdBL.Out0
+BhexL[6] <= HexDriver:hdBL.Out0
+Aval[0] <= Aval[0].DB_MAX_OUTPUT_PORT_TYPE
+Aval[1] <= Aval[1].DB_MAX_OUTPUT_PORT_TYPE
+Aval[2] <= Aval[2].DB_MAX_OUTPUT_PORT_TYPE
+Aval[3] <= Aval[3].DB_MAX_OUTPUT_PORT_TYPE
+Aval[4] <= Aval[4].DB_MAX_OUTPUT_PORT_TYPE
+Aval[5] <= Aval[5].DB_MAX_OUTPUT_PORT_TYPE
+Aval[6] <= Aval[6].DB_MAX_OUTPUT_PORT_TYPE
+Aval[7] <= Aval[7].DB_MAX_OUTPUT_PORT_TYPE
+Bval[0] <= Bval[0].DB_MAX_OUTPUT_PORT_TYPE
+Bval[1] <= Bval[1].DB_MAX_OUTPUT_PORT_TYPE
+Bval[2] <= Bval[2].DB_MAX_OUTPUT_PORT_TYPE
+Bval[3] <= Bval[3].DB_MAX_OUTPUT_PORT_TYPE
+Bval[4] <= Bval[4].DB_MAX_OUTPUT_PORT_TYPE
+Bval[5] <= Bval[5].DB_MAX_OUTPUT_PORT_TYPE
+Bval[6] <= Bval[6].DB_MAX_OUTPUT_PORT_TYPE
+Bval[7] <= Bval[7].DB_MAX_OUTPUT_PORT_TYPE
 X <= X.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|multiplier_toplevel|HexDriver:hdAU
+In0[0] => Decoder0.IN3
+In0[1] => Decoder0.IN2
+In0[2] => Decoder0.IN1
+In0[3] => Decoder0.IN0
+Out0[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out0[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out0[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|HexDriver:hdAL
+In0[0] => Decoder0.IN3
+In0[1] => Decoder0.IN2
+In0[2] => Decoder0.IN1
+In0[3] => Decoder0.IN0
+Out0[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out0[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out0[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|HexDriver:hdBU
+In0[0] => Decoder0.IN3
+In0[1] => Decoder0.IN2
+In0[2] => Decoder0.IN1
+In0[3] => Decoder0.IN0
+Out0[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out0[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out0[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|HexDriver:hdBL
+In0[0] => Decoder0.IN3
+In0[1] => Decoder0.IN2
+In0[2] => Decoder0.IN1
+In0[3] => Decoder0.IN0
+Out0[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Out0[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Out0[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Out0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Out0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Out0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Out0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |multiplier_toplevel|control:controller
-Reset => ~NO_FANOUT~
-Clk => ~NO_FANOUT~
-Run => ~NO_FANOUT~
-ClearA_LoadB => ~NO_FANOUT~
-Clr_Ld <= <GND>
-Shift <= <GND>
-Add <= <GND>
-Sub <= <GND>
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => shiftCounter.OUTPUTSELECT
+Reset => shiftCounter.OUTPUTSELECT
+Reset => shiftCounter.OUTPUTSELECT
+Reset => shiftCounter.OUTPUTSELECT
+Reset => shiftCounter.OUTPUTSELECT
+Clk => shiftCounter[0].CLK
+Clk => shiftCounter[1].CLK
+Clk => shiftCounter[2].CLK
+Clk => shiftCounter[3].CLK
+Clk => shiftCounter[4].CLK
+Clk => currentState~1.DATAIN
+Run => nextState.OUTPUTSELECT
+Run => nextState.OUTPUTSELECT
+Run => nextState.BeginCycleState.DATAB
+Run => Selector3.IN3
+Run => Selector1.IN3
+ClearA_LoadB => nextState.DATAA
+ClearA_LoadB => nextState.DATAA
+M => Add.DATAB
+M => Selector0.IN1
+M => Sub.DATAB
+ClearAX <= ClearAX.DB_MAX_OUTPUT_PORT_TYPE
+ClearB <= <GND>
+LoadAX <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+LoadB <= LoadB.DB_MAX_OUTPUT_PORT_TYPE
+Shift <= Shift.DB_MAX_OUTPUT_PORT_TYPE
+Add <= Add.DB_MAX_OUTPUT_PORT_TYPE
+Sub <= Sub.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |multiplier_toplevel|adder_9:adderUnit
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-A[8] => ~NO_FANOUT~
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-B[4] => B[4].IN1
-B[5] => B[5].IN1
-B[6] => B[6].IN1
-B[7] => B[7].IN1
-B[8] => ~NO_FANOUT~
-MSB <= <GND>
+A[0] => comb.IN0
+A[1] => comb.IN0
+A[2] => comb.IN0
+A[3] => comb.IN0
+A[4] => comb.IN0
+A[5] => comb.IN0
+A[6] => comb.IN0
+A[7] => comb.IN0
+A[8] => comb.IN0
+B[0] => comb.IN0
+B[1] => comb.IN0
+B[2] => comb.IN0
+B[3] => comb.IN0
+B[4] => comb.IN0
+B[5] => comb.IN0
+B[6] => comb.IN0
+B[7] => comb.IN0
+B[8] => comb.IN0
+sub => carries[0].IN1
+MSB <= full_adder:adderGenLoop[8].adder_i.S
 Sum[0] <= full_adder:adderGenLoop[0].adder_i.S
 Sum[1] <= full_adder:adderGenLoop[1].adder_i.S
 Sum[2] <= full_adder:adderGenLoop[2].adder_i.S
@@ -154,6 +282,20 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[7].adder_i
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[8].adder_i
 A => S.IN0
 A => Cout.IN0
 A => Cout.IN0

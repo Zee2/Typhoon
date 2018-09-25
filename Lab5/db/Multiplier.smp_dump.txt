@@ -1,0 +1,10 @@
+
+State Machine - |multiplier_toplevel|control:controller|currentState
+Name currentState.HaltState currentState.ClearingLoadingState currentState.SubState currentState.AddState currentState.ShiftState currentState.BeginCycleState currentState.StartState 
+currentState.StartState 0 0 0 0 0 0 0 
+currentState.BeginCycleState 0 0 0 0 0 1 1 
+currentState.ShiftState 0 0 0 0 1 0 1 
+currentState.AddState 0 0 0 1 0 0 1 
+currentState.SubState 0 0 1 0 0 0 1 
+currentState.ClearingLoadingState 0 1 0 0 0 0 1 
+currentState.HaltState 1 0 0 0 0 0 1 
