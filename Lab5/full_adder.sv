@@ -12,10 +12,9 @@ module full_adder
 
 	always_comb begin
 	
-	
 	// Compute sum and carry out.
 	S = A ^ B ^ Cin;
-	Cout = (A & B) | (A & Cin) | ( B & Cin);
+	Cout = (A & B) | (A & Cin) | (B & Cin);
 	
 	end
 	

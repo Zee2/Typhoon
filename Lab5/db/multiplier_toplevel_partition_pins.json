@@ -184,6 +184,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "S[4]",
+					"strict" : false
+				},
+				{
 					"name" : "S[3]",
 					"strict" : false
 				},
@@ -200,10 +208,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "S[4]",
-					"strict" : false
-				},
-				{
 					"name" : "Clk",
 					"strict" : false
 				},
@@ -217,10 +221,6 @@
 				},
 				{
 					"name" : "S[7]",
-					"strict" : false
-				},
-				{
-					"name" : "Reset",
 					"strict" : false
 				},
 				{

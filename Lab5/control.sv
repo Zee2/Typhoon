@@ -11,113 +11,56 @@ module control(
 );
 
 	logic[4:0] shiftCounter;
-	enum logic[4:0] {StartState, BeginCycleState, ShiftState, AddState, SubState, ClearingLoadingState, HaltState} currentState, nextState;
+	enum logic[4:0] {
+		StartState, //initial state
+		BeginCycleState, //right after run, initialization
+		ShiftState, //shifting XAB next
+		AddSubState, //if M=0, nothing, else adding S to XA
+		HaltState //all done with everything, waiting for run to fall
+	} currentState, nextState;
 	
 	always_ff @ (posedge Clk)
 	begin
-		if (Reset) begin
-			currentState <= StartState;
-			shiftCounter <= 4'b0000;
-		end
-		else begin
-			currentState <= nextState;
-			if(currentState == ShiftState)
-				shiftCounter <= (shiftCounter + 4'b0001);
-			if(currentState == HaltState)
-				shiftCounter <= 4'b0000;
-		end
+		currentState <= nextState;
+		case(currentState)
+			ShiftState: shiftCounter <= (shiftCounter + 4'b0001);
+			StartState, HaltState: shiftCounter <= 4'b0000;
+		endcase
 	end
 	
 	always_comb
 	begin
-		case(currentState)
-		StartState: begin
-				ClearAX = 1'b0;
-				ClearB = 1'b0;
-				
-				LoadAX = 1'b0;
-				LoadB = 1'b0;
-				
-				Shift = 1'b0;
-				Add = 1'b0;
-				Sub = 1'b0;
-				
-				if (Run)
-					nextState = BeginCycleState;
-				else if(ClearA_LoadB)
-					nextState = ClearingLoadingState; // ClearA_LoadB
-				else
-					nextState = currentState; // Stay at Idle
-			end
-					
-			ClearingLoadingState: begin // Clear A, Load B.
-				ClearAX = 1'b1;
-				ClearB = 1'b0;
-				
-				LoadAX = 1'b0;
-				LoadB = 1'b1;
-				
-				Shift = 1'b0;
-				Add = 1'b0;
-				Sub = 1'b0;
-				nextState = StartState;
-			end
+		//Reset and ClearA_LoadB are unconditional
+		if (Reset) begin
+			ClearAX = 1'b1;
+			ClearB = 1'b1;
 			
-			BeginCycleState: begin //Clears AX.
-				ClearAX = 1'b1;
-				ClearB = 1'b0;
-				
-				LoadAX = 1'b0;
-				LoadB = 1'b0;
-				
-				Shift = 1'b0;
-				Add = 1'b0;
-				Sub = 1'b0;
-				nextState = AddState;
+			LoadAX = 1'b0;
+			LoadB = 1'b0;
 			
-			end
+			Shift = 1'b0;
+			Add = 1'b0;
+			Sub = 1'b0;
 			
-			ShiftState: begin
-				
-				ClearAX = 1'b0;
-				ClearB = 1'b0;
-				
-				LoadAX = 1'b0;
-				LoadB = 1'b0;
-				
-				Shift = 1'b1;
-				Add = 1'b0;
-				Sub = 1'b0;
-				
-				
-				if(shiftCounter == 4'd6) begin
-					nextState = SubState;
-				end
-				else if(shiftCounter == 4'd7) begin
-					nextState = HaltState;
-				end
-				else
-					
-				
-					nextState = AddState;
-				
+			nextState = StartState;
+		end
+		else if (ClearA_LoadB) begin
+			ClearAX = 1'b1;
+			ClearB = 1'b0;
 			
-			end
-				
-			AddState: begin
-				if(M == 1'b1) begin //If we should add (M = 1)
+			LoadAX = 1'b0;
+			LoadB = 1'b1;
+			
+			Shift = 1'b0;
+			Add = 1'b0;
+			Sub = 1'b0;
+			
+			nextState = StartState;
+		end
+		else begin
+			case(currentState)
+				StartState: begin
 					ClearAX = 1'b0;
-					ClearB = 1'b0;
-					
-					LoadAX = 1'b1;
-					LoadB = 1'b0;
-					
-					Shift = 1'b0;
-					Add = 1'b1;
-					Sub = 1'b0;
-				end
-				else begin
-					ClearAX = 1'b0; //If we should just omit the add step (M = 0)
 					ClearB = 1'b0;
 					
 					LoadAX = 1'b0;
@@ -126,26 +69,13 @@ module control(
 					Shift = 1'b0;
 					Add = 1'b0;
 					Sub = 1'b0;
+					
+					if (Run) nextState = BeginCycleState;
+					else nextState = StartState; // Stay at Idle
 				end
 				
-				nextState = ShiftState;
-					
-			end
-				
-			SubState: begin
-				if(M == 1'b1) begin //If we should add (M = 1)
-					ClearAX = 1'b0;
-					ClearB = 1'b0;
-					
-					LoadAX = 1'b1;
-					LoadB = 1'b0;
-					
-					Shift = 1'b0;
-					Add = 1'b0;
-					Sub = 1'b1;
-				end
-				else begin
-					ClearAX = 1'b0; //If we should just omit the add step (M = 0)
+				BeginCycleState: begin
+					ClearAX = 1'b1;
 					ClearB = 1'b0;
 					
 					LoadAX = 1'b0;
@@ -154,38 +84,76 @@ module control(
 					Shift = 1'b0;
 					Add = 1'b0;
 					Sub = 1'b0;
+					
+					nextState = AddSubState;
 				end
 				
-				nextState = ShiftState;
-			end
-			
-			HaltState: begin
-				ClearAX = 1'b0;
-				ClearB = 1'b0;
-				
-				LoadAX = 1'b0;
-				LoadB = 1'b0;
-				
-				Shift = 1'b0;
-				Add = 1'b0;
-				Sub = 1'b0;
-				
-				
-				if(!Run)
-					nextState = StartState;
-				else
-				
-					nextState = currentState;
-			end
-			
-			default:
-				begin
+				ShiftState: begin
+					ClearAX = 1'b0;
+					ClearB = 1'b0;
+					
+					LoadAX = 1'b0;
+					LoadB = 1'b0;
+					
+					Shift = 1'b1;
+					Add = 1'b0;
+					Sub = 1'b0;
+					
+					if(shiftCounter == 4'd7) nextState = HaltState;
+					else nextState = AddSubState;
+				end
+					
+				AddSubState: begin
+					if(M == 1'b1) begin //If we should add (M = 1)
+						ClearAX = 1'b0;
+						ClearB = 1'b0;
+						
+						LoadAX = 1'b1;
+						LoadB = 1'b0;
+						
+						Shift = 1'b0;
+						if (shiftCounter == 4'd7) begin
+							//subtract if we're on the last bit
+							Add = 1'b1;
+							Sub = 1'b0;
+						end
+						else begin
+							//otherwise add
+							Add = 1'b1;
+							Sub = 1'b0;
+						end
+					end
+					else begin
+						ClearAX = 1'b0; //If we should just omit the add step (M = 0)
+						ClearB = 1'b0;
+						
+						LoadAX = 1'b0;
+						LoadB = 1'b0;
+						
+						Shift = 1'b0;
+						Add = 1'b0;
+						Sub = 1'b0;
+					end
+					
+					nextState = ShiftState;
 				end
 				
-			
-		endcase
-				
+				HaltState: begin
+					ClearAX = 1'b0;
+					ClearB = 1'b0;
+					
+					LoadAX = 1'b0;
+					LoadB = 1'b0;
+					
+					Shift = 1'b0;
+					Add = 1'b0;
+					Sub = 1'b0;
+					
+					if(!Run) nextState = StartState;
+					else nextState = HaltState;
+				end
+			endcase
+		end
 	end
-
 
 endmodule

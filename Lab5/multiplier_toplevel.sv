@@ -15,14 +15,12 @@ module multiplier_toplevel(
 );
 
 	//Hex drivers
-
 	HexDriver hdAU(.In0(Aval[7:4]), .Out0(AhexU));
 	HexDriver hdAL(.In0(Aval[3:0]), .Out0(AhexL));
 	HexDriver hdBU(.In0(Bval[7:4]), .Out0(BhexU));
 	HexDriver hdBL(.In0(Bval[3:0]), .Out0(BhexL));
 
 	// Internal busses
-	
 	logic[7:0] adderToA;
 	
 	// AdderMSB is bound to the MSB of the 9bit adder.
@@ -39,11 +37,9 @@ module multiplier_toplevel(
 	control controller(.M(Bval[0]), .*);
 	
 	// Adder unit
-	adder_9 adderUnit(.A({Aval[7], Aval}), .B({S[7], S}), .MSB(adderMSB), .Sum(adderToA), .sub(Sub));
+	adder_9 adderUnit(.A({Aval[7], Aval}), .B({S[7], S}), .MSB(adderMSB), .Sum(adderToA), .Sub(Sub));
 
-
-	
-	// Leaving regA.Shift_Out unconnected bc we can just use A[0].
+	// Leaving regA.Shift_Out unconnected because we can just use A[0].
 	//
 	// Reset controlled by Clr_Ld signal from FSM
 	//
@@ -79,12 +75,6 @@ module multiplier_toplevel(
 			X <= 1'b0;
 		else
 			X <= adderMSB;
-		
 	end
-	
-		
-
-
-
 
 endmodule

@@ -5,7 +5,7 @@ timeunit 10ns;	// Half clock cycle at 50 MHz
 timeprecision 1ns;
 
 
-logic[7:0] switches;
+logic[7:0] Switches;
 logic Reset, Run, ClearA_LoadB, X;
 logic Clk = 0;
 
@@ -16,14 +16,11 @@ logic[6:0] BhexL;
 logic[7:0] Aval;
 logic[7:0] Bval;
 
-
-multiplier_toplevel testee(.S(switches), .*);
-
-
+multiplier_toplevel testee(.S(Switches), .*);
 
 // Toggle the clock
 // #1 means wait for a delay of 1 timeunit
-always begin : CLOCK_GENERATION
+always begin: CLOCK_GENERATION
 #1 Clk = ~Clk;
 end
 
@@ -39,25 +36,20 @@ initial begin: testing
 	#2
 	Reset = 0;
 	#2
-	switches = -8'd3;
+	Switches = -8'd5;
 	ClearA_LoadB = 1;
 	#2
 	ClearA_LoadB = 0;
 	#4
-	switches = -8'd4;
+	Switches = 8'd3;
 	#2
 	Run = 1;
-	#60
+	#40
 	Run = 0;
 	#10
 	Run = 1;
 	#3
 	Run = 0;
-	
-	
 end
-
-
-
 
 endmodule
