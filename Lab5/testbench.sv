@@ -6,7 +6,7 @@ timeprecision 1ns;
 
 
 logic[7:0] Switches;
-logic Reset, Run, ClearA_LoadB, X;
+logic Reset_USH, Run_USH, ClearA_LoadB_USH, X;
 logic Clk = 0;
 
 logic[6:0] AhexU;
@@ -16,7 +16,7 @@ logic[6:0] BhexL;
 logic[7:0] Aval;
 logic[7:0] Bval;
 
-multiplier_toplevel testee(.S(Switches), .*);
+multiplier_toplevel testee(.S_USH(Switches), .*);
 
 // Toggle the clock
 // #1 means wait for a delay of 1 timeunit
@@ -29,27 +29,27 @@ initial begin: CLOCK_INITIALIZATION
 end 
 
 initial begin: testing
-	Reset = 1;
-	Run = 0;
-	ClearA_LoadB = 0;
+	Reset_USH = 0;
+	Run_USH = 1;
+	ClearA_LoadB_USH = 1;
 	
 	#2
-	Reset = 0;
+	Reset_USH = 1;
 	#2
-	Switches = -8'd5;
-	ClearA_LoadB = 1;
+	Switches = -8'd42;
+	ClearA_LoadB_USH = 0;
 	#2
-	ClearA_LoadB = 0;
+	ClearA_LoadB_USH = 1;
 	#4
-	Switches = 8'd3;
+	Switches = 8'd2;
 	#2
-	Run = 1;
+	Run_USH = 0;
 	#40
-	Run = 0;
+	Run_USH = 1;
 	#10
-	Run = 1;
+	Run_USH = 0;
 	#3
-	Run = 0;
+	Run_USH = 1;
 end
 
 endmodule

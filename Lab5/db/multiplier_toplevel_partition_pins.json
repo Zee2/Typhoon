@@ -184,51 +184,51 @@
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
-					"strict" : false
-				},
-				{
-					"name" : "S[4]",
-					"strict" : false
-				},
-				{
-					"name" : "S[3]",
-					"strict" : false
-				},
-				{
-					"name" : "S[2]",
-					"strict" : false
-				},
-				{
-					"name" : "S[0]",
-					"strict" : false
-				},
-				{
-					"name" : "S[1]",
-					"strict" : false
-				},
-				{
 					"name" : "Clk",
 					"strict" : false
 				},
 				{
-					"name" : "S[5]",
+					"name" : "S_USH[3]",
 					"strict" : false
 				},
 				{
-					"name" : "S[6]",
+					"name" : "S_USH[2]",
 					"strict" : false
 				},
 				{
-					"name" : "S[7]",
+					"name" : "S_USH[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Run",
+					"name" : "S_USH[1]",
 					"strict" : false
 				},
 				{
-					"name" : "ClearA_LoadB",
+					"name" : "S_USH[4]",
+					"strict" : false
+				},
+				{
+					"name" : "S_USH[5]",
+					"strict" : false
+				},
+				{
+					"name" : "S_USH[6]",
+					"strict" : false
+				},
+				{
+					"name" : "S_USH[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Reset_USH",
+					"strict" : false
+				},
+				{
+					"name" : "ClearA_LoadB_USH",
+					"strict" : false
+				},
+				{
+					"name" : "Run_USH",
 					"strict" : false
 				}
 			]

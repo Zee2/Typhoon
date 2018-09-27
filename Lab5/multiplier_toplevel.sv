@@ -1,9 +1,9 @@
 module multiplier_toplevel(
-	input logic[7:0] S,
+	input logic[7:0] S_USH,
 	input logic Clk,
-	input logic Reset,
-	input logic Run,
-	input logic ClearA_LoadB,
+	input logic Reset_USH,
+	input logic Run_USH,
+	input logic ClearA_LoadB_USH,
 	output logic[6:0] AhexU,
 	output logic[6:0] AhexL,
 	output logic[6:0] BhexU,
@@ -13,6 +13,11 @@ module multiplier_toplevel(
 	output logic X
 
 );
+
+	// Synced inputs
+	logic Reset, Run, ClearA_LoadB;
+	logic[7:0] S;
+
 
 	//Hex drivers
 	HexDriver hdAU(.In0(Aval[7:4]), .Out0(AhexU));
@@ -76,5 +81,9 @@ module multiplier_toplevel(
 		else
 			X <= adderMSB;
 	end
+	
+	sync button_sync[2:0] (Clk, {~Reset_USH, ~ClearA_LoadB_USH, ~Run_USH}, {Reset, ClearA_LoadB, Run});
+	sync switch_sync[7:0] (Clk, S_USH, S);
+	
 
 endmodule

@@ -1,61 +1,61 @@
 |multiplier_toplevel
-S[0] => S[0].IN2
-S[1] => S[1].IN2
-S[2] => S[2].IN2
-S[3] => S[3].IN2
-S[4] => S[4].IN2
-S[5] => S[5].IN2
-S[6] => S[6].IN2
-S[7] => S[7].IN3
+S_USH[0] => sync:switch_sync[0].d
+S_USH[1] => sync:switch_sync[1].d
+S_USH[2] => sync:switch_sync[2].d
+S_USH[3] => sync:switch_sync[3].d
+S_USH[4] => sync:switch_sync[4].d
+S_USH[5] => sync:switch_sync[5].d
+S_USH[6] => sync:switch_sync[6].d
+S_USH[7] => sync:switch_sync[7].d
 Clk => Clk.IN2
-Reset => control:controller.Reset
-Run => control:controller.Run
-ClearA_LoadB => control:controller.ClearA_LoadB
-AhexU[0] <= HexDriver:hdAU.Out0
-AhexU[1] <= HexDriver:hdAU.Out0
-AhexU[2] <= HexDriver:hdAU.Out0
-AhexU[3] <= HexDriver:hdAU.Out0
-AhexU[4] <= HexDriver:hdAU.Out0
-AhexU[5] <= HexDriver:hdAU.Out0
-AhexU[6] <= HexDriver:hdAU.Out0
-AhexL[0] <= HexDriver:hdAL.Out0
-AhexL[1] <= HexDriver:hdAL.Out0
-AhexL[2] <= HexDriver:hdAL.Out0
-AhexL[3] <= HexDriver:hdAL.Out0
-AhexL[4] <= HexDriver:hdAL.Out0
-AhexL[5] <= HexDriver:hdAL.Out0
-AhexL[6] <= HexDriver:hdAL.Out0
-BhexU[0] <= HexDriver:hdBU.Out0
-BhexU[1] <= HexDriver:hdBU.Out0
-BhexU[2] <= HexDriver:hdBU.Out0
-BhexU[3] <= HexDriver:hdBU.Out0
-BhexU[4] <= HexDriver:hdBU.Out0
-BhexU[5] <= HexDriver:hdBU.Out0
-BhexU[6] <= HexDriver:hdBU.Out0
-BhexL[0] <= HexDriver:hdBL.Out0
-BhexL[1] <= HexDriver:hdBL.Out0
-BhexL[2] <= HexDriver:hdBL.Out0
-BhexL[3] <= HexDriver:hdBL.Out0
-BhexL[4] <= HexDriver:hdBL.Out0
-BhexL[5] <= HexDriver:hdBL.Out0
-BhexL[6] <= HexDriver:hdBL.Out0
-Aval[0] <= Aval[0].DB_MAX_OUTPUT_PORT_TYPE
-Aval[1] <= Aval[1].DB_MAX_OUTPUT_PORT_TYPE
-Aval[2] <= Aval[2].DB_MAX_OUTPUT_PORT_TYPE
-Aval[3] <= Aval[3].DB_MAX_OUTPUT_PORT_TYPE
-Aval[4] <= Aval[4].DB_MAX_OUTPUT_PORT_TYPE
-Aval[5] <= Aval[5].DB_MAX_OUTPUT_PORT_TYPE
-Aval[6] <= Aval[6].DB_MAX_OUTPUT_PORT_TYPE
-Aval[7] <= Aval[7].DB_MAX_OUTPUT_PORT_TYPE
-Bval[0] <= Bval[0].DB_MAX_OUTPUT_PORT_TYPE
-Bval[1] <= Bval[1].DB_MAX_OUTPUT_PORT_TYPE
-Bval[2] <= Bval[2].DB_MAX_OUTPUT_PORT_TYPE
-Bval[3] <= Bval[3].DB_MAX_OUTPUT_PORT_TYPE
-Bval[4] <= Bval[4].DB_MAX_OUTPUT_PORT_TYPE
-Bval[5] <= Bval[5].DB_MAX_OUTPUT_PORT_TYPE
-Bval[6] <= Bval[6].DB_MAX_OUTPUT_PORT_TYPE
-Bval[7] <= Bval[7].DB_MAX_OUTPUT_PORT_TYPE
-X <= X.DB_MAX_OUTPUT_PORT_TYPE
+Reset_USH => sync:button_sync[2].d
+Run_USH => sync:button_sync[0].d
+ClearA_LoadB_USH => sync:button_sync[1].d
+AhexU[0] << HexDriver:hdAU.Out0
+AhexU[1] << HexDriver:hdAU.Out0
+AhexU[2] << HexDriver:hdAU.Out0
+AhexU[3] << HexDriver:hdAU.Out0
+AhexU[4] << HexDriver:hdAU.Out0
+AhexU[5] << HexDriver:hdAU.Out0
+AhexU[6] << HexDriver:hdAU.Out0
+AhexL[0] << HexDriver:hdAL.Out0
+AhexL[1] << HexDriver:hdAL.Out0
+AhexL[2] << HexDriver:hdAL.Out0
+AhexL[3] << HexDriver:hdAL.Out0
+AhexL[4] << HexDriver:hdAL.Out0
+AhexL[5] << HexDriver:hdAL.Out0
+AhexL[6] << HexDriver:hdAL.Out0
+BhexU[0] << HexDriver:hdBU.Out0
+BhexU[1] << HexDriver:hdBU.Out0
+BhexU[2] << HexDriver:hdBU.Out0
+BhexU[3] << HexDriver:hdBU.Out0
+BhexU[4] << HexDriver:hdBU.Out0
+BhexU[5] << HexDriver:hdBU.Out0
+BhexU[6] << HexDriver:hdBU.Out0
+BhexL[0] << HexDriver:hdBL.Out0
+BhexL[1] << HexDriver:hdBL.Out0
+BhexL[2] << HexDriver:hdBL.Out0
+BhexL[3] << HexDriver:hdBL.Out0
+BhexL[4] << HexDriver:hdBL.Out0
+BhexL[5] << HexDriver:hdBL.Out0
+BhexL[6] << HexDriver:hdBL.Out0
+Aval[0] << Aval[0].DB_MAX_OUTPUT_PORT_TYPE
+Aval[1] << Aval[1].DB_MAX_OUTPUT_PORT_TYPE
+Aval[2] << Aval[2].DB_MAX_OUTPUT_PORT_TYPE
+Aval[3] << Aval[3].DB_MAX_OUTPUT_PORT_TYPE
+Aval[4] << Aval[4].DB_MAX_OUTPUT_PORT_TYPE
+Aval[5] << Aval[5].DB_MAX_OUTPUT_PORT_TYPE
+Aval[6] << Aval[6].DB_MAX_OUTPUT_PORT_TYPE
+Aval[7] << Aval[7].DB_MAX_OUTPUT_PORT_TYPE
+Bval[0] << Bval[0].DB_MAX_OUTPUT_PORT_TYPE
+Bval[1] << Bval[1].DB_MAX_OUTPUT_PORT_TYPE
+Bval[2] << Bval[2].DB_MAX_OUTPUT_PORT_TYPE
+Bval[3] << Bval[3].DB_MAX_OUTPUT_PORT_TYPE
+Bval[4] << Bval[4].DB_MAX_OUTPUT_PORT_TYPE
+Bval[5] << Bval[5].DB_MAX_OUTPUT_PORT_TYPE
+Bval[6] << Bval[6].DB_MAX_OUTPUT_PORT_TYPE
+Bval[7] << Bval[7].DB_MAX_OUTPUT_PORT_TYPE
+X << X.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |multiplier_toplevel|HexDriver:hdAU
@@ -115,20 +115,17 @@ Out0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |multiplier_toplevel|control:controller
-Reset => ClearAX.OUTPUTSELECT
-Reset => LoadAX.OUTPUTSELECT
-Reset => LoadB.OUTPUTSELECT
-Reset => Shift.OUTPUTSELECT
-Reset => Add.OUTPUTSELECT
-Reset => Sub.OUTPUTSELECT
-Reset => nextState.StartState.OUTPUTSELECT
-Reset => nextState.BeginCycleState.OUTPUTSELECT
-Reset => nextState.ShiftState.OUTPUTSELECT
-Reset => nextState.AddState.OUTPUTSELECT
-Reset => nextState.SubState.OUTPUTSELECT
-Reset => nextState.ClearingLoadingState.OUTPUTSELECT
-Reset => nextState.HaltState.OUTPUTSELECT
-Reset => ClearB.DATAIN
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => currentState.OUTPUTSELECT
+Reset => shiftCounter.OUTPUTSELECT
+Reset => shiftCounter.OUTPUTSELECT
+Reset => shiftCounter.OUTPUTSELECT
+Reset => shiftCounter.OUTPUTSELECT
+Reset => shiftCounter.OUTPUTSELECT
 Clk => shiftCounter[0].CLK
 Clk => shiftCounter[1].CLK
 Clk => shiftCounter[2].CLK
@@ -137,21 +134,22 @@ Clk => shiftCounter[4].CLK
 Clk => currentState~1.DATAIN
 Run => nextState.OUTPUTSELECT
 Run => nextState.OUTPUTSELECT
-Run => nextState.DATAB
+Run => nextState.BeginCycleState.DATAB
 Run => Selector8.IN3
-Run => Selector6.IN3
+Run => Selector5.IN3
 ClearA_LoadB => nextState.DATAA
+ClearA_LoadB => Selector6.IN3
 ClearA_LoadB => nextState.DATAA
+ClearA_LoadB => Selector5.IN1
+M => LoadAX.DATAB
 M => Add.DATAB
-M => Selector5.IN1
-M => Sub.DATAB
 ClearAX <= ClearAX.DB_MAX_OUTPUT_PORT_TYPE
-ClearB <= Reset.DB_MAX_OUTPUT_PORT_TYPE
+ClearB <= <GND>
 LoadAX <= LoadAX.DB_MAX_OUTPUT_PORT_TYPE
 LoadB <= LoadB.DB_MAX_OUTPUT_PORT_TYPE
 Shift <= Shift.DB_MAX_OUTPUT_PORT_TYPE
 Add <= Add.DB_MAX_OUTPUT_PORT_TYPE
-Sub <= Sub.DB_MAX_OUTPUT_PORT_TYPE
+Sub <= <GND>
 
 
 |multiplier_toplevel|adder_9:adderUnit
@@ -415,5 +413,71 @@ Data_Out[4] <= Data_Out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Data_Out[5] <= Data_Out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Data_Out[6] <= Data_Out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Data_Out[7] <= Data_Out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:button_sync[0]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:button_sync[1]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:button_sync[2]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:switch_sync[0]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:switch_sync[1]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:switch_sync[2]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:switch_sync[3]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:switch_sync[4]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:switch_sync[5]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:switch_sync[6]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier_toplevel|sync:switch_sync[7]
+Clk => q~reg0.CLK
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

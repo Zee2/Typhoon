@@ -7,173 +7,255 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/kuilin/Desktop/385/385_FPGA/Lab5/simulation/modelsim
+Z0 dC:/Users/finnn/Documents/385/385_FPGA/Lab5/simulation/modelsim
 vadder_9
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1537948992
+Z2 !s110 1538022260
 !i10b 1
-!s100 =J2^HnEZAEI;3H8J3KG>i2
-Ih`8@4@QHAlT?W`ZzFKAPi1
+!s100 EGc?0gF^4n^]bcG`<b>C>3
+Iok0>1JhOOWamSkQaf=[8l2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 adder_9_sv_unit
 S1
 R0
-w1537947478
-8./../../adder_9.sv
-F./../../adder_9.sv
+w1538000018
+8C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1537948992.000000
-!s107 ./../../adder_9.sv|
-!s90 -reportprogress|300|-sv|-work|work|./../../adder_9.sv|
+Z5 !s108 1538022260.000000
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv|
 !i113 1
 Z6 o-sv -work work
-Z7 tCvgOpt 0
+Z7 !s92 -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5
+Z8 tCvgOpt 0
 vcontrol
 R1
 R2
 !i10b 1
-!s100 kRhd_6SjP9zSBdI^dj=?73
-IjB]]@1[ceNDFaKU@FZV823
+!s100 827MOo7<PH4h1[I^f:]CN3
+I7VeP^RZ4EzmFdEn30eQ;62
 R3
 !s105 control_sv_unit
 S1
 R0
-w1537947779
-8./../../control.sv
-F./../../control.sv
+w1538022228
+8C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 ./../../control.sv|
-!s90 -reportprogress|300|-sv|-work|work|./../../control.sv|
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv|
 !i113 1
 R6
 R7
+R8
 vfull_adder
 R1
 R2
 !i10b 1
 !s100 V0i7JI]>REd4Tk1>EP5=N2
-IMSE93kZ<^DSLod2aPM]FP2
+IChOzYcUVVn<UW2JW1mDAd0
 R3
 !s105 full_adder_sv_unit
 S1
 R0
-w1537947049
-8./../../full_adder.sv
-F./../../full_adder.sv
+Z9 w1537999331
+8C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 ./../../full_adder.sv|
-!s90 -reportprogress|300|-sv|-work|work|./../../full_adder.sv|
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv|
 !i113 1
 R6
 R7
+R8
 vHexDriver
 R1
 R2
 !i10b 1
 !s100 ^DddjRd7Wla]U<SlP;mT@0
-IF@X?C9_a?[VXk:HAWRn[Y1
+I<TZR3UmGBeJbX7h<B>imA2
 R3
 !s105 HexDriver_sv_unit
 S1
 R0
-w1537936943
-8./../../HexDriver.sv
-F./../../HexDriver.sv
+Z10 w1537217010
+8C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 ./../../HexDriver.sv|
-!s90 -reportprogress|300|-sv|-work|work|./../../HexDriver.sv|
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv|
 !i113 1
 R6
 R7
+R8
 n@hex@driver
 vmultiplier_toplevel
 R1
 R2
 !i10b 1
-!s100 L;4BK7C7DQ>Z8>NYD?H>W3
-I0?UKX1VNC8?cmOKiD=Xkb3
+!s100 jG<JTnHeNnYg6J0RE0lNh2
+IRX?AeRcSXa?n[J_fIe?hL2
 R3
 !s105 multiplier_toplevel_sv_unit
 S1
 R0
-w1537947936
-8./../../multiplier_toplevel.sv
-F./../../multiplier_toplevel.sv
+w1538001535
+8C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 ./../../multiplier_toplevel.sv|
-!s90 -reportprogress|300|-sv|-work|work|./../../multiplier_toplevel.sv|
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv|
 !i113 1
 R6
 R7
+R8
 vreg_8
 R1
 R2
 !i10b 1
 !s100 AXDzj?_?eZ4hKcKof@=bm2
-Ilf[V8HLBS>UEEG`FR6_n<2
+ISRk64Pi_nMfJM5FRcU3^D2
 R3
 !s105 Reg_8_sv_unit
 S1
 R0
-w1537947972
-8./../../Reg_8.sv
-F./../../Reg_8.sv
+R9
+8C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 ./../../Reg_8.sv|
-!s90 -reportprogress|300|-sv|-work|work|./../../Reg_8.sv|
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv|
 !i113 1
 R6
 R7
+R8
+vsync
+R1
+R2
+!i10b 1
+!s100 2W5Vz0:F6ckE2`eJOTK5l1
+IJlR3AEXa:]j``l^e[W=QW2
+R3
+Z11 !s105 Synchronizers_sv_unit
+S1
+R0
+R10
+Z12 8C:/Users/finnn/Documents/385/385_FPGA/Lab5/Synchronizers.sv
+Z13 FC:/Users/finnn/Documents/385/385_FPGA/Lab5/Synchronizers.sv
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+Z14 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/Synchronizers.sv|
+Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/Synchronizers.sv|
+!i113 1
+R6
+R7
+R8
+vsync_r0
+R1
+R2
+!i10b 1
+!s100 IGd9f_F;JNjVBLQ@DAnD10
+IlmcaVG2DkLS3Xme72@OXU1
+R3
+R11
+S1
+R0
+R10
+R12
+R13
+L0 18
+R4
+r1
+!s85 0
+31
+R5
+R14
+R15
+!i113 1
+R6
+R7
+R8
+vsync_r1
+R1
+R2
+!i10b 1
+!s100 1CXiH1DYDbAUS69Ee2j060
+I?fkjO7DaGZMT=g80`P]G90
+R3
+R11
+S1
+R0
+R10
+R12
+R13
+L0 39
+R4
+r1
+!s85 0
+31
+R5
+R14
+R15
+!i113 1
+R6
+R7
+R8
 vtestbench
 R1
 R2
 !i10b 1
-!s100 6[`[0ZaB3@Bhk<d7LReLA1
-Ini7[VXCXk73@n;iXQ`<^c1
+!s100 UPAazh]m4Kb1f6lb3b>Xm1
+II799Z@cX`BK>1Fn>9JSRj2
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1537948021
-8./../../testbench.sv
-F./../../testbench.sv
+w1538021677
+8C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv
+FC:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 ./../../testbench.sv|
-!s90 -reportprogress|300|-sv|-work|work|./../../testbench.sv|
+!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab5|C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv|
 !i113 1
 R6
 R7
+R8

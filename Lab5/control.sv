@@ -107,8 +107,8 @@ module control(
 					Shift = 1'b0;
 					if (shiftCounter == 4'd7) begin
 						//subtract if we're on the last bit
-						Add = 1'b1;
-						Sub = 1'b0;
+						Add = 1'b0;
+						Sub = 1'b1;
 					end
 					else begin
 						//otherwise add

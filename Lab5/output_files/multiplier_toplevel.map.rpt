@@ -1,5 +1,5 @@
 Analysis & Synthesis report for multiplier_toplevel
-Wed Sep 26 01:59:19 2018
+Wed Sep 26 17:44:51 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -50,15 +50,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 26 01:59:19 2018       ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 26 17:44:51 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; multiplier_toplevel                         ;
 ; Top-level Entity Name              ; multiplier_toplevel                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 91                                          ;
+; Total logic elements               ; 99                                          ;
 ;     Total combinational functions  ; 91                                          ;
-;     Dedicated logic registers      ; 29                                          ;
-; Total registers                    ; 29                                          ;
+;     Dedicated logic registers      ; 39                                          ;
+; Total registers                    ; 39                                          ;
 ; Total pins                         ; 57                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -158,7 +158,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -170,50 +170,51 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
-; HexDriver.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/HexDriver.sv           ;         ;
-; adder_9.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/adder_9.sv             ;         ;
-; Reg_8.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/Reg_8.sv               ;         ;
-; full_adder.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/full_adder.sv          ;         ;
-; multiplier_toplevel.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/multiplier_toplevel.sv ;         ;
-; control.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/control.sv             ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; Synchronizers.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab5/Synchronizers.sv       ;         ;
+; HexDriver.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv           ;         ;
+; adder_9.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv             ;         ;
+; Reg_8.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv               ;         ;
+; full_adder.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv          ;         ;
+; multiplier_toplevel.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv ;         ;
+; control.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv             ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 91          ;
-;                                             ;             ;
-; Total combinational functions               ; 91          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 73          ;
-;     -- 3 input functions                    ; 11          ;
-;     -- <=2 input functions                  ; 7           ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 87          ;
-;     -- arithmetic mode                      ; 4           ;
-;                                             ;             ;
-; Total registers                             ; 29          ;
-;     -- Dedicated logic registers            ; 29          ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 57          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; Reset~input ;
-; Maximum fan-out                             ; 30          ;
-; Total fan-out                               ; 524         ;
-; Average fan-out                             ; 2.24        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 99        ;
+;                                             ;           ;
+; Total combinational functions               ; 91        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 61        ;
+;     -- 3 input functions                    ; 13        ;
+;     -- <=2 input functions                  ; 17        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 87        ;
+;     -- arithmetic mode                      ; 4         ;
+;                                             ;           ;
+; Total registers                             ; 39        ;
+;     -- Dedicated logic registers            ; 39        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 57        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; Clk~input ;
+; Maximum fan-out                             ; 39        ;
+; Total fan-out                               ; 509       ;
+; Average fan-out                             ; 2.09      ;
++---------------------------------------------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -221,42 +222,49 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Entity Name         ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+---------------------+--------------+
-; |multiplier_toplevel                       ; 91 (1)              ; 29 (1)                    ; 0           ; 0            ; 0       ; 0         ; 57   ; 0            ; |multiplier_toplevel                                                      ; multiplier_toplevel ; work         ;
+; |multiplier_toplevel                       ; 91 (2)              ; 39 (1)                    ; 0           ; 0            ; 0       ; 0         ; 57   ; 0            ; |multiplier_toplevel                                                      ; multiplier_toplevel ; work         ;
 ;    |HexDriver:hdAL|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|HexDriver:hdAL                                       ; HexDriver           ; work         ;
 ;    |HexDriver:hdAU|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|HexDriver:hdAU                                       ; HexDriver           ; work         ;
 ;    |HexDriver:hdBL|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|HexDriver:hdBL                                       ; HexDriver           ; work         ;
 ;    |HexDriver:hdBU|                        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|HexDriver:hdBU                                       ; HexDriver           ; work         ;
-;    |adder_9:adderUnit|                     ; 18 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit                                    ; adder_9             ; work         ;
-;       |full_adder:adderGenLoop[0].adder_i| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[0].adder_i ; full_adder          ; work         ;
+;    |adder_9:adderUnit|                     ; 11 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit                                    ; adder_9             ; work         ;
 ;       |full_adder:adderGenLoop[1].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[1].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[2].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[2].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[3].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[3].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[4].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[4].adder_i ; full_adder          ; work         ;
+;       |full_adder:adderGenLoop[2].adder_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[2].adder_i ; full_adder          ; work         ;
+;       |full_adder:adderGenLoop[3].adder_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[3].adder_i ; full_adder          ; work         ;
+;       |full_adder:adderGenLoop[4].adder_i| ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[4].adder_i ; full_adder          ; work         ;
 ;       |full_adder:adderGenLoop[5].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[5].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[6].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[6].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[7].adder_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[7].adder_i ; full_adder          ; work         ;
-;       |full_adder:adderGenLoop[8].adder_i| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[8].adder_i ; full_adder          ; work         ;
-;    |control:controller|                    ; 23 (23)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|control:controller                                   ; control             ; work         ;
-;    |reg_8:regA|                            ; 12 (12)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|reg_8:regA                                           ; reg_8               ; work         ;
+;       |full_adder:adderGenLoop[7].adder_i| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|adder_9:adderUnit|full_adder:adderGenLoop[7].adder_i ; full_adder          ; work         ;
+;    |control:controller|                    ; 24 (24)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|control:controller                                   ; control             ; work         ;
+;    |reg_8:regA|                            ; 14 (14)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|reg_8:regA                                           ; reg_8               ; work         ;
 ;    |reg_8:regB|                            ; 9 (9)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|reg_8:regB                                           ; reg_8               ; work         ;
+;    |sync:button_sync[0]|                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:button_sync[0]                                  ; sync                ; work         ;
+;    |sync:button_sync[1]|                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:button_sync[1]                                  ; sync                ; work         ;
+;    |sync:button_sync[2]|                   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:button_sync[2]                                  ; sync                ; work         ;
+;    |sync:switch_sync[0]|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:switch_sync[0]                                  ; sync                ; work         ;
+;    |sync:switch_sync[1]|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:switch_sync[1]                                  ; sync                ; work         ;
+;    |sync:switch_sync[2]|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:switch_sync[2]                                  ; sync                ; work         ;
+;    |sync:switch_sync[3]|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:switch_sync[3]                                  ; sync                ; work         ;
+;    |sync:switch_sync[4]|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:switch_sync[4]                                  ; sync                ; work         ;
+;    |sync:switch_sync[5]|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:switch_sync[5]                                  ; sync                ; work         ;
+;    |sync:switch_sync[6]|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:switch_sync[6]                                  ; sync                ; work         ;
+;    |sync:switch_sync[7]|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |multiplier_toplevel|sync:switch_sync[7]                                  ; sync                ; work         ;
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |multiplier_toplevel|control:controller|currentState                                                                                                                                                              ;
-+-----------------------------------+------------------------+-----------------------------------+-----------------------+-----------------------+-------------------------+------------------------------+-------------------------+
-; Name                              ; currentState.HaltState ; currentState.ClearingLoadingState ; currentState.SubState ; currentState.AddState ; currentState.ShiftState ; currentState.BeginCycleState ; currentState.StartState ;
-+-----------------------------------+------------------------+-----------------------------------+-----------------------+-----------------------+-------------------------+------------------------------+-------------------------+
-; currentState.StartState           ; 0                      ; 0                                 ; 0                     ; 0                     ; 0                       ; 0                            ; 0                       ;
-; currentState.BeginCycleState      ; 0                      ; 0                                 ; 0                     ; 0                     ; 0                       ; 1                            ; 1                       ;
-; currentState.ShiftState           ; 0                      ; 0                                 ; 0                     ; 0                     ; 1                       ; 0                            ; 1                       ;
-; currentState.AddState             ; 0                      ; 0                                 ; 0                     ; 1                     ; 0                       ; 0                            ; 1                       ;
-; currentState.SubState             ; 0                      ; 0                                 ; 1                     ; 0                     ; 0                       ; 0                            ; 1                       ;
-; currentState.ClearingLoadingState ; 0                      ; 1                                 ; 0                     ; 0                     ; 0                       ; 0                            ; 1                       ;
-; currentState.HaltState            ; 1                      ; 0                                 ; 0                     ; 0                     ; 0                       ; 0                            ; 1                       ;
-+-----------------------------------+------------------------+-----------------------------------+-----------------------+-----------------------+-------------------------+------------------------------+-------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |multiplier_toplevel|control:controller|currentState                                                                                                                              ;
++------------------------------+------------------------+--------------------------+-------------------------+------------------------------+-----------------------------+-------------------------+
+; Name                         ; currentState.HaltState ; currentState.AddSubState ; currentState.ShiftState ; currentState.BeginCycleState ; currentState.ClearLoadState ; currentState.StartState ;
++------------------------------+------------------------+--------------------------+-------------------------+------------------------------+-----------------------------+-------------------------+
+; currentState.StartState      ; 0                      ; 0                        ; 0                       ; 0                            ; 0                           ; 0                       ;
+; currentState.ClearLoadState  ; 0                      ; 0                        ; 0                       ; 0                            ; 1                           ; 1                       ;
+; currentState.BeginCycleState ; 0                      ; 0                        ; 0                       ; 1                            ; 0                           ; 1                       ;
+; currentState.ShiftState      ; 0                      ; 0                        ; 1                       ; 0                            ; 0                           ; 1                       ;
+; currentState.AddSubState     ; 0                      ; 1                        ; 0                       ; 0                            ; 0                           ; 1                       ;
+; currentState.HaltState       ; 1                      ; 0                        ; 0                       ; 0                            ; 0                           ; 1                       ;
++------------------------------+------------------------+--------------------------+-------------------------+------------------------------+-----------------------------+-------------------------+
 
 
 +------------------------------------------------------------+
@@ -278,8 +286,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 29    ;
-; Number of registers using Synchronous Clear  ; 10    ;
+; Total registers                              ; 39    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -293,8 +301,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |multiplier_toplevel|reg_8:regB|Data_Out[7] ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |multiplier_toplevel|reg_8:regA|Data_Out[7] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |multiplier_toplevel|reg_8:regB|Data_Out[7] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
@@ -340,22 +348,20 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 57                          ;
-; cycloneiii_ff         ; 29                          ;
-;     ENA               ; 8                           ;
-;     ENA SCLR          ; 8                           ;
-;     SCLR              ; 2                           ;
-;     plain             ; 11                          ;
+; cycloneiii_ff         ; 39                          ;
+;     ENA               ; 16                          ;
+;     plain             ; 23                          ;
 ; cycloneiii_lcell_comb ; 95                          ;
 ;     arith             ; 4                           ;
 ;         2 data inputs ; 4                           ;
 ;     normal            ; 91                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 11                          ;
-;         4 data inputs ; 73                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 61                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 3.55                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.36                        ;
 +-----------------------+-----------------------------+
 
 
@@ -364,7 +370,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -374,50 +380,55 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Wed Sep 26 01:59:05 2018
+    Info: Processing started: Wed Sep 26 17:44:39 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Multiplier -c multiplier_toplevel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 3 design units, including 3 entities, in source file synchronizers.sv
+    Info (12023): Found entity 1: sync File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/Synchronizers.sv Line: 4
+    Info (12023): Found entity 2: sync_r0 File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/Synchronizers.sv Line: 18
+    Info (12023): Found entity 3: sync_r1 File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/Synchronizers.sv Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
-    Info (12023): Found entity 1: HexDriver File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/HexDriver.sv Line: 1
+    Info (12023): Found entity 1: HexDriver File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/HexDriver.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder_9.sv
-    Info (12023): Found entity 1: adder_9 File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/adder_9.sv Line: 1
+    Info (12023): Found entity 1: adder_9 File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file reg_8.sv
-    Info (12023): Found entity 1: reg_8 File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/Reg_8.sv Line: 1
+    Info (12023): Found entity 1: reg_8 File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/Reg_8.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
-    Info (12023): Found entity 1: full_adder File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/full_adder.sv Line: 1
+    Info (12023): Found entity 1: full_adder File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/full_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_toplevel.sv
-    Info (12023): Found entity 1: multiplier_toplevel File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 1
+    Info (12023): Found entity 1: multiplier_toplevel File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file control.sv
-    Info (12023): Found entity 1: control File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/control.sv Line: 1
+    Info (12023): Found entity 1: control File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
-    Info (12023): Found entity 1: testbench File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/testbench.sv Line: 1
+    Info (12023): Found entity 1: testbench File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/testbench.sv Line: 1
 Info (12127): Elaborating entity "multiplier_toplevel" for the top level hierarchy
-Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:hdAU" File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 19
-Info (12128): Elaborating entity "control" for hierarchy "control:controller" File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 39
-Info (10264): Verilog HDL Case Statement information at control.sv(19): all case item expressions in this case statement are onehot File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/control.sv Line: 19
-Info (12128): Elaborating entity "adder_9" for hierarchy "adder_9:adderUnit" File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 42
-Info (12128): Elaborating entity "full_adder" for hierarchy "adder_9:adderUnit|full_adder:adderGenLoop[0].adder_i" File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/adder_9.sv Line: 18
-Info (12128): Elaborating entity "reg_8" for hierarchy "reg_8:regA" File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 59
+Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:hdAU" File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 23
+Info (12128): Elaborating entity "control" for hierarchy "control:controller" File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 42
+Info (10264): Verilog HDL Case Statement information at control.sv(30): all case item expressions in this case statement are onehot File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/control.sv Line: 30
+Info (12128): Elaborating entity "adder_9" for hierarchy "adder_9:adderUnit" File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 45
+Info (12128): Elaborating entity "full_adder" for hierarchy "adder_9:adderUnit|full_adder:adderGenLoop[0].adder_i" File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/adder_9.sv Line: 18
+Info (12128): Elaborating entity "reg_8" for hierarchy "reg_8:regA" File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 60
+Info (12128): Elaborating entity "sync" for hierarchy "sync:button_sync[0]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab5/multiplier_toplevel.sv Line: 85
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 5 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/output_files/multiplier_toplevel.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/finnn/Documents/385/385_FPGA/Lab5/output_files/multiplier_toplevel.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 149 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 156 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 92 logic cells
+    Info (21061): Implemented 99 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 628 megabytes
-    Info: Processing ended: Wed Sep 26 01:59:19 2018
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Wed Sep 26 17:44:51 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/output_files/multiplier_toplevel.map.smsg.
+The suppressed messages can be found in C:/Users/finnn/Documents/385/385_FPGA/Lab5/output_files/multiplier_toplevel.map.smsg.
 
 

@@ -12,8 +12,9 @@ module adder_9(
 	logic[9:0] carries; //10 carry signals, one carry out per adder, plus overall carry in
 	logic[8:0] sum_9bit;
 
+	genvar i;
 	generate
-		for(genvar i = 0; i < 9; i++) begin: adderGenLoop
+		for(i = 0; i < 9; i++) begin: adderGenLoop
 			full_adder adder_i(.A(A[i]), .B(B[i] ^ Sub), .Cin(carries[i]), .Cout(carries[i+1]), .S(sum_9bit[i]));
 		end
 	endgenerate
