@@ -36,12 +36,12 @@ initial begin: testing
 	#2
 	Reset_USH = 1;
 	#2
-	Switches = -8'd42;
+	Switches = 8'b11111110;
 	ClearA_LoadB_USH = 0;
 	#2
 	ClearA_LoadB_USH = 1;
 	#4
-	Switches = 8'd2;
+	Switches = 8'b11111111;
 	#2
 	Run_USH = 0;
 	#40

@@ -166,4 +166,6 @@ set_location_assignment PIN_AH17 -to Bhex3[3]
 set_location_assignment PIN_AG17 -to Bhex3[2]
 set_location_assignment PIN_AE17 -to Bhex3[1]
 set_location_assignment PIN_AD17 -to Bhex3[0]
+set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
+set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

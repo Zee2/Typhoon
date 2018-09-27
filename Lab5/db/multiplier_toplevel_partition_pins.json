@@ -188,6 +188,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "S_USH[4]",
+					"strict" : false
+				},
+				{
 					"name" : "S_USH[3]",
 					"strict" : false
 				},
@@ -201,10 +205,6 @@
 				},
 				{
 					"name" : "S_USH[1]",
-					"strict" : false
-				},
-				{
-					"name" : "S_USH[4]",
 					"strict" : false
 				},
 				{

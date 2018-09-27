@@ -78,7 +78,7 @@ module multiplier_toplevel(
 		// Reset X on the FSM's clr_ld signal
 		if(ClearAX)
 			X <= 1'b0;
-		else
+		else if(Add | Sub)
 			X <= adderMSB;
 	end
 	

@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/finnn/Documents/385/385_FPGA/Lab4/simulation/modelsim
 vcompute
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1537568922
+Z2 !s110 1538067671
 !i10b 1
 !s100 i=]6932U1_OWO<5E?3HbR1
 I=nTT0HRIKS5DU7MXjD]S00
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1537568922.000000
+Z6 !s108 1538067671.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/compute.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/compute.sv|
 !i113 1
@@ -187,82 +187,82 @@ R8
 R9
 vsync
 R1
-Z11 !s110 1537568921
+R2
 !i10b 1
 !s100 2W5Vz0:F6ckE2`eJOTK5l1
 IBl6o3R7TdeIKF68N?B4ld3
 R3
-Z12 !s105 Synchronizers_sv_unit
+Z11 !s105 Synchronizers_sv_unit
 S1
 R0
 R4
-Z13 8C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv
-Z14 FC:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv
+Z12 8C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv
+Z13 FC:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv
 L0 4
 R5
 r1
 !s85 0
 31
-Z15 !s108 1537568921.000000
-Z16 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv|
-Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv|
+R6
+Z14 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv|
+Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab4|C:/Users/finnn/Documents/385/385_FPGA/Lab4/Synchronizers.sv|
 !i113 1
 R7
 R8
 R9
 vsync_r0
 R1
-R11
+R2
 !i10b 1
 !s100 IGd9f_F;JNjVBLQ@DAnD10
 I9Wg6MZo`P84:Z8221C59N1
 R3
-R12
+R11
 S1
 R0
 R4
+R12
 R13
-R14
 L0 18
 R5
 r1
 !s85 0
 31
+R6
+R14
 R15
-R16
-R17
 !i113 1
 R7
 R8
 R9
 vsync_r1
 R1
-R11
+R2
 !i10b 1
 !s100 1CXiH1DYDbAUS69Ee2j060
 IMJK1>a9K@71>?Zha<idBH3
 R3
-R12
+R11
 S1
 R0
 R4
+R12
 R13
-R14
 L0 39
 R5
 r1
 !s85 0
 31
+R6
+R14
 R15
-R16
-R17
 !i113 1
 R7
 R8
 R9
 vtestbench_8
 R1
-R2
+!s110 1538067672
 !i10b 1
 !s100 T0BJh0iLc]T:2jkSK6_`l0
 Ib<P@^2cR0@LGX5DZ[V=M>2
