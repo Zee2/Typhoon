@@ -1,0 +1,19 @@
+
+module internal_register_16 #(parameter width = 16)(
+
+	input logic Clk,
+	input logic Load,
+	input logic Reset,
+	input logic[width-1:0] D;
+	output logic[width-1:0] Q;
+);
+
+always_ff@(posedge Clk) begin
+	if(Load)
+		Q <= D;
+	else if(Reset)
+		Q <= width'b0;
+	
+end
+
+endmodule

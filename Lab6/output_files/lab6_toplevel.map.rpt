@@ -1,0 +1,945 @@
+Analysis & Synthesis report for lab6_toplevel
+Tue Oct 02 17:07:02 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |lab6_toplevel|slc3:my_slc|ISDU:state_controller|State
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:MDRregister
+ 13. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:MARregister
+ 14. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:IRregister
+ 15. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:PCregister
+ 16. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[0]
+ 17. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[1]
+ 18. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[2]
+ 19. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[3]
+ 20. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[4]
+ 21. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[5]
+ 22. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[6]
+ 23. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[7]
+ 24. Parameter Settings for User Entity Instance: slc3:my_slc|tristate:tr0
+ 25. Parameter Settings for User Entity Instance: test_memory:my_test_memory
+ 26. Parameter Settings for User Entity Instance: test_memory:my_test_memory|memory_parser:parser
+ 27. Port Connectivity Checks: "slc3:my_slc|ISDU:state_controller"
+ 28. Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem"
+ 29. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[7]"
+ 30. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[6]"
+ 31. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[5]"
+ 32. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[4]"
+ 33. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[3]"
+ 34. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[2]"
+ 35. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[1]"
+ 36. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[0]"
+ 37. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78"
+ 38. Port Connectivity Checks: "slc3:my_slc|datapath:d0|internal_register:PCregister"
+ 39. Port Connectivity Checks: "slc3:my_slc|datapath:d0|internal_register:IRregister"
+ 40. Port Connectivity Checks: "slc3:my_slc|datapath:d0|internal_register:MARregister"
+ 41. Port Connectivity Checks: "slc3:my_slc|datapath:d0|internal_register:MDRregister"
+ 42. Port Connectivity Checks: "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder|CSA_unit:genloop[1].unit_i|CRA_4bit:adder1"
+ 43. Port Connectivity Checks: "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder|CSA_unit:genloop[1].unit_i|CRA_4bit:adder0"
+ 44. Port Connectivity Checks: "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder|CRA_4bit:unit_0"
+ 45. Port Connectivity Checks: "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder"
+ 46. Post-Synthesis Netlist Statistics for Top Partition
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
+ 49. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Oct 02 17:07:02 2018       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; lab6_toplevel                               ;
+; Top-level Entity Name              ; lab6_toplevel                               ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 9                                           ;
+;     Total combinational functions  ; 9                                           ;
+;     Dedicated logic registers      ; 7                                           ;
+; Total registers                    ; 7                                           ;
+; Total pins                         ; 129                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; lab6_toplevel      ; lab6_toplevel      ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; HexDriver.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv          ;         ;
+; full_adder.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/full_adder.sv         ;         ;
+; CRA_4bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/CRA_4bit.sv           ;         ;
+; CSA_unit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/CSA_unit.sv           ;         ;
+; carry_select_adder.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/carry_select_adder.sv ;         ;
+; tristate.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/tristate.sv           ;         ;
+; test_memory.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv        ;         ;
+; SLC3_2.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/SLC3_2.sv             ;         ;
+; slc3.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv               ;         ;
+; memory_contents.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/memory_contents.sv    ;         ;
+; Mem2IO.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/Mem2IO.sv             ;         ;
+; lab6_toplevel.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv      ;         ;
+; ISDU.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv               ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv           ;         ;
+; internal_register.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv  ;         ;
+; registerFile.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv       ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 9           ;
+;                                             ;             ;
+; Total combinational functions               ; 9           ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 3           ;
+;     -- 3 input functions                    ; 1           ;
+;     -- <=2 input functions                  ; 5           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 9           ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 7           ;
+;     -- Dedicated logic registers            ; 7           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 129         ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Reset~input ;
+; Maximum fan-out                             ; 7           ;
+; Total fan-out                               ; 185         ;
+; Average fan-out                             ; 0.64        ;
++---------------------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name   ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+---------------+--------------+
+; |lab6_toplevel                ; 9 (0)               ; 7 (0)                     ; 0           ; 0            ; 0       ; 0         ; 129  ; 0            ; |lab6_toplevel                                   ; lab6_toplevel ; work         ;
+;    |slc3:my_slc|              ; 9 (0)               ; 7 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc                       ; slc3          ; work         ;
+;       |ISDU:state_controller| ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|ISDU:state_controller ; ISDU          ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |lab6_toplevel|slc3:my_slc|ISDU:state_controller|State                                                                            ;
++----------------+------------+------------+--------------+--------------+------------+----------------+----------------+--------------+------------+
+; Name           ; State.S_32 ; State.S_35 ; State.S_33_2 ; State.S_33_1 ; State.S_18 ; State.PauseIR2 ; State.PauseIR1 ; State.Halted ; State.S_01 ;
++----------------+------------+------------+--------------+--------------+------------+----------------+----------------+--------------+------------+
+; State.Halted   ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0              ; 0            ; 0          ;
+; State.PauseIR1 ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 1              ; 1            ; 0          ;
+; State.PauseIR2 ; 0          ; 0          ; 0            ; 0            ; 0          ; 1              ; 0              ; 1            ; 0          ;
+; State.S_18     ; 0          ; 0          ; 0            ; 0            ; 1          ; 0              ; 0              ; 1            ; 0          ;
+; State.S_33_1   ; 0          ; 0          ; 0            ; 1            ; 0          ; 0              ; 0              ; 1            ; 0          ;
+; State.S_33_2   ; 0          ; 0          ; 1            ; 0            ; 0          ; 0              ; 0              ; 1            ; 0          ;
+; State.S_35     ; 0          ; 1          ; 0            ; 0            ; 0          ; 0              ; 0              ; 1            ; 0          ;
+; State.S_32     ; 1          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0              ; 1            ; 0          ;
+; State.S_01     ; 0          ; 0          ; 0            ; 0            ; 0          ; 0              ; 0              ; 1            ; 1          ;
++----------------+------------+------------+--------------+--------------+------------+----------------+----------------+--------------+------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++---------------------------------------------------+----------------------------------------+
+; Register name                                     ; Reason for Removal                     ;
++---------------------------------------------------+----------------------------------------+
+; slc3:my_slc|tristate:tr0|Data_write_buffer[0..15] ; Stuck at GND due to stuck port data_in ;
+; slc3:my_slc|ISDU:state_controller|State.S_32      ; Lost fanout                            ;
+; slc3:my_slc|ISDU:state_controller|State.S_01      ; Lost fanout                            ;
+; slc3:my_slc|ISDU:state_controller|State~2         ; Lost fanout                            ;
+; slc3:my_slc|ISDU:state_controller|State~3         ; Lost fanout                            ;
+; slc3:my_slc|ISDU:state_controller|State~4         ; Lost fanout                            ;
+; Total Number of Removed Registers = 21            ;                                        ;
++---------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 7     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|ISDU:state_controller|State ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:MDRregister ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:MARregister ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:IRregister ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:PCregister ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[0] ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[1] ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[2] ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[3] ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[4] ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[5] ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[6] ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[7] ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; width          ; 16    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|tristate:tr0 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; N              ; 16    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test_memory:my_test_memory ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; size           ; 256   ; Signed Integer                                 ;
+; init_external  ; 0     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: test_memory:my_test_memory|memory_parser:parser ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; size           ; 256   ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|ISDU:state_controller"                                                        ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; BEN        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; LD_MAR     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; LD_MDR     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; LD_IR      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; LD_BEN     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; LD_CC      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; LD_REG     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; LD_PC      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; LD_LED     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; GatePC     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; GateMDR    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; GateALU    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; GateMARMUX ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; PCMUX      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; DRMUX      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; SR1MUX     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; SR2MUX     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ADDR1MUX   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ADDR2MUX   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ALUK       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem"                                                         ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; ADDR          ; Input  ; Info     ; Stuck at GND                                                                        ;
+; HEX0          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; HEX1          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; HEX2          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; HEX3          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Data_from_CPU ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Data_to_CPU   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[7]"                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Clk   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Load  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Reset ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; D     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Q     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[6]"                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Clk   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Load  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Reset ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; D     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Q     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[5]"                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Clk   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Load  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Reset ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; D     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Q     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[4]"                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Clk   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Load  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Reset ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; D     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Q     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[3]"                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Clk   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Load  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Reset ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; D     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Q     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[2]"                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Clk   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Load  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Reset ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; D     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Q     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[1]"                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Clk   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Load  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Reset ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; D     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Q     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78|internal_register:registers[0]"                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Clk   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Load  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Reset ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; D     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; Q     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:comb_78"                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; SR2  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|internal_register:PCregister" ;
++-------+-------+----------+-------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                               ;
++-------+-------+----------+-------------------------------------------------------+
+; D     ; Input ; Info     ; Stuck at GND                                          ;
+; Reset ; Input ; Info     ; Stuck at GND                                          ;
++-------+-------+----------+-------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|internal_register:IRregister" ;
++-------+-------+----------+-------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                               ;
++-------+-------+----------+-------------------------------------------------------+
+; Reset ; Input ; Info     ; Stuck at GND                                          ;
++-------+-------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|internal_register:MARregister" ;
++-------+-------+----------+--------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                ;
++-------+-------+----------+--------------------------------------------------------+
+; Reset ; Input ; Info     ; Stuck at GND                                           ;
++-------+-------+----------+--------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|internal_register:MDRregister" ;
++-------+-------+----------+--------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                ;
++-------+-------+----------+--------------------------------------------------------+
+; Reset ; Input ; Info     ; Stuck at GND                                           ;
++-------+-------+----------+--------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder|CSA_unit:genloop[1].unit_i|CRA_4bit:adder1" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                              ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; Cin  ; Input ; Info     ; Stuck at VCC                                                                                         ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder|CSA_unit:genloop[1].unit_i|CRA_4bit:adder0" ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                              ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+; Cin  ; Input ; Info     ; Stuck at GND                                                                                         ;
++------+-------+----------+------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder|CRA_4bit:unit_0" ;
++------+-------+----------+---------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                   ;
++------+-------+----------+---------------------------------------------------------------------------+
+; Cin  ; Input ; Info     ; Stuck at GND                                                              ;
++------+-------+----------+---------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder"                                                 ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; B    ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; CO   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 129                         ;
+; cycloneiii_ff         ; 7                           ;
+;     plain             ; 7                           ;
+; cycloneiii_io_obuf    ; 16                          ;
+; cycloneiii_lcell_comb ; 12                          ;
+;     normal            ; 12                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 3                           ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 0.77                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Tue Oct 02 17:06:49 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SLC3 -c lab6_toplevel
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
+    Info (12023): Found entity 1: HexDriver File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
+    Info (12023): Found entity 1: full_adder File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/full_adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cra_4bit.sv
+    Info (12023): Found entity 1: CRA_4bit File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/CRA_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file csa_unit.sv
+    Info (12023): Found entity 1: CSA_unit File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/CSA_unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file carry_select_adder.sv
+    Info (12023): Found entity 1: carry_select_adder File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/carry_select_adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
+    Info (12023): Found entity 1: tristate File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/tristate.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file test_memory.sv
+    Info (12023): Found entity 1: test_memory File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv Line: 22
+Info (12021): Found 1 design units, including 0 entities, in source file slc3_2.sv
+    Info (12022): Found design unit 1: SLC3_2 (SystemVerilog) File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/SLC3_2.sv Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file slc3.sv
+    Info (12023): Found entity 1: slc3 File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file memory_contents.sv
+    Info (12023): Found entity 1: memory_parser File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/memory_contents.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file mem2io.sv
+    Info (12023): Found entity 1: Mem2IO File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/Mem2IO.sv Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file lab6_toplevel.sv
+    Info (12023): Found entity 1: lab6_toplevel File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file isdu.sv
+    Info (12023): Found entity 1: ISDU File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
+    Info (12023): Found entity 1: datapath File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file internal_register.sv
+    Info (12023): Found entity 1: internal_register File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file registerfile.sv
+    Info (12023): Found entity 1: registerFile File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at datapath.sv(101): instance has no name File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 101
+Info (12127): Elaborating entity "lab6_toplevel" for the top level hierarchy
+Info (12128): Elaborating entity "slc3" for hierarchy "slc3:my_slc" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 18
+Warning (10036): Verilog HDL or VHDL warning at slc3.sv(42): object "MIO_EN" assigned a value but never read File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 42
+Warning (10858): Verilog HDL warning at slc3.sv(45): object MAR used but never assigned File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 45
+Warning (10030): Net "MAR" at slc3.sv(45) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 45
+Warning (10030): Net "MDR" at slc3.sv(45) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 45
+Warning (10030): Net "BEN" at slc3.sv(37) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 37
+Warning (10034): Output port "LED" at slc3.sv(22) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 22
+Info (12128): Elaborating entity "HexDriver" for hierarchy "slc3:my_slc|HexDriver:hex_driver3" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 52
+Info (12128): Elaborating entity "datapath" for hierarchy "slc3:my_slc|datapath:d0" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 77
+Warning (10036): Verilog HDL or VHDL warning at datapath.sv(21): object "SR2" assigned a value but never read File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 21
+Warning (10858): Verilog HDL warning at datapath.sv(27): object ALU used but never assigned File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 27
+Info (10264): Verilog HDL Case Statement information at datapath.sv(64): all case item expressions in this case statement are onehot File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 64
+Warning (10030): Net "PC_MuxedIn" at datapath.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 24
+Warning (10030): Net "ALU" at datapath.sv(27) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 27
+Info (12128): Elaborating entity "carry_select_adder" for hierarchy "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 57
+Info (12128): Elaborating entity "CRA_4bit" for hierarchy "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder|CRA_4bit:unit_0" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/carry_select_adder.sv Line: 21
+Info (12128): Elaborating entity "full_adder" for hierarchy "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder|CRA_4bit:unit_0|full_adder:genLoop[0].adder_i" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/CRA_4bit.sv Line: 19
+Info (12128): Elaborating entity "CSA_unit" for hierarchy "slc3:my_slc|datapath:d0|carry_select_adder:addressAdder|CSA_unit:genloop[1].unit_i" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/carry_select_adder.sv Line: 29
+Info (12128): Elaborating entity "internal_register" for hierarchy "slc3:my_slc|datapath:d0|internal_register:MDRregister" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 93
+Info (12128): Elaborating entity "registerFile" for hierarchy "slc3:my_slc|datapath:d0|registerFile:comb_78" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 101
+Warning (10034): Output port "SR1" at registerFile.sv(5) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv Line: 5
+Warning (10034): Output port "SR2" at registerFile.sv(7) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv Line: 7
+Info (12128): Elaborating entity "Mem2IO" for hierarchy "slc3:my_slc|Mem2IO:memory_subsystem" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 85
+Info (12128): Elaborating entity "tristate" for hierarchy "slc3:my_slc|tristate:tr0" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 90
+Info (12128): Elaborating entity "ISDU" for hierarchy "slc3:my_slc|ISDU:state_controller" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 97
+Info (12128): Elaborating entity "test_memory" for hierarchy "test_memory:my_test_memory" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 22
+Warning (10036): Verilog HDL or VHDL warning at test_memory.sv(42): object "actual_address" assigned a value but never read File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv Line: 42
+Info (12128): Elaborating entity "memory_parser" for hierarchy "test_memory:my_test_memory|memory_parser:parser" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv Line: 48
+Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[7]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[8]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[9]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[10]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "LED[11]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX6[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX6[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 13
+    Warning (13410): Pin "CE" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 14
+    Warning (13410): Pin "UB" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 14
+    Warning (13410): Pin "LB" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 14
+    Warning (13410): Pin "WE" is stuck at VCC File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 14
+    Warning (13410): Pin "ADDR[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[7]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[8]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[9]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[10]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[11]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[12]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[13]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[14]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[15]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[16]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[17]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[18]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+    Warning (13410): Pin "ADDR[19]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/finnn/Documents/385/385_FPGA/Lab6/output_files/lab6_toplevel.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "S[0]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[1]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[2]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[3]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[4]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[5]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[6]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[7]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[8]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[9]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[10]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[11]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[12]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[13]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[14]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+    Warning (15610): No output dependent on input pin "S[15]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 10
+Info (21057): Implemented 138 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 93 output pins
+    Info (21060): Implemented 16 bidirectional pins
+    Info (21061): Implemented 9 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 126 warnings
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Tue Oct 02 17:07:02 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/finnn/Documents/385/385_FPGA/Lab6/output_files/lab6_toplevel.map.smsg.
+
+
