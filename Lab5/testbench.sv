@@ -36,20 +36,56 @@ initial begin: testing
 	#2
 	Reset_USH = 1;
 	#2
-	Switches = 8'b11111110;
+	Switches = 8'd7;
 	ClearA_LoadB_USH = 0;
 	#2
 	ClearA_LoadB_USH = 1;
 	#4
-	Switches = 8'b11111111;
+	Switches = 8'd59;
 	#2
 	Run_USH = 0;
 	#40
 	Run_USH = 1;
-	#10
+	#2
+	
+	Switches = -8'd7;
+	ClearA_LoadB_USH = 0;
+	#2
+	ClearA_LoadB_USH = 1;
+	#4
+	Switches = 8'd59;
+	#2
 	Run_USH = 0;
-	#3
+	#40
 	Run_USH = 1;
+	#2
+	
+	Switches = 8'd7;
+	ClearA_LoadB_USH = 0;
+	#2
+	ClearA_LoadB_USH = 1;
+	#4
+	Switches = -8'd59;
+	#2
+	Run_USH = 0;
+	#40
+	Run_USH = 1;
+	#2
+	
+	
+	Switches = -8'd7;
+	ClearA_LoadB_USH = 0;
+	#2
+	ClearA_LoadB_USH = 1;
+	#4
+	Switches = -8'd59;
+	#2
+	Run_USH = 0;
+	#40
+	Run_USH = 1;
+	
+	
+	
 end
 
 endmodule

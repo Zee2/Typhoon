@@ -220,15 +220,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "Reset_USH",
-					"strict" : false
-				},
-				{
 					"name" : "ClearA_LoadB_USH",
 					"strict" : false
 				},
 				{
 					"name" : "Run_USH",
+					"strict" : false
+				},
+				{
+					"name" : "Reset_USH",
 					"strict" : false
 				}
 			]

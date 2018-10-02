@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Sep 26 23:47:42 2018
+Analysis & Synthesis Status : Successful - Fri Sep 28 16:02:49 2018
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : multiplier_toplevel
 Top-level Entity Name : multiplier_toplevel
 Family : Cyclone IV E
-Total logic elements : 102
-    Total combinational functions : 94
+Total logic elements : 104
+    Total combinational functions : 96
     Dedicated logic registers : 39
 Total registers : 39
 Total pins : 57

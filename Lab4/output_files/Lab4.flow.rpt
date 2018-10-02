@@ -1,5 +1,5 @@
 Flow report for Lab4
-Fri Sep 21 17:28:17 2018
+Fri Sep 28 02:32:26 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,22 +40,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Sep 21 17:28:17 2018       ;
+; Flow Status                        ; Successful - Fri Sep 28 02:32:26 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab4                                        ;
 ; Top-level Entity Name              ; Processor                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 85                                          ;
-;     Total combinational functions  ; 72                                          ;
-;     Dedicated logic registers      ; 43                                          ;
+; Total logic elements               ; 84 / 114,480 ( < 1 % )                      ;
+;     Total combinational functions  ; 72 / 114,480 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 43 / 114,480 ( < 1 % )                      ;
 ; Total registers                    ; 43                                          ;
-; Total pins                         ; 66                                          ;
+; Total pins                         ; 66 / 529 ( 12 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/21/2018 17:28:05 ;
+; Start date & time ; 09/28/2018 02:31:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab4                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 108223642620545.153756888506712        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 108223642620545.153811989211348        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; testbench_8    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench_8                            ; --            ; --          ; eda_simulation ;
@@ -109,8 +109,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4790 MB             ; 00:00:24                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:24                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4790 MB             ; 00:00:41                           ;
+; Fitter               ; 00:00:21     ; 1.0                     ; 5730 MB             ; 00:00:30                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4701 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4863 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
+; Total                ; 00:00:50     ; --                      ; --                  ; 00:01:19                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,6 +124,10 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -127,6 +135,10 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
+quartus_fit --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
+quartus_asm --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
+quartus_sta Lab4 -c Lab4
+quartus_eda --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
 
 
 
