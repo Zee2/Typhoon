@@ -15,10 +15,16 @@ module lab6_toplevel( input logic [15:0] S,
                       output logic [19:0] ADDR,
                       inout wire [15:0] Data);
 
-slc3 my_slc(.*);
+slc3 my_slc(.Reset(ResetSync), .Run(RunSync), .Continue(ContinueSync), .*);
+
+sync SwitchSync0(Clk, Reset, ResetSync);
+sync SwitchSync1(Clk, Run, RunSync);
+sync SwitchSync2(Clk, Continue, ContinueSync);
+
+
 // Even though test memory is instantiated here, it will be synthesized into 
 // a blank module, and will not interfere with the actual SRAM.
 // Test memory is to play the role of physical SRAM in simulation.
-test_memory my_test_memory(.Reset(~Reset), .I_O(Data), .A(ADDR), .*);
+test_memory my_test_memory(.Reset(~ResetSync), .I_O(Data), .A(ADDR), .*);
 
 endmodule

@@ -1,5 +1,5 @@
 module datapath(
-
+	input logic Reset_ah,
 	input logic Clk,
 	input logic BEN,
 	input logic LD_MAR, LD_MDR, LD_IR, LD_BEN, LD_CC, LD_REG, LD_PC, LD_LED,
@@ -12,16 +12,18 @@ module datapath(
 	input logic MIO_EN,
 
 	input logic [15:0] MDR_In, //technically actually data_to_CPU (bad naming)
-	output logic [15:0] MAR, IR, PC, MDR,
-	output logic[15:0] Bus
+	output logic [15:0] MAR, IR, PC, MDR
 
 );
-	// Register output signals.
-	logic[15:0] SR1 = 16'b0;
-	logic[15:0] SR2 = 16'b0;
+	// Thank you Mr. Bus Driver. ("wire" type to avoid any accidental latching)
+	logic[15:0] Bus;
 	
-	// Connection between PCMUX and PC.
-	wire[15:0] PC_MuxedIn;
+	// Register output signals.
+	logic[15:0] SR1;
+	logic[15:0] SR2;
+	// Instantiate register file. Hooks up to clk, system bus, and outputs to SR1 and SR2, as of now...
+	// Will need more control signals, muxes, etc etc etc :(
+	registerFile registers(.*);
 
 	// ALU output.
 	logic[15:0] ALU;
@@ -32,6 +34,8 @@ module datapath(
 	
 	// Result of addition of ADDR1 + ADDR2
 	logic[15:0] MARMUX;
+	
+	assign MARMUX = ADDR1 + ADDR2;
 
 	//ADDR1MUX.
 	always_comb begin
@@ -53,8 +57,7 @@ module datapath(
 		endcase
 	end
 	
-	// Adder to combine ADDR1 and ADDR2.
-	carry_select_adder addressAdder(.A(ADDR1), .B(ADDR2), .Sum(MARMUX));
+	
 
 	logic[3:0] BusMuxCode;
 	// Bus driver MUX to prevent bus contention.
@@ -62,20 +65,15 @@ module datapath(
 		
 		BusMuxCode = {GateMARMUX, GatePC, GateALU, GateMDR};
 		unique case(BusMuxCode)
-			4'b1000:
-				Bus = MARMUX;
-			4'b0100:
-				Bus = PC;
-			4'b0010:
-				Bus = ALU;
-			4'b0001:
-				Bus = MDR;
-			default:
-				Bus = 16'bx;
+			4'b1000: Bus = MARMUX;
+			4'b0100: Bus = PC;
+			4'b0010: Bus = ALU;
+			4'b0001: Bus = MDR;
+			default: Bus = 16'bx;
 		endcase
 	end
 	
-	wire[15:0] MDR_MuxedIn; // "Wire" to ensure no accidental latching...
+	logic[15:0] MDR_MuxedIn; // "Wire" to ensure no accidental latching...
 	// MAR Input mux, selecting between bus and Data_In_CPU (technically called MDR_in but that's just bad naming)
 	always_comb begin
 		unique case(MIO_EN)
@@ -87,21 +85,36 @@ module datapath(
 	end
 	
 	
+	// Connection between PCMUX and PC.
+	logic[15:0] PC_MuxedIn;
+	//PCMUX implementation
+	always_comb begin
+		unique case(PCMUX)
+			0: PC_MuxedIn = PC + 1;
+			1: PC_MuxedIn = Bus;
+			2: PC_MuxedIn = MARMUX;
+			default: PC_MuxedIn = 1'bx;
+		endcase
+	end
+	
+	
+	
 	// Internal registers. Possibly replace the reset signals in the future... not specced?
 	// Parameterized basic flipflop register custom module by Finn :)
 	
-	internal_register #(16) MDRregister(.D(MDR_MuxedIn), .Q(MDR), .Load(LD_MDR), .Reset(1'b0), .*);
-	internal_register #(16) MARregister(.D(Bus),         .Q(MAR), .Load(LD_MAR), .Reset(1'b0), .*);
-	internal_register #(16) IRregister( .D(Bus),         .Q(IR),  .Load(LD_IR),  .Reset(1'b0), .*);
-	internal_register #(16) PCregister( .D(PC_MuxedIn),  .Q(PC),  .Load(LD_IR),  .Reset(1'b0), .*);
+	internal_register #(16) MDRregister(.D(MDR_MuxedIn), .Q(MDR), .Load(LD_MDR), .Reset(Reset_ah), .*);
+	internal_register #(16) MARregister(.D(Bus),         .Q(MAR), .Load(LD_MAR), .Reset(Reset_ah), .*);
+	internal_register #(16) IRregister( .D(Bus),         .Q(IR),  .Load(LD_IR),  .Reset(Reset_ah), .*);
+	internal_register #(16) PCregister( .D(PC_MuxedIn),  .Q(PC),  .Load(LD_IR),  .Reset(Reset_ah), .*);
 	
 	
-	// Instantiate register file. Hooks up to clk, system bus, and outputs to SR1 and SR2, as of now...
-	// Will need more control signals, muxes, etc etc etc :(
-	registerFile(.*);
+	
+	
 	
 	
 
+	
+		
 	
 
 
