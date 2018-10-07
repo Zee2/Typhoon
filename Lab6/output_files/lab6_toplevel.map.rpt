@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab6_toplevel
-Thu Oct 04 17:09:48 2018
+Fri Oct 05 15:38:22 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -29,25 +29,26 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  21. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:MARregister
  22. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:IRregister
  23. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|internal_register:PCregister
- 24. Parameter Settings for User Entity Instance: slc3:my_slc|tristate:tr0
- 25. Parameter Settings for User Entity Instance: test_memory:my_test_memory
- 26. Parameter Settings for User Entity Instance: test_memory:my_test_memory|memory_parser:parser
- 27. Port Connectivity Checks: "slc3:my_slc|ISDU:state_controller"
- 28. Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem"
- 29. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[7]"
- 30. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[6]"
- 31. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[5]"
- 32. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[4]"
- 33. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[3]"
- 34. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[2]"
- 35. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[1]"
- 36. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[0]"
- 37. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers"
- 38. Port Connectivity Checks: "slc3:my_slc|datapath:d0"
- 39. Post-Synthesis Netlist Statistics for Top Partition
- 40. Elapsed Time Per Partition
- 41. Analysis & Synthesis Messages
- 42. Analysis & Synthesis Suppressed Messages
+ 24. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:NZPregister
+ 25. Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:BENregister
+ 26. Parameter Settings for User Entity Instance: slc3:my_slc|tristate:tr0
+ 27. Parameter Settings for User Entity Instance: test_memory:my_test_memory
+ 28. Parameter Settings for User Entity Instance: test_memory:my_test_memory|memory_parser:parser
+ 29. Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem"
+ 30. Port Connectivity Checks: "slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic"
+ 31. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[7]"
+ 32. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[6]"
+ 33. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[5]"
+ 34. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[4]"
+ 35. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[3]"
+ 36. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[2]"
+ 37. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[1]"
+ 38. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[0]"
+ 39. Port Connectivity Checks: "slc3:my_slc|datapath:d0|registerFile:registers"
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
+ 43. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -73,7 +74,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 04 17:09:48 2018       ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 05 15:38:21 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab6_toplevel                               ;
 ; Top-level Entity Name              ; lab6_toplevel                               ;
@@ -211,6 +212,7 @@ refer to the applicable agreement for further details.
 ; ISDU.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv              ;         ;
 ; HexDriver.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv         ;         ;
 ; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv          ;         ;
+; NZPlogic.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv          ;         ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
 
 
@@ -331,7 +333,7 @@ Encoding Type:  One-Hot
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:MARregister|Q[0] ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:IRregister|Q[1]  ;
 ; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:MDRregister|Q[3] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|Mux12                              ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|Mux22                              ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|ISDU:state_controller|State                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
@@ -456,6 +458,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:NZPregister ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; width          ; 3     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:BENregister ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; width          ; 1     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: slc3:my_slc|tristate:tr0 ;
 +----------------+-------+----------------------------------------------+
@@ -487,15 +509,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Port Connectivity Checks: "slc3:my_slc|ISDU:state_controller" ;
-+------+-------+----------+-------------------------------------+
-; Port ; Type  ; Severity ; Details                             ;
-+------+-------+----------+-------------------------------------+
-; BEN  ; Input ; Info     ; Stuck at GND                        ;
-+------+-------+----------+-------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem"                                                        ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -507,6 +520,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; HEX2         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; HEX3         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic" ;
++-------+-------+----------+----------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                            ;
++-------+-------+----------+----------------------------------------------------+
+; Reset ; Input ; Info     ; Stuck at GND                                       ;
++-------+-------+----------+----------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -623,15 +645,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------+
-; Port Connectivity Checks: "slc3:my_slc|datapath:d0" ;
-+------+-------+----------+---------------------------+
-; Port ; Type  ; Severity ; Details                   ;
-+------+-------+----------+---------------------------+
-; BEN  ; Input ; Info     ; Stuck at GND              ;
-+------+-------+----------+---------------------------+
-
-
-+-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
@@ -672,7 +685,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Oct 04 17:09:35 2018
+    Info: Processing started: Fri Oct 05 15:38:08 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SLC3 -c lab6_toplevel
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -717,12 +730,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file hexdriv
     Info (12023): Found entity 1: HexDriver File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
     Info (12023): Found entity 1: datapath File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at lab6_toplevel.sv(18): created implicit net for "ResetSync" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 18
-Warning (10236): Verilog HDL Implicit Net warning at lab6_toplevel.sv(18): created implicit net for "RunSync" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 18
-Warning (10236): Verilog HDL Implicit Net warning at lab6_toplevel.sv(18): created implicit net for "ContinueSync" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file nzplogic.sv
+    Info (12023): Found entity 1: NZPlogic File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(116): created implicit net for "Reset_AH" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 116
 Info (12127): Elaborating entity "lab6_toplevel" for the top level hierarchy
-Info (12128): Elaborating entity "slc3" for hierarchy "slc3:my_slc" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 18
-Warning (10030): Net "BEN" at slc3.sv(37) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 37
+Info (12128): Elaborating entity "sync" for hierarchy "sync:SwitchSync0" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 20
+Info (12128): Elaborating entity "slc3" for hierarchy "slc3:my_slc" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 24
 Warning (10034): Output port "LED" at slc3.sv(22) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 22
 Info (12128): Elaborating entity "HexDriver" for hierarchy "slc3:my_slc|HexDriver:hex_driver3" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 52
 Info (12128): Elaborating entity "datapath" for hierarchy "slc3:my_slc|datapath:d0" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 77
@@ -730,15 +743,18 @@ Warning (10858): Verilog HDL warning at datapath.sv(29): object ALU used but nev
 Info (10264): Verilog HDL Case Statement information at datapath.sv(67): all case item expressions in this case statement are onehot File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 67
 Warning (10230): Verilog HDL assignment warning at datapath.sv(93): truncated value with size 32 to match size of target (16) File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 93
 Warning (10030): Net "ALU" at datapath.sv(29) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 29
+Warning (10030): Net "Reset_AH" at datapath.sv(116) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 116
 Info (12128): Elaborating entity "registerFile" for hierarchy "slc3:my_slc|datapath:d0|registerFile:registers" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 26
 Warning (10034): Output port "SR1" at registerFile.sv(5) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv Line: 5
 Warning (10034): Output port "SR2" at registerFile.sv(7) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv Line: 7
 Info (12128): Elaborating entity "internal_register" for hierarchy "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:registers[0]" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv Line: 9
+Info (12128): Elaborating entity "NZPlogic" for hierarchy "slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 116
+Info (12128): Elaborating entity "internal_register" for hierarchy "slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:NZPregister" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv Line: 15
+Info (12128): Elaborating entity "internal_register" for hierarchy "slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:BENregister" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv Line: 22
 Info (12128): Elaborating entity "Mem2IO" for hierarchy "slc3:my_slc|Mem2IO:memory_subsystem" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 85
 Info (12128): Elaborating entity "tristate" for hierarchy "slc3:my_slc|tristate:tr0" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 90
 Info (12128): Elaborating entity "ISDU" for hierarchy "slc3:my_slc|ISDU:state_controller" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 97
-Info (12128): Elaborating entity "sync" for hierarchy "sync:SwitchSync0" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 20
-Info (12128): Elaborating entity "test_memory" for hierarchy "test_memory:my_test_memory" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 28
+Info (12128): Elaborating entity "test_memory" for hierarchy "test_memory:my_test_memory" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 29
 Warning (10036): Verilog HDL or VHDL warning at test_memory.sv(42): object "actual_address" assigned a value but never read File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv Line: 42
 Info (12128): Elaborating entity "memory_parser" for hierarchy "test_memory:my_test_memory|memory_parser:parser" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv Line: 48
 Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -790,11 +806,11 @@ Info (21057): Implemented 301 device resources after synthesis - the final resou
     Info (21059): Implemented 93 output pins
     Info (21060): Implemented 16 bidirectional pins
     Info (21061): Implemented 172 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Thu Oct 04 17:09:48 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Fri Oct 05 15:38:22 2018
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

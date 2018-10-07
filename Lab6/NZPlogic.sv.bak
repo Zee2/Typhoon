@@ -1,0 +1,9 @@
+module NZPlogic(
+
+	input logic LD_BEN,
+	input logic LD_CC,
+	input logic[15:0] Bus,
+	input logic[15:0] IR,
+	output logic BEN
+
+);

@@ -20,6 +20,7 @@ source_file = 1, C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv
 source_file = 1, C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv
 source_file = 1, C:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv
 source_file = 1, C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv
+source_file = 1, C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv
 source_file = 1, C:/Users/finnn/Documents/385/385_FPGA/Lab6/db/lab6_toplevel.cbx.xml
 design_name = lab6_toplevel
 instance = comp, \Data[0]~output , Data[0]~output, lab6_toplevel, 1

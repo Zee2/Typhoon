@@ -1,5 +1,5 @@
 Fitter report for lab6_toplevel
-Thu Oct 04 17:10:18 2018
+Fri Oct 05 15:25:52 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Oct 04 17:10:18 2018       ;
+; Fitter Status                      ; Successful - Fri Oct 05 15:25:52 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab6_toplevel                               ;
 ; Top-level Entity Name              ; lab6_toplevel                               ;
@@ -2137,8 +2137,8 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X69_Y0 to location X80_Y11
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.21 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2163,10 +2163,10 @@ Warning (169064): Following 16 pins have no output enable or a GND or VCC output
     Info (169065): Pin Data[15] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
 Info (144001): Generated suppressed messages file C:/Users/finnn/Documents/385/385_FPGA/Lab6/output_files/lab6_toplevel.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5744 megabytes
-    Info: Processing ended: Thu Oct 04 17:10:19 2018
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 5742 megabytes
+    Info: Processing ended: Fri Oct 05 15:25:53 2018
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +----------------------------+

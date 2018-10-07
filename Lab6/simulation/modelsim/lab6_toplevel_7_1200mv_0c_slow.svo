@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition"
 
-// DATE "10/04/2018 17:10:37"
+// DATE "10/05/2018 15:26:07"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -50,27 +50,27 @@ module lab6_toplevel (
 	WE,
 	ADDR,
 	Data);
-input 	logic [15:0] S ;
-input 	logic Clk ;
-input 	logic Reset ;
-input 	logic Run ;
-input 	logic \Continue  ;
-output 	logic [11:0] LED ;
-output 	logic [6:0] HEX0 ;
-output 	logic [6:0] HEX1 ;
-output 	logic [6:0] HEX2 ;
-output 	logic [6:0] HEX3 ;
-output 	logic [6:0] HEX4 ;
-output 	logic [6:0] HEX5 ;
-output 	logic [6:0] HEX6 ;
-output 	logic [6:0] HEX7 ;
-output 	logic CE ;
-output 	logic UB ;
-output 	logic LB ;
-output 	logic OE ;
-output 	logic WE ;
-output 	logic [19:0] ADDR ;
-inout 	reg [15:0] Data ;
+input 	[15:0] S;
+input 	Clk;
+input 	Reset;
+input 	Run;
+input 	\Continue ;
+output 	[11:0] LED;
+output 	[6:0] HEX0;
+output 	[6:0] HEX1;
+output 	[6:0] HEX2;
+output 	[6:0] HEX3;
+output 	[6:0] HEX4;
+output 	[6:0] HEX5;
+output 	[6:0] HEX6;
+output 	[6:0] HEX7;
+output 	CE;
+output 	UB;
+output 	LB;
+output 	OE;
+output 	WE;
+output 	[19:0] ADDR;
+output 	[15:0] Data;
 
 // Design Ports Information
 // LED[0]	=>  Location: PIN_G19,	 I/O Standard: 2.5 V,	 Current Strength: Default

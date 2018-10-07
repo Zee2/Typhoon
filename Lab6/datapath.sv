@@ -1,7 +1,6 @@
 module datapath(
 	input logic Reset_ah,
 	input logic Clk,
-	input logic BEN,
 	input logic LD_MAR, LD_MDR, LD_IR, LD_BEN, LD_CC, LD_REG, LD_PC, LD_LED,
 	input logic GatePC,
 	input logic GateMDR,
@@ -10,12 +9,13 @@ module datapath(
 	input logic [1:0] PCMUX, ADDR2MUX, ALUK,
 	input logic DRMUX, SR1MUX, SR2MUX, ADDR1MUX,
 	input logic MIO_EN,
-
 	input logic [15:0] MDR_In, //technically actually data_to_CPU (bad naming)
+	
+	output logic BEN,
 	output logic [15:0] MAR, IR, PC, MDR
 
 );
-	// Thank you Mr. Bus Driver. ("wire" type to avoid any accidental latching)
+	// Thank you Mr. Bus Driver.
 	logic[15:0] Bus;
 	
 	// Register output signals.
@@ -50,9 +50,9 @@ module datapath(
 	always_comb begin
 		unique case(ADDR2MUX)
 			0: ADDR2 = 16'b0;
-			1: ADDR2 = 16'b0; // TODO: offset6 (SEXT(IR[5:0]))
-			2: ADDR2 = 16'b0; // TODO: PCoffset9 (SEXT(IR[8:0]))
-			3: ADDR2 = 16'b0; // TODO: PCoffset11 (SEXT(IR[10:0]))
+			1: ADDR2 = $signed(IR[5:0]);
+			2: ADDR2 = $signed(IR[8:0]);
+			3: ADDR2 = $signed(IR[10:0]);
 			default: ADDR2 = 16'bx;
 		endcase
 	end
@@ -109,6 +109,11 @@ module datapath(
 	
 	
 	
+	
+	
+	// Conditional branch logic.
+	// Connects to Bus, IR, outputs to BEN.
+	NZPlogic conditionalLogic(.Reset(Reset_ah), .*);
 	
 	
 	
