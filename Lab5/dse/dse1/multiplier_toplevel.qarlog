@@ -1,0 +1,24 @@
+Quartus Prime Archive log --	C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/multiplier_toplevel.qarlog
+
+Archive:	C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/multiplier_toplevel.qar
+Date:		Fri Oct 05 00:12:03 2018
+Quartus Prime		18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/HexDriver.sv
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/Multiplier.qpf
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/Reg_8.sv
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/Synchronizers.sv
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/adder_9.sv
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/control.sv
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/full_adder.sv
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/multiplier_toplevel.dse
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/multiplier_toplevel.qsf
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/multiplier_toplevel.sdc
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/multiplier_toplevel.sv
+C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/testbench.sv
+c:/intelfpga_lite/18.0/quartus/bin64/assignment_defaults.qdf
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

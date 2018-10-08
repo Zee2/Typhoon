@@ -1,0 +1,6 @@
+{
+	"title" : "Timing Analyzer||Legal Notice",
+	"data" : {
+		"text" : "Copyright (C) 2018  Intel Corporation. All rights reserved.\nYour use of Intel Corporation's design tools, logic functions \nand other software and tools, and its AMPP partner logic \nfunctions, and any output files from any of the foregoing \n(including device programming or simulation files), and any \nassociated documentation or information are expressly subject \nto the terms and conditions of the Intel Program License \nSubscription Agreement, the Intel Quartus Prime License Agreement,\nthe Intel FPGA IP License Agreement, or other applicable license\nagreement, including, without limitation, that your use is for\nthe sole purpose of programming logic devices manufactured by\nIntel and sold by Intel or its authorized distributors.  Please\nrefer to the applicable agreement for further details.\n"
+	}
+}

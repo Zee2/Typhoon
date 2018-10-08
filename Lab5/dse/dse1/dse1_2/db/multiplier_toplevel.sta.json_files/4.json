@@ -1,0 +1,343 @@
+{
+	"title" : "Flow Non-Default Global Settings",
+	"data" : {
+		"data" : [
+			{
+				"0" : "ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP",
+				"1" : "On",
+				"2" : "Off",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "CLOUD_NOTIFY_ENABLE",
+				"1" : "Off",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "CLOUD_NOTIFY_GROUP_ID",
+				"1" : "dse1",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "COMPILER_SIGNATURE_ID",
+				"1" : "44883555731459.153871650810608",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "CYCLONEII_OPTIMIZATION_TECHNIQUE",
+				"1" : "Speed",
+				"2" : "Balanced",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "DSE_SEND_REPORT_PANEL",
+				"1" : "Fitter/(Resource Section|Place Stage)/Fitter Resource Usage Summary",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "DSE_SEND_REPORT_PANEL",
+				"1" : "Flow Elapsed Time",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "DSE_SEND_REPORT_PANEL",
+				"1" : "^Timing Analyzer/(Slow|Fast)\\s.*Model/(Slow|Fast)\\s.*Model\\s(Setup|Hold|Recovery|Removal)\\sSummary$",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "DSE_SEND_REPORT_PANEL",
+				"1" : "^Timing Analyzer/Clocks$",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "DSE_SEND_REPORT_PANEL",
+				"1" : "^Timing Analyzer/(Slow|Fast)\\s.*Model/(Slow|Fast)\\s.*Model\\sFmax\\sSummary$",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "DSE_SERVER_SEND_REPORTS",
+				"1" : "On",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "DSE_SERVER_URL",
+				"1" : "http://localhost:53608",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "DSE_WORKER_ID",
+				"1" : "2",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "EDA_DESIGN_INSTANCE_NAME",
+				"1" : "NA",
+				"2" : "--",
+				"3" : "--",
+				"4" : "testbench"
+			},
+			{
+				"0" : "EDA_NATIVELINK_SIMULATION_TEST_BENCH",
+				"1" : "testbench",
+				"2" : "--",
+				"3" : "--",
+				"4" : "eda_simulation"
+			},
+			{
+				"0" : "EDA_OUTPUT_DATA_FORMAT",
+				"1" : "Verilog Hdl",
+				"2" : "--",
+				"3" : "--",
+				"4" : "eda_simulation"
+			},
+			{
+				"0" : "EDA_SIMULATION_TOOL",
+				"1" : "ModelSim-Altera (Verilog)",
+				"2" : "<None>",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "EDA_TEST_BENCH_ENABLE_STATUS",
+				"1" : "TEST_BENCH_MODE",
+				"2" : "--",
+				"3" : "--",
+				"4" : "eda_simulation"
+			},
+			{
+				"0" : "EDA_TEST_BENCH_FILE",
+				"1" : "testbench.sv",
+				"2" : "--",
+				"3" : "--",
+				"4" : "testbench"
+			},
+			{
+				"0" : "EDA_TEST_BENCH_MODULE_NAME",
+				"1" : "testbench",
+				"2" : "--",
+				"3" : "--",
+				"4" : "testbench"
+			},
+			{
+				"0" : "EDA_TEST_BENCH_NAME",
+				"1" : "testbench",
+				"2" : "--",
+				"3" : "--",
+				"4" : "eda_simulation"
+			},
+			{
+				"0" : "EDA_TEST_BENCH_RUN_SIM_FOR",
+				"1" : "1000 ns",
+				"2" : "--",
+				"3" : "--",
+				"4" : "testbench"
+			},
+			{
+				"0" : "EDA_TIME_SCALE",
+				"1" : "1 ps",
+				"2" : "--",
+				"3" : "--",
+				"4" : "eda_simulation"
+			},
+			{
+				"0" : "FINAL_PLACEMENT_OPTIMIZATION",
+				"1" : "Always",
+				"2" : "Automatically",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "FITTER_EFFORT",
+				"1" : "Standard Fit",
+				"2" : "Auto Fit",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "FIT_ATTEMPTS_TO_SKIP",
+				"1" : "0",
+				"2" : "0.0",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "FLOW_ENABLE_POWER_ANALYZER",
+				"1" : "On",
+				"2" : "Off",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "MAX_CORE_JUNCTION_TEMP",
+				"1" : "85",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "MIN_CORE_JUNCTION_TEMP",
+				"1" : "0",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "MUX_RESTRUCTURE",
+				"1" : "Off",
+				"2" : "Auto",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "NOMINAL_CORE_SUPPLY_VOLTAGE",
+				"1" : "1.2V",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "OPTIMIZATION_MODE",
+				"1" : "Aggressive Performance",
+				"2" : "Balanced",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "OPTIMIZE_POWER_DURING_SYNTHESIS",
+				"1" : "Off",
+				"2" : "Normal compilation",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "PARTITION_COLOR",
+				"1" : "-- (Not supported for targeted family)",
+				"2" : "--",
+				"3" : "--",
+				"4" : "Top"
+			},
+			{
+				"0" : "PARTITION_FITTER_PRESERVATION_LEVEL",
+				"1" : "-- (Not supported for targeted family)",
+				"2" : "--",
+				"3" : "--",
+				"4" : "Top"
+			},
+			{
+				"0" : "PARTITION_NETLIST_TYPE",
+				"1" : "-- (Not supported for targeted family)",
+				"2" : "--",
+				"3" : "--",
+				"4" : "Top"
+			},
+			{
+				"0" : "PHYSICAL_SYNTHESIS_COMBO_LOGIC",
+				"1" : "On",
+				"2" : "Off",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION",
+				"1" : "On",
+				"2" : "Off",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "PHYSICAL_SYNTHESIS_REGISTER_RETIMING",
+				"1" : "On",
+				"2" : "Off",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "PLACEMENT_EFFORT_MULTIPLIER",
+				"1" : "4.0",
+				"2" : "1.0",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "POWER_BOARD_THERMAL_MODEL",
+				"1" : "None (CONSERVATIVE)",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "POWER_PRESET_COOLING_SOLUTION",
+				"1" : "23 MM HEAT SINK WITH 200 LFPM AIRFLOW",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "PROJECT_OUTPUT_DIRECTORY",
+				"1" : "output_files",
+				"2" : "--",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "QII_AUTO_PACKED_REGISTERS",
+				"1" : "Normal",
+				"2" : "Auto",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION",
+				"1" : "On",
+				"2" : "Auto",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "ROUTER_TIMING_OPTIMIZATION_LEVEL",
+				"1" : "MAXIMUM",
+				"2" : "Normal",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "SEED",
+				"1" : "3",
+				"2" : "1",
+				"3" : "--",
+				"4" : "--"
+			},
+			{
+				"0" : "SYNTH_PROTECT_SDC_CONSTRAINT",
+				"1" : "On",
+				"2" : "Off",
+				"3" : "--",
+				"4" : "--"
+			}
+		]
+	}
+}

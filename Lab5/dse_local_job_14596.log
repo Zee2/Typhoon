@@ -1,0 +1,39 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Worker Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Info: Your use of Intel Corporation's design tools, logic functions 
+Info: and other software and tools, and its AMPP partner logic 
+Info: functions, and any output files from any of the foregoing 
+Info: (including device programming or simulation files), and any 
+Info: associated documentation or information are expressly subject 
+Info: to the terms and conditions of the Intel Program License 
+Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+Info: the Intel FPGA IP License Agreement, or other applicable license
+Info: agreement, including, without limitation, that your use is for
+Info: the sole purpose of programming logic devices manufactured by
+Info: Intel and sold by Intel or its authorized distributors.  Please
+Info: refer to the applicable agreement for further details.
+Info: *******************************************************************
+Info: Registering self with server http://localhost:53608/api/v1.0/broker/server/
+Info: Successfully registered with server.
+Info: Starting compilation quartus_sh --ipc_json --flow compile multiplier_toplevel.qsf
+Info: Sent timestamps successfully
+Info: Preparing to compile multiplier_toplevel ...
+Info: Downloading multiplier_toplevel.qar.sha256 ...
+Info: Finished download.
+Info: Verified dse/dse1/dse1_2\multiplier_toplevel.qar.sha256 exists.
+Info: Downloading multiplier_toplevel.qar ...
+Info: Finished download.
+Info: Verified dse/dse1/dse1_2\multiplier_toplevel.qar exists.
+Info: Download successful. Checksum matched expected value.
+Info: Running quartus_sh --restore -output dse/dse1/dse1_2 dse/dse1/dse1_2\multiplier_toplevel.qar
+Info: Downloading dse1_2.qsf ...
+Info: Finished download.
+Info: Verified C:\Users\kuilin\Desktop\385\385_FPGA\Lab5\dse/dse1/dse1_2\multiplier_toplevel.qsf exists.
+Info: Downloading dse1_2.qpf ...
+Info: Finished download.
+Info: Verified dse/dse1/dse1_2\multiplier_toplevel.qpf exists.
+Info: Sent timestamps successfully
+Info: Sent timestamps successfully
+Info: Compilation finished. 0 msgs
+Info: Processing keep results option: all
+Info: Sent timestamps successfully

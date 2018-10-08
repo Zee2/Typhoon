@@ -238,6 +238,7 @@ module ISDU (   input logic         Clk,
 					
 					DRMUX = 1'b0;  //IR[11:9]
 					SR1MUX = 1'b1; //IR[8:6]
+					LD_CC = 1'b1;
 				end
 			S_06, S_07: //LDR and STR's MAR <- B+off6
 				begin
@@ -254,6 +255,7 @@ module ISDU (   input logic         Clk,
 					LD_REG = 1'b1;
 					
 					GateMDR = 1'b1;
+					LD_CC = 1'b1;
 				end
 			S_23: //STR MDR<-SR
 				begin

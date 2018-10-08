@@ -1,0 +1,447 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+Info: Command: quartus_sh --flow compile multiplier_toplevel.qsf
+Info: Quartus(args): compile multiplier_toplevel.qsf
+Info: Project Name = C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/multiplier_toplevel
+Info: Revision Name = multiplier_toplevel
+{"object_type": "report_status", "percent" : 0}
+Info: *******************************************************************
+Info: Running Quartus Prime Signal Tap
+Info: Command: quartus_stp multiplier_toplevel -c multiplier_toplevel
+Info: Quartus Prime Signal Tap was successful. 0 errors, 0 warnings
+{"object_type": "report_status", "percent" : 14}
+{"object_type": "report_status", "percent" : 14}
+{"object_type": "report_status", "percent" : 14}
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+Info: Command: quartus_map --read_settings_files=off --write_settings_files=off multiplier_toplevel -c multiplier_toplevel
+{"object_type": "refresh_report"}
+Warning: Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Found 3 design units, including 3 entities, in source file synchronizers.sv
+Warning: Verilog HDL warning at HexDriver.sv(23): extended using "x" or "z"
+Info: Found 1 design units, including 1 entities, in source file hexdriver.sv
+Info: Found 1 design units, including 1 entities, in source file adder_9.sv
+Info: Found 1 design units, including 1 entities, in source file reg_8.sv
+Info: Found 1 design units, including 1 entities, in source file full_adder.sv
+Info: Found 1 design units, including 1 entities, in source file multiplier_toplevel.sv
+Info: Found 1 design units, including 1 entities, in source file control.sv
+Info: Found 1 design units, including 1 entities, in source file testbench.sv
+{"object_type": "report_status", "percent" : 15}
+{"object_type": "report_status", "percent" : 15}
+{"object_type": "report_status", "percent" : 15}
+Info: Elaborating entity "multiplier_toplevel" for the top level hierarchy
+Info: Elaborating entity "HexDriver" for hierarchy "HexDriver:hdAU"
+Info: Elaborating entity "control" for hierarchy "control:controller"
+Info: Verilog HDL Case Statement information at control.sv(36): all case item expressions in this case statement are onehot
+Info: Elaborating entity "adder_9" for hierarchy "adder_9:adderUnit"
+Info: Elaborating entity "full_adder" for hierarchy "adder_9:adderUnit|full_adder:adderGenLoop[0].adder_i"
+Info: Elaborating entity "reg_8" for hierarchy "reg_8:regA"
+Info: Elaborating entity "sync" for hierarchy "sync:button_sync[0]"
+{"object_type": "report_status", "percent" : 19}
+{"object_type": "report_status", "percent" : 20}
+{"object_type": "report_status", "percent" : 21}
+{"object_type": "report_status", "percent" : 20}
+Info: Timing-Driven Synthesis is running
+{"object_type": "report_status", "percent" : 14}
+{"object_type": "report_status", "percent" : 21}
+{"object_type": "report_status", "percent" : 20}
+{"object_type": "report_status", "percent" : 20}
+Info: Resynthesizing 0 WYSIWYG logic cells and I/Os using "speed" technology mapper which leaves 0 WYSIWYG logic cells and I/Os untouched
+{"object_type": "report_status", "percent" : 23}
+{"object_type": "report_status", "percent" : 23}
+{"object_type": "report_status", "percent" : 23}
+{"object_type": "report_status", "percent" : 23}
+{"object_type": "report_status", "percent" : 24}
+{"object_type": "report_status", "percent" : 24}
+{"object_type": "report_status", "percent" : 24}
+{"object_type": "report_status", "percent" : 24}
+{"object_type": "report_status", "percent" : 24}
+{"object_type": "report_status", "percent" : 24}
+{"object_type": "report_status", "percent" : 24}
+{"object_type": "report_status", "percent" : 25}
+{"object_type": "report_status", "percent" : 25}
+{"object_type": "report_status", "percent" : 25}
+{"object_type": "report_status", "percent" : 25}
+{"object_type": "report_status", "percent" : 25}
+{"object_type": "report_status", "percent" : 25}
+{"object_type": "report_status", "percent" : 26}
+{"object_type": "report_status", "percent" : 27}
+{"object_type": "report_status", "percent" : 27}
+Info: 5 registers lost all their fanouts during netlist optimizations.
+Info: Starting physical synthesis optimizations for speed
+{"object_type": "report_status", "percent" : 28}
+Info: Reading SDC File: 'multiplier_toplevel.sdc'
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+Info: Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info: Found 1 clocks
+Info: Starting physical synthesis algorithm register retiming
+Info: Physical synthesis algorithm register retiming complete: estimated slack improvement of 2351 ps
+Info: Starting physical synthesis algorithm combinational resynthesis using boolean division
+Info: Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
+Info: Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
+Info: Generated suppressed messages file C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/output_files/multiplier_toplevel.map.smsg
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.map.json_files/
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.flow.json_files/
+{"object_type": "report_status", "percent" : 28}
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Info: Implemented 191 device resources after synthesis - the final resource count might be different
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.map.json_files/
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.flow.json_files/
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+{"object_type": "report_status", "percent" : 28}
+{"object_type": "refresh_report"}
+{"object_type": "report_status", "percent" : 28}
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off multiplier_toplevel -c multiplier_toplevel
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = multiplier_toplevel
+Info: Revision = multiplier_toplevel
+{"object_type": "report_status", "percent" : 29}
+{"object_type": "refresh_report"}
+Warning: Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Selected device EP4CE115F29C7 for design "multiplier_toplevel"
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Info: Fitter is performing a Standard Fit compilation using maximum Fitter effort to optimize design performance
+Warning: Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+{"object_type": "report_status", "percent" : 30}
+Info: Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+Info: Fitter converted 5 user pins into dedicated programming pins
+{"object_type": "report_status", "percent" : 30}
+Warning: Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Critical Warning: No exact pin location assignment(s) for 16 pins of 57 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+{"object_type": "report_status", "percent" : 33}
+Info: Reading SDC File: 'multiplier_toplevel.sdc'
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+Info: Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info: Found 1 clocks
+Info: Automatically promoted node Clk~input (placed in PIN Y2 (CLK2, DIFFCLK_1p))
+{"object_type": "report_status", "percent" : 30}
+{"object_type": "report_status", "percent" : 33}
+Info: Starting register packing
+Extra Info: Performing register packing on registers with non-logic cell location assignments
+Extra Info: Completed register packing on registers with non-logic cell location assignments
+Extra Info: Started Fast Input/Output/OE register processing
+Extra Info: Finished Fast Input/Output/OE register processing
+Extra Info: Start inferring scan chains for DSP blocks
+Extra Info: Inferring scan chains for DSP blocks is complete
+Extra Info: Moving registers into I/O cells, Multiplier Blocks, and RAM blocks to improve timing and density
+Extra Info: Finished moving registers into I/O cells, Multiplier Blocks, and RAM blocks
+Info: Finished register packing
+{"object_type": "report_status", "percent" : 31}
+Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+Info: I/O bank details before I/O pin placement
+Info: Starting physical synthesis optimizations for speed
+{"object_type": "report_status", "percent" : 33}
+Info: Physical synthesis optimizations for speed complete: elapsed time is 00:00:00
+{"object_type": "report_status", "percent" : 31}
+Info: Fitter preparation operations ending: elapsed time is 00:00:03
+Info: Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
+{"object_type": "report_status", "percent" : 31}
+{"object_type": "report_status", "percent" : 33}
+Info: Fitter placement preparation operations beginning
+{"object_type": "report_status", "percent" : 31}
+{"object_type": "report_status", "percent" : 31}
+{"object_type": "report_status", "percent" : 32}
+{"object_type": "report_status", "percent" : 33}
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement operations beginning
+{"object_type": "report_status", "percent" : 33}
+{"object_type": "report_status", "percent" : 33}
+{"object_type": "report_status", "percent" : 33}
+{"object_type": "report_status", "percent" : 33}
+{"object_type": "report_status", "percent" : 34}
+{"object_type": "report_status", "percent" : 34}
+{"object_type": "report_status", "percent" : 34}
+{"object_type": "report_status", "percent" : 34}
+{"object_type": "report_status", "percent" : 34}
+{"object_type": "report_status", "percent" : 34}
+{"object_type": "report_status", "percent" : 34}
+{"object_type": "report_status", "percent" : 35}
+{"object_type": "report_status", "percent" : 35}
+{"object_type": "report_status", "percent" : 35}
+{"object_type": "report_status", "percent" : 35}
+{"object_type": "report_status", "percent" : 35}
+{"object_type": "report_status", "percent" : 35}
+{"object_type": "report_status", "percent" : 35}
+{"object_type": "report_status", "percent" : 36}
+{"object_type": "report_status", "percent" : 36}
+{"object_type": "report_status", "percent" : 37}
+{"object_type": "report_status", "percent" : 37}
+{"object_type": "report_status", "percent" : 38}
+{"object_type": "report_status", "percent" : 39}
+{"object_type": "report_status", "percent" : 36}
+{"object_type": "report_status", "percent" : 36}
+{"object_type": "report_status", "percent" : 36}
+{"object_type": "report_status", "percent" : 37}
+{"object_type": "report_status", "percent" : 37}
+{"object_type": "report_status", "percent" : 37}
+{"object_type": "report_status", "percent" : 38}
+{"object_type": "report_status", "percent" : 38}
+{"object_type": "report_status", "percent" : 38}
+{"object_type": "report_status", "percent" : 39}
+Info: Fitter placement was successful
+Info: Fitter placement operations ending: elapsed time is 00:00:11
+{"object_type": "report_status", "percent" : 33}
+Info: Fitter routing operations beginning
+{"object_type": "report_status", "percent" : 39}
+Info: Router estimated average interconnect usage is 0% of the available device resources
+{"object_type": "report_status", "percent" : 39}
+{"object_type": "report_status", "percent" : 39}
+{"object_type": "report_status", "percent" : 39}
+{"object_type": "report_status", "percent" : 39}
+{"object_type": "report_status", "percent" : 39}
+{"object_type": "report_status", "percent" : 39}
+{"object_type": "report_status", "percent" : 40}
+{"object_type": "report_status", "percent" : 40}
+{"object_type": "report_status", "percent" : 40}
+Info: Fitter routing operations ending: elapsed time is 00:00:04
+Info: Total time spent on timing analysis during the Fitter is 0.26 seconds.
+{"object_type": "report_status", "percent" : 40}
+Info: Started post-fitting delay annotation
+{"object_type": "report_status", "percent" : 41}
+{"object_type": "report_status", "percent" : 41}
+{"object_type": "report_status", "percent" : 41}
+{"object_type": "report_status", "percent" : 41}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+Info: Delay annotation completed successfully
+Info: Started post-fitting delay annotation
+{"object_type": "report_status", "percent" : 41}
+{"object_type": "report_status", "percent" : 41}
+{"object_type": "report_status", "percent" : 41}
+{"object_type": "report_status", "percent" : 41}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 41}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 42}
+Info: Delay annotation completed successfully
+{"object_type": "report_status", "percent" : 40}
+{"object_type": "report_status", "percent" : 42}
+Info: Fitter post-fit operations ending: elapsed time is 00:00:02
+Info: Generated suppressed messages file C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/output_files/multiplier_toplevel.fit.smsg
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.fit.json_files/
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.flow.json_files/
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "refresh_report"}
+{"object_type": "report_status", "percent" : 42}
+{"object_type": "report_status", "percent" : 43}
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off multiplier_toplevel -c multiplier_toplevel
+{"object_type": "refresh_report"}
+Warning: Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+{"object_type": "report_status", "percent" : 44}
+{"object_type": "report_status", "percent" : 44}
+{"object_type": "report_status", "percent" : 47}
+{"object_type": "report_status", "percent" : 48}
+{"object_type": "report_status", "percent" : 50}
+{"object_type": "report_status", "percent" : 53}
+{"object_type": "report_status", "percent" : 54}
+Info: Writing out detailed assembly data for power analysis
+Info: Assembler is generating device programming files
+{"object_type": "report_status", "percent" : 55}
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+{"object_type": "report_status", "percent" : 57}
+{"object_type": "refresh_report"}
+{"object_type": "report_status", "percent" : 57}
+{"object_type": "report_status", "percent" : 57}
+Info: *******************************************************************
+Info: Running Quartus Prime Power Analyzer
+Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off multiplier_toplevel -c multiplier_toplevel
+{"object_type": "refresh_report"}
+Warning: Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+{"object_type": "report_status", "percent" : 59}
+{"object_type": "report_status", "percent" : 57}
+{"object_type": "report_status", "percent" : 59}
+{"object_type": "report_status", "percent" : 58}
+Info: Reading SDC File: 'multiplier_toplevel.sdc'
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+Info: Starting Vectorless Power Activity Estimation
+{"object_type": "report_status", "percent" : 59}
+{"object_type": "report_status", "percent" : 59}
+{"object_type": "report_status", "percent" : 60}
+{"object_type": "report_status", "percent" : 60}
+{"object_type": "report_status", "percent" : 61}
+Info: Completed Vectorless Power Activity Estimation
+Warning: Toggle rates for 1 nodes were above physically achievable device limits and have been clipped
+Info: Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
+Info: Started post-fitting delay annotation
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 69}
+{"object_type": "report_status", "percent" : 69}
+{"object_type": "report_status", "percent" : 69}
+{"object_type": "report_status", "percent" : 69}
+Info: Delay annotation completed successfully
+{"object_type": "report_status", "percent" : 63}
+{"object_type": "report_status", "percent" : 63}
+{"object_type": "report_status", "percent" : 63}
+{"object_type": "report_status", "percent" : 63}
+{"object_type": "report_status", "percent" : 64}
+{"object_type": "report_status", "percent" : 64}
+{"object_type": "report_status", "percent" : 64}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 65}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 66}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 67}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 68}
+{"object_type": "report_status", "percent" : 69}
+{"object_type": "report_status", "percent" : 69}
+{"object_type": "report_status", "percent" : 69}
+{"object_type": "report_status", "percent" : 69}
+{"object_type": "report_status", "percent" : 69}
+{"object_type": "report_status", "percent" : 69}
+Info: Average toggle rate for this design is 1828.531 millions of transitions / sec
+{"object_type": "report_status", "percent" : 70}
+{"object_type": "report_status", "percent" : 70}
+{"object_type": "report_status", "percent" : 70}
+{"object_type": "report_status", "percent" : 70}
+{"object_type": "report_status", "percent" : 71}
+Info: Total thermal power estimate for the design is 3638.61 mW
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.pow.json_files/
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.flow.json_files/
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 4 warnings
+{"object_type": "report_status", "percent" : 71}
+{"object_type": "refresh_report"}
+{"object_type": "report_status", "percent" : 71}
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+Info: Command: quartus_sta multiplier_toplevel -c multiplier_toplevel
+Info: qsta_default_script.tcl version: #2
+{"object_type": "report_status", "percent" : 72}
+Warning: Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+{"object_type": "report_status", "percent" : 74}
+Info: Reading SDC File: 'multiplier_toplevel.sdc'
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -9.435
+Info: Worst-case hold slack is -0.097
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.998
+Info: Analyzing Slow 1200mV 0C Model
+Info: Started post-fitting delay annotation
+{"object_type": "report_status", "percent" : 78}
+{"object_type": "report_status", "percent" : 79}
+{"object_type": "report_status", "percent" : 79}
+{"object_type": "report_status", "percent" : 80}
+{"object_type": "report_status", "percent" : 80}
+{"object_type": "report_status", "percent" : 80}
+{"object_type": "report_status", "percent" : 81}
+{"object_type": "report_status", "percent" : 81}
+{"object_type": "report_status", "percent" : 82}
+{"object_type": "report_status", "percent" : 82}
+{"object_type": "report_status", "percent" : 83}
+{"object_type": "report_status", "percent" : 83}
+{"object_type": "report_status", "percent" : 83}
+{"object_type": "report_status", "percent" : 84}
+{"object_type": "report_status", "percent" : 79}
+{"object_type": "report_status", "percent" : 85}
+{"object_type": "report_status", "percent" : 85}
+{"object_type": "report_status", "percent" : 84}
+{"object_type": "report_status", "percent" : 85}
+Info: Delay annotation completed successfully
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -8.596
+Info: Worst-case hold slack is 0.144
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.998
+Info: Analyzing Fast 1200mV 0C Model
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -6.252
+Info: Worst-case hold slack is 0.183
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.998
+Info: Design is fully constrained for setup requirements
+Info: Design is fully constrained for hold requirements
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.sta.json_files/
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.flow.json_files/
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 10 warnings
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.sta.json_files/
+{"object_type": "report_status", "percent" : 85}
+{"object_type": "refresh_report"}
+{"object_type": "report_status", "percent" : 85}
+{"object_type": "report_status", "percent" : 86}
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off multiplier_toplevel -c multiplier_toplevel
+{"object_type": "refresh_report"}
+Warning: Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+{"object_type": "report_status", "percent" : 86}
+{"object_type": "report_status", "percent" : 89}
+Info: Generated file multiplier_toplevel_7_1200mv_85c_slow.vo in folder "C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/simulation/modelsim/" for EDA simulation tool
+Info: Generated file multiplier_toplevel_7_1200mv_0c_slow.vo in folder "C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/simulation/modelsim/" for EDA simulation tool
+Info: Generated file multiplier_toplevel_min_1200mv_0c_fast.vo in folder "C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/simulation/modelsim/" for EDA simulation tool
+Info: Generated file multiplier_toplevel.vo in folder "C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/simulation/modelsim/" for EDA simulation tool
+{"object_type": "report_status", "percent" : 91}
+Info: Generated file multiplier_toplevel_7_1200mv_85c_v_slow.sdo in folder "C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/simulation/modelsim/" for EDA simulation tool
+Info: Generated file multiplier_toplevel_7_1200mv_0c_v_slow.sdo in folder "C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/simulation/modelsim/" for EDA simulation tool
+Info: Generated file multiplier_toplevel_min_1200mv_0c_v_fast.sdo in folder "C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/simulation/modelsim/" for EDA simulation tool
+Info: Generated file multiplier_toplevel_v.sdo in folder "C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/simulation/modelsim/" for EDA simulation tool
+{"object_type": "report_status", "percent" : 92}
+{"object_type": "report_status", "percent" : 93}
+{"object_type": "report_status", "percent" : 99}
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.eda.json_files/
+Info: Generated JSON formatted report files in C:/Users/kuilin/Desktop/385/385_FPGA/Lab5/dse/dse1/dse1_base/db/multiplier_toplevel.flow.json_files/
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+{"object_type": "report_status", "percent" : 100}
+{"object_type": "refresh_report"}
+Info: Quartus Prime Full Compilation was successful. 0 errors, 25 warnings
+Info: Evaluation of Tcl script c:/intelfpga_lite/18.0/quartus/common/tcl/internal/qsh_flow.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 25 warnings

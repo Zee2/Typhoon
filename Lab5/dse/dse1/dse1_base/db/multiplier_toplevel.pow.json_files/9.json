@@ -1,0 +1,147 @@
+{
+	"title" : "table_of_contents",
+	"data" : {
+		"children" : [
+			{
+				"name" : "Legal Notice",
+				"leaf" : true,
+				"content_type" : "text",
+				"icon" : "/site_media/report_viewer/img/afcq_text.png",
+				"panel_path" : "Legal Notice"
+			},
+			{
+				"name" : "Flow Summary",
+				"leaf" : true,
+				"content_type" : "table_summary",
+				"icon" : "/site_media/report_viewer/img/afcq_table_summary.png",
+				"panel_path" : "Flow Summary",
+				"field_names" : [
+					"0",
+					"1"
+				],
+				"field_display_names" : [
+					"Flow Status",
+					"Successful - Fri Oct 05 00:13:17 2018"
+				]
+			},
+			{
+				"name" : "Flow Settings",
+				"leaf" : true,
+				"content_type" : "table",
+				"icon" : "/site_media/report_viewer/img/afcq_table.png",
+				"panel_path" : "Flow Settings",
+				"field_names" : [
+					"0",
+					"1"
+				],
+				"field_display_names" : [
+					"Option",
+					"Setting"
+				]
+			},
+			{
+				"name" : "Flow Non-Default Global Settings",
+				"leaf" : true,
+				"content_type" : "table",
+				"icon" : "/site_media/report_viewer/img/afcq_table.png",
+				"panel_path" : "Flow Non-Default Global Settings",
+				"field_names" : [
+					"0",
+					"1",
+					"2",
+					"3",
+					"4"
+				],
+				"field_display_names" : [
+					"Assignment Name",
+					"Value",
+					"Default Value",
+					"Entity Name",
+					"Section Id"
+				]
+			},
+			{
+				"name" : "Flow Elapsed Time",
+				"leaf" : true,
+				"content_type" : "table",
+				"icon" : "/site_media/report_viewer/img/afcq_table.png",
+				"panel_path" : "Flow Elapsed Time",
+				"field_names" : [
+					"0",
+					"1",
+					"2",
+					"3",
+					"4"
+				],
+				"field_display_names" : [
+					"Module Name",
+					"Elapsed Time",
+					"Average Processors Used",
+					"Peak Virtual Memory",
+					"Total CPU Time (on all processors)"
+				]
+			},
+			{
+				"name" : "Flow OS Summary",
+				"leaf" : true,
+				"content_type" : "table",
+				"icon" : "/site_media/report_viewer/img/afcq_table.png",
+				"panel_path" : "Flow OS Summary",
+				"field_names" : [
+					"0",
+					"1",
+					"2",
+					"3",
+					"4"
+				],
+				"field_display_names" : [
+					"Module Name",
+					"Machine Hostname",
+					"OS Name",
+					"OS Version",
+					"Processor type"
+				]
+			},
+			{
+				"name" : "Fitter",
+				"children" : [
+					{
+						"name" : "Fitter Summary",
+						"leaf" : true,
+						"content_type" : "table_summary",
+						"icon" : "/site_media/report_viewer/img/afcq_table_summary.png",
+						"panel_path" : "Fitter||Fitter Summary",
+						"field_names" : [
+							"0",
+							"1"
+						],
+						"field_display_names" : [
+							"Fitter Status",
+							"Successful - Fri Oct 05 00:13:00 2018"
+						]
+					},
+					{
+						"name" : "Resource Section",
+						"children" : [
+							{
+								"name" : "Fitter Resource Usage Summary",
+								"leaf" : true,
+								"content_type" : "table",
+								"icon" : "/site_media/report_viewer/img/afcq_table.png",
+								"panel_path" : "Fitter||Resource Section||Fitter Resource Usage Summary",
+								"field_names" : [
+									"0",
+									"1"
+								],
+								"field_display_names" : [
+									"Resource",
+									"Usage"
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

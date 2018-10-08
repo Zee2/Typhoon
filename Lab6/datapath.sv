@@ -25,7 +25,7 @@ module datapath(
 	logic[2:0] DRMUX_Muxed, SR1MUX_Muxed;
 	
 	// Register file
-	registerFile registers(.Clk(Clk), .D(Bus), .DR(DRMUX_Muxed), .LD_REG(LD_REG), .SR1(SR1MUX_Muxed), .SR2(IR[15:13]), 
+	registerFile registers(.Clk(Clk), .D(Bus), .DR(DRMUX_Muxed), .LD_REG(LD_REG), .SR1(SR1MUX_Muxed), .SR2(IR[2:0]), 
 									.SR1_Out(SR1_Out), .SR2_Out(SR2_Out), .Reset_ah(Reset_ah));
 	
 	// Muxes

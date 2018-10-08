@@ -1,0 +1,179 @@
+{
+	"title" : "Fitter||Resource Section||Fitter Resource Usage Summary",
+	"data" : {
+		"data" : [
+			{
+				"0" : "Total logic elements",
+				"1" : "101 / 114,480 ( < 1 % )"
+			},
+			{
+				"0" : "    -- Combinational with no register",
+				"1" : "64"
+			},
+			{
+				"0" : "    -- Register only",
+				"1" : "5"
+			},
+			{
+				"0" : "    -- Combinational with a register",
+				"1" : "32"
+			},
+			{
+				"0" : "",
+				"1" : ""
+			},
+			{
+				"0" : "Logic element usage by number of LUT inputs",
+				"1" : ""
+			},
+			{
+				"0" : "    -- 4 input functions",
+				"1" : "68"
+			},
+			{
+				"0" : "    -- 3 input functions",
+				"1" : "15"
+			},
+			{
+				"0" : "    -- <=2 input functions",
+				"1" : "13"
+			},
+			{
+				"0" : "    -- Register only",
+				"1" : "5"
+			},
+			{
+				"0" : "",
+				"1" : ""
+			},
+			{
+				"0" : "Logic elements by mode",
+				"1" : ""
+			},
+			{
+				"0" : "    -- normal mode",
+				"1" : "92"
+			},
+			{
+				"0" : "    -- arithmetic mode",
+				"1" : "4"
+			},
+			{
+				"0" : "",
+				"1" : ""
+			},
+			{
+				"0" : "Total registers*  ",
+				"1" : "91 / 117,053 ( < 1 % )"
+			},
+			{
+				"0" : "    -- Dedicated logic registers",
+				"1" : "37 / 114,480 ( < 1 % )"
+			},
+			{
+				"0" : "    -- I/O registers",
+				"1" : "54 / 2,573 ( 2 % )"
+			},
+			{
+				"0" : "",
+				"1" : ""
+			},
+			{
+				"0" : "Total LABs:  partially or completely used",
+				"1" : "13 / 7,155 ( < 1 % )"
+			},
+			{
+				"0" : "Virtual pins",
+				"1" : "0"
+			},
+			{
+				"0" : "I/O pins",
+				"1" : "57 / 529 ( 11 % )"
+			},
+			{
+				"0" : "    -- Clock pins ",
+				"1" : "1 / 7 ( 14 % )"
+			},
+			{
+				"0" : "    -- Dedicated input pins ",
+				"1" : "0 / 9 ( 0 % )"
+			},
+			{
+				"0" : " ",
+				"1" : " "
+			},
+			{
+				"0" : "M9Ks",
+				"1" : "0 / 432 ( 0 % )"
+			},
+			{
+				"0" : "Total block memory bits",
+				"1" : "0 / 3,981,312 ( 0 % )"
+			},
+			{
+				"0" : "Total block memory implementation bits",
+				"1" : "0 / 3,981,312 ( 0 % )"
+			},
+			{
+				"0" : "Embedded Multiplier 9-bit elements",
+				"1" : "0 / 532 ( 0 % )"
+			},
+			{
+				"0" : "PLLs",
+				"1" : "0 / 4 ( 0 % )"
+			},
+			{
+				"0" : "Global signals ",
+				"1" : "1"
+			},
+			{
+				"0" : "    -- Global clocks",
+				"1" : "1 / 20 ( 5 % )"
+			},
+			{
+				"0" : "JTAGs",
+				"1" : "0 / 1 ( 0 % )"
+			},
+			{
+				"0" : "CRC blocks",
+				"1" : "0 / 1 ( 0 % )"
+			},
+			{
+				"0" : "ASMI blocks",
+				"1" : "0 / 1 ( 0 % )"
+			},
+			{
+				"0" : "Oscillator blocks",
+				"1" : "0 / 1 ( 0 % )"
+			},
+			{
+				"0" : "Impedance control blocks",
+				"1" : "0 / 4 ( 0 % )"
+			},
+			{
+				"0" : "Average interconnect usage (total/H/V)",
+				"1" : "0.1% / 0.1% / 0.1%"
+			},
+			{
+				"0" : "Peak interconnect usage (total/H/V)",
+				"1" : "1.5% / 0.8% / 2.5%"
+			},
+			{
+				"0" : "Maximum fan-out",
+				"1" : "91"
+			},
+			{
+				"0" : "Highest non-global fan-out",
+				"1" : "29"
+			},
+			{
+				"0" : "Total fan-out",
+				"1" : "691"
+			},
+			{
+				"0" : "Average fan-out",
+				"1" : "2.18"
+			}
+		]
+	}
+}
