@@ -10,10 +10,10 @@
 # Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/Synchronizers.sv}
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:06 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/Synchronizers.sv 
+# Start time: 03:54:10 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv 
 # -- Compiling module sync
 # -- Compiling module sync_r0
 # -- Compiling module sync_r1
@@ -22,155 +22,177 @@
 # 	sync
 # 	sync_r0
 # 	sync_r1
-# End time: 15:40:06 on Oct 05,2018, Elapsed time: 0:00:00
+# End time: 03:54:10 on Oct 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv}
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:06 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv 
+# Start time: 03:54:10 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv 
 # -- Compiling module internal_register
 # 
 # Top level modules:
 # 	internal_register
-# End time: 15:40:06 on Oct 05,2018, Elapsed time: 0:00:00
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/tristate.sv}
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:06 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/tristate.sv 
-# -- Compiling module tristate
-# 
-# Top level modules:
-# 	tristate
-# End time: 15:40:06 on Oct 05,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:06 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv 
-# -- Compiling module test_memory
-# 
-# Top level modules:
-# 	test_memory
-# End time: 15:40:06 on Oct 05,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/SLC3_2.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:06 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/SLC3_2.sv 
-# -- Compiling package SLC3_2
-# 
-# Top level modules:
-# 	--none--
-# End time: 15:40:07 on Oct 05,2018, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/Mem2IO.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:07 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/Mem2IO.sv 
-# -- Compiling module Mem2IO
-# 
-# Top level modules:
-# 	Mem2IO
-# End time: 15:40:07 on Oct 05,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:07 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv 
-# -- Compiling module ISDU
-# 
-# Top level modules:
-# 	ISDU
-# End time: 15:40:07 on Oct 05,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:07 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv 
-# -- Compiling module HexDriver
-# 
-# Top level modules:
-# 	HexDriver
-# End time: 15:40:07 on Oct 05,2018, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:07 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv 
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv 
 # -- Compiling module registerFile
 # 
 # Top level modules:
 # 	registerFile
-# End time: 15:40:07 on Oct 05,2018, Elapsed time: 0:00:00
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/memory_contents.sv}
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:07 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/memory_contents.sv 
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv 
+# -- Compiling module tristate
+# 
+# Top level modules:
+# 	tristate
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv 
+# -- Compiling module test_memory
+# 
+# Top level modules:
+# 	test_memory
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv 
+# -- Compiling package SLC3_2
+# 
+# Top level modules:
+# 	--none--
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv 
+# -- Compiling module Mem2IO
+# 
+# Top level modules:
+# 	Mem2IO
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv 
+# -- Compiling module ISDU
+# 
+# Top level modules:
+# 	ISDU
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv 
+# -- Compiling module two_mux
+# -- Compiling module four_mux
+# 
+# Top level modules:
+# 	two_mux
+# 	four_mux
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv 
 # -- Compiling package memory_contents_sv_unit
 # -- Importing package SLC3_2
 # -- Compiling module memory_parser
 # 
 # Top level modules:
 # 	memory_parser
-# End time: 15:40:07 on Oct 05,2018, Elapsed time: 0:00:00
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv}
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:07 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv 
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv 
 # -- Compiling module NZPlogic
 # 
 # Top level modules:
 # 	NZPlogic
-# End time: 15:40:07 on Oct 05,2018, Elapsed time: 0:00:00
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv}
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:08 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv 
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 15:40:08 on Oct 05,2018, Elapsed time: 0:00:00
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv}
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:08 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv 
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv 
 # -- Compiling module slc3
 # 
 # Top level modules:
 # 	slc3
-# End time: 15:40:08 on Oct 05,2018, Elapsed time: 0:00:00
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv}
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:08 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv 
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv 
 # -- Compiling module lab6_toplevel
 # 
 # Top level modules:
 # 	lab6_toplevel
-# End time: 15:40:08 on Oct 05,2018, Elapsed time: 0:00:00
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6 {C:/Users/finnn/Documents/385/385_FPGA/Lab6/testbench.sv}
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:40:08 on Oct 05,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6" C:/Users/finnn/Documents/385/385_FPGA/Lab6/testbench.sv 
+# Start time: 03:54:11 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 15:40:08 on Oct 05,2018, Elapsed time: 0:00:00
+# End time: 03:54:11 on Oct 08,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 15:40:09 on Oct 05,2018
+# Start time: 03:54:11 on Oct 08,2018
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.lab6_toplevel
@@ -179,6 +201,9 @@
 # Loading work.HexDriver
 # Loading work.datapath
 # Loading work.registerFile
+# Loading work.four_mux
+# Loading work.two_mux
+# Loading work.alu
 # Loading work.internal_register
 # Loading work.NZPlogic
 # Loading work.Mem2IO
@@ -188,62 +213,8 @@
 # Loading work.SLC3_2
 # Loading work.memory_contents_sv_unit
 # Loading work.memory_parser
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[0] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[1] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[2] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[3] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[4] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[5] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[6] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[7] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: (vsim-3015) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv(32): [PCDPC] - Port size (16) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
 # 
 # add wave *
 # view structure
@@ -251,124 +222,843 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1000 ns
-restart -f; run 2000ns
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[0] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[1] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[2] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[3] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[4] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[5] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[6] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[7] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-add wave -position insertpoint sim:/testbench/tested/my_slc/d0/*
-restart -f; run 2000ns
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[0] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[1] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[2] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[3] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[4] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[5] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[6] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# ** Warning: (vsim-3017) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Too few port connections. Expected 5, found 0.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/registers/registers[7] File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Clk'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Load'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Reset'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'D'.
-# ** Warning: (vsim-3722) C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv(9): [TFMPC] - Missing connection for port 'Q'.
-# GetModuleFileName: The specified module could not be found.
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ALU_Inst
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ADDR2MUX_Mux
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux
+do C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ily_modelsim.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
 # 
+#sorry finn, you're gonna have to rename these :P
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv 
+# -- Compiling module sync
+# -- Compiling module sync_r0
+# -- Compiling module sync_r1
 # 
-# WARNING: No extended dataflow license exists
-# End time: 16:01:55 on Oct 05,2018, Elapsed time: 0:21:46
-# Errors: 0, Warnings: 145
+# Top level modules:
+# 	sync
+# 	sync_r0
+# 	sync_r1
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv 
+# -- Compiling module internal_register
+# 
+# Top level modules:
+# 	internal_register
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv 
+# -- Compiling module registerFile
+# 
+# Top level modules:
+# 	registerFile
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv 
+# -- Compiling module tristate
+# 
+# Top level modules:
+# 	tristate
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv 
+# -- Compiling module test_memory
+# 
+# Top level modules:
+# 	test_memory
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv 
+# -- Compiling package SLC3_2
+# 
+# Top level modules:
+# 	--none--
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv 
+# -- Compiling module Mem2IO
+# 
+# Top level modules:
+# 	Mem2IO
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv 
+# -- Compiling module ISDU
+# 
+# Top level modules:
+# 	ISDU
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv 
+# -- Compiling module two_mux
+# -- Compiling module four_mux
+# 
+# Top level modules:
+# 	two_mux
+# 	four_mux
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:24 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv 
+# -- Compiling package memory_contents_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module memory_parser
+# 
+# Top level modules:
+# 	memory_parser
+# End time: 03:54:24 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:25 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv 
+# -- Compiling module NZPlogic
+# 
+# Top level modules:
+# 	NZPlogic
+# End time: 03:54:25 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:25 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 03:54:25 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:25 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv 
+# -- Compiling module slc3
+# 
+# Top level modules:
+# 	slc3
+# End time: 03:54:25 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:25 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv 
+# -- Compiling module lab6_toplevel
+# 
+# Top level modules:
+# 	lab6_toplevel
+# End time: 03:54:25 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:54:25 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 03:54:25 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# End time: 03:54:27 on Oct 08,2018, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 4
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 03:54:27 on Oct 08,2018
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lab6_toplevel
+# Loading work.sync
+# Loading work.slc3
+# Loading work.HexDriver
+# Loading work.datapath
+# Loading work.registerFile
+# Loading work.four_mux
+# Loading work.two_mux
+# Loading work.alu
+# Loading work.internal_register
+# Loading work.NZPlogic
+# Loading work.Mem2IO
+# Loading work.tristate
+# Loading work.ISDU
+# Loading work.test_memory
+# Loading work.SLC3_2
+# Loading work.memory_contents_sv_unit
+# Loading work.memory_parser
+# ** Warning: (vsim-3015) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv(32): [PCDPC] - Port size (16) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
+# 
+# add wave -noupdate /testbench/Clk
+# add wave -noupdate -radix decimal /testbench/S
+# add wave -noupdate /testbench/Reset
+# add wave -noupdate /testbench/Run
+# add wave -noupdate /testbench/Continue
+# add wave -noupdate /testbench/LED
+# add wave -noupdate /testbench/OE
+# add wave -noupdate /testbench/WE
+# add wave -noupdate /testbench/ADDR
+# 
+# add wave -noupdate {/testbench/tested/my_slc/d0/MDRregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/MARregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/PCregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/IRregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/conditionalLogic/NZPregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/conditionalLogic/BENregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[0]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[1]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[2]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[3]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[4]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[5]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[6]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[7]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/state_controller/State}
+# add wave -noupdate {/testbench/tested/my_slc/state_controller/Next_state}
+# add wave -noupdate {/testbench/tested/my_slc/d0/Bus}
+# add wave -noupdate {/testbench/tested/my_slc/hex_4}
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1ms
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ALU_Inst
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ADDR2MUX_Mux
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux
+add wave -position end  sim:/testbench/tested/my_slc/d0/ALU_Inst/Out
+restart
+# ** Warning: (vsim-3015) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv(32): [PCDPC] - Port size (16) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
+run
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ALU_Inst
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ADDR2MUX_Mux
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux
+add wave -position end  sim:/testbench/tested/my_slc/d0/ALU_Inst/A
+add wave -position end  sim:/testbench/tested/my_slc/d0/ALU_Inst/B
+restart
+# ** Warning: (vsim-3015) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv(32): [PCDPC] - Port size (16) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
+run
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ALU_Inst
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ADDR2MUX_Mux
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux
+add wave -position end  sim:/testbench/tested/my_slc/d0/SR1_Out
+add wave -position end  sim:/testbench/tested/my_slc/d0/SR2_Out
+restart
+# ** Warning: (vsim-3015) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv(32): [PCDPC] - Port size (16) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
+run
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ALU_Inst
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ADDR2MUX_Mux
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux
+add wave -position end  sim:/testbench/tested/my_slc/d0/SR1MUX_Muxed
+restart
+# ** Warning: (vsim-3015) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv(32): [PCDPC] - Port size (16) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
+run
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ALU_Inst
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ADDR2MUX_Mux
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux
+add wave -position end  sim:/testbench/tested/my_slc/d0/SR1MUX_Mux/A
+add wave -position end  sim:/testbench/tested/my_slc/d0/SR1MUX_Mux/B
+restart
+# ** Warning: (vsim-3015) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv(32): [PCDPC] - Port size (16) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
+run
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ALU_Inst
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ADDR2MUX_Mux
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux
+do C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ily_modelsim.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+#sorry finn, you're gonna have to rename these :P
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:26 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv 
+# -- Compiling module sync
+# -- Compiling module sync_r0
+# -- Compiling module sync_r1
+# 
+# Top level modules:
+# 	sync
+# 	sync_r0
+# 	sync_r1
+# End time: 04:06:26 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:26 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv 
+# -- Compiling module internal_register
+# 
+# Top level modules:
+# 	internal_register
+# End time: 04:06:26 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:26 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv 
+# -- Compiling module registerFile
+# 
+# Top level modules:
+# 	registerFile
+# End time: 04:06:26 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:26 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv 
+# -- Compiling module tristate
+# 
+# Top level modules:
+# 	tristate
+# End time: 04:06:26 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:26 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv 
+# -- Compiling module test_memory
+# 
+# Top level modules:
+# 	test_memory
+# End time: 04:06:26 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:26 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv 
+# -- Compiling package SLC3_2
+# 
+# Top level modules:
+# 	--none--
+# End time: 04:06:26 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:26 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv 
+# -- Compiling module Mem2IO
+# 
+# Top level modules:
+# 	Mem2IO
+# End time: 04:06:26 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:26 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv 
+# -- Compiling module ISDU
+# 
+# Top level modules:
+# 	ISDU
+# End time: 04:06:26 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:26 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 04:06:27 on Oct 08,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:27 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv 
+# -- Compiling module two_mux
+# -- Compiling module four_mux
+# 
+# Top level modules:
+# 	two_mux
+# 	four_mux
+# End time: 04:06:27 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:27 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 04:06:27 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:27 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv 
+# -- Compiling package memory_contents_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module memory_parser
+# 
+# Top level modules:
+# 	memory_parser
+# End time: 04:06:27 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:27 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv 
+# -- Compiling module NZPlogic
+# 
+# Top level modules:
+# 	NZPlogic
+# End time: 04:06:27 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:27 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 04:06:27 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:27 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv 
+# -- Compiling module slc3
+# 
+# Top level modules:
+# 	slc3
+# End time: 04:06:27 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:27 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv 
+# -- Compiling module lab6_toplevel
+# 
+# Top level modules:
+# 	lab6_toplevel
+# End time: 04:06:27 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:06:27 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 04:06:27 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# End time: 04:06:30 on Oct 08,2018, Elapsed time: 0:12:03
+# Errors: 0, Warnings: 24
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 04:06:30 on Oct 08,2018
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lab6_toplevel
+# Loading work.sync
+# Loading work.slc3
+# Loading work.HexDriver
+# Loading work.datapath
+# Loading work.registerFile
+# Loading work.four_mux
+# Loading work.two_mux
+# Loading work.alu
+# Loading work.internal_register
+# Loading work.NZPlogic
+# Loading work.Mem2IO
+# Loading work.tristate
+# Loading work.ISDU
+# Loading work.test_memory
+# Loading work.SLC3_2
+# Loading work.memory_contents_sv_unit
+# Loading work.memory_parser
+# ** Warning: (vsim-3015) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv(32): [PCDPC] - Port size (16) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
+# 
+# add wave -noupdate /testbench/Clk
+# add wave -noupdate -radix decimal /testbench/S
+# add wave -noupdate /testbench/Reset
+# add wave -noupdate /testbench/Run
+# add wave -noupdate /testbench/Continue
+# add wave -noupdate /testbench/LED
+# add wave -noupdate /testbench/OE
+# add wave -noupdate /testbench/WE
+# add wave -noupdate /testbench/ADDR
+# 
+# add wave -noupdate {/testbench/tested/my_slc/d0/MDRregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/MARregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/PCregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/IRregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/conditionalLogic/NZPregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/conditionalLogic/BENregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[0]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[1]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[2]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[3]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[4]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[5]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[6]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[7]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/state_controller/State}
+# add wave -noupdate {/testbench/tested/my_slc/state_controller/Next_state}
+# add wave -noupdate {/testbench/tested/my_slc/d0/Bus}
+# add wave -noupdate {/testbench/tested/my_slc/hex_4}
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1ms
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ALU_Inst
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ADDR2MUX_Mux
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux
+do C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ily_modelsim.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+#sorry finn, you're gonna have to rename these :P
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:13 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv 
+# -- Compiling module sync
+# -- Compiling module sync_r0
+# -- Compiling module sync_r1
+# 
+# Top level modules:
+# 	sync
+# 	sync_r0
+# 	sync_r1
+# End time: 04:08:13 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv 
+# -- Compiling module internal_register
+# 
+# Top level modules:
+# 	internal_register
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv 
+# -- Compiling module registerFile
+# 
+# Top level modules:
+# 	registerFile
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv 
+# -- Compiling module tristate
+# 
+# Top level modules:
+# 	tristate
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv 
+# -- Compiling module test_memory
+# 
+# Top level modules:
+# 	test_memory
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv 
+# -- Compiling package SLC3_2
+# 
+# Top level modules:
+# 	--none--
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv 
+# -- Compiling module Mem2IO
+# 
+# Top level modules:
+# 	Mem2IO
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv 
+# -- Compiling module ISDU
+# 
+# Top level modules:
+# 	ISDU
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv 
+# -- Compiling module two_mux
+# -- Compiling module four_mux
+# 
+# Top level modules:
+# 	two_mux
+# 	four_mux
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv 
+# -- Compiling package memory_contents_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module memory_parser
+# 
+# Top level modules:
+# 	memory_parser
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv 
+# -- Compiling module NZPlogic
+# 
+# Top level modules:
+# 	NZPlogic
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv 
+# -- Compiling module slc3
+# 
+# Top level modules:
+# 	slc3
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:14 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv 
+# -- Compiling module lab6_toplevel
+# 
+# Top level modules:
+# 	lab6_toplevel
+# End time: 04:08:14 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6 {C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:08:15 on Oct 08,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6" C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 04:08:15 on Oct 08,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# End time: 04:08:17 on Oct 08,2018, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 4
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 04:08:17 on Oct 08,2018
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lab6_toplevel
+# Loading work.sync
+# Loading work.slc3
+# Loading work.HexDriver
+# Loading work.datapath
+# Loading work.registerFile
+# Loading work.four_mux
+# Loading work.two_mux
+# Loading work.alu
+# Loading work.internal_register
+# Loading work.NZPlogic
+# Loading work.Mem2IO
+# Loading work.tristate
+# Loading work.ISDU
+# Loading work.test_memory
+# Loading work.SLC3_2
+# Loading work.memory_contents_sv_unit
+# Loading work.memory_parser
+# ** Warning: (vsim-3015) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv(32): [PCDPC] - Port size (16) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(15).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux File: C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
+# 
+# add wave -noupdate /testbench/Clk
+# add wave -noupdate -radix decimal /testbench/S
+# add wave -noupdate /testbench/Reset
+# add wave -noupdate /testbench/Run
+# add wave -noupdate /testbench/Continue
+# add wave -noupdate /testbench/LED
+# add wave -noupdate /testbench/OE
+# add wave -noupdate /testbench/WE
+# add wave -noupdate /testbench/ADDR
+# 
+# add wave -noupdate {/testbench/tested/my_slc/d0/MDRregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/MARregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/PCregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/IRregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/conditionalLogic/NZPregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/conditionalLogic/BENregister/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[0]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[1]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[2]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[3]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[4]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[5]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[6]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/d0/registers/internal_register_generate[7]/register/Q}
+# add wave -noupdate {/testbench/tested/my_slc/state_controller/State}
+# add wave -noupdate {/testbench/tested/my_slc/state_controller/Next_state}
+# add wave -noupdate {/testbench/tested/my_slc/d0/Bus}
+# add wave -noupdate {/testbench/tested/my_slc/hex_4}
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1ms
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv(11): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ALU_Inst
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/ADDR2MUX_Mux
+# ** Warning: (vsim-8315) C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv(23): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/tested/my_slc/d0/PCMux_Mux
+# End time: 04:09:44 on Oct 08,2018, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 4

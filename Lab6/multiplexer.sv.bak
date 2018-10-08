@@ -1,0 +1,10 @@
+module multiplexer (
+	input logic A
+	input logic B
+	input logic Sel
+	output logic Out
+);
+	
+	always_comb Out = Sel ? A : B;
+	
+endmodule

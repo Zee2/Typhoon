@@ -28,6 +28,8 @@ lab6_toplevel tested(.*);
 
 
 initial begin : testLoop
+	S = 20; //XOR test
+	Continue = 0;
 	#20 Reset = 1;
 	#2 Reset = 0;
 	#2 Reset = 1;
@@ -35,6 +37,12 @@ initial begin : testLoop
 	#2 Run = 0;
 	#2 Run = 1;
 	
+	//XOR test, expected result is 1010 0101 1010 0101, or A5A5
+	#100 S = 16'b1111000011110000;
+	Continue = 1;
+	#100 S = 16'b0101010101010101;
+	Continue = 0;
+	#10 Continue = 1;
 end
 
 endmodule

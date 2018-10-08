@@ -7,53 +7,103 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/finnn/Documents/385/385_FPGA/Lab6/simulation/modelsim
-vdatapath
+Z0 dC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/simulation/modelsim
+valu
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1538772008
+Z2 !s110 1538989694
 !i10b 1
-!s100 nZHMW3@]l^<Q0VW^Th>CW1
-I2A_Qef3Q>R@1oBb@Kh8]Q2
+!s100 49f0LIC3^^8>U3ZWlD;zo0
+Ig3iUg=F82XP<ef58I_8df1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 datapath_sv_unit
+!s105 alu_sv_unit
 S1
 R0
-w1538768083
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv
-L0 1
+w1538978746
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv
+L0 3
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1538772008.000000
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv|
+Z5 !s108 1538989694.000000
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/alu.sv|
 !i113 1
 Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6
+Z7 !s92 -sv -work work +incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6
 Z8 tCvgOpt 0
-vHexDriver
+vdatapath
 R1
-Z9 !s110 1538772007
+R2
 !i10b 1
-!s100 ^DddjRd7Wla]U<SlP;mT@0
-I76ID]>1NeKA<7aKV94d7Q0
+!s100 i1KU`OU>W8FBab_811GgJ2
+IUh>of5DYNQQNl7^LoEXzc2
 R3
-!s105 HexDriver_sv_unit
+!s105 datapath_sv_unit
 S1
 R0
-Z10 w1537217010
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv
+w1538987853
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv
 L0 1
 R4
 r1
 !s85 0
 31
-Z11 !s108 1538772007.000000
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/HexDriver.sv|
+R5
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/datapath.sv|
+!i113 1
+R6
+R7
+R8
+vfour_mux
+R1
+R2
+!i10b 1
+!s100 icMM3nbeQJ:U>0P2HKfW@1
+IZ`LDfAU@:IIB[DXQMhfZa2
+R3
+Z9 !s105 multiplexer_sv_unit
+S1
+R0
+Z10 w1538987473
+Z11 8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
+Z12 FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv
+Z13 L0 14
+R4
+r1
+!s85 0
+31
+R5
+Z14 !s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv|
+Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/multiplexer.sv|
+!i113 1
+R6
+R7
+R8
+vHexDriver
+R1
+R2
+!i10b 1
+!s100 ^DddjRd7Wla]U<SlP;mT@0
+I;aQ0b`mNBS0IFic7C?A@P2
+R3
+!s105 HexDriver_sv_unit
+S1
+R0
+Z16 w1538692154
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/HexDriver.sv|
 !i113 1
 R6
 R7
@@ -61,50 +111,50 @@ R8
 n@hex@driver
 vinternal_register
 R1
-Z12 !s110 1538772006
+R2
 !i10b 1
 !s100 Ca<gA5L_eZ5jg0QQXP_5C3
-I^MzSFV>cXLlIW[oZdPX`F3
+IJW>7IbNhen28QTOW_?N?21
 R3
 !s105 internal_register_sv_unit
 S1
 R0
-w1538620206
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv
+R16
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv
 L0 5
 R4
 r1
 !s85 0
 31
-Z13 !s108 1538772006.000000
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/internal_register.sv|
+R5
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/internal_register.sv|
 !i113 1
 R6
 R7
 R8
 vISDU
 R1
-R9
+R2
 !i10b 1
-!s100 S6BIONZc=PM]zS?o]C=2b2
-IfkzBVEHQ;ebCn<0?VB]<]0
+!s100 iFHbZ9VS33?<kW_Gd4Z8^3
+I]K_GPUFWCKK<<zo08>Sdi3
 R3
 !s105 ISDU_sv_unit
 S1
 R0
-Z14 w1538509082
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv
-Z15 L0 19
+w1538989689
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv
+Z17 L0 19
 R4
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv|
+R5
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/ISDU.sv|
 !i113 1
 R6
 R7
@@ -115,47 +165,47 @@ R1
 R2
 !i10b 1
 !s100 ?kcESmZEHHOPkJBkNFeG83
-I2b5<EI9Eac8PF6=GJ;OW10
+IYankS]O6j_W6aHcNKb4om1
 R3
 !s105 lab6_toplevel_sv_unit
 S1
 R0
-w1538767319
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv
+Z18 w1538971616
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv
 L0 10
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv|
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/lab6_toplevel.sv|
 !i113 1
 R6
 R7
 R8
 vMem2IO
 R1
-R9
+R2
 !i10b 1
 !s100 d<=A`]_5?F8Tz<i9:]04<3
-IB@RUamMKdW:c^^k;FAG942
+I^]F[U_H6NDVDDXnjjj8Wd2
 R3
 !s105 Mem2IO_sv_unit
 S1
 R0
-R14
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/Mem2IO.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/Mem2IO.sv
-Z16 L0 16
+R16
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv
+Z19 L0 16
 R4
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/Mem2IO.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/Mem2IO.sv|
+R5
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Mem2IO.sv|
 !i113 1
 R6
 R7
@@ -163,76 +213,76 @@ R8
 n@mem2@i@o
 Xmemory_contents_sv_unit
 R1
-Z17 DXx4 work 6 SLC3_2 0 22 6Cg15M`6O<F7jdf]?:F;n3
-VH6ncVgJYa36M=Z<75zhe43
+Z20 DXx4 work 6 SLC3_2 0 22 ai7Q]U;?0l`TMJYUiCH2b1
+VE=<g<aUB12imU;RI8i=GE2
 r1
 !s85 0
 31
 !i10b 1
 !s100 c2m7WKcaV<L[XVf`30RGj3
-IH6ncVgJYa36M=Z<75zhe43
+IE=<g<aUB12imU;RI8i=GE2
 !i103 1
 S1
 R0
-R14
-Z18 8C:/Users/finnn/Documents/385/385_FPGA/Lab6/memory_contents.sv
-Z19 FC:/Users/finnn/Documents/385/385_FPGA/Lab6/memory_contents.sv
-L0 14
+R16
+Z21 8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv
+Z22 FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv
+R13
 R4
-R11
-Z20 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/memory_contents.sv|
-Z21 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/memory_contents.sv|
+R5
+Z23 !s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv|
+Z24 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/memory_contents.sv|
 !i113 1
 R6
 R7
 R8
 vmemory_parser
 R1
-R17
-DXx4 work 23 memory_contents_sv_unit 0 22 H6ncVgJYa36M=Z<75zhe43
+R20
+DXx4 work 23 memory_contents_sv_unit 0 22 E=<g<aUB12imU;RI8i=GE2
 R3
 r1
 !s85 0
 31
 !i10b 1
 !s100 744B[g>P4=Q9zVQXU8>HF2
-I_dZXe6NS@9:zhIM@FQ>QE2
+I4USD>dO[L^b4jcVS``P>S1
 !s105 memory_contents_sv_unit
 S1
 R0
-R14
-R18
-R19
 R16
-R4
-R11
-R20
 R21
+R22
+R19
+R4
+R5
+R23
+R24
 !i113 1
 R6
 R7
 R8
 vNZPlogic
 R1
-R9
+R2
 !i10b 1
 !s100 h]QiJ7IzSVFR2PSMFO^Y^1
-I`dI7<>L6C[aPAAj8F93eN2
+InScKK>8kP_2K;lb:cI=]R0
 R3
 !s105 NZPlogic_sv_unit
 S1
 R0
-w1538767161
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv
+R18
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv
 L0 1
 R4
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv|
+R5
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/NZPlogic.sv|
 !i113 1
 R6
 R7
@@ -240,25 +290,25 @@ R8
 n@n@z@plogic
 vregisterFile
 R1
-R9
+R2
 !i10b 1
-!s100 2MQ0f<@2o;h@Xg:327i^H2
-IURCE]Y]90dNUY?2l``?C02
+!s100 aRAhaaa]f4KO;<[b^=iQ53
+I=cel1Kh;E`znKPh`izP733
 R3
 !s105 registerFile_sv_unit
 S1
 R0
-w1538518007
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv
+w1538977533
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv
 L0 1
 R4
 r1
 !s85 0
 31
-R11
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv|
+R5
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/registerFile.sv|
 !i113 1
 R6
 R7
@@ -269,46 +319,46 @@ R1
 R2
 !i10b 1
 !s100 6P61o7QZb=1a]Q9F82G@N2
-IHjP0d8^BJFdFQP@iHl`i`3
+IA]`MG7Hm;5f8g7VGOX`nA0
 R3
 !s105 slc3_sv_unit
 S1
 R0
-w1538617267
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv
-R15
+w1538988747
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv
+R17
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv|
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/slc3.sv|
 !i113 1
 R6
 R7
 R8
 XSLC3_2
 R1
-R9
+R2
 !i10b 1
 !s100 Cz8_^@QRefP31?j=Zf>lj0
-I6Cg15M`6O<F7jdf]?:F;n3
-V6Cg15M`6O<F7jdf]?:F;n3
+Iai7Q]U;?0l`TMJYUiCH2b1
+Vai7Q]U;?0l`TMJYUiCH2b1
 S1
 R0
-R14
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/SLC3_2.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/SLC3_2.sv
+R16
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv
 L0 24
 R4
 r1
 !s85 0
 31
-R13
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/SLC3_2.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/SLC3_2.sv|
+R5
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/SLC3_2.sv|
 !i113 1
 R6
 R7
@@ -316,150 +366,175 @@ R8
 n@s@l@c3_2
 vsync
 R1
-R12
+Z25 !s110 1538989693
 !i10b 1
 !s100 2W5Vz0:F6ckE2`eJOTK5l1
-I3QB8a6Ph3IQSI>@ANRR6<3
+IZ3^m]Yne=F=GzdNQHnLVf2
 R3
-Z22 !s105 Synchronizers_sv_unit
+Z26 !s105 Synchronizers_sv_unit
 S1
 R0
-R10
-Z23 8C:/Users/finnn/Documents/385/385_FPGA/Lab6/Synchronizers.sv
-Z24 FC:/Users/finnn/Documents/385/385_FPGA/Lab6/Synchronizers.sv
+R16
+Z27 8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv
+Z28 FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv
 L0 4
 R4
 r1
 !s85 0
 31
-R13
-Z25 !s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/Synchronizers.sv|
-Z26 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/Synchronizers.sv|
+Z29 !s108 1538989693.000000
+Z30 !s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv|
+Z31 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/Synchronizers.sv|
 !i113 1
 R6
 R7
 R8
 vsync_r0
 R1
-R12
+R25
 !i10b 1
 !s100 IGd9f_F;JNjVBLQ@DAnD10
-IkP<;2Vf[o9YMSK7@Hdm=`1
+I=bSGEdfbGaD:=AjCVAf^a2
 R3
-R22
+R26
 S1
 R0
-R10
-R23
-R24
+R16
+R27
+R28
 L0 18
 R4
 r1
 !s85 0
 31
-R13
-R25
-R26
+R29
+R30
+R31
 !i113 1
 R6
 R7
 R8
 vsync_r1
 R1
-R12
+R25
 !i10b 1
 !s100 1CXiH1DYDbAUS69Ee2j060
-IE7hJ9S1QjVRR?2Rzd0DU:3
+IF?24PnLPAoo]II4BG>07m0
 R3
-R22
+R26
 S1
 R0
-R10
-R23
-R24
+R16
+R27
+R28
 L0 39
 R4
 r1
 !s85 0
 31
-R13
-R25
-R26
+R29
+R30
+R31
 !i113 1
 R6
 R7
 R8
 vtest_memory
 R1
-R12
+R2
 !i10b 1
 !s100 AZAU7PQT4]][EEHo>57W43
-Ia5bXVbbMUAaO_6=>G572_2
+IU[b=dTmkQFPJo6l3KV1B90
 R3
 !s105 test_memory_sv_unit
 S1
 R0
-R14
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv
+R16
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv
 L0 22
 R4
 r1
 !s85 0
 31
-R13
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv|
+R5
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/test_memory.sv|
 !i113 1
 R6
 R7
 R8
 vtestbench
 R1
-R2
+!s110 1538989695
 !i10b 1
-!s100 =_=ZHXPbn9CQSfL]:YbKC1
-ImBoR3Yb:5KczI:ARTOYLc3
+!s100 >hiOYYn;>0kGiFOVUJ^JK3
+Iz0U05U<ezho>N2od?gSo81
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1538619270
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/testbench.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/testbench.sv
+w1538988408
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv
 L0 1
 R4
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/testbench.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/testbench.sv|
+!s108 1538989695.000000
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/testbench.sv|
 !i113 1
 R6
 R7
 R8
 vtristate
 R1
-R12
+R2
 !i10b 1
 !s100 Akazoo=71mOgoH<gVR_UC0
-In0l67gPd=k>2F1eA>=OUS0
+ID7d0WSFFVg[LNOKSC@n]Z1
 R3
 !s105 tristate_sv_unit
 S1
 R0
-R14
-8C:/Users/finnn/Documents/385/385_FPGA/Lab6/tristate.sv
-FC:/Users/finnn/Documents/385/385_FPGA/Lab6/tristate.sv
 R16
+8C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv
+FC:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv
+R19
 R4
 r1
 !s85 0
 31
-R13
-!s107 C:/Users/finnn/Documents/385/385_FPGA/Lab6/tristate.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/Lab6|C:/Users/finnn/Documents/385/385_FPGA/Lab6/tristate.sv|
+R5
+!s107 C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kuilin/Desktop/385/385_FPGA/Lab6|C:/Users/kuilin/Desktop/385/385_FPGA/Lab6/tristate.sv|
+!i113 1
+R6
+R7
+R8
+vtwo_mux
+R1
+R2
+!i10b 1
+!s100 0R3=YYazlliHC@o:TU0SP0
+IX51S^1hmm7cQ=B0JLkJ=41
+R3
+R9
+S1
+R0
+R10
+R11
+R12
+L0 5
+R4
+r1
+!s85 0
+31
+R5
+R14
+R15
 !i113 1
 R6
 R7

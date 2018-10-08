@@ -18,62 +18,45 @@ module datapath(
 	// Thank you Mr. Bus Driver.
 	logic[15:0] Bus;
 	
-	// Register output signals.
-	logic[15:0] SR1;
-	logic[15:0] SR2;
-	// Instantiate register file. Hooks up to clk, system bus, and outputs to SR1 and SR2, as of now...
-	// Will need more control signals, muxes, etc etc etc :(
-	registerFile registers(.*);
-
-	// ALU output.
-	logic[15:0] ALU;
-
-	//Connection between Address muxes and the adder.
-	logic[15:0] ADDR1;
-	logic[15:0] ADDR2;
+	// Internal signals
+	logic[15:0] SR1_Out, SR2_Out, ALU_Out, MARMUX;
+	// Output of muxes
+	logic[15:0] PCMUX_Muxed, ADDR1MUX_Muxed, ADDR2MUX_Muxed, SR2MUX_Muxed, MDR_MuxedIn;
+	logic[2:0] DRMUX_Muxed, SR1MUX_Muxed;
 	
-	// Result of addition of ADDR1 + ADDR2
-	logic[15:0] MARMUX;
+	// Register file
+	registerFile registers(.Clk(Clk), .D(Bus), .DR(DRMUX_Muxed), .LD_REG(LD_REG), .SR1(SR1MUX_Muxed), .SR2(IR[15:13]), 
+									.SR1_Out(SR1_Out), .SR2_Out(SR2_Out), .Reset_ah(Reset_ah));
 	
-	assign MARMUX = ADDR1 + ADDR2;
-
-	//ADDR1MUX.
-	always_comb begin
-		unique case(ADDR1MUX)
-			0: ADDR1 = PC; // This mux mapping is taken from the SLC-3 control signal mapping pdf
-			1: ADDR1 = SR1;
-			default: ADDR1 = 16'bx;
-		endcase
-	end
+	// Muxes
+	four_mux #(16) PCMux_Mux(.A(PC+1), .B(Bus), .C(MARMUX), .D(16'bx), .Sel(PCMUX), .Out(PCMUX_Muxed));
+	two_mux #(3) DRMUX_Mux(.A(IR[11:9]), .B(3'b111), .Sel(DRMUX), .Out(DRMUX_Muxed));
+	two_mux #(3) SR1MUX_Mux(.A(IR[11:9]), .B(IR[8:6]), .Sel(SR1MUX), .Out(SR1MUX_Muxed));
+	two_mux #(16) ADDR1MUX_Mux(.A(PC), .B(SR1_Out), .Sel(ADDR1MUX), .Out(ADDR1MUX_Muxed));
+	four_mux #(16) ADDR2MUX_Mux(	.A(16'b0), 
+											.B({{10{IR[ 5]}}, IR[ 5:0]}), 
+											.C({{ 7{IR[ 8]}}, IR[ 8:0]}),
+											.D({{ 5{IR[10]}}, IR[10:0]}), 
+											.Sel(ADDR2MUX), .Out(ADDR2MUX_Muxed));
+	two_mux #(16) SR2MUX_Mux(.A(SR2_Out), .B({{11{IR[4]}}, IR[4:0]}), .Sel(SR2MUX), .Out(SR2MUX_Muxed));
+	alu ALU_Inst(.A(SR1_Out), .B(SR2MUX_Muxed), .K(ALUK), .Out(ALU_Out));
 	
-	//ADDR2MUX. Needs more work! Not done! TODO!!!
-	always_comb begin
-		unique case(ADDR2MUX)
-			0: ADDR2 = 16'b0;
-			1: ADDR2 = $signed(IR[5:0]);
-			2: ADDR2 = $signed(IR[8:0]);
-			3: ADDR2 = $signed(IR[10:0]);
-			default: ADDR2 = 16'bx;
-		endcase
-	end
+	// * MARMUX addition module
+	assign MARMUX = ADDR1MUX_Muxed + ADDR2MUX_Muxed;
 	
-	
-
 	logic[3:0] BusMuxCode;
 	// Bus driver MUX to prevent bus contention.
 	always_comb begin
-		
 		BusMuxCode = {GateMARMUX, GatePC, GateALU, GateMDR};
 		unique case(BusMuxCode)
 			4'b1000: Bus = MARMUX;
 			4'b0100: Bus = PC;
-			4'b0010: Bus = ALU;
+			4'b0010: Bus = ALU_Out;
 			4'b0001: Bus = MDR;
 			default: Bus = 16'bx;
 		endcase
 	end
 	
-	logic[15:0] MDR_MuxedIn; // "Wire" to ensure no accidental latching...
 	// MAR Input mux, selecting between bus and Data_In_CPU (technically called MDR_in but that's just bad naming)
 	always_comb begin
 		unique case(MIO_EN)
@@ -84,43 +67,33 @@ module datapath(
 		endcase
 	end
 	
-	
-	// Connection between PCMUX and PC.
-	logic[15:0] PC_MuxedIn;
-	//PCMUX implementation
+	/* //I wrote this, and then realized you already wrote it... lmao why so much vertical space after the internal registers ;-;
+	//BEN and NZP logic
+	logic BEN_In;
+	logic[2:0] NZP_In;
+	logic[2:0] NZP;
 	always_comb begin
-		unique case(PCMUX)
-			0: PC_MuxedIn = PC + 1;
-			1: PC_MuxedIn = Bus;
-			2: PC_MuxedIn = MARMUX;
-			default: PC_MuxedIn = 1'bx;
-		endcase
+		BEN_In = (IR[11] & NZP[2])| //N
+					(IR[10] & NZP[1])| //Z
+					(IR[ 9] & NZP[0]); //P
+		
+		NZP_In = ~Bus[15] ? Bus[15:0] == 16'b0 ? 3'b001 : 3'b010 : 3'b100;
 	end
 	
-	
+	internal_register #(1) BENregister( .D(BEN_In),      .Q(BEN), .Load(LD_BEN), .Reset(Reset_ah), .*);
+	internal_register #(3) NZPregister( .D(NZP_In),      .Q(NZP), .Load(LD_CC),  .Reset(Reset_ah), .*);
+	*/
 	
 	// Internal registers. Possibly replace the reset signals in the future... not specced?
 	// Parameterized basic flipflop register custom module by Finn :)
-	
 	internal_register #(16) MDRregister(.D(MDR_MuxedIn), .Q(MDR), .Load(LD_MDR), .Reset(Reset_ah), .*);
 	internal_register #(16) MARregister(.D(Bus),         .Q(MAR), .Load(LD_MAR), .Reset(Reset_ah), .*);
 	internal_register #(16) IRregister( .D(Bus),         .Q(IR),  .Load(LD_IR),  .Reset(Reset_ah), .*);
-	internal_register #(16) PCregister( .D(PC_MuxedIn),  .Q(PC),  .Load(LD_IR),  .Reset(Reset_ah), .*);
-	
-	
-	
+	internal_register #(16) PCregister( .D(PCMUX_Muxed), .Q(PC),  .Load(LD_PC),  .Reset(Reset_ah), .*);
 	
 	
 	// Conditional branch logic.
 	// Connects to Bus, IR, outputs to BEN.
 	NZPlogic conditionalLogic(.Reset(Reset_ah), .*);
-	
-	
-	
-
-	
-		
-	
-
 
 endmodule
