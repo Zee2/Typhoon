@@ -189,7 +189,8 @@ module ISDU (   input logic         Clk,
 			S_04:
 				Next_state = S_21;
 			S_00:
-				Next_state = BEN ? S_18 : S_22;
+				//Next_state = BEN ? S_18 : S_22; //KUILINNN
+				Next_state = BEN ? S_22 : S_18;
 			
 			default : 
 				Next_state = Halted; //to easily spot errors in sim

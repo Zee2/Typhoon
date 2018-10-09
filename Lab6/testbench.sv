@@ -26,23 +26,85 @@ wire [15:0] Data;
 
 lab6_toplevel tested(.*);
 
+logic[15:0] argA;
+logic[15:0] argB;
 
 initial begin : testLoop
-	S = 20; //XOR test
-	Continue = 0;
-	#20 Reset = 1;
-	#2 Reset = 0;
-	#2 Reset = 1;
-	#20 Run = 1;
-	#2 Run = 0;
-	#2 Run = 1;
+	for(int i = 0; i < 20; i = i+1) begin: xorloop
+		
 	
-	//XOR test, expected result is 1010 0101 1010 0101, or A5A5
-	#100 S = 16'b1111000011110000;
-	Continue = 1;
-	#100 S = 16'b0101010101010101;
-	Continue = 0;
-	#10 Continue = 1;
+		argA = $random;
+		argB = $random;
+		
+		S = 20; //XOR test
+		Continue = 0;
+		#20 Reset = 1;
+		#2 Reset = 0;
+		#2 Reset = 1;
+		#20 Run = 1;
+		#2 Run = 0;
+		#2 Run = 1;
+		
+		
+		#150 S = argA;
+		#10 Continue = 1;
+		#10 Continue = 0;
+		#150 S = argB;
+		#10 Continue = 1;
+		
+		#2000 if(tested.my_slc.d0.registers.Q[3] == (argA ^ argB)) begin
+			$display("XOR Passes ");
+			$display(argA);
+			$display(argB);
+			$display(tested.my_slc.d0.registers.Q[3]);
+			$display(argA ^ argB);
+		end
+		else begin
+			$display("XOR Fails ");
+			$display(argA);
+			$display(argB);
+			$display(tested.my_slc.d0.registers.Q[3]);
+			$display(argA ^ argB);
+		end
+	
+	end
+	
+	for(int i = 0; i < 20; i = i+1) begin: multiplyloop
+		
+	
+		argA = ($signed($urandom_range(0,256)))-128;
+		argB = ($signed($urandom_range(0,256)))-128;
+		S = 49; //multiply test
+		Continue = 0;
+		#20 Reset = 1;
+		#2 Reset = 0;
+		#2 Reset = 1;
+		#20 Run = 1;
+		#2 Run = 0;
+		#2 Run = 1;
+		
+		
+		#150 S = argA;
+		#10 Continue = 1;
+		#10 Continue = 0;
+		#150 S = argB;
+		#10 Continue = 1;
+		
+		#2000 if($signed(tested.my_slc.d0.registers.Q[5]) == ($signed(argA) * $signed(argB))) begin
+			$display("Multiply Passes ");
+			$display($signed(argA));
+			$display($signed(argB));
+			$display($signed(tested.my_slc.d0.registers.Q[5]));
+		end
+		else begin
+			$display("Multiply Fails ");
+			$display($signed(argA));
+			$display($signed(argB));
+			$display($signed(tested.my_slc.d0.registers.Q[5]));
+		end
+	
+	end
+	
 end
 
 endmodule

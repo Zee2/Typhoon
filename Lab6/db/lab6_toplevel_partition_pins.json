@@ -232,6 +232,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "WE",
+					"strict" : false
+				},
+				{
 					"name" : "ADDR[0]",
 					"strict" : false
 				},
