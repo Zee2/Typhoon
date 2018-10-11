@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab6_toplevel
-Mon Oct 08 16:19:26 2018
+Mon Oct 08 21:03:25 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -45,10 +45,11 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  37. Port Connectivity Checks: "slc3:my_slc|datapath:d0|four_mux:ADDR2MUX_Mux"
  38. Port Connectivity Checks: "slc3:my_slc|datapath:d0|two_mux:DRMUX_Mux"
  39. Port Connectivity Checks: "slc3:my_slc|datapath:d0|four_mux:PCMux_Mux"
- 40. Post-Synthesis Netlist Statistics for Top Partition
- 41. Elapsed Time Per Partition
- 42. Analysis & Synthesis Messages
- 43. Analysis & Synthesis Suppressed Messages
+ 40. Port Connectivity Checks: "slc3:my_slc|datapath:d0"
+ 41. Post-Synthesis Netlist Statistics for Top Partition
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
+ 44. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -74,15 +75,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 08 16:19:26 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 08 21:03:25 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab6_toplevel                               ;
 ; Top-level Entity Name              ; lab6_toplevel                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 746                                         ;
-;     Total combinational functions  ; 711                                         ;
-;     Dedicated logic registers      ; 255                                         ;
-; Total registers                    ; 255                                         ;
+; Total logic elements               ; 762                                         ;
+;     Total combinational functions  ; 727                                         ;
+;     Dedicated logic registers      ; 271                                         ;
+; Total registers                    ; 271                                         ;
 ; Total pins                         ; 129                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -226,20 +227,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 746       ;
+; Estimated Total logic elements              ; 762       ;
 ;                                             ;           ;
-; Total combinational functions               ; 711       ;
+; Total combinational functions               ; 727       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 437       ;
 ;     -- 3 input functions                    ; 82        ;
-;     -- <=2 input functions                  ; 192       ;
+;     -- <=2 input functions                  ; 208       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 666       ;
+;     -- normal mode                          ; 682       ;
 ;     -- arithmetic mode                      ; 45        ;
 ;                                             ;           ;
-; Total registers                             ; 255       ;
-;     -- Dedicated logic registers            ; 255       ;
+; Total registers                             ; 271       ;
+;     -- Dedicated logic registers            ; 271       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 129       ;
@@ -247,8 +248,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
-; Maximum fan-out                             ; 255       ;
-; Total fan-out                               ; 3335      ;
+; Maximum fan-out                             ; 271       ;
+; Total fan-out                               ; 3427      ;
 ; Average fan-out                             ; 2.69      ;
 +---------------------------------------------+-----------+
 
@@ -258,19 +259,19 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                                             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Entity Name       ; Library Name ;
 +------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |lab6_toplevel                                                         ; 711 (0)             ; 255 (0)                   ; 0           ; 0            ; 0       ; 0         ; 129  ; 0            ; |lab6_toplevel                                                                                                         ; lab6_toplevel     ; work         ;
-;    |slc3:my_slc|                                                       ; 711 (0)             ; 252 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc                                                                                             ; slc3              ; work         ;
+; |lab6_toplevel                                                         ; 727 (0)             ; 271 (0)                   ; 0           ; 0            ; 0       ; 0         ; 129  ; 0            ; |lab6_toplevel                                                                                                         ; lab6_toplevel     ; work         ;
+;    |slc3:my_slc|                                                       ; 727 (0)             ; 268 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc                                                                                             ; slc3              ; work         ;
 ;       |HexDriver:hex_driver0|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver0                                                                       ; HexDriver         ; work         ;
 ;       |HexDriver:hex_driver1|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver1                                                                       ; HexDriver         ; work         ;
 ;       |HexDriver:hex_driver2|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver2                                                                       ; HexDriver         ; work         ;
-;       |HexDriver:hex_driver3|                                          ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver3                                                                       ; HexDriver         ; work         ;
+;       |HexDriver:hex_driver3|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver3                                                                       ; HexDriver         ; work         ;
 ;       |HexDriver:hex_driver4|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver4                                                                       ; HexDriver         ; work         ;
 ;       |HexDriver:hex_driver5|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver5                                                                       ; HexDriver         ; work         ;
 ;       |HexDriver:hex_driver6|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver6                                                                       ; HexDriver         ; work         ;
 ;       |HexDriver:hex_driver7|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver7                                                                       ; HexDriver         ; work         ;
-;       |ISDU:state_controller|                                          ; 42 (42)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|ISDU:state_controller                                                                       ; ISDU              ; work         ;
-;       |Mem2IO:memory_subsystem|                                        ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|Mem2IO:memory_subsystem                                                                     ; Mem2IO            ; work         ;
-;       |datapath:d0|                                                    ; 599 (142)           ; 196 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0                                                                                 ; datapath          ; work         ;
+;       |ISDU:state_controller|                                          ; 51 (51)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|ISDU:state_controller                                                                       ; ISDU              ; work         ;
+;       |Mem2IO:memory_subsystem|                                        ; 22 (22)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|Mem2IO:memory_subsystem                                                                     ; Mem2IO            ; work         ;
+;       |datapath:d0|                                                    ; 598 (144)           ; 196 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0                                                                                 ; datapath          ; work         ;
 ;          |NZPlogic:conditionalLogic|                                   ; 13 (4)              ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic                                                       ; NZPlogic          ; work         ;
 ;             |internal_register:BENregister|                            ; 3 (3)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:BENregister                         ; internal_register ; work         ;
 ;             |internal_register:NZPregister|                            ; 6 (6)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:NZPregister                         ; internal_register ; work         ;
@@ -289,9 +290,9 @@ refer to the applicable agreement for further details.
 ;             |internal_register:internal_register_generate[5].register| ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[5].register ; internal_register ; work         ;
 ;             |internal_register:internal_register_generate[6].register| ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[6].register ; internal_register ; work         ;
 ;             |internal_register:internal_register_generate[7].register| ; 17 (17)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[7].register ; internal_register ; work         ;
-;          |two_mux:ADDR1MUX_Mux|                                        ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|two_mux:ADDR1MUX_Mux                                                            ; two_mux           ; work         ;
+;          |two_mux:ADDR1MUX_Mux|                                        ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|two_mux:ADDR1MUX_Mux                                                            ; two_mux           ; work         ;
 ;          |two_mux:SR1MUX_Mux|                                          ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|two_mux:SR1MUX_Mux                                                              ; two_mux           ; work         ;
-;          |two_mux:SR2MUX_Mux|                                          ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|two_mux:SR2MUX_Mux                                                              ; two_mux           ; work         ;
+;          |two_mux:SR2MUX_Mux|                                          ; 95 (95)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|datapath:d0|two_mux:SR2MUX_Mux                                                              ; two_mux           ; work         ;
 ;       |tristate:tr0|                                                   ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|slc3:my_slc|tristate:tr0                                                                                ; tristate          ; work         ;
 ;    |sync:SwitchSync0|                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|sync:SwitchSync0                                                                                        ; sync              ; work         ;
 ;    |sync:SwitchSync1|                                                  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab6_toplevel|sync:SwitchSync1                                                                                        ; sync              ; work         ;
@@ -352,12 +353,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 255   ;
+; Total registers                              ; 271   ;
 ; Number of registers using Synchronous Clear  ; 2     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 195   ;
+; Number of registers using Clock Enable       ; 211   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -367,23 +368,24 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:IRregister|Q[6]                                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|Mem2IO:memory_subsystem|hex_data[9]                                                               ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:IRregister|Q[11]                                                    ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:MARregister|Q[0]                                                    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[0].register|Q[3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[1].register|Q[2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[2].register|Q[3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[3].register|Q[3]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[4].register|Q[15] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[5].register|Q[4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[6].register|Q[13] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[7].register|Q[6]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[0].register|Q[8]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[1].register|Q[10] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[2].register|Q[12] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[3].register|Q[9]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[4].register|Q[12] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[5].register|Q[12] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[6].register|Q[12] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[7].register|Q[0]  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:NZPregister|Q[0]                          ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:PCregister|Q[2]                                                     ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:MDRregister|Q[1]                                                    ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:PCregister|Q[13]                                                    ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:MDRregister|Q[2]                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|four_mux:ADDR2MUX_Mux|Mux0                                                            ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|Mux4                                                           ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|two_mux:SR2MUX_Mux|Out[11]                                                            ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|Mux7                                                                                  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|Mux5                                                           ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|two_mux:SR2MUX_Mux|Out[14]                                                            ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |lab6_toplevel|slc3:my_slc|datapath:d0|Mux1                                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -628,17 +630,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem"                                                        ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; ADDR[19..16] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; HEX0         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; HEX1         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; HEX2         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; HEX3         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|Mem2IO:memory_subsystem" ;
++--------------+-------+----------+-------------------------------+
+; Port         ; Type  ; Severity ; Details                       ;
++--------------+-------+----------+-------------------------------+
+; ADDR[19..16] ; Input ; Info     ; Stuck at GND                  ;
++--------------+-------+----------+-------------------------------+
 
 
 +---------------------------------------------------------------------------+
@@ -668,30 +666,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slc3:my_slc|datapath:d0"                                                                 ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; IR[10..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; IR[4..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 129                         ;
-; cycloneiii_ff         ; 255                         ;
-;     ENA               ; 195                         ;
+; cycloneiii_ff         ; 271                         ;
+;     ENA               ; 211                         ;
 ;     SCLR              ; 2                           ;
 ;     plain             ; 58                          ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 722                         ;
+; cycloneiii_lcell_comb ; 738                         ;
 ;     arith             ; 45                          ;
 ;         2 data inputs ; 15                          ;
 ;         3 data inputs ; 30                          ;
-;     normal            ; 677                         ;
+;     normal            ; 693                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 11                          ;
-;         2 data inputs ; 176                         ;
+;         2 data inputs ; 192                         ;
 ;         3 data inputs ; 52                          ;
 ;         4 data inputs ; 437                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.00                       ;
-; Average LUT depth     ; 8.31                        ;
+; Average LUT depth     ; 8.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -710,7 +718,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 08 16:19:11 2018
+    Info: Processing started: Mon Oct 08 21:03:10 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SLC3 -c lab6_toplevel
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 3 design units, including 3 entities, in source file synchronizers.sv
@@ -761,40 +769,27 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
 Info (12127): Elaborating entity "lab6_toplevel" for the top level hierarchy
 Info (12128): Elaborating entity "sync" for hierarchy "sync:SwitchSync0" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 20
 Info (12128): Elaborating entity "slc3" for hierarchy "slc3:my_slc" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 24
-Warning (10034): Output port "LED" at slc3.sv(22) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 22
-Info (12128): Elaborating entity "HexDriver" for hierarchy "slc3:my_slc|HexDriver:hex_driver3" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 52
+Info (12128): Elaborating entity "HexDriver" for hierarchy "slc3:my_slc|HexDriver:hex_driver3" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 58
 Info (12128): Elaborating entity "datapath" for hierarchy "slc3:my_slc|datapath:d0" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 77
-Info (10264): Verilog HDL Case Statement information at datapath.sv(51): all case item expressions in this case statement are onehot File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 51
-Info (12128): Elaborating entity "registerFile" for hierarchy "slc3:my_slc|datapath:d0|registerFile:registers" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 29
-Info (12128): Elaborating entity "internal_register" for hierarchy "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[0].register" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv Line: 22
-Info (12128): Elaborating entity "four_mux" for hierarchy "slc3:my_slc|datapath:d0|four_mux:PCMux_Mux" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 32
-Info (12128): Elaborating entity "two_mux" for hierarchy "slc3:my_slc|datapath:d0|two_mux:DRMUX_Mux" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 33
-Info (12128): Elaborating entity "two_mux" for hierarchy "slc3:my_slc|datapath:d0|two_mux:ADDR1MUX_Mux" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 35
-Info (12128): Elaborating entity "alu" for hierarchy "slc3:my_slc|datapath:d0|alu:ALU_Inst" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 42
-Info (12128): Elaborating entity "NZPlogic" for hierarchy "slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 97
+Info (10264): Verilog HDL Case Statement information at datapath.sv(53): all case item expressions in this case statement are onehot File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 53
+Info (12128): Elaborating entity "registerFile" for hierarchy "slc3:my_slc|datapath:d0|registerFile:registers" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 31
+Info (12128): Elaborating entity "internal_register" for hierarchy "slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[0].register" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/registerFile.sv Line: 24
+Info (12128): Elaborating entity "four_mux" for hierarchy "slc3:my_slc|datapath:d0|four_mux:PCMux_Mux" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 34
+Info (12128): Elaborating entity "two_mux" for hierarchy "slc3:my_slc|datapath:d0|two_mux:DRMUX_Mux" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 35
+Info (12128): Elaborating entity "two_mux" for hierarchy "slc3:my_slc|datapath:d0|two_mux:ADDR1MUX_Mux" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 37
+Info (12128): Elaborating entity "alu" for hierarchy "slc3:my_slc|datapath:d0|alu:ALU_Inst" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 44
+Info (12128): Elaborating entity "NZPlogic" for hierarchy "slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/datapath.sv Line: 101
 Info (12128): Elaborating entity "internal_register" for hierarchy "slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:NZPregister" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv Line: 15
 Info (12128): Elaborating entity "internal_register" for hierarchy "slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:BENregister" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/NZPlogic.sv Line: 22
 Info (12128): Elaborating entity "Mem2IO" for hierarchy "slc3:my_slc|Mem2IO:memory_subsystem" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 85
 Info (12128): Elaborating entity "tristate" for hierarchy "slc3:my_slc|tristate:tr0" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 90
 Info (12128): Elaborating entity "ISDU" for hierarchy "slc3:my_slc|ISDU:state_controller" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/slc3.sv Line: 97
-Warning (10958): SystemVerilog warning at ISDU.sv(230): unique or priority keyword makes case statement complete File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv Line: 230
+Warning (10958): SystemVerilog warning at ISDU.sv(231): unique or priority keyword makes case statement complete File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/ISDU.sv Line: 231
 Info (12128): Elaborating entity "test_memory" for hierarchy "test_memory:my_test_memory" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 29
 Warning (10036): Verilog HDL or VHDL warning at test_memory.sv(42): object "actual_address" assigned a value but never read File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv Line: 42
 Info (12128): Elaborating entity "memory_parser" for hierarchy "test_memory:my_test_memory|memory_parser:parser" File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/test_memory.sv Line: 48
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[7]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[8]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[9]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[10]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
-    Warning (13410): Pin "LED[11]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 12
     Warning (13410): Pin "CE" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 14
     Warning (13410): Pin "UB" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 14
     Warning (13410): Pin "LB" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 14
@@ -807,16 +802,16 @@ Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/finnn/Documents/385/385_FPGA/Lab6/output_files/lab6_toplevel.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 875 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 891 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 93 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 746 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4794 megabytes
-    Info: Processing ended: Mon Oct 08 16:19:26 2018
+    Info (21061): Implemented 762 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Mon Oct 08 21:03:25 2018
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

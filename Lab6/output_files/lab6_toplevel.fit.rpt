@@ -1,5 +1,5 @@
 Fitter report for lab6_toplevel
-Fri Oct 05 15:25:52 2018
+Mon Oct 08 21:03:49 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -66,17 +66,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Fri Oct 05 15:25:52 2018       ;
+; Fitter Status                      ; Successful - Mon Oct 08 21:03:49 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab6_toplevel                               ;
 ; Top-level Entity Name              ; lab6_toplevel                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 170 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 137 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 106 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 106                                         ;
+; Total logic elements               ; 741 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 727 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 271 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 271                                         ;
 ; Total pins                         ; 129 / 529 ( 24 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -91,6 +91,7 @@ refer to the applicable agreement for further details.
 ; Option                                                             ; Setting                               ; Default Value                         ;
 +--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 ; Device                                                             ; EP4CE115F29C7                         ;                                       ;
+; Maximum processors allowed for parallel compilation                ; 4                                     ;                                       ;
 ; Nominal Core Supply Voltage                                        ; 1.2V                                  ;                                       ;
 ; Minimum Core Junction Temperature                                  ; 0                                     ;                                       ;
 ; Maximum Core Junction Temperature                                  ; 85                                    ;                                       ;
@@ -153,28 +154,30 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.2%      ;
+;     Processor 2            ;   0.8%      ;
+;     Processor 3            ;   0.7%      ;
+;     Processor 4            ;   0.7%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                     ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 529 ) ; 0.00 % ( 0 / 529 )         ; 0.00 % ( 0 / 529 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 529 ) ; 0.00 % ( 0 / 529 )         ; 0.00 % ( 0 / 529 )       ;
-;                     ;                    ;                            ;                          ;
-; Routing (by net)    ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+--------------------+----------------------------+--------------------------+
++---------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                      ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Placement (by node) ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 1284 ) ; 0.00 % ( 0 / 1284 )        ; 0.00 % ( 0 / 1284 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 1284 ) ; 0.00 % ( 0 / 1284 )        ; 0.00 % ( 0 / 1284 )      ;
+;                     ;                     ;                            ;                          ;
+; Routing (by net)    ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+---------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -192,7 +195,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 519 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 1274 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -208,26 +211,26 @@ The pin-out file can be found in C:/Users/finnn/Documents/385/385_FPGA/Lab6/outp
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 170 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 64                      ;
-;     -- Register only                        ; 33                      ;
-;     -- Combinational with a register        ; 73                      ;
+; Total logic elements                        ; 741 / 114,480 ( < 1 % ) ;
+;     -- Combinational with no register       ; 470                     ;
+;     -- Register only                        ; 14                      ;
+;     -- Combinational with a register        ; 257                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 64                      ;
-;     -- 3 input functions                    ; 17                      ;
-;     -- <=2 input functions                  ; 56                      ;
-;     -- Register only                        ; 33                      ;
+;     -- 4 input functions                    ; 437                     ;
+;     -- 3 input functions                    ; 82                      ;
+;     -- <=2 input functions                  ; 208                     ;
+;     -- Register only                        ; 14                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 122                     ;
-;     -- arithmetic mode                      ; 15                      ;
+;     -- normal mode                          ; 682                     ;
+;     -- arithmetic mode                      ; 45                      ;
 ;                                             ;                         ;
-; Total registers*                            ; 106 / 117,053 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 106 / 114,480 ( < 1 % ) ;
+; Total registers*                            ; 271 / 117,053 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 271 / 114,480 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 16 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 62 / 7,155 ( < 1 % )    ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 129 / 529 ( 24 % )      ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )          ;
@@ -245,12 +248,12 @@ The pin-out file can be found in C:/Users/finnn/Documents/385/385_FPGA/Lab6/outp
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 0.4% / 0.5% / 0.2%      ;
-; Peak interconnect usage (total/H/V)         ; 3.0% / 3.4% / 2.5%      ;
-; Maximum fan-out                             ; 106                     ;
-; Highest non-global fan-out                  ; 34                      ;
-; Total fan-out                               ; 996                     ;
-; Average fan-out                             ; 1.78                    ;
+; Average interconnect usage (total/H/V)      ; 0.7% / 0.7% / 0.6%      ;
+; Peak interconnect usage (total/H/V)         ; 9.5% / 8.1% / 11.5%     ;
+; Maximum fan-out                             ; 271                     ;
+; Highest non-global fan-out                  ; 55                      ;
+; Total fan-out                               ; 3442                    ;
+; Average fan-out                             ; 2.66                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -263,26 +266,26 @@ The pin-out file can be found in C:/Users/finnn/Documents/385/385_FPGA/Lab6/outp
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 170 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 64                     ; 0                              ;
-;     -- Register only                        ; 33                     ; 0                              ;
-;     -- Combinational with a register        ; 73                     ; 0                              ;
+; Total logic elements                        ; 741 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 470                    ; 0                              ;
+;     -- Register only                        ; 14                     ; 0                              ;
+;     -- Combinational with a register        ; 257                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 64                     ; 0                              ;
-;     -- 3 input functions                    ; 17                     ; 0                              ;
-;     -- <=2 input functions                  ; 56                     ; 0                              ;
-;     -- Register only                        ; 33                     ; 0                              ;
+;     -- 4 input functions                    ; 437                    ; 0                              ;
+;     -- 3 input functions                    ; 82                     ; 0                              ;
+;     -- <=2 input functions                  ; 208                    ; 0                              ;
+;     -- Register only                        ; 14                     ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 122                    ; 0                              ;
-;     -- arithmetic mode                      ; 15                     ; 0                              ;
+;     -- normal mode                          ; 682                    ; 0                              ;
+;     -- arithmetic mode                      ; 45                     ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 106                    ; 0                              ;
-;     -- Dedicated logic registers            ; 106 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 271                    ; 0                              ;
+;     -- Dedicated logic registers            ; 271 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 16 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 62 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 129                    ; 0                              ;
@@ -298,8 +301,8 @@ The pin-out file can be found in C:/Users/finnn/Documents/385/385_FPGA/Lab6/outp
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 991                    ; 5                              ;
-;     -- Registered Connections               ; 446                    ; 0                              ;
+;     -- Total Connections                    ; 3437                   ; 5                              ;
+;     -- Registered Connections               ; 1187                   ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 32                     ; 0                              ;
@@ -331,7 +334,7 @@ The pin-out file can be found in C:/Users/finnn/Documents/385/385_FPGA/Lab6/outp
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; Clk      ; Y2    ; 2        ; 0            ; 36           ; 14           ; 106                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; Clk      ; Y2    ; 2        ; 0            ; 36           ; 14           ; 271                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; Continue ; N21   ; 6        ; 115          ; 42           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; Reset    ; M23   ; 6        ; 115          ; 40           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; Run      ; R24   ; 5        ; 115          ; 35           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
@@ -455,28 +458,28 @@ The pin-out file can be found in C:/Users/finnn/Documents/385/385_FPGA/Lab6/outp
 +----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Bidir Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
-+----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
-; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination                ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group ;
-+----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
-; Data[0]  ; AH3   ; 3        ; 5            ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[10] ; AE2   ; 2        ; 0            ; 17           ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[11] ; AE1   ; 2        ; 0            ; 16           ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[12] ; AE3   ; 2        ; 0            ; 7            ; 7            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[13] ; AE4   ; 3        ; 3            ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[14] ; AF3   ; 3        ; 7            ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[15] ; AG3   ; 3        ; 3            ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[1]  ; AF4   ; 3        ; 1            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[2]  ; AG4   ; 3        ; 9            ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[3]  ; AH4   ; 3        ; 9            ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[4]  ; AF6   ; 3        ; 7            ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[5]  ; AG6   ; 3        ; 11           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[6]  ; AH6   ; 3        ; 11           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[7]  ; AF7   ; 3        ; 20           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[8]  ; AD1   ; 2        ; 0            ; 21           ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; Data[9]  ; AD2   ; 2        ; 0            ; 22           ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-+----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Bidir Pins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+-------------------------------------------------------+
+; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination                ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group                                   ;
++----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+-------------------------------------------------------+
+; Data[0]  ; AH3   ; 3        ; 5            ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[10] ; AE2   ; 2        ; 0            ; 17           ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[11] ; AE1   ; 2        ; 0            ; 16           ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[12] ; AE3   ; 2        ; 0            ; 7            ; 7            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[13] ; AE4   ; 3        ; 3            ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[14] ; AF3   ; 3        ; 7            ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[15] ; AG3   ; 3        ; 3            ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[1]  ; AF4   ; 3        ; 1            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[2]  ; AG4   ; 3        ; 9            ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[3]  ; AH4   ; 3        ; 9            ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[4]  ; AF6   ; 3        ; 7            ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[5]  ; AG6   ; 3        ; 11           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[6]  ; AH6   ; 3        ; 11           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[7]  ; AF7   ; 3        ; 20           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[8]  ; AD1   ; 2        ; 0            ; 21           ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
+; Data[9]  ; AD2   ; 2        ; 0            ; 22           ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; slc3:my_slc|ISDU:state_controller|Mem_WE~0 (inverted) ;
++----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+-------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -1442,33 +1445,50 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------+-------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                              ;
-+------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node               ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                  ; Entity Name       ; Library Name ;
-+------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------+-------------------+--------------+
-; |lab6_toplevel                           ; 170 (0)     ; 106 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 129  ; 0            ; 64 (0)       ; 33 (0)            ; 73 (0)           ; |lab6_toplevel                                                       ; lab6_toplevel     ; work         ;
-;    |slc3:my_slc|                         ; 169 (0)     ; 103 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 64 (0)       ; 32 (0)            ; 73 (0)           ; |lab6_toplevel|slc3:my_slc                                           ; slc3              ; work         ;
-;       |HexDriver:hex_driver0|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver0                     ; HexDriver         ; work         ;
-;       |HexDriver:hex_driver1|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver1                     ; HexDriver         ; work         ;
-;       |HexDriver:hex_driver2|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver2                     ; HexDriver         ; work         ;
-;       |HexDriver:hex_driver3|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver3                     ; HexDriver         ; work         ;
-;       |HexDriver:hex_driver4|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver4                     ; HexDriver         ; work         ;
-;       |HexDriver:hex_driver5|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver5                     ; HexDriver         ; work         ;
-;       |HexDriver:hex_driver6|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver6                     ; HexDriver         ; work         ;
-;       |HexDriver:hex_driver7|            ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver7                     ; HexDriver         ; work         ;
-;       |ISDU:state_controller|            ; 9 (9)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 9 (9)            ; |lab6_toplevel|slc3:my_slc|ISDU:state_controller                     ; ISDU              ; work         ;
-;       |Mem2IO:memory_subsystem|          ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 3 (3)            ; |lab6_toplevel|slc3:my_slc|Mem2IO:memory_subsystem                   ; Mem2IO            ; work         ;
-;       |datapath:d0|                      ; 70 (0)      ; 64 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 64 (0)           ; |lab6_toplevel|slc3:my_slc|datapath:d0                               ; datapath          ; work         ;
-;          |internal_register:IRregister|  ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:IRregister  ; internal_register ; work         ;
-;          |internal_register:MARregister| ; 20 (20)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:MARregister ; internal_register ; work         ;
-;          |internal_register:MDRregister| ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:MDRregister ; internal_register ; work         ;
-;          |internal_register:PCregister|  ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:PCregister  ; internal_register ; work         ;
-;       |tristate:tr0|                     ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 32 (32)           ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|tristate:tr0                              ; tristate          ; work         ;
-;    |sync:SwitchSync0|                    ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |lab6_toplevel|sync:SwitchSync0                                      ; sync              ; work         ;
-;    |sync:SwitchSync1|                    ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |lab6_toplevel|sync:SwitchSync1                                      ; sync              ; work         ;
-;    |sync:SwitchSync2|                    ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |lab6_toplevel|sync:SwitchSync2                                      ; sync              ; work         ;
-+------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------+-------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                              ;
++------------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                                             ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                    ; Entity Name       ; Library Name ;
++------------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |lab6_toplevel                                                         ; 741 (0)     ; 271 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 129  ; 0            ; 470 (0)      ; 14 (0)            ; 257 (0)          ; |lab6_toplevel                                                                                                         ; lab6_toplevel     ; work         ;
+;    |slc3:my_slc|                                                       ; 739 (0)     ; 268 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 470 (0)      ; 12 (0)            ; 257 (0)          ; |lab6_toplevel|slc3:my_slc                                                                                             ; slc3              ; work         ;
+;       |HexDriver:hex_driver0|                                          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver0                                                                       ; HexDriver         ; work         ;
+;       |HexDriver:hex_driver1|                                          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver1                                                                       ; HexDriver         ; work         ;
+;       |HexDriver:hex_driver2|                                          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver2                                                                       ; HexDriver         ; work         ;
+;       |HexDriver:hex_driver3|                                          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver3                                                                       ; HexDriver         ; work         ;
+;       |HexDriver:hex_driver4|                                          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver4                                                                       ; HexDriver         ; work         ;
+;       |HexDriver:hex_driver5|                                          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver5                                                                       ; HexDriver         ; work         ;
+;       |HexDriver:hex_driver6|                                          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver6                                                                       ; HexDriver         ; work         ;
+;       |HexDriver:hex_driver7|                                          ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|HexDriver:hex_driver7                                                                       ; HexDriver         ; work         ;
+;       |ISDU:state_controller|                                          ; 52 (52)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 26 (26)          ; |lab6_toplevel|slc3:my_slc|ISDU:state_controller                                                                       ; ISDU              ; work         ;
+;       |Mem2IO:memory_subsystem|                                        ; 22 (22)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|Mem2IO:memory_subsystem                                                                     ; Mem2IO            ; work         ;
+;       |datapath:d0|                                                    ; 598 (128)   ; 196 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 382 (125)    ; 0 (0)             ; 216 (19)         ; |lab6_toplevel|slc3:my_slc|datapath:d0                                                                                 ; datapath          ; work         ;
+;          |NZPlogic:conditionalLogic|                                   ; 13 (4)      ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (4)        ; 0 (0)             ; 4 (0)            ; |lab6_toplevel|slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic                                                       ; NZPlogic          ; work         ;
+;             |internal_register:BENregister|                            ; 3 (3)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; |lab6_toplevel|slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:BENregister                         ; internal_register ; work         ;
+;             |internal_register:NZPregister|                            ; 6 (6)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 3 (3)            ; |lab6_toplevel|slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:NZPregister                         ; internal_register ; work         ;
+;          |alu:ALU_Inst|                                                ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|datapath:d0|alu:ALU_Inst                                                                    ; alu               ; work         ;
+;          |four_mux:ADDR2MUX_Mux|                                       ; 14 (14)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|datapath:d0|four_mux:ADDR2MUX_Mux                                                           ; four_mux          ; work         ;
+;          |internal_register:IRregister|                                ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:IRregister                                                    ; internal_register ; work         ;
+;          |internal_register:MARregister|                               ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:MARregister                                                   ; internal_register ; work         ;
+;          |internal_register:MDRregister|                               ; 35 (35)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 33 (33)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:MDRregister                                                   ; internal_register ; work         ;
+;          |internal_register:PCregister|                                ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|internal_register:PCregister                                                    ; internal_register ; work         ;
+;          |registerFile:registers|                                      ; 226 (90)    ; 128 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 98 (90)      ; 0 (0)             ; 128 (0)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers                                                          ; registerFile      ; work         ;
+;             |internal_register:internal_register_generate[0].register| ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[0].register ; internal_register ; work         ;
+;             |internal_register:internal_register_generate[1].register| ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[1].register ; internal_register ; work         ;
+;             |internal_register:internal_register_generate[2].register| ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[2].register ; internal_register ; work         ;
+;             |internal_register:internal_register_generate[3].register| ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[3].register ; internal_register ; work         ;
+;             |internal_register:internal_register_generate[4].register| ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[4].register ; internal_register ; work         ;
+;             |internal_register:internal_register_generate[5].register| ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[5].register ; internal_register ; work         ;
+;             |internal_register:internal_register_generate[6].register| ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[6].register ; internal_register ; work         ;
+;             |internal_register:internal_register_generate[7].register| ; 17 (17)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 16 (16)          ; |lab6_toplevel|slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[7].register ; internal_register ; work         ;
+;          |two_mux:ADDR1MUX_Mux|                                        ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|datapath:d0|two_mux:ADDR1MUX_Mux                                                            ; two_mux           ; work         ;
+;          |two_mux:SR1MUX_Mux|                                          ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|datapath:d0|two_mux:SR1MUX_Mux                                                              ; two_mux           ; work         ;
+;          |two_mux:SR2MUX_Mux|                                          ; 95 (95)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 95 (95)      ; 0 (0)             ; 0 (0)            ; |lab6_toplevel|slc3:my_slc|datapath:d0|two_mux:SR2MUX_Mux                                                              ; two_mux           ; work         ;
+;       |tristate:tr0|                                                   ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 12 (12)           ; 20 (20)          ; |lab6_toplevel|slc3:my_slc|tristate:tr0                                                                                ; tristate          ; work         ;
+;    |sync:SwitchSync0|                                                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |lab6_toplevel|sync:SwitchSync0                                                                                        ; sync              ; work         ;
+;    |sync:SwitchSync1|                                                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |lab6_toplevel|sync:SwitchSync1                                                                                        ; sync              ; work         ;
+;    |sync:SwitchSync2|                                                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |lab6_toplevel|sync:SwitchSync2                                                                                        ; sync              ; work         ;
++------------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1571,40 +1591,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ADDR[18] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; ADDR[19] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; Data[0]  ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Data[1]  ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Data[2]  ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; Data[1]  ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; Data[2]  ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Data[3]  ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Data[4]  ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Data[5]  ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Data[6]  ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Data[6]  ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Data[7]  ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Data[8]  ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Data[9]  ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Data[10] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Data[11] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Data[11] ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Data[12] ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; Data[13] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Data[14] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Data[13] ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; Data[14] ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Data[15] ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; Clk      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; S[0]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Reset    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; S[1]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; S[2]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; S[3]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; S[2]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; S[3]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; S[4]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; S[5]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; S[6]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; S[7]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; S[8]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; S[9]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; S[9]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; S[10]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; S[11]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; S[12]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; S[13]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; S[14]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; S[12]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; S[13]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; S[14]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; S[15]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; Continue ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; Continue ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; Run      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +----------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1615,91 +1635,102 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                               ; Pad To Core Index ; Setting ;
 +-------------------------------------------------------------------+-------------------+---------+
 ; Data[0]                                                           ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[0]~feeder        ; 0                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[0]               ; 0                 ; 6       ;
 ; Data[1]                                                           ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[1]~feeder        ; 0                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[1]               ; 1                 ; 6       ;
 ; Data[2]                                                           ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[2]               ; 1                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[2]               ; 0                 ; 6       ;
 ; Data[3]                                                           ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[3]~feeder        ; 0                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[3]               ; 0                 ; 6       ;
 ; Data[4]                                                           ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[4]~feeder        ; 0                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[4]               ; 0                 ; 6       ;
 ; Data[5]                                                           ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[5]~feeder        ; 1                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[5]               ; 1                 ; 6       ;
 ; Data[6]                                                           ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[6]~feeder        ; 0                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[6]               ; 1                 ; 6       ;
 ; Data[7]                                                           ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[7]~feeder        ; 1                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[7]               ; 1                 ; 6       ;
 ; Data[8]                                                           ;                   ;         ;
 ;      - slc3:my_slc|tristate:tr0|Data_read_buffer[8]               ; 1                 ; 6       ;
 ; Data[9]                                                           ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[9]~feeder        ; 1                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[9]               ; 1                 ; 6       ;
 ; Data[10]                                                          ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[10]~feeder       ; 0                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[10]              ; 0                 ; 6       ;
 ; Data[11]                                                          ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[11]~feeder       ; 0                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[11]              ; 1                 ; 6       ;
 ; Data[12]                                                          ;                   ;         ;
 ;      - slc3:my_slc|tristate:tr0|Data_read_buffer[12]              ; 1                 ; 6       ;
 ; Data[13]                                                          ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[13]~feeder       ; 0                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[13]              ; 1                 ; 6       ;
 ; Data[14]                                                          ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[14]~feeder       ; 0                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[14]              ; 1                 ; 6       ;
 ; Data[15]                                                          ;                   ;         ;
-;      - slc3:my_slc|tristate:tr0|Data_read_buffer[15]~feeder       ; 0                 ; 6       ;
+;      - slc3:my_slc|tristate:tr0|Data_read_buffer[15]              ; 0                 ; 6       ;
 ; Clk                                                               ;                   ;         ;
 ; S[0]                                                              ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~0  ; 1                 ; 6       ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~4  ; 1                 ; 6       ;
 ; Reset                                                             ;                   ;         ;
 ;      - sync:SwitchSync0|q                                         ; 0                 ; 6       ;
 ; S[1]                                                              ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~2  ; 0                 ; 6       ;
-; S[2]                                                              ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~3  ; 0                 ; 6       ;
-; S[3]                                                              ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~4  ; 1                 ; 6       ;
-; S[4]                                                              ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~5  ; 1                 ; 6       ;
-; S[5]                                                              ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~6  ; 1                 ; 6       ;
-; S[6]                                                              ;                   ;         ;
 ;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~7  ; 0                 ; 6       ;
-; S[7]                                                              ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~8  ; 0                 ; 6       ;
-; S[8]                                                              ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~9  ; 0                 ; 6       ;
-; S[9]                                                              ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~10 ; 0                 ; 6       ;
-; S[10]                                                             ;                   ;         ;
+; S[2]                                                              ;                   ;         ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~9  ; 1                 ; 6       ;
+; S[3]                                                              ;                   ;         ;
 ;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~11 ; 0                 ; 6       ;
-; S[11]                                                             ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~12 ; 1                 ; 6       ;
-; S[12]                                                             ;                   ;         ;
+; S[4]                                                              ;                   ;         ;
 ;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~13 ; 1                 ; 6       ;
+; S[5]                                                              ;                   ;         ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~15 ; 1                 ; 6       ;
+; S[6]                                                              ;                   ;         ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~17 ; 0                 ; 6       ;
+; S[7]                                                              ;                   ;         ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~19 ; 0                 ; 6       ;
+; S[8]                                                              ;                   ;         ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~21 ; 0                 ; 6       ;
+; S[9]                                                              ;                   ;         ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~23 ; 1                 ; 6       ;
+; S[10]                                                             ;                   ;         ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~25 ; 0                 ; 6       ;
+; S[11]                                                             ;                   ;         ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~27 ; 1                 ; 6       ;
+; S[12]                                                             ;                   ;         ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~29 ; 0                 ; 6       ;
 ; S[13]                                                             ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~14 ; 0                 ; 6       ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~31 ; 1                 ; 6       ;
 ; S[14]                                                             ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~15 ; 0                 ; 6       ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~33 ; 1                 ; 6       ;
 ; S[15]                                                             ;                   ;         ;
-;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~16 ; 0                 ; 6       ;
+;      - slc3:my_slc|datapath:d0|internal_register:MDRregister|Q~35 ; 0                 ; 6       ;
 ; Continue                                                          ;                   ;         ;
-;      - sync:SwitchSync2|q~feeder                                  ; 0                 ; 6       ;
+;      - sync:SwitchSync2|q~feeder                                  ; 1                 ; 6       ;
 ; Run                                                               ;                   ;         ;
 ;      - sync:SwitchSync1|q                                         ; 0                 ; 6       ;
 +-------------------------------------------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                           ;
-+--------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                         ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Clk                                                          ; PIN_Y2             ; 106     ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; slc3:my_slc|ISDU:state_controller|State.S_33_2               ; FF_X73_Y10_N23     ; 19      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; slc3:my_slc|ISDU:state_controller|State.S_35                 ; FF_X73_Y10_N27     ; 34      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; slc3:my_slc|datapath:d0|internal_register:IRregister|Q[1]~1  ; LCCOMB_X73_Y10_N0  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; slc3:my_slc|datapath:d0|internal_register:MARregister|Q[0]~1 ; LCCOMB_X73_Y10_N24 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; slc3:my_slc|datapath:d0|internal_register:MDRregister|Q[3]~1 ; LCCOMB_X73_Y10_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+--------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                               ;
++-----------------------------------------------------------------------------------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                                            ; Location           ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------------------------------------------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
+; Clk                                                                                                             ; PIN_Y2             ; 271     ; Clock         ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; slc3:my_slc|ISDU:state_controller|Mem_WE~0                                                                      ; LCCOMB_X70_Y13_N22 ; 17      ; Output enable ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|Mem2IO:memory_subsystem|hex_data[9]~18                                                              ; LCCOMB_X70_Y13_N16 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|NZPlogic:conditionalLogic|internal_register:NZPregister|Q[0]~2                          ; LCCOMB_X72_Y12_N10 ; 3       ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|internal_register:IRregister|Q[11]~1                                                    ; LCCOMB_X67_Y16_N16 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|internal_register:MARregister|Q[0]~32                                                   ; LCCOMB_X65_Y12_N10 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|internal_register:MDRregister|Q[2]~6                                                    ; LCCOMB_X72_Y15_N30 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|internal_register:PCregister|Q[13]~0                                                    ; LCCOMB_X67_Y11_N12 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[0].register|Q[8]~1  ; LCCOMB_X65_Y14_N4  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[1].register|Q[10]~1 ; LCCOMB_X70_Y14_N2  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[2].register|Q[12]~1 ; LCCOMB_X66_Y16_N8  ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[3].register|Q[9]~1  ; LCCOMB_X65_Y14_N24 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[4].register|Q[12]~1 ; LCCOMB_X70_Y15_N10 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[5].register|Q[12]~1 ; LCCOMB_X65_Y13_N30 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[6].register|Q[12]~1 ; LCCOMB_X70_Y16_N12 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; slc3:my_slc|datapath:d0|registerFile:registers|internal_register:internal_register_generate[7].register|Q[0]~1  ; LCCOMB_X65_Y13_N28 ; 16      ; Clock enable  ; no     ; --                   ; --               ; --                        ;
+; sync:SwitchSync0|q                                                                                              ; FF_X79_Y17_N9      ; 55      ; Sync. clear   ; no     ; --                   ; --               ; --                        ;
++-----------------------------------------------------------------------------------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -1707,156 +1738,170 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Clk  ; PIN_Y2   ; 106     ; 16                                   ; Global Clock         ; GCLK4            ; --                        ;
+; Clk  ; PIN_Y2   ; 271     ; 171                                  ; Global Clock         ; GCLK4            ; --                        ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------+
-; Routing Usage Summary                           ;
-+-----------------------+-------------------------+
-; Routing Resource Type ; Usage                   ;
-+-----------------------+-------------------------+
-; Block interconnects   ; 220 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 76 / 10,120 ( < 1 % )   ;
-; C4 interconnects      ; 254 / 209,544 ( < 1 % ) ;
-; Direct links          ; 26 / 342,891 ( < 1 % )  ;
-; Global clocks         ; 1 / 20 ( 5 % )          ;
-; Local interconnects   ; 63 / 119,088 ( < 1 % )  ;
-; R24 interconnects     ; 205 / 9,963 ( 2 % )     ;
-; R4 interconnects      ; 394 / 289,782 ( < 1 % ) ;
-+-----------------------+-------------------------+
++---------------------------------------------------+
+; Routing Usage Summary                             ;
++-----------------------+---------------------------+
+; Routing Resource Type ; Usage                     ;
++-----------------------+---------------------------+
+; Block interconnects   ; 1,304 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 137 / 10,120 ( 1 % )      ;
+; C4 interconnects      ; 980 / 209,544 ( < 1 % )   ;
+; Direct links          ; 106 / 342,891 ( < 1 % )   ;
+; Global clocks         ; 1 / 20 ( 5 % )            ;
+; Local interconnects   ; 354 / 119,088 ( < 1 % )   ;
+; R24 interconnects     ; 244 / 9,963 ( 2 % )       ;
+; R4 interconnects      ; 969 / 289,782 ( < 1 % )   ;
++-----------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 10.63) ; Number of LABs  (Total = 16) ;
+; Number of Logic Elements  (Average = 11.95) ; Number of LABs  (Total = 62) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
-; 5                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 2                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 4                            ;
+; 5                                           ; 3                            ;
 ; 6                                           ; 1                            ;
-; 7                                           ; 4                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 0                            ;
+; 7                                           ; 3                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 2                            ;
 ; 11                                          ; 2                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 5                            ;
+; 12                                          ; 2                            ;
+; 13                                          ; 4                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 3                            ;
+; 16                                          ; 30                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.50) ; Number of LABs  (Total = 16) ;
+; LAB-wide Signals  (Average = 1.53) ; Number of LABs  (Total = 62) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 12                           ;
-; 1 Clock enable                     ; 9                            ;
-; 1 Sync. clear                      ; 3                            ;
+; 1 Clock                            ; 52                           ;
+; 1 Clock enable                     ; 19                           ;
+; 2 Clock enables                    ; 24                           ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.06) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced  (Average = 16.24) ; Number of LABs  (Total = 62) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
+; 2                                            ; 2                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 2                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 4                            ;
-; 8                                            ; 1                            ;
+; 8                                            ; 3                            ;
 ; 9                                            ; 1                            ;
 ; 10                                           ; 1                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 12                                           ; 2                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 1                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
+; 15                                           ; 2                            ;
+; 16                                           ; 7                            ;
+; 17                                           ; 3                            ;
+; 18                                           ; 11                           ;
+; 19                                           ; 6                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 0                            ;
+; 21                                           ; 2                            ;
 ; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 0                            ;
+; 23                                           ; 3                            ;
+; 24                                           ; 3                            ;
 ; 25                                           ; 2                            ;
-; 26                                           ; 0                            ;
+; 26                                           ; 1                            ;
 ; 27                                           ; 0                            ;
 ; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
+; 29                                           ; 1                            ;
 ; 30                                           ; 1                            ;
 ; 31                                           ; 0                            ;
-; 32                                           ; 2                            ;
+; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.25) ; Number of LABs  (Total = 16) ;
+; Number of Signals Sourced Out  (Average = 7.98) ; Number of LABs  (Total = 62) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 0                            ;
-; 2                                               ; 0                            ;
-; 3                                               ; 0                            ;
-; 4                                               ; 1                            ;
-; 5                                               ; 1                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 6                            ;
-; 8                                               ; 0                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 0                            ;
-; 11                                              ; 1                            ;
-; 12                                              ; 3                            ;
-; 13                                              ; 1                            ;
-; 14                                              ; 0                            ;
+; 1                                               ; 2                            ;
+; 2                                               ; 4                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 7                            ;
+; 5                                               ; 5                            ;
+; 6                                               ; 7                            ;
+; 7                                               ; 8                            ;
+; 8                                               ; 4                            ;
+; 9                                               ; 5                            ;
+; 10                                              ; 4                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 2                            ;
+; 13                                              ; 5                            ;
+; 14                                              ; 1                            ;
 ; 15                                              ; 1                            ;
-; 16                                              ; 1                            ;
+; 16                                              ; 6                            ;
 +-------------------------------------------------+------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.38) ; Number of LABs  (Total = 16) ;
-+---------------------------------------------+------------------------------+
-; 0                                           ; 0                            ;
-; 1                                           ; 0                            ;
-; 2                                           ; 0                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 5                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 3                            ;
-; 8                                           ; 2                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 0                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 0                            ;
-; 17                                          ; 0                            ;
-; 18                                          ; 1                            ;
-; 19                                          ; 1                            ;
-; 20                                          ; 0                            ;
-; 21                                          ; 0                            ;
-; 22                                          ; 1                            ;
-+---------------------------------------------+------------------------------+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 18.15) ; Number of LABs  (Total = 62) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 2                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 4                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 4                            ;
+; 8                                            ; 4                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 3                            ;
+; 12                                           ; 2                            ;
+; 13                                           ; 4                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 3                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 3                            ;
+; 19                                           ; 2                            ;
+; 20                                           ; 0                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 2                            ;
+; 25                                           ; 3                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 6                            ;
+; 28                                           ; 3                            ;
+; 29                                           ; 2                            ;
+; 30                                           ; 1                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 6                            ;
+; 33                                           ; 1                            ;
+; 34                                           ; 1                            ;
+; 35                                           ; 0                            ;
+; 36                                           ; 1                            ;
++----------------------------------------------+------------------------------+
 
 
 +------------------------------------------+
@@ -2091,8 +2136,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (119006): Selected device EP4CE115F29C7 for design "lab6_toplevel"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -2131,42 +2175,25 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:08
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:06
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X69_Y0 to location X80_Y11
+    Info (170196): Router estimated peak interconnect usage is 7% of the available device resources in the region that extends from location X58_Y12 to location X68_Y23
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+Info (11888): Total time spent on timing analysis during the Fitter is 0.63 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Warning (169064): Following 16 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
-    Info (169065): Pin Data[0] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[1] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[2] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[3] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[4] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[5] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[6] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[7] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[8] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[9] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[10] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[11] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[12] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[13] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[14] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
-    Info (169065): Pin Data[15] has a permanently disabled output enable File: C:/Users/finnn/Documents/385/385_FPGA/Lab6/lab6_toplevel.sv Line: 16
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/finnn/Documents/385/385_FPGA/Lab6/output_files/lab6_toplevel.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5742 megabytes
-    Info: Processing ended: Fri Oct 05 15:25:53 2018
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:30
+Info: Quartus Prime Fitter was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 5752 megabytes
+    Info: Processing ended: Mon Oct 08 21:03:50 2018
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:35
 
 
 +----------------------------+

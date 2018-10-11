@@ -10,11 +10,13 @@ module datapath(
 	input logic DRMUX, SR1MUX, SR2MUX, ADDR1MUX,
 	input logic MIO_EN,
 	input logic [15:0] MDR_In, //technically actually data_to_CPU (bad naming)
-	
+	output logic[11:0] LED,
 	output logic BEN,
 	output logic [15:0] MAR, IR, PC, MDR
 
 );
+
+
 	// Thank you Mr. Bus Driver.
 	logic[15:0] Bus;
 	
@@ -90,6 +92,8 @@ module datapath(
 	internal_register #(16) MARregister(.D(Bus),         .Q(MAR), .Load(LD_MAR), .Reset(Reset_ah), .*);
 	internal_register #(16) IRregister( .D(Bus),         .Q(IR),  .Load(LD_IR),  .Reset(Reset_ah), .*);
 	internal_register #(16) PCregister( .D(PCMUX_Muxed), .Q(PC),  .Load(LD_PC),  .Reset(Reset_ah), .*);
+	
+	assign LED = IR[11:0];
 	
 	
 	// Conditional branch logic.
