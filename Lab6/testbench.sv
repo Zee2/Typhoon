@@ -22,6 +22,8 @@ logic [11:0] LED;
 logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
 logic CE, UB, LB, OE, WE;
 logic [19:0] ADDR;
+logic[15:0] test;
+logic[18:0] test2;
 wire [15:0] Data;
 
 lab6_toplevel tested(.*);

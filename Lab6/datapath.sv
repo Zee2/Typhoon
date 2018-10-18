@@ -30,17 +30,27 @@ module datapath(
 	registerFile registers(.Clk(Clk), .D(Bus), .DR(DRMUX_Muxed), .LD_REG(LD_REG), .SR1(SR1MUX_Muxed), .SR2(IR[2:0]), 
 									.SR1_Out(SR1_Out), .SR2_Out(SR2_Out), .Reset_ah(Reset_ah));
 	
-	// Muxes
+	// PCMux module
 	four_mux #(16) PCMux_Mux(.A(PC+1), .B(Bus), .C(MARMUX), .D(16'bx), .Sel(PCMUX), .Out(PCMUX_Muxed));
+	
+	// DRMux module
 	two_mux #(3) DRMUX_Mux(.A(IR[11:9]), .B(3'b111), .Sel(DRMUX), .Out(DRMUX_Muxed));
+	
+	// SR1Mux module
 	two_mux #(3) SR1MUX_Mux(.A(IR[11:9]), .B(IR[8:6]), .Sel(SR1MUX), .Out(SR1MUX_Muxed));
+	
+	// ADDR Muxes
 	two_mux #(16) ADDR1MUX_Mux(.A(PC), .B(SR1_Out), .Sel(ADDR1MUX), .Out(ADDR1MUX_Muxed));
+	
 	four_mux #(16) ADDR2MUX_Mux(	.A(16'b0), 
 											.B({{10{IR[ 5]}}, IR[ 5:0]}), 
 											.C({{ 7{IR[ 8]}}, IR[ 8:0]}),
 											.D({{ 5{IR[10]}}, IR[10:0]}), 
 											.Sel(ADDR2MUX), .Out(ADDR2MUX_Muxed));
+	// SR2Mux module						
 	two_mux #(16) SR2MUX_Mux(.A(SR2_Out), .B({{11{IR[4]}}, IR[4:0]}), .Sel(SR2MUX), .Out(SR2MUX_Muxed));
+	
+	// ALU
 	alu ALU_Inst(.A(SR1_Out), .B(SR2MUX_Muxed), .K(ALUK), .Out(ALU_Out));
 	
 	// * MARMUX addition module
