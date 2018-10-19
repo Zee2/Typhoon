@@ -1,5 +1,5 @@
 Flow report for lab7
-Thu Oct 18 01:52:29 2018
+Fri Oct 19 01:11:55 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 18 01:48:11 2018       ;
+; Flow Status                        ; Successful - Fri Oct 19 01:11:47 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab7                                        ;
 ; Top-level Entity Name              ; lab7                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,874 / 114,480 ( 3 % )                     ;
+; Total logic elements               ; 2,867 / 114,480 ( 3 % )                     ;
 ;     Total combinational functions  ; 2,269 / 114,480 ( 2 % )                     ;
 ;     Dedicated logic registers      ; 1,856 / 114,480 ( 2 % )                     ;
 ; Total registers                    ; 1975                                        ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/18/2018 01:46:31 ;
+; Start date & time ; 10/19/2018 01:10:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab7                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 108223642620545.153984519012232                            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 108223642620545.153992943201552                            ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                          ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)                            ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                       ; --            ; --          ; eda_simulation ;
@@ -103,13 +103,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:41     ; 1.0                     ; 4938 MB             ; 00:01:08                           ;
-; Fitter               ; 00:00:34     ; 1.1                     ; 5791 MB             ; 00:00:51                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4718 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.2                     ; 4907 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:07     ; 1.0                     ; 4723 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 4877 MB             ; 00:00:05                           ;
-; Total                ; 00:01:37     ; --                      ; --                  ; 00:02:20                           ;
+; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 4938 MB             ; 00:01:03                           ;
+; Fitter               ; 00:00:32     ; 1.1                     ; 5790 MB             ; 00:00:50                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.2                     ; 4913 MB             ; 00:00:05                           ;
+; Total                ; 00:01:17     ; --                      ; --                  ; 00:01:58                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,9 +117,6 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
 ; Fitter               ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
@@ -132,9 +126,6 @@ refer to the applicable agreement for further details.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off lab7 -c lab7
 quartus_fit --read_settings_files=off --write_settings_files=off lab7 -c lab7
-quartus_asm --read_settings_files=off --write_settings_files=off lab7 -c lab7
-quartus_sta lab7 -c lab7
-quartus_eda --read_settings_files=off --write_settings_files=off lab7 -c lab7
 quartus_sta lab7 -c lab7
 
 

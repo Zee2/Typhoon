@@ -23,8 +23,6 @@ sync SwitchSync0(Clk, Reset, ResetSync);
 sync SwitchSync1(Clk, Run, RunSync);
 sync SwitchSync2(Clk, Continue, ContinueSync);
 
-myram2 hmmmmmm(.clock(Clk), .address_a(LED), .q_a(test));
-
 slc3 my_slc(.Reset(ResetSync), .Run(RunSync), .Continue(ContinueSync), .*);
 
 // Even though test memory is instantiated here, it will be synthesized into 
