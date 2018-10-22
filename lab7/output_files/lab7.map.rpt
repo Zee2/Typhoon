@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab7
-Fri Oct 19 01:11:14 2018
+Fri Oct 19 15:18:39 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -260,7 +260,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 19 01:11:14 2018       ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 19 15:18:39 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab7                                        ;
 ; Top-level Entity Name              ; lab7                                        ;
@@ -376,7 +376,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -5636,7 +5636,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -5646,7 +5646,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Oct 19 01:10:31 2018
+    Info: Processing started: Fri Oct 19 15:17:23 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab7 -c lab7
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -5909,7 +5909,7 @@ Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "lab7
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "lab7_soc:m_lab7_soc|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: C:/Users/finnn/Documents/385/385_FPGA/lab7/lab7_soc/synthesis/submodules/altera_reset_controller.v Line: 220
 Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "lab7_soc:m_lab7_soc|altera_reset_controller:rst_controller_001" File: C:/Users/finnn/Documents/385/385_FPGA/lab7/lab7_soc/synthesis/lab7_soc.v Line: 405
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2018.10.19.01:10:55 Progress: Loading sld2dead247/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2018.10.19.15:18:05 Progress: Loading sld2dead247/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -5963,9 +5963,9 @@ Info (21057): Implemented 3563 device resources after synthesis - the final reso
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
     Info: Peak virtual memory: 4938 megabytes
-    Info: Processing ended: Fri Oct 19 01:11:14 2018
-    Info: Elapsed time: 00:00:43
-    Info: Total CPU time (on all processors): 00:01:07
+    Info: Processing ended: Fri Oct 19 15:18:39 2018
+    Info: Elapsed time: 00:01:16
+    Info: Total CPU time (on all processors): 00:01:53
 
 
 +------------------------------------------+

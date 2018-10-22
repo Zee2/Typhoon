@@ -297,6 +297,7 @@ int main()
 10000094:	10000015 	stw	zero,0(r2)
 	while ( (1+1) != 3) //infinite loop
 	{
+
 		currBT = *BT_PIO;
 10000098:	e0bffe17 	ldw	r2,-8(fp)
 1000009c:	10800017 	ldw	r2,0(r2)

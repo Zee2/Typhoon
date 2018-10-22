@@ -14,6 +14,7 @@ int main()
 	*LED_PIO = 0; //clear all LEDs
 	while ( (1+1) != 3) //infinite loop
 	{
+
 		currBT = *BT_PIO;
 		if(currBT != prevBT){
 			if(currBT == 0x01){

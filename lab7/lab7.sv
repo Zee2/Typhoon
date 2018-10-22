@@ -24,14 +24,7 @@ module lab7(  	  input	       CLOCK_50,
 					  output		    DRAM_CLK
 				  
 				  );
-				  /*
-				  logic [3:0] syncedButtons;
-				  always_ff @ (posedge CLOCK_50) begin
 				  
-					 syncedButtons <= KEY;
-				  
-				  end
-				  */
 				  // You need to make sure that the port names here are identical to the port names at 
 				  // the interface in lab7_soc.v
 				  lab7_soc m_lab7_soc (.clk_clk(CLOCK_50),
