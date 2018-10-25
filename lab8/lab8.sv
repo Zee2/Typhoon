@@ -43,15 +43,38 @@ module lab8( input               CLOCK_50,
                                  DRAM_CKE,     //SDRAM Clock Enable
                                  DRAM_WE_N,    //SDRAM Write Enable
                                  DRAM_CS_N,    //SDRAM Chip Select
-                                 DRAM_CLK      //SDRAM Clock
+                                 DRAM_CLK,      //SDRAM Clock
+				output logic[7:0] LEDG
                     );
     
     logic Reset_h, Clk;
     logic [7:0] keycode;
-    
+		
+	 logic [9:0] DrawX, DrawY;
+	 logic is_ball;
+	 logic [7:0] LEDvec = 8'b0;
+    assign LEDG = LEDvec;
     assign Clk = CLOCK_50;
     always_ff @ (posedge Clk) begin
-        Reset_h <= ~(KEY[0]);        // The push buttons are active low
+        Reset_h <= ~(KEY[0]);    // The push buttons are active low
+		  
+		  case(keycode)
+				8'd26: begin // W
+					LEDvec <= 4'b00001000;
+				end
+				8'd22: begin // S
+					LEDvec <= 4'b00000100;
+				end
+				8'd4: begin // A
+					LEDvec <= 4'b00000010;
+				end
+				8'd7: begin // D
+					LEDvec <= 4'b00000001;
+				end
+				default: begin
+				end
+				
+		endcase
     end
     
     logic [1:0] hpi_addr;
@@ -108,16 +131,20 @@ module lab8( input               CLOCK_50,
     vga_clk vga_clk_instance(.inclk0(Clk), .c0(VGA_CLK));
     
     // TODO: Fill in the connections for the rest of the modules 
-    VGA_controller vga_controller_instance();
+    VGA_controller vga_controller_instance(.Reset(Reset_h), .*);
     
     // Which signal should be frame_clk?
-    ball ball_instance();
+    ball ball_instance(.frame_clk(~VGA_VS), .Reset(Reset_h), .*);
     
-    color_mapper color_instance();
+    color_mapper color_instance(.*);
     
     // Display keycode on hex display
     HexDriver hex_inst_0 (keycode[3:0], HEX0);
     HexDriver hex_inst_1 (keycode[7:4], HEX1);
+	 
+	 
+	 
+	 
     
     /**************************************************************************************
         ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!

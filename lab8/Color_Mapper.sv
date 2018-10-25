@@ -34,8 +34,8 @@ module  color_mapper ( input              is_ball,            // Whether current
         begin
             // White ball
             Red = 8'hff;
-            Green = 8'hff;
-            Blue = 8'hff;
+            Green = 8'h00;
+            Blue = 8'h00;
         end
         else 
         begin

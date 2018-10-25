@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="lab7_soc" kind="lab7_soc" version="1.0" fabric="QSYS">
  <!-- Format version 18.0 614 (Future versions may contain additional information.) -->
- <!-- 2018.10.21.16:37:14 -->
+ <!-- 2018.10.24.12:00:41 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1540157833</value>
+  <value>1540400441</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -3581,7 +3581,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="instSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x0' end='0x10' type='altera_avalon_onchip_memory2.s1' /><slave name='otg_hpi_reset.s1' start='0x90' end='0xA0' type='altera_avalon_pio.s1' /><slave name='otg_hpi_cs.s1' start='0xA0' end='0xB0' type='altera_avalon_pio.s1' /><slave name='otg_hpi_w.s1' start='0xB0' end='0xC0' type='altera_avalon_pio.s1' /><slave name='otg_hpi_r.s1' start='0xC0' end='0xD0' type='altera_avalon_pio.s1' /><slave name='otg_hpi_data.s1' start='0xD0' end='0xE0' type='altera_avalon_pio.s1' /><slave name='otg_hpi_address.s1' start='0xE0' end='0xF0' type='altera_avalon_pio.s1' /><slave name='keycode.s1' start='0xF0' end='0x100' type='altera_avalon_pio.s1' /><slave name='sdram_pll.pll_slave' start='0x100' end='0x110' type='altpll.pll_slave' /><slave name='sysid_qsys_0.control_slave' start='0x120' end='0x128' type='altera_avalon_sysid_qsys.control_slave' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x1000' end='0x1800' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sdram.s1' start='0x10000000' end='0x18000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x0' end='0x10' type='altera_avalon_onchip_memory2.s1' /><slave name='sdram_pll.pll_slave' start='0x90' end='0xA0' type='altpll.pll_slave' /><slave name='sysid_qsys_0.control_slave' start='0xA8' end='0xB0' type='altera_avalon_sysid_qsys.control_slave' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x1000' end='0x1800' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sdram.s1' start='0x10000000' end='0x18000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -3601,7 +3601,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x0' end='0x10' type='altera_avalon_onchip_memory2.s1' /><slave name='otg_hpi_reset.s1' start='0x90' end='0xA0' type='altera_avalon_pio.s1' /><slave name='otg_hpi_cs.s1' start='0xA0' end='0xB0' type='altera_avalon_pio.s1' /><slave name='otg_hpi_w.s1' start='0xB0' end='0xC0' type='altera_avalon_pio.s1' /><slave name='otg_hpi_r.s1' start='0xC0' end='0xD0' type='altera_avalon_pio.s1' /><slave name='otg_hpi_data.s1' start='0xD0' end='0xE0' type='altera_avalon_pio.s1' /><slave name='otg_hpi_address.s1' start='0xE0' end='0xF0' type='altera_avalon_pio.s1' /><slave name='keycode.s1' start='0xF0' end='0x100' type='altera_avalon_pio.s1' /><slave name='sdram_pll.pll_slave' start='0x100' end='0x110' type='altpll.pll_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x118' end='0x120' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='sysid_qsys_0.control_slave' start='0x120' end='0x128' type='altera_avalon_sysid_qsys.control_slave' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x1000' end='0x1800' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sdram.s1' start='0x10000000' end='0x18000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x0' end='0x10' type='altera_avalon_onchip_memory2.s1' /><slave name='otg_hpi_reset.s1' start='0x20' end='0x30' type='altera_avalon_pio.s1' /><slave name='otg_hpi_cs.s1' start='0x30' end='0x40' type='altera_avalon_pio.s1' /><slave name='otg_hpi_w.s1' start='0x40' end='0x50' type='altera_avalon_pio.s1' /><slave name='otg_hpi_r.s1' start='0x50' end='0x60' type='altera_avalon_pio.s1' /><slave name='otg_hpi_data.s1' start='0x60' end='0x70' type='altera_avalon_pio.s1' /><slave name='otg_hpi_address.s1' start='0x70' end='0x80' type='altera_avalon_pio.s1' /><slave name='keycode.s1' start='0x80' end='0x90' type='altera_avalon_pio.s1' /><slave name='sdram_pll.pll_slave' start='0x90' end='0xA0' type='altpll.pll_slave' /><slave name='sysid_qsys_0.control_slave' start='0xA8' end='0xB0' type='altera_avalon_sysid_qsys.control_slave' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0xB0' end='0xB8' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x1000' end='0x1800' type='altera_nios2_gen2.debug_mem_slave' /><slave name='sdram.s1' start='0x10000000' end='0x18000000' type='altera_avalon_new_sdram_controller.s1' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -4272,7 +4272,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>jtag_uart_0</moduleName>
     <slaveName>avalon_jtag_slave</slaveName>
     <name>jtag_uart_0.avalon_jtag_slave</name>
-    <baseAddress>280</baseAddress>
+    <baseAddress>176</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -4280,7 +4280,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>sysid_qsys_0</moduleName>
     <slaveName>control_slave</slaveName>
     <name>sysid_qsys_0.control_slave</name>
-    <baseAddress>288</baseAddress>
+    <baseAddress>168</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -4296,7 +4296,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>sdram_pll</moduleName>
     <slaveName>pll_slave</slaveName>
     <name>sdram_pll.pll_slave</name>
-    <baseAddress>256</baseAddress>
+    <baseAddress>144</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -4320,7 +4320,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>keycode</moduleName>
     <slaveName>s1</slaveName>
     <name>keycode.s1</name>
-    <baseAddress>240</baseAddress>
+    <baseAddress>128</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -4328,7 +4328,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>otg_hpi_address</moduleName>
     <slaveName>s1</slaveName>
     <name>otg_hpi_address.s1</name>
-    <baseAddress>224</baseAddress>
+    <baseAddress>112</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -4336,7 +4336,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>otg_hpi_data</moduleName>
     <slaveName>s1</slaveName>
     <name>otg_hpi_data.s1</name>
-    <baseAddress>208</baseAddress>
+    <baseAddress>96</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -4344,7 +4344,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>otg_hpi_r</moduleName>
     <slaveName>s1</slaveName>
     <name>otg_hpi_r.s1</name>
-    <baseAddress>192</baseAddress>
+    <baseAddress>80</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -4352,7 +4352,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>otg_hpi_w</moduleName>
     <slaveName>s1</slaveName>
     <name>otg_hpi_w.s1</name>
-    <baseAddress>176</baseAddress>
+    <baseAddress>64</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -4360,7 +4360,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>otg_hpi_cs</moduleName>
     <slaveName>s1</slaveName>
     <name>otg_hpi_cs.s1</name>
-    <baseAddress>160</baseAddress>
+    <baseAddress>48</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -4368,7 +4368,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>otg_hpi_reset</moduleName>
     <slaveName>s1</slaveName>
     <name>otg_hpi_reset.s1</name>
-    <baseAddress>144</baseAddress>
+    <baseAddress>32</baseAddress>
     <span>16</span>
    </memoryBlock>
   </interface>
@@ -4663,7 +4663,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>sysid_qsys_0</moduleName>
     <slaveName>control_slave</slaveName>
     <name>sysid_qsys_0.control_slave</name>
-    <baseAddress>288</baseAddress>
+    <baseAddress>168</baseAddress>
     <span>8</span>
    </memoryBlock>
    <memoryBlock>
@@ -4679,7 +4679,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>sdram_pll</moduleName>
     <slaveName>pll_slave</slaveName>
     <name>sdram_pll.pll_slave</name>
-    <baseAddress>256</baseAddress>
+    <baseAddress>144</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -4697,62 +4697,6 @@ parameters are a RESULT of the module parameters. -->
     <name>sdram.s1</name>
     <baseAddress>268435456</baseAddress>
     <span>134217728</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>keycode</moduleName>
-    <slaveName>s1</slaveName>
-    <name>keycode.s1</name>
-    <baseAddress>240</baseAddress>
-    <span>16</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>otg_hpi_address</moduleName>
-    <slaveName>s1</slaveName>
-    <name>otg_hpi_address.s1</name>
-    <baseAddress>224</baseAddress>
-    <span>16</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>otg_hpi_data</moduleName>
-    <slaveName>s1</slaveName>
-    <name>otg_hpi_data.s1</name>
-    <baseAddress>208</baseAddress>
-    <span>16</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>otg_hpi_r</moduleName>
-    <slaveName>s1</slaveName>
-    <name>otg_hpi_r.s1</name>
-    <baseAddress>192</baseAddress>
-    <span>16</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>otg_hpi_w</moduleName>
-    <slaveName>s1</slaveName>
-    <name>otg_hpi_w.s1</name>
-    <baseAddress>176</baseAddress>
-    <span>16</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>otg_hpi_cs</moduleName>
-    <slaveName>s1</slaveName>
-    <name>otg_hpi_cs.s1</name>
-    <baseAddress>160</baseAddress>
-    <span>16</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>otg_hpi_reset</moduleName>
-    <slaveName>s1</slaveName>
-    <name>otg_hpi_reset.s1</name>
-    <baseAddress>144</baseAddress>
-    <span>16</span>
    </memoryBlock>
   </interface>
   <interface name="irq" kind="interrupt_receiver" version="18.0">
@@ -13801,7 +13745,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1540157833</value>
+   <value>1540400441</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -13821,7 +13765,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1540157833</value>
+   <value>1540400441</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -13837,7 +13781,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1540157833</value>
+   <value>1540400441</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -14310,7 +14254,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0118</value>
+   <value>0x00b0</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14361,7 +14305,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0120</value>
+   <value>0x00a8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14463,7 +14407,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0100</value>
+   <value>0x0090</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14616,7 +14560,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00f0</value>
+   <value>0x0080</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14667,7 +14611,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00e0</value>
+   <value>0x0070</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14718,7 +14662,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00d0</value>
+   <value>0x0060</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14769,7 +14713,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00c0</value>
+   <value>0x0050</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14820,7 +14764,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00b0</value>
+   <value>0x0040</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14871,7 +14815,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00a0</value>
+   <value>0x0030</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14922,7 +14866,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0090</value>
+   <value>0x0020</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -14973,7 +14917,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0120</value>
+   <value>0x00a8</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -15075,7 +15019,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0100</value>
+   <value>0x0090</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -15210,363 +15154,6 @@ parameters are a RESULT of the module parameters. -->
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>instruction_master</startConnectionPoint>
   <endModule>sdram</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.instruction_master/keycode.s1"
-   kind="avalon"
-   version="18.0"
-   start="nios2_gen2_0.instruction_master"
-   end="keycode.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00f0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>keycode</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.instruction_master/otg_hpi_address.s1"
-   kind="avalon"
-   version="18.0"
-   start="nios2_gen2_0.instruction_master"
-   end="otg_hpi_address.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00e0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>otg_hpi_address</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.instruction_master/otg_hpi_data.s1"
-   kind="avalon"
-   version="18.0"
-   start="nios2_gen2_0.instruction_master"
-   end="otg_hpi_data.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00d0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>otg_hpi_data</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.instruction_master/otg_hpi_r.s1"
-   kind="avalon"
-   version="18.0"
-   start="nios2_gen2_0.instruction_master"
-   end="otg_hpi_r.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00c0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>otg_hpi_r</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.instruction_master/otg_hpi_w.s1"
-   kind="avalon"
-   version="18.0"
-   start="nios2_gen2_0.instruction_master"
-   end="otg_hpi_w.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00b0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>otg_hpi_w</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.instruction_master/otg_hpi_cs.s1"
-   kind="avalon"
-   version="18.0"
-   start="nios2_gen2_0.instruction_master"
-   end="otg_hpi_cs.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00a0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>otg_hpi_cs</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.instruction_master/otg_hpi_reset.s1"
-   kind="avalon"
-   version="18.0"
-   start="nios2_gen2_0.instruction_master"
-   end="otg_hpi_reset.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x0090</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>otg_hpi_reset</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
@@ -16807,7 +16394,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.0</version>
  </plugin>
  <plugin>
-  <instanceCount>25</instanceCount>
+  <instanceCount>18</instanceCount>
   <name>avalon</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>

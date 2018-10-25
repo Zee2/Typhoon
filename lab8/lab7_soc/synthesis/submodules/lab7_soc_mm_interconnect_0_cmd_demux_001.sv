@@ -30,7 +30,7 @@
 //   output_name:         lab7_soc_mm_interconnect_0_cmd_demux_001
 //   ST_DATA_W:           107
 //   ST_CHANNEL_W:        13
-//   NUM_OUTPUTS:         12
+//   NUM_OUTPUTS:         5
 //   VALID_WIDTH:         1
 // ------------------------------------------
 
@@ -90,55 +90,6 @@ module lab7_soc_mm_interconnect_0_cmd_demux_001
     output reg                      src4_endofpacket,
     input                           src4_ready,
 
-    output reg                      src5_valid,
-    output reg [107-1    : 0] src5_data, // ST_DATA_W=107
-    output reg [13-1 : 0] src5_channel, // ST_CHANNEL_W=13
-    output reg                      src5_startofpacket,
-    output reg                      src5_endofpacket,
-    input                           src5_ready,
-
-    output reg                      src6_valid,
-    output reg [107-1    : 0] src6_data, // ST_DATA_W=107
-    output reg [13-1 : 0] src6_channel, // ST_CHANNEL_W=13
-    output reg                      src6_startofpacket,
-    output reg                      src6_endofpacket,
-    input                           src6_ready,
-
-    output reg                      src7_valid,
-    output reg [107-1    : 0] src7_data, // ST_DATA_W=107
-    output reg [13-1 : 0] src7_channel, // ST_CHANNEL_W=13
-    output reg                      src7_startofpacket,
-    output reg                      src7_endofpacket,
-    input                           src7_ready,
-
-    output reg                      src8_valid,
-    output reg [107-1    : 0] src8_data, // ST_DATA_W=107
-    output reg [13-1 : 0] src8_channel, // ST_CHANNEL_W=13
-    output reg                      src8_startofpacket,
-    output reg                      src8_endofpacket,
-    input                           src8_ready,
-
-    output reg                      src9_valid,
-    output reg [107-1    : 0] src9_data, // ST_DATA_W=107
-    output reg [13-1 : 0] src9_channel, // ST_CHANNEL_W=13
-    output reg                      src9_startofpacket,
-    output reg                      src9_endofpacket,
-    input                           src9_ready,
-
-    output reg                      src10_valid,
-    output reg [107-1    : 0] src10_data, // ST_DATA_W=107
-    output reg [13-1 : 0] src10_channel, // ST_CHANNEL_W=13
-    output reg                      src10_startofpacket,
-    output reg                      src10_endofpacket,
-    input                           src10_ready,
-
-    output reg                      src11_valid,
-    output reg [107-1    : 0] src11_data, // ST_DATA_W=107
-    output reg [13-1 : 0] src11_channel, // ST_CHANNEL_W=13
-    output reg                      src11_startofpacket,
-    output reg                      src11_endofpacket,
-    input                           src11_ready,
-
 
     // -------------------
     // Clock & Reset
@@ -150,7 +101,7 @@ module lab7_soc_mm_interconnect_0_cmd_demux_001
 
 );
 
-    localparam NUM_OUTPUTS = 12;
+    localparam NUM_OUTPUTS = 5;
     wire [NUM_OUTPUTS - 1 : 0] ready_vector;
 
     // -------------------
@@ -192,55 +143,6 @@ module lab7_soc_mm_interconnect_0_cmd_demux_001
 
         src4_valid         = sink_channel[4] && sink_valid;
 
-        src5_data          = sink_data;
-        src5_startofpacket = sink_startofpacket;
-        src5_endofpacket   = sink_endofpacket;
-        src5_channel       = sink_channel >> NUM_OUTPUTS;
-
-        src5_valid         = sink_channel[5] && sink_valid;
-
-        src6_data          = sink_data;
-        src6_startofpacket = sink_startofpacket;
-        src6_endofpacket   = sink_endofpacket;
-        src6_channel       = sink_channel >> NUM_OUTPUTS;
-
-        src6_valid         = sink_channel[6] && sink_valid;
-
-        src7_data          = sink_data;
-        src7_startofpacket = sink_startofpacket;
-        src7_endofpacket   = sink_endofpacket;
-        src7_channel       = sink_channel >> NUM_OUTPUTS;
-
-        src7_valid         = sink_channel[7] && sink_valid;
-
-        src8_data          = sink_data;
-        src8_startofpacket = sink_startofpacket;
-        src8_endofpacket   = sink_endofpacket;
-        src8_channel       = sink_channel >> NUM_OUTPUTS;
-
-        src8_valid         = sink_channel[8] && sink_valid;
-
-        src9_data          = sink_data;
-        src9_startofpacket = sink_startofpacket;
-        src9_endofpacket   = sink_endofpacket;
-        src9_channel       = sink_channel >> NUM_OUTPUTS;
-
-        src9_valid         = sink_channel[9] && sink_valid;
-
-        src10_data          = sink_data;
-        src10_startofpacket = sink_startofpacket;
-        src10_endofpacket   = sink_endofpacket;
-        src10_channel       = sink_channel >> NUM_OUTPUTS;
-
-        src10_valid         = sink_channel[10] && sink_valid;
-
-        src11_data          = sink_data;
-        src11_startofpacket = sink_startofpacket;
-        src11_endofpacket   = sink_endofpacket;
-        src11_channel       = sink_channel >> NUM_OUTPUTS;
-
-        src11_valid         = sink_channel[11] && sink_valid;
-
     end
 
     // -------------------
@@ -251,15 +153,8 @@ module lab7_soc_mm_interconnect_0_cmd_demux_001
     assign ready_vector[2] = src2_ready;
     assign ready_vector[3] = src3_ready;
     assign ready_vector[4] = src4_ready;
-    assign ready_vector[5] = src5_ready;
-    assign ready_vector[6] = src6_ready;
-    assign ready_vector[7] = src7_ready;
-    assign ready_vector[8] = src8_ready;
-    assign ready_vector[9] = src9_ready;
-    assign ready_vector[10] = src10_ready;
-    assign ready_vector[11] = src11_ready;
 
-    assign sink_ready = |(sink_channel & {{1{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
+    assign sink_ready = |(sink_channel & {{8{1'b0}},{ready_vector[NUM_OUTPUTS - 1 : 0]}});
 
 endmodule
 

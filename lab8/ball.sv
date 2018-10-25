@@ -17,6 +17,7 @@
 module  ball ( input         Clk,                // 50 MHz clock
                              Reset,              // Active-high reset signal
                              frame_clk,          // The clock indicating a new frame (~60Hz)
+					input logic[7:0] keycode,
                input [9:0]   DrawX, DrawY,       // Current pixel coordinates
                output logic  is_ball             // Whether current pixel belongs to ball or background
               );
@@ -33,6 +34,8 @@ module  ball ( input         Clk,                // 50 MHz clock
     
     logic [9:0] Ball_X_Pos, Ball_X_Motion, Ball_Y_Pos, Ball_Y_Motion;
     logic [9:0] Ball_X_Pos_in, Ball_X_Motion_in, Ball_Y_Pos_in, Ball_Y_Motion_in;
+	 
+	 logic isFreshStart = 1;
     
     //////// Do not modify the always_ff blocks. ////////
     // Detect rising edge of frame_clk
@@ -44,12 +47,13 @@ module  ball ( input         Clk,                // 50 MHz clock
     // Update registers
     always_ff @ (posedge Clk)
     begin
-        if (Reset)
+        if (Reset || isFreshStart)
         begin
+				isFreshStart = 0;
             Ball_X_Pos <= Ball_X_Center;
             Ball_Y_Pos <= Ball_Y_Center;
             Ball_X_Motion <= 10'd0;
-            Ball_Y_Motion <= Ball_Y_Step;
+            Ball_Y_Motion <= 10'd0;
         end
         else
         begin
@@ -73,20 +77,66 @@ module  ball ( input         Clk,                // 50 MHz clock
         // Update position and motion only at rising edge of frame clock
         if (frame_clk_rising_edge)
         begin
+		  
+				case(keycode)
+					8'd26: begin // W
+						Ball_X_Motion_in = 0;
+						Ball_Y_Motion_in = (~Ball_Y_Step)+1'b1;
+					end
+					8'd22: begin // S
+						Ball_X_Motion_in = 0;
+						Ball_Y_Motion_in = Ball_Y_Step;
+					end
+					8'd4: begin // A
+						Ball_X_Motion_in = (~Ball_X_Step)+1'b1;
+						Ball_Y_Motion_in = 0;
+					end
+					8'd7: begin // D
+						Ball_X_Motion_in = Ball_X_Step;
+						Ball_Y_Motion_in = 0;
+					end
+					default: begin
+					end
+				
+				endcase
+		  
+		  
+		  
             // Be careful when using comparators with "logic" datatype because compiler treats 
             //   both sides of the operator as UNSIGNED numbers.
             // e.g. Ball_Y_Pos - Ball_Size <= Ball_Y_Min 
             // If Ball_Y_Pos is 0, then Ball_Y_Pos - Ball_Size will not be -4, but rather a large positive number.
-            if( Ball_Y_Pos + Ball_Size >= Ball_Y_Max )  // Ball is at the bottom edge, BOUNCE!
+            if( Ball_Y_Pos + Ball_Size >= Ball_Y_Max ) begin // Ball is at the bottom edge, BOUNCE!
                 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);  // 2's complement.  
-            else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )  // Ball is at the top edge, BOUNCE!
+					 Ball_X_Motion_in = 0;
+				end
+            else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size ) begin  // Ball is at the top edge, BOUNCE!
                 Ball_Y_Motion_in = Ball_Y_Step;
+					 Ball_X_Motion_in = 0;
+				end
             // TODO: Add other boundary detections and handle keypress here.
-        
+				if( Ball_X_Pos + Ball_Size >= Ball_X_Max ) begin  // Ball is at the bottom edge, BOUNCE!
+                Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);  // 2's complement.
+					 Ball_Y_Motion_in = 0;
+				end
+            else if ( Ball_X_Pos <= Ball_X_Min + Ball_Size ) begin // Ball is at the top edge, BOUNCE!
+                Ball_X_Motion_in = Ball_X_Step;
+					 Ball_Y_Motion_in = 0;
+				end
+				
+				
+					
         
             // Update the ball's position with its motion
             Ball_X_Pos_in = Ball_X_Pos + Ball_X_Motion;
             Ball_Y_Pos_in = Ball_Y_Pos + Ball_Y_Motion;
+				
+				if(Ball_X_Motion != 0 && Ball_Y_Motion != 0) begin
+					Ball_X_Motion_in = 0;
+					Ball_Y_Motion_in = 0;
+					Ball_X_Pos_in = Ball_X_Center;
+					Ball_Y_Pos_in = Ball_Y_Center;
+				end
         end
         
         /**************************************************************************************
