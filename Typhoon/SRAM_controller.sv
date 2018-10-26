@@ -96,6 +96,7 @@ always_ff @(posedge SRAM_CLK) begin
 	if(lastOpRead && ~controllerIdle) begin
 		DataFromSRAM[lastRoundRobin] <= SRAM_DQ;
 		DataReady[lastRoundRobin] <= 1;
+		FIFOread[lastRoundRobin] <= 0;
 	end
 	else begin
 		DataReady[0] <= 0;
@@ -106,6 +107,7 @@ always_ff @(posedge SRAM_CLK) begin
 	
 	SRAM_ADDR <= FIFOaddr[roundRobin][19:0]; // Assert 20-bit address on SRAM, always
 	if(FIFOaddr[roundRobin][21] == 1  && ~controllerIdle) begin // It's a read request
+		FIFOread[roundRobin] <= 1;
 		lastOpRead <= 1; // So we fetch data next clock
 		SRAM_OE_N <= 0; // Bring OE low to read
 		SRAM_WE_N <= 1;
@@ -113,6 +115,7 @@ always_ff @(posedge SRAM_CLK) begin
 	else begin
 		if(~controllerIdle) begin
 			lastOpRead <= 0; // This op was not a read, so don't read next clock
+		FIFOread[roundRobin] <= 0;
 		SRAM_DQ <= FIFOdata[roundRobin][15:0]; // Assert FIFO data on SRAM bus
 		SRAM_OE_N <= 1;
 		SRAM_WE_N <= 0; // Bring WE low to write
