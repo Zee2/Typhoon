@@ -1,4 +1,7 @@
 module Typhoon(
+	inout logic[15:0] SRAM_DQ,
+	output logic[19:0] SRAM_ADDR,
+	output logic SRAM_UB_N, SRAM_LB_N, SRAM_CE_N, SRAM_OE_N, SRAM_WE_N,
 	input logic Clk
 	
 );
@@ -21,6 +24,6 @@ module Typhoon(
 	
 	VGA_controller VGAtiming(.Reset(VGA_reset), .DrawX(VGA_SCAN_X), .DrawY(VGA_SCAN_Y), .*);
 	
-	SRAM_controller SRAM(.*);
+	SRAM_controller SRAM();
 
 endmodule
