@@ -11,10 +11,14 @@ int main()
 	unsigned char accumulator = 0;
 	unsigned char prevBT = 0;
 	unsigned char currBT = 0;
+
+
+
 	*LED_PIO = 0; //clear all LEDs
+
+
 	while ( (1+1) != 3) //infinite loop
 	{
-
 		currBT = *BT_PIO;
 		if(currBT != prevBT){
 			if(currBT == 0x01){
@@ -33,6 +37,33 @@ int main()
 		*LED_PIO &= ~0x1; //clear LSB
 		*/
 		prevBT = currBT;
+	}
+	return 1; //never gets here
+}
+
+int main()
+{
+	int i = 0;
+	volatile unsigned int *LED_PIO = (unsigned int*)0x70; //make a pointer to access the PIO block
+	volatile unsigned int *SW_PIO = (unsigned int*)0x60;
+	volatile unsigned int *BT_PIO = (unsigned int*)0x50;
+	unsigned char accumulator = 0;
+	unsigned char prevBT = 0;
+	unsigned char currBT = 0;
+
+
+
+	*LED_PIO = 0; //clear all LEDs
+
+
+	while ( (1+1) != 3) //infinite loop
+	{
+		
+		for (i = 0; i < 100000; i++); //software delay
+		*LED_PIO |= 0x1; //set LSB
+		for (i = 0; i < 100000; i++); //software delay
+		*LED_PIO &= ~0x1; //clear LSB
+		
 	}
 	return 1; //never gets here
 }
