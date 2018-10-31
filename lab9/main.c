@@ -58,6 +58,72 @@ char charsToHex(char c1, char c2)
 	return (hex1 << 4) + hex2;
 }
 
+//these can be optimized by... not... having them be function calls...
+//but the lab specifically divides it like that, so eh, hope the compiler inlines 'em
+inline void keyExpansion(uint key[4], uint w[44]) {
+    uchar i;
+    //copy key into first of 'em
+    for (i=0;i<4;i++) w[i] = key[i];
+    
+    //then do stuff for the rest of 'em
+    for (;i<44;i++) {
+        w[i] = w[i-1];
+        if (i % 4 == 0) 
+            //w = subWord(rotWord(w)) xor Rcon[i/Nk]
+            w[i] = (aes_sbox[w[i] >> 16 & 0xFF] << 24 |
+                    aes_sbox[w[i] >>  8 & 0xFF] << 16 |
+                    aes_sbox[w[i]       & 0xFF] <<  8 |
+                    aes_sbox[w[i] >> 24 & 0xFF]
+                ) ^ Rcon[i/4];
+        //xor with older one
+        w[i] ^= w[i-4];
+    }
+}
+inline void addRoundKey(uchar state[16], uint **roundKey) {
+    uchar i;
+    for (i=0;i<4;i++) {
+        state[4*i  ] ^= **roundKey >> 24 & 0xFF;
+        state[4*i+1] ^= **roundKey >> 16 & 0xFF;
+        state[4*i+2] ^= **roundKey >>  8 & 0xFF;
+        state[4*i+3] ^= **roundKey       & 0xFF;
+        (*roundKey)++;
+    }
+}
+inline void subBytes(uchar state[16]) {
+    uchar i;
+    for (i=0;i<16;i++) state[i] = aes_sbox[state[i]];
+}
+inline void shiftRows(uchar s[16]) {
+    //speed > artsiness :P
+    //that said, this way is pretty damn ugly, but still, instruction memory is cheap :P
+    uchar temp;
+    //1 shift
+    temp = s[0xd]; s[0xd] = s[0x1]; s[0x1] = s[0x5]; s[0x5] = s[0x9]; s[0x9] = temp;
+    //2 shift (swap pairs)
+    temp = s[0x2]; s[0x2] = s[0xa]; s[0xa] = temp;
+    temp = s[0x6]; s[0x6] = s[0xe]; s[0xe] = temp;
+    //3 shift (1 shift in reverse);
+    temp = s[0x3]; s[0x3] = s[0xf]; s[0xf] = s[0xb]; s[0xb] = s[0x7]; s[0x7] = temp;
+}
+inline void mixColumns(uchar s[16]) {
+    uchar i;
+    //save state because the below can't be done on the fly
+    uchar a[16];
+    for (i=0;i<16;i++) a[i] = s[i];
+    
+    for (i=0;i<4;i++) {
+        //gf_mul offsets
+        //0     1     2     3     4     5
+        //0x02, 0x03, 0x09, 0x0b, 0x0d, 0x0e
+        s[0+4*i] = gf_mul[a[0+4*i]][0] ^ gf_mul[a[1+4*i]][1] ^        a[2+4*i]     ^        a[3+4*i]    ;
+        s[1+4*i] =        a[0+4*i]     ^ gf_mul[a[1+4*i]][0] ^ gf_mul[a[2+4*i]][1] ^        a[3+4*i]    ;
+        s[2+4*i] =        a[0+4*i]     ^        a[1+4*i]     ^ gf_mul[a[2+4*i]][0] ^ gf_mul[a[3+4*i]][1];
+        s[3+4*i] = gf_mul[a[0+4*i]][1] ^        a[1+4*i]     ^        a[2+4*i]     ^ gf_mul[a[3+4*i]][0];
+    }
+}
+/*
+void shiftRows
+void mixColumns
 /** encrypt
  *  Perform AES encryption in software.
  *
@@ -68,7 +134,33 @@ char charsToHex(char c1, char c2)
  */
 void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int * msg_enc, unsigned int * key)
 {
-	// Implement this function
+    //key expansion
+    sscanf(key_ascii, "%08x%08x%08x%08x", &key[0], &key[1], &key[2], &key[3]);
+    uint w[44];
+    keyExpansion(key, w);
+    uint *roundKey = w;
+    
+    //set state to input message
+    uchar state[16], i;
+    for (i=0;i<16;i++) state[i] = charsToHex(msg_ascii[2*i], msg_ascii[2*i+1]);
+    
+    //do the things
+    addRoundKey(state, &roundKey);
+    for (i=0;i<9;i++) {
+        subBytes(state);
+        shiftRows(state);
+        mixColumns(state);
+        addRoundKey(state, &roundKey);
+    }
+    subBytes(state);
+    shiftRows(state);
+    addRoundKey(state, &roundKey);
+    //convert the thingie back into ints ;-;
+    for (i=0;i<4;i++) 
+        msg_enc[i] = state[4*i+0] << 24 |
+                     state[4*i+1] << 16 |
+                     state[4*i+2] <<  8 |
+                     state[4*i+3]       ;
 }
 
 /** decrypt
