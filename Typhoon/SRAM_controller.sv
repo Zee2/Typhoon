@@ -67,7 +67,7 @@ generate
 			.data({16'b0, DataToSRAM[i]}),
 			.wrreq(QueueReadReq[i] || QueueWriteReq[i]),
 			.rdreq(FIFOread[i]),
-			.rdempty(FIFOvalid[i]),
+			.rdempty(~FIFOvalid[i]),
 			.q(FIFOdata[i])
 		);
 	end
