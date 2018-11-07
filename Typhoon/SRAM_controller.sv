@@ -22,13 +22,13 @@
 */
 
 module SRAM_controller(
-	inout logic[15:0] SRAM_DQ,
+	inout wire[15:0] SRAM_DQ,
 	output logic[19:0] SRAM_ADDR,
 	output logic SRAM_UB_N, SRAM_LB_N, SRAM_CE_N, SRAM_OE_N, SRAM_WE_N,
 
 	input logic[15:0] DataToSRAM[4],
 	input logic[19:0] AddressToSRAM[4],
-	input logic[3:0] QueueReadReq, QueueWriteReq,
+	input logic QueueReadReq[4], QueueWriteReq[4],
 
 	output logic DataReady[4],
 	output logic[15:0] DataFromSRAM[4],
@@ -42,16 +42,23 @@ module SRAM_controller(
 
 
 
-logic[3:0] FIFOread; // Internal signal for memory fetch loop to read from FIFOs
-logic[3:0] FIFOvalid; // Does each FIFO have some data for us?
+logic FIFOread[4] = {0,0,0,0}; // Internal signal for memory fetch loop to read from FIFOs
+logic FIFOvalid[4]; // Does each FIFO have some data for us?
 logic[15:0] FIFOdata[4];
 logic[21:0] FIFOaddr[4];
-logic[1:0] lastRoundRobin;
+logic[1:0] lastRoundRobin = -1;
 logic[1:0] roundRobin = 0; // Round robin counter 
-logic[1:0] nextRoundRobin = 0;
+logic[1:0] nextRoundRobin = 1;
+
+
+logic[15:0] DataFromSRAMLatch[4];
+logic[1:0] lookAheadIndex = 0;
+logic[3:0] lookAheadBit = 0;
+
+logic[15:0] DQ_buffer;
 
 logic lastOpRead = 0;
-logic controllerIdle = 0;
+logic controllerIdle = 1;
 
 assign SRAM_CE_N = 0; // Always chip-enable
 assign SRAM_UB_N = 0; // Always writing both bytes
@@ -87,44 +94,60 @@ generate
 
 endgenerate
 
+assign SRAM_DQ = SRAM_WE_N ? DQ_buffer : 16'bz;
 
-always_ff @(posedge SRAM_CLK) begin
+
+always_ff @(posedge SRAM_CLK) begin: mainblock
+	
+	
+		for(integer i = 0; i < 4; i++) begin: readLoop
+			if(QueueReadReq[i]) begin
+				DataReady[i] <= 0;
+			end
+
+		end
 
 
 
 	//At clock edge, read data from SRAM if last operation was a read
 	if(lastOpRead && ~controllerIdle) begin
-		DataFromSRAM[lastRoundRobin] <= SRAM_DQ;
-		DataReady[lastRoundRobin] <= 1;
-		FIFOread[lastRoundRobin] <= 0;
-	end
-	else begin
-		DataReady[0] <= 0;
-		DataReady[1] <= 0;
-		DataReady[2] <= 0;
-		DataReady[3] <= 0;
-	end
+		DataFromSRAMLatch[lastRoundRobin] <= SRAM_DQ; // Latch in output, but the port output has already had this data for 2ns
+		lookAheadBit[roundRobin] <= 0; //Disconnect lookahead combinatorial circuit
+		//FIFOread[lastRoundRobin] <= 0;
+	end 
 	
 	SRAM_ADDR <= FIFOaddr[roundRobin][19:0]; // Assert 20-bit address on SRAM, always
 	if(FIFOaddr[roundRobin][21] == 1  && ~controllerIdle) begin // It's a read request
-		FIFOread[roundRobin] <= 1;
+		//FIFOread[roundRobin] <= 1;
 		lastOpRead <= 1; // So we fetch data next clock
-		SRAM_OE_N <= 0; // Bring OE low to read
+		DataReady[roundRobin] <= 1; // Bring data ready signal high, as the board clock can read this as "ready" on the next cycle
+									// This works because the memory access time is 8ns, less than the 10ns memory clock
+
+		lookAheadIndex <= roundRobin; // Latch in lookahead bit
+		lookAheadBit[roundRobin] <= 1;
+		SRAM_OE_N <= 0; // Bring OE low to read, start 8ns countdown..!
 		SRAM_WE_N <= 1;
 	end
 	else begin
 		if(~controllerIdle) begin
 			lastOpRead <= 0; // This op was not a read, so don't read next clock
-		FIFOread[roundRobin] <= 0;
-		SRAM_DQ <= FIFOdata[roundRobin][15:0]; // Assert FIFO data on SRAM bus
-		SRAM_OE_N <= 1;
-		SRAM_WE_N <= 0; // Bring WE low to write
+			//FIFOread[roundRobin] <= 1;
+			DQ_buffer <= FIFOdata[roundRobin][15:0]; // Assert FIFO data on SRAM bus
+			SRAM_OE_N <= 1;
+			SRAM_WE_N <= 0; // Bring WE low to write
 		end
 	end
 
+	FIFOread[roundRobin] <= 0;
 	lastRoundRobin <= roundRobin;
-	if(~controllerIdle) begin
+	if(controllerIdle == 0) begin
 		roundRobin <= nextRoundRobin; // nextRoundRobin should indicate valid FIFO
+		FIFOread[nextRoundRobin] <= 1;
+	end
+	else begin 
+		SRAM_OE_N <= 1;
+		SRAM_WE_N <= 1;
+
 	end
 end
 
@@ -134,27 +157,46 @@ end
 
 always_comb begin
 
-	if(FIFOvalid[roundRobin+1] == 1) begin
+
+	// Combinatorially connect output ports to memory reading for look-ahead access
+	
+	
+	for(integer i = 0; i < 4; i++) begin: switcher
+		DataFromSRAM[i] = lookAheadBit[i] && i == lookAheadIndex ? SRAM_DQ : DataFromSRAMLatch[lookAheadIndex];
+	
+	end
+	
+	
+
+	if(~FIFOvalid[roundRobin+2'b01] == -1) begin
 		nextRoundRobin = roundRobin + 2'd1;
 		controllerIdle = 0;
 	end
 	else begin
-		if(FIFOvalid[roundRobin+2] == 1) begin
+		if(~FIFOvalid[roundRobin+2'b10] == -1) begin
 			nextRoundRobin = roundRobin + 2'd2;
 			controllerIdle = 0;
 		end
 		else begin
-			if(FIFOvalid[roundRobin+3] == 1) begin
+			if(~FIFOvalid[roundRobin+2'b11] == -1) begin
 				nextRoundRobin = roundRobin + 2'd3;
 				controllerIdle = 0;
 			end
 			else begin
-				controllerIdle = 1;
-				nextRoundRobin = roundRobin;
-				// All next ports are empty, just idle
+				if(~FIFOvalid[roundRobin] == -1) begin
+					nextRoundRobin = roundRobin;
+					controllerIdle = 0;
+				end
+				else begin
+					controllerIdle = 1;
+					nextRoundRobin = roundRobin;
+					// All next ports are empty, just idle
+				end
+				
 			end
 		end
 	end
+	
 
 end
 endmodule

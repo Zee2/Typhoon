@@ -2,7 +2,164 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "SRAM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_ADDR[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_OE_N",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_WE_N",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_DQ[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAM_CLK",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
