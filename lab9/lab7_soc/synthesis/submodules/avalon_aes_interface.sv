@@ -105,7 +105,7 @@ logic[3:0] registerSelect;
 logic[31:0] Qout[16];
 logic[31:0] mask;
 
-assign AVL_READDATA = Qout[registerSelect] & mask;
+assign AVL_READDATA = Qout[registerSelect];
 assign EXPORT_DATA = {Qout[0][31:16], Qout[3][15:0]};
 assign registerSelect = AVL_ADDR;
 
@@ -113,7 +113,7 @@ registerFile registers(
 	.Clk(CLK),
 	.Reset_ah(RESET),
 	
-	.D(AVL_WRITEDATA),
+	.D((AVL_WRITEDATA & mask) | (Qout[registerSelect] & ~mask)),
 	.DR(registerSelect),
 	.LD_REG(AVL_WRITE && AVL_CS),
 	.Q(Qout)
@@ -121,7 +121,7 @@ registerFile registers(
 
 
 always_comb begin
-/*
+
 	case(AVL_BYTE_EN)
 	
 		4'b1111:
@@ -142,8 +142,8 @@ always_comb begin
 			mask = 32'h00000000;
 	endcase
 		
-*/
-mask = 32'hffffffff;
+
+
 
 end
 

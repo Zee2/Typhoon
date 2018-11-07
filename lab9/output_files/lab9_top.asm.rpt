@@ -1,5 +1,5 @@
 Assembler report for lab9_top
-Thu Nov 01 23:14:08 2018
+Fri Nov 02 15:14:52 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Nov 01 23:14:08 2018 ;
+; Assembler Status      ; Successful - Fri Nov 02 15:14:52 2018 ;
 ; Revision Name         ; lab9_top                              ;
 ; Top-level Entity Name ; lab9_top                              ;
 ; Family                ; Cyclone IV E                          ;
@@ -77,8 +77,8 @@ refer to the applicable agreement for further details.
 +----------------+-------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                       ;
 +----------------+-------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x007E5DDF                                                                    ;
-; Checksum       ; 0x007E5DDF                                                                    ;
+; JTAG usercode  ; 0x0080667F                                                                    ;
+; Checksum       ; 0x0080667F                                                                    ;
 +----------------+-------------------------------------------------------------------------------+
 
 
@@ -88,14 +88,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 01 23:14:03 2018
+    Info: Processing started: Fri Nov 02 15:14:47 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off lab9 -c lab9_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Thu Nov 01 23:14:08 2018
+    Info: Processing ended: Fri Nov 02 15:14:52 2018
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
