@@ -1,0 +1,144 @@
+Flow report for lab9_top
+Fri Nov 02 15:15:12 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Fri Nov 02 15:15:12 2018       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; lab9_top                                    ;
+; Top-level Entity Name              ; lab9_top                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE115F29C7                               ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 4,174 / 114,480 ( 4 % )                     ;
+;     Total combinational functions  ; 3,471 / 114,480 ( 3 % )                     ;
+;     Dedicated logic registers      ; 2,609 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 2728                                        ;
+; Total pins                         ; 142 / 529 ( 27 % )                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 11,392 / 3,981,312 ( < 1 % )                ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/02/2018 15:12:23 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; lab9_top            ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                    ;
++-------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
+; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name     ; Section Id     ;
++-------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 108223642620545.154118954309304                            ; --            ; --              ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                ; --            ; --              ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                  ; <None>        ; --              ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                                       ; --            ; --              ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                         ; --            ; --              ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                          ; --            ; --              ; --             ;
+; MISC_FILE                           ; lab7_soc/synthesis/../lab7_soc.cmp                         ; --            ; --              ; --             ;
+; MISC_FILE                           ; lab7_soc/synthesis/../../lab7_soc.qsys                     ; --            ; --              ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                       ; --            ; --              ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                     ; --            ; DE2_115_Default ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                     ; --            ; lab8            ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                     ; --            ; --              ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                     ; --            ; DE2_115_Default ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                     ; --            ; lab8            ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                     ; --            ; --              ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                     ; --            ; DE2_115_Default ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                     ; --            ; lab8            ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                     ; --            ; --              ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                        ; --            ; --              ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                      ; --            ; --              ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                               ; --            ; --              ; --             ;
+; SLD_FILE                            ; lab7_soc/synthesis/lab7_soc.regmap                         ; --            ; --              ; --             ;
+; SLD_FILE                            ; lab7_soc/synthesis/lab7_soc.debuginfo                      ; --            ; --              ; --             ;
+; SLD_INFO                            ; QSYS_NAME lab7_soc HAS_SOPCINFO 1 GENERATION_ID 1541129747 ; --            ; lab7_soc        ; --             ;
+; SOPCINFO_FILE                       ; lab7_soc/synthesis/../../lab7_soc.sopcinfo                 ; --            ; --              ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                         ; --            ; --              ; --             ;
++-------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:34     ; 1.0                     ; 4955 MB             ; 00:02:20                           ;
+; Fitter               ; 00:00:43     ; 1.1                     ; 5876 MB             ; 00:01:02                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4727 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.3                     ; 4937 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:10     ; 1.0                     ; 4741 MB             ; 00:00:08                           ;
+; Total                ; 00:02:38     ; --                      ; --                  ; 00:03:42                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Midway           ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off lab9 -c lab9_top
+quartus_fit --read_settings_files=off --write_settings_files=off lab9 -c lab9_top
+quartus_asm --read_settings_files=off --write_settings_files=off lab9 -c lab9_top
+quartus_sta lab9 -c lab9_top
+quartus_eda --read_settings_files=off --write_settings_files=off lab9 -c lab9_top
+
+
+

@@ -37,10 +37,10 @@ module lab9_top (
 logic [31:0] AES_EXPORT_DATA;
 
 // Instantiation of Qsys design
-lab9_soc lab9_qsystem (
+lab7_soc lab9_qsystem (
 	.clk_clk(CLOCK_50),								// Clock input
 	.reset_reset_n(KEY[0]),							// Reset key
-	.aes_export_EXPORT_DATA(AES_EXPORT_DATA),	// Exported data
+	.aes_export_new_signal(AES_EXPORT_DATA),	// Exported data
 	.sdram_wire_addr(DRAM_ADDR),					// sdram_wire.addr
 	.sdram_wire_ba(DRAM_BA),						// sdram_wire.ba
 	.sdram_wire_cas_n(DRAM_CAS_N),				// sdram_wire.cas_n
