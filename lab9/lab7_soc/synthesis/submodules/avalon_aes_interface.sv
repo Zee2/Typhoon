@@ -104,11 +104,46 @@ module avalon_aes_interface (
 logic[3:0] registerSelect;
 logic[31:0] Qout[16];
 logic[31:0] mask;
+logic[31:0] AES_MSG_DEC[4];
+logic AES_DONE;
 
 assign AVL_READDATA = Qout[registerSelect];
 assign EXPORT_DATA = {Qout[0][31:16], Qout[3][15:0]};
 assign registerSelect = AVL_ADDR;
 
+
+
+genvar i;
+generate
+	for (i=0;i<8;i++) begin: input_register_generate
+		internal_register #(32) register(.D((AVL_WRITEDATA & mask) | (Qout[registerSelect] & ~mask)),
+													.Q(Qout[i]),
+													.Load(AVL_WRITE && AVL_CS),
+													.Reset(RESET),
+													.Clk(CLK));
+	end
+	for (i=8;i<12;i++) begin: output_register_generate
+		internal_register #(32) register(.D(AES_MSG_DEC[i-8]),
+													.Q(Qout[i]),
+													.Load(1'b1),
+													.Reset(RESET),
+													.Clk(CLK));
+	end
+endgenerate
+
+internal_register #(32) start_register(.D((AVL_WRITEDATA & mask) | (Qout[registerSelect] & ~mask)),
+													.Q(Qout[14]),
+													.Load(AVL_WRITE && AVL_CS),
+													.Reset(RESET),
+													.Clk(CLK));
+internal_register #(32) done_register(.D(AES_DONE),
+													.Q(Qout[15]),
+													.Load(1'b1),
+													.Reset(RESET),
+													.Clk(CLK));
+
+
+/*
 registerFile registers(
 	.Clk(CLK),
 	.Reset_ah(RESET),
@@ -117,6 +152,16 @@ registerFile registers(
 	.DR(registerSelect),
 	.LD_REG(AVL_WRITE && AVL_CS),
 	.Q(Qout)
+);
+*/
+AES AES_module(
+	.AES_START(Qout[14][0]),
+	.AES_DONE(AES_DONE),
+	.AES_KEY({Qout[3],Qout[2],Qout[1],Qout[0]}),
+	.AES_MSG_ENC({Qout[7],Qout[6],Qout[5],Qout[4]}),
+	.AES_MSG_DEC({AES_MSG_DEC[3], AES_MSG_DEC[2], AES_MSG_DEC[1], AES_MSG_DEC[0]}),
+	.*
+
 );
 
 
