@@ -44,8 +44,13 @@ DRsize.100 0 1 0 0 0 1
 DRsize.101 1 0 0 0 0 1 
 
 State Machine - |lab9_top|lab7_soc:lab9_qsystem|avalon_aes_interface:aes_decryption_core_0|AES:AES_module|state
-Name state.expansion state.AESbegin state.done state.waiting 
-state.waiting 0 0 0 0 
-state.done 0 0 1 1 
-state.AESbegin 0 1 0 1 
-state.expansion 1 0 0 1 
+Name state.addRoundKeyState state.subBytesState2 state.subBytesState1 state.shiftRowsState state.expansion state.AESbegin state.done state.waiting state.mixColumnsState 
+state.waiting 0 0 0 0 0 0 0 0 0 
+state.done 0 0 0 0 0 0 1 1 0 
+state.AESbegin 0 0 0 0 0 1 0 1 0 
+state.expansion 0 0 0 0 1 0 0 1 0 
+state.shiftRowsState 0 0 0 1 0 0 0 1 0 
+state.subBytesState1 0 0 1 0 0 0 0 1 0 
+state.subBytesState2 0 1 0 0 0 0 0 1 0 
+state.addRoundKeyState 1 0 0 0 0 0 0 1 0 
+state.mixColumnsState 0 0 0 0 0 0 0 1 1 

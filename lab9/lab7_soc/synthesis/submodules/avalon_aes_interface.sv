@@ -110,10 +110,11 @@ logic AES_DONE;
 assign AVL_READDATA = Qout[registerSelect];
 assign EXPORT_DATA = {Qout[0][31:16], Qout[3][15:0]};
 assign registerSelect = AVL_ADDR;
-
+					
 
 
 genvar i;
+genvar j;
 generate
 	for (i=0;i<8;i++) begin: input_register_generate
 		internal_register #(32) register(.D((AVL_WRITEDATA & mask) | (Qout[registerSelect] & ~mask)),
@@ -122,9 +123,9 @@ generate
 													.Reset(RESET),
 													.Clk(CLK));
 	end
-	for (i=8;i<12;i++) begin: output_register_generate
-		internal_register #(32) register(.D(AES_MSG_DEC[i-8]),
-													.Q(Qout[i]),
+	for (j=8;j<12;j++) begin: output_register_generate
+		internal_register #(32) register(.D(AES_MSG_DEC[j-8]),
+													.Q(Qout[j]),
 													.Load(1'b1),
 													.Reset(RESET),
 													.Clk(CLK));
@@ -155,6 +156,7 @@ registerFile registers(
 );
 */
 AES AES_module(
+	.CLK(CLK),
 	.AES_START(Qout[14][0]),
 	.AES_DONE(AES_DONE),
 	.AES_KEY({Qout[3],Qout[2],Qout[1],Qout[0]}),
