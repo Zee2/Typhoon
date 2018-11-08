@@ -10,6 +10,7 @@ University of Illinois ECE Department
 module AES (
 	input	 logic CLK,
 	input  logic RESET,
+	input  logic CONTINUE,
 	input  logic AES_START,
 	output logic AES_DONE,
 	input  logic [127:0] AES_KEY,
@@ -17,10 +18,14 @@ module AES (
 	output logic [127:0] AES_MSG_DEC
 );
 
-	
-logic [3:0] expandCounter = 0;
-logic [3:0] decryptCounter = 0;
-logic [3:0] mixCounter = 0;
+logic contPulse = 0;
+logic lastContinue = 1;
+
+logic isFirstClock = 1;
+
+logic [7:0] expandCounter = 0;
+logic [7:0] decryptCounter = 0;
+logic [7:0] mixCounter = 0;
 
 logic [1407:0] RoundKeySchedule;
 
@@ -61,7 +66,7 @@ generate
 
 for(i = 0; i < 16; i++) begin: subBytesGenerate
 
-	SubBytes subBytes(.in(currentData[((i+1)*8)-1:i*8]), .out(subBytesOut[((i+1)*8)-1:i*8]), .clk(CLK));
+	InvSubBytes subBytes(.in(currentData[i*8+:8]), .out(subBytesOut[i*8+:8]), .clk(CLK));
 
 end
 
@@ -74,8 +79,7 @@ enum logic [7:0] {
 	AESbegin,
 	expansion,
 	shiftRowsState,
-	subBytesState1,
-	subBytesState2,
+	subBytesState,
 	addRoundKeyState,
 	mixColumnsState
 	
@@ -83,13 +87,28 @@ enum logic [7:0] {
 
 } state, nextState;
 
-
+initial state = waiting;
 
 
 // Synchronous state latching
 always_ff @ (posedge CLK) begin
-	state <= nextState;
-	currentData <= nextData;
+
+
+	lastContinue <= CONTINUE;
+	
+	if(contPulse) begin
+		state <= nextState;
+		currentData <= nextData;
+		AES_MSG_DEC <= nextData;
+		contPulse <= 0;
+	end	
+	else begin
+		currentData <= currentData;
+	end
+	
+	if(~CONTINUE && CONTINUE != lastContinue) begin
+		contPulse <= 1;
+	end
 	
 	if(state == waiting) begin
 		AES_DONE <= 0;
@@ -100,10 +119,13 @@ always_ff @ (posedge CLK) begin
 	
 	if(state == expansion)
 		expandCounter <= expandCounter + 1;
+	else
+		expandCounter <= 0;
 	
 	if(state == mixColumnsState)
 		mixCounter <= mixCounter + 1;
-	
+	else
+		mixCounter <= 0;
 		
 	// Make sure to increment decryptCounter even during the 
 	// AESbegin state, because we use decryptCounter as the roundKeySchedule index
@@ -111,7 +133,8 @@ always_ff @ (posedge CLK) begin
 		decryptCounter <= decryptCounter + 1;
 		
 	if(state == done) begin
-		AES_MSG_DEC <= nextData;
+		//AES_MSG_DEC <= nextData;
+		//AES_MSG_DEC <= {64'h0f0f0f0f0f0f0f0f, AES_MSG_ENC[63:0]};
 		AES_DONE <= 1;
 	end
 	
@@ -137,10 +160,7 @@ always_comb begin
 		
 		// Perform subBytes. All subBytes modules already have
 		// the currentData as their input. Simply set nextData to the output
-		subBytesState1: begin
-			nextData = subBytesOut;
-		end
-		subBytesState2: begin
+		subBytesState: begin
 			nextData = subBytesOut;
 		end
 		
@@ -191,7 +211,8 @@ always_comb begin
 			end
 			endgenerate
 			*/
-			nextData = mixOut;
+			nextData = currentData;
+			nextData[mixCounter*32+:32] = mixOut;
 		end
 		
 		done: begin
@@ -227,7 +248,7 @@ always_comb begin
 		end
 		
 		expansion: begin
-			if(expandCounter >= 10)
+			if(expandCounter <= 10)
 				nextState = expansion;
 			else
 				nextState = AESbegin;
@@ -242,14 +263,11 @@ always_comb begin
 		end
 		
 		shiftRowsState: begin
-			nextState = subBytesState1;
+			nextState = subBytesState;
 		
 		end
 		
-		subBytesState1: begin
-			nextState = subBytesState2;
-		end
-		subBytesState2: begin
+		subBytesState: begin
 			nextState = addRoundKeyState;
 		end
 		
@@ -261,7 +279,7 @@ always_comb begin
 		end
 		
 		mixColumnsState: begin
-			if(mixCounter < 4)
+			if(mixCounter < 3)
 				nextState = mixColumnsState; //Mix more columns....
 			else // Done mixing columns....
 				nextState = shiftRowsState;

@@ -5,6 +5,7 @@
 `timescale 1 ps / 1 ps
 module lab7_soc (
 		output wire [31:0] aes_export_new_signal, // aes_export.new_signal
+		input  wire        cont,
 		input  wire        clk_clk,               //        clk.clk
 		input  wire        reset_reset_n,         //      reset.reset_n
 		output wire        sdram_clk_clk,         //  sdram_clk.clk
@@ -101,7 +102,8 @@ module lab7_soc (
 		.AVL_READDATA  (mm_interconnect_0_aes_decryption_core_0_aes_slave_readdata),   //            .readdata
 		.AVL_WRITE     (mm_interconnect_0_aes_decryption_core_0_aes_slave_write),      //            .write
 		.AVL_WRITEDATA (mm_interconnect_0_aes_decryption_core_0_aes_slave_writedata),  //            .writedata
-		.EXPORT_DATA   (aes_export_new_signal)                                         // Export_Data.new_signal
+		.EXPORT_DATA   (aes_export_new_signal),                                        // Export_Data.new_signal
+		.CONTINUE(cont)
 	);
 
 	lab7_soc_jtag_uart_0 jtag_uart_0 (

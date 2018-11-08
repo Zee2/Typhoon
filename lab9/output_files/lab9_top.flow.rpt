@@ -1,5 +1,5 @@
 Flow report for lab9_top
-Thu Nov 08 00:44:07 2018
+Thu Nov 08 04:58:26 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 08 00:44:07 2018       ;
+; Flow Status                        ; Successful - Thu Nov 08 04:58:26 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab9_top                                    ;
 ; Top-level Entity Name              ; lab9_top                                    ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 6,048 / 114,480 ( 5 % )                     ;
-;     Total combinational functions  ; 5,351 / 114,480 ( 5 % )                     ;
-;     Dedicated logic registers      ; 2,568 / 114,480 ( 2 % )                     ;
-; Total registers                    ; 2687                                        ;
+; Total logic elements               ; 6,388 / 114,480 ( 6 % )                     ;
+;     Total combinational functions  ; 5,705 / 114,480 ( 5 % )                     ;
+;     Dedicated logic registers      ; 2,677 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 2796                                        ;
 ; Total pins                         ; 142 / 529 ( 27 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 126,080 / 3,981,312 ( 3 % )                 ;
@@ -64,44 +64,54 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/08/2018 00:40:57 ;
+; Start date & time ; 11/08/2018 04:55:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab9_top            ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                    ;
-+-------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
-; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name     ; Section Id     ;
-+-------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 108223642620545.154165925623620                            ; --            ; --              ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                ; --            ; --              ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                  ; <None>        ; --              ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                                       ; --            ; --              ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                         ; --            ; --              ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                          ; --            ; --              ; --             ;
-; MISC_FILE                           ; lab7_soc/synthesis/../lab7_soc.cmp                         ; --            ; --              ; --             ;
-; MISC_FILE                           ; lab7_soc/synthesis/../../lab7_soc.qsys                     ; --            ; --              ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                       ; --            ; --              ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                     ; --            ; DE2_115_Default ; Top            ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                     ; --            ; lab8            ; Top            ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                     ; --            ; --              ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                     ; --            ; DE2_115_Default ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                     ; --            ; lab8            ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                     ; --            ; --              ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                     ; --            ; DE2_115_Default ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                     ; --            ; lab8            ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                     ; --            ; --              ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                        ; --            ; --              ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                      ; --            ; --              ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                               ; --            ; --              ; --             ;
-; SLD_FILE                            ; lab7_soc/synthesis/lab7_soc.regmap                         ; --            ; --              ; --             ;
-; SLD_FILE                            ; lab7_soc/synthesis/lab7_soc.debuginfo                      ; --            ; --              ; --             ;
-; SLD_INFO                            ; QSYS_NAME lab7_soc HAS_SOPCINFO 1 GENERATION_ID 1541129747 ; --            ; lab7_soc        ; --             ;
-; SOPCINFO_FILE                       ; lab7_soc/synthesis/../../lab7_soc.sopcinfo                 ; --            ; --              ; --             ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                         ; --            ; --              ; --             ;
-+-------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                     ;
++--------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
+; Assignment Name                      ; Value                                                      ; Default Value ; Entity Name     ; Section Id     ;
++--------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 108223642620545.154167450215652                            ; --            ; --              ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                                         ; --            ; --              ; testbench      ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                                                  ; --            ; --              ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                ; --            ; --              ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                  ; <None>        ; --              ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                                            ; --            ; --              ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; testbench.sv                                               ; --            ; --              ; testbench      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench                                                  ; --            ; --              ; testbench      ;
+; EDA_TEST_BENCH_NAME                  ; testbench                                                  ; --            ; --              ; eda_simulation ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 2000 ns                                                    ; --            ; --              ; testbench      ;
+; EDA_TIME_SCALE                       ; 1 ps                                                       ; --            ; --              ; eda_simulation ;
+; ENABLE_SIGNALTAP                     ; On                                                         ; --            ; --              ; --             ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                                         ; --            ; --              ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                                          ; --            ; --              ; --             ;
+; MISC_FILE                            ; lab7_soc/synthesis/../lab7_soc.cmp                         ; --            ; --              ; --             ;
+; MISC_FILE                            ; lab7_soc/synthesis/../../lab7_soc.qsys                     ; --            ; --              ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                                       ; --            ; --              ; --             ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                     ; --            ; DE2_115_Default ; Top            ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                     ; --            ; lab8            ; Top            ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family)                     ; --            ; --              ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                     ; --            ; DE2_115_Default ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                     ; --            ; lab8            ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family)                     ; --            ; --              ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                     ; --            ; DE2_115_Default ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                     ; --            ; lab8            ; Top            ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family)                     ; --            ; --              ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                        ; --            ; --              ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                      ; --            ; --              ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                                               ; --            ; --              ; --             ;
+; SLD_FILE                             ; lab7_soc/synthesis/lab7_soc.regmap                         ; --            ; --              ; --             ;
+; SLD_FILE                             ; lab7_soc/synthesis/lab7_soc.debuginfo                      ; --            ; --              ; --             ;
+; SLD_FILE                             ; db/stp2_auto_stripped.stp                                  ; --            ; --              ; --             ;
+; SLD_INFO                             ; QSYS_NAME lab7_soc HAS_SOPCINFO 1 GENERATION_ID 1541129747 ; --            ; lab7_soc        ; --             ;
+; SOPCINFO_FILE                        ; lab7_soc/synthesis/../../lab7_soc.sopcinfo                 ; --            ; --              ; --             ;
+; SYNTHESIS_ONLY_QIP                   ; On                                                         ; --            ; --              ; --             ;
+; USE_SIGNALTAP_FILE                   ; output_files/stp2.stp                                      ; --            ; --              ; --             ;
++--------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -109,12 +119,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:38     ; 1.0                     ; 4993 MB             ; 00:02:30                           ;
-; Fitter               ; 00:00:59     ; 1.1                     ; 5904 MB             ; 00:01:35                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4731 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.4                     ; 4946 MB             ; 00:00:08                           ;
-; EDA Netlist Writer   ; 00:00:11     ; 1.0                     ; 4767 MB             ; 00:00:10                           ;
-; Total                ; 00:03:00     ; --                      ; --                  ; 00:04:28                           ;
+; Analysis & Synthesis ; 00:01:45     ; 1.0                     ; 5010 MB             ; 00:02:48                           ;
+; Fitter               ; 00:01:01     ; 1.1                     ; 5942 MB             ; 00:01:39                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4733 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.4                     ; 4951 MB             ; 00:00:09                           ;
+; EDA Netlist Writer   ; 00:00:12     ; 1.0                     ; 4768 MB             ; 00:00:11                           ;
+; Total                ; 00:03:10     ; --                      ; --                  ; 00:04:53                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

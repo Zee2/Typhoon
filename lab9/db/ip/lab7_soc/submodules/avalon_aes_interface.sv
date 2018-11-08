@@ -19,7 +19,6 @@ Register Map:
 ************************************************************************/
 
 
-// not currently used for MAR/MDR/IR/ etc... maybe in future?
 module internal_register #(parameter width = 16)(
 
 	input logic Clk,
@@ -37,46 +36,6 @@ always_ff@(posedge Clk) begin
 	
 end
 
-endmodule
-
-module registerFile(
-	input logic Clk,
-	input logic[31:0] D,
-	input logic Reset_ah,
-	
-	input logic LD_REG, 
-	
-	input logic[3:0] DR,
-	input logic[3:0] SR1,
-	input logic[3:0] SR2,
-	
-	output logic[31:0] Q[16],
-	output logic[31:0] SR1_Out,
-	output logic[31:0] SR2_Out
-);
-
-	logic Load[16];
-	
-	
-	
-	
-	genvar i;
-	generate
-		for (i=0;i<16;i++) begin: internal_register_generate
-			internal_register #(32) register(.D(D),  .Q(Q[i]),  .Load(Load[i]),  .Reset(Reset_ah), .Clk(Clk));
-		end
-	endgenerate
-	
-	always_comb begin
-		//load BUS into DR
-		Load = '{16{'0}};
-		Load[DR] = LD_REG;
-		
-		//output the correct SR's
-		SR1_Out = Q[SR1];
-		SR2_Out = Q[SR2];
-	end
-	
 endmodule
 
 
@@ -114,17 +73,18 @@ assign registerSelect = AVL_ADDR;
 
 
 genvar i;
+genvar j;
 generate
 	for (i=0;i<8;i++) begin: input_register_generate
 		internal_register #(32) register(.D((AVL_WRITEDATA & mask) | (Qout[registerSelect] & ~mask)),
 													.Q(Qout[i]),
-													.Load(AVL_WRITE && AVL_CS),
+													.Load(AVL_WRITE && AVL_CS && (registerSelect == i)),
 													.Reset(RESET),
 													.Clk(CLK));
 	end
-	for (i=8;i<12;i++) begin: output_register_generate
-		internal_register #(32) register(.D(AES_MSG_DEC[i-8]),
-													.Q(Qout[i]),
+	for (j=8;j<12;j++) begin: output_register_generate
+		internal_register #(32) register(.D(AES_MSG_DEC[j-8]),
+													.Q(Qout[j]),
 													.Load(1'b1),
 													.Reset(RESET),
 													.Clk(CLK));
@@ -133,7 +93,7 @@ endgenerate
 
 internal_register #(32) start_register(.D((AVL_WRITEDATA & mask) | (Qout[registerSelect] & ~mask)),
 													.Q(Qout[14]),
-													.Load(AVL_WRITE && AVL_CS),
+													.Load(AVL_WRITE && AVL_CS  && (registerSelect == 4'd14)),
 													.Reset(RESET),
 													.Clk(CLK));
 internal_register #(32) done_register(.D(AES_DONE),
@@ -155,7 +115,7 @@ registerFile registers(
 );
 */
 AES AES_module(
-	.CLK(Clk),
+	.CLK(CLK),
 	.AES_START(Qout[14][0]),
 	.AES_DONE(AES_DONE),
 	.AES_KEY({Qout[3],Qout[2],Qout[1],Qout[0]}),

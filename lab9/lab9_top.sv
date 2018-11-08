@@ -40,6 +40,7 @@ logic [31:0] AES_EXPORT_DATA;
 lab7_soc lab9_qsystem (
 	.clk_clk(CLOCK_50),								// Clock input
 	.reset_reset_n(KEY[0]),							// Reset key
+	.cont(KEY[1]),
 	.aes_export_new_signal(AES_EXPORT_DATA),	// Exported data
 	.sdram_wire_addr(DRAM_ADDR),					// sdram_wire.addr
 	.sdram_wire_ba(DRAM_BA),						// sdram_wire.ba
