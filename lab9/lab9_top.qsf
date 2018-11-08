@@ -595,7 +595,6 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id tes
 set_global_assignment -name EDA_TEST_BENCH_FILE testbench.sv -section_id testbench
 set_global_assignment -name SYSTEMVERILOG_FILE testbench.sv
 set_global_assignment -name SDC_FILE lab9.sdc
-set_global_assignment -name SDC_FILE lab8.sdc
 set_global_assignment -name QIP_FILE lab7_soc/synthesis/lab7_soc.qip
 set_global_assignment -name QSYS_FILE lab7_soc.qsys
 set_global_assignment -name SYSTEMVERILOG_FILE SubBytes.sv

@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/finnn/Documents/385/385_FPGA/lab9/simulation/modelsim
 valtera_avalon_sc_fifo
-Z1 !s110 1541670005
+Z1 !s110 1541711516
 !i10b 1
 !s100 4mK@em][G=j]om3zJIhOc0
 IELLg]G969hI5o86GL=4N_2
@@ -23,7 +23,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1541670005.000000
+Z6 !s108 1541711516.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_avalon_sc_fifo.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_avalon_sc_fifo.v|
 !i113 1
@@ -31,7 +31,7 @@ Z7 o-vlog01compat -work lab7_soc
 Z8 !s92 -vlog01compat -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules
 Z9 tCvgOpt 0
 valtera_avalon_st_clock_crosser
-Z10 !s110 1541670008
+Z10 !s110 1541711521
 !i10b 1
 !s100 YbU`iK^TYJ_9Hz`CZekjQ3
 I@O>;E2_YoZU8oT?j^GQz:0
@@ -45,7 +45,7 @@ R5
 r1
 !s85 0
 31
-Z13 !s108 1541670008.000000
+Z13 !s108 1541711521.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_avalon_st_clock_crosser.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_avalon_st_clock_crosser.v|
 !i113 1
@@ -76,57 +76,57 @@ R8
 R9
 valtera_merlin_arb_adder
 Z15 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z16 !s110 1541670009
+R10
 !i10b 1
 !s100 1Jn[a;@5nZmTN?DFKQNzj2
 I_UNTlKo]4@F7c:Li8^3M[1
 R2
-Z17 !s105 altera_merlin_arbitrator_sv_unit
+Z16 !s105 altera_merlin_arbitrator_sv_unit
 S1
 R0
 R3
-Z18 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_arbitrator.sv
-Z19 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+Z17 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+Z18 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_arbitrator.sv
 L0 228
 R5
 r1
 !s85 0
 31
-Z20 !s108 1541670009.000000
-Z21 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_arbitrator.sv|
-Z22 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_arbitrator.sv|
+R13
+Z19 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_arbitrator.sv|
+Z20 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_arbitrator.sv|
 !i113 1
-Z23 o-sv -work lab7_soc
-Z24 !s92 -sv -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules
+Z21 o-sv -work lab7_soc
+Z22 !s92 -sv -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules
 R9
 valtera_merlin_arbitrator
 R15
-R16
+R10
 !i10b 1
 !s100 NQTehjm2fNQROUMUzShGa1
 IMZZM826@C:^cLUS]6:_k[2
 R2
-R17
+R16
 S1
 R0
 R3
+R17
 R18
-R19
 L0 103
 R5
 r1
 !s85 0
 31
+R13
+R19
 R20
+!i113 1
 R21
 R22
-!i113 1
-R23
-R24
 R9
 valtera_merlin_burst_uncompressor
 R15
-Z25 !s110 1541670010
+Z23 !s110 1541711524
 !i10b 1
 !s100 f1?Rb<=9U?R9LJoHl;7>T3
 Ib45M?]G;Wf1K=Nn<[[BmA0
@@ -142,16 +142,16 @@ R5
 r1
 !s85 0
 31
-Z26 !s108 1541670010.000000
+Z24 !s108 1541711524.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_burst_uncompressor.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 valtera_merlin_master_agent
 R15
-R25
+R23
 !i10b 1
 !s100 _CJm:YX=>U2LQKH;8=@cb0
 IJKY0OAFW52oQ:JPVbM2>L3
@@ -167,16 +167,16 @@ R5
 r1
 !s85 0
 31
-R26
+R24
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_master_agent.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_master_agent.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 valtera_merlin_master_translator
 R15
-Z27 !s110 1541670011
+R23
 !i10b 1
 !s100 NdRk@]3fC2C@V7Rm;dQM31
 I?d8OHnRJGTQkbD8P[YTW=1
@@ -192,16 +192,16 @@ R5
 r1
 !s85 0
 31
-Z28 !s108 1541670011.000000
+R24
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_master_translator.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_master_translator.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 valtera_merlin_slave_agent
 R15
-R25
+R23
 !i10b 1
 !s100 ePZN1d?B062J`OBb?blff3
 IQ]LP5:`k3e_C^hNMWMM3o1
@@ -212,21 +212,21 @@ R0
 R3
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_slave_agent.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_slave_agent.sv
-Z29 L0 34
+Z25 L0 34
 R5
 r1
 !s85 0
 31
-R26
+Z26 !s108 1541711523.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_slave_agent.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_slave_agent.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 valtera_merlin_slave_translator
 R15
-R27
+R23
 !i10b 1
 !s100 k`9[YAn_dLTkg;GE`mOb61
 IGjn:6@kVO4XSnUcbV5`dY0
@@ -242,21 +242,21 @@ R5
 r1
 !s85 0
 31
-R28
+R24
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_slave_translator.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_slave_translator.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 valtera_reset_controller
-Z30 !s110 1541670004
+Z27 !s110 1541711515
 !i10b 1
 !s100 z[H_hRO9gO=:^2E3_jWH03
 I0:Q6Va=`kQ=NOlNnfgN3[2
 R2
 R0
-Z31 w1541129767
+Z28 w1541129767
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_reset_controller.v
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_reset_controller.v
 L0 42
@@ -264,7 +264,7 @@ R5
 r1
 !s85 0
 31
-Z32 !s108 1541670004.000000
+Z29 !s108 1541711515.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_reset_controller.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_reset_controller.v|
 !i113 1
@@ -272,13 +272,13 @@ R7
 R8
 R9
 valtera_reset_synchronizer
-R30
+R27
 !i10b 1
 !s100 oWLYmSO[EOX[G0PgQhZ2=0
 IAQYeUWP4VP=Z]i9c_f>5b0
 R2
 R0
-R31
+R28
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_reset_synchronizer.v
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_reset_synchronizer.v
 R14
@@ -286,7 +286,7 @@ R5
 r1
 !s85 0
 31
-R32
+R29
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_reset_synchronizer.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_reset_synchronizer.v|
 !i113 1
@@ -317,62 +317,62 @@ R8
 R9
 vavalon_aes_interface
 R15
-R27
+Z30 !s110 1541711525
 !i10b 1
-!s100 Ym8UhZR5a[niS;K@fDE401
-IXZ?3NnC1iPhA=0<_PJ6oO0
+!s100 =]?o5^Z2ceiYDj^PN7eP]2
+I9LHTl3<62QB:^kU:>bY]?2
 R2
-Z33 !s105 avalon_aes_interface_sv_unit
+Z31 !s105 avalon_aes_interface_sv_unit
 S1
 R0
-Z34 w1541668275
-Z35 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/avalon_aes_interface.sv
-Z36 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/avalon_aes_interface.sv
-Z37 L0 43
+Z32 w1541711508
+Z33 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/avalon_aes_interface.sv
+Z34 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/avalon_aes_interface.sv
+Z35 L0 43
 R5
 r1
 !s85 0
 31
-R28
-Z38 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/avalon_aes_interface.sv|
-Z39 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/avalon_aes_interface.sv|
+Z36 !s108 1541711525.000000
+Z37 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/avalon_aes_interface.sv|
+Z38 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/avalon_aes_interface.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vinternal_register
 R15
-R27
+R30
 !i10b 1
 !s100 Y8z1C^KhdhdGL`DMNaBIb2
 I6aN8VX3FLa68kIdI5H;0g1
 R2
-R33
+R31
 S1
 R0
+R32
+R33
 R34
-R35
-R36
 R12
 R5
 r1
 !s85 0
 31
-R28
+R36
+R37
 R38
-R39
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc
-R30
+R27
 !i10b 1
-!s100 dh[^R<dN=CAPUlM?XDG]k2
-IinU;YijWO1[o029glfm:h3
+!s100 01h[k<H]3mJY1R@Fk[@Q@0
+I>bPf:l;2ZGb_HOEeOWMMT1
 R2
 R0
-w1541129880
+w1541671679
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/lab7_soc.v
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/lab7_soc.v
 L0 6
@@ -380,7 +380,7 @@ R5
 r1
 !s85 0
 31
-R32
+R29
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/lab7_soc.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/lab7_soc.v|
 !i113 1
@@ -389,7 +389,7 @@ R7
 R9
 vlab7_soc_irq_mapper
 R15
-R10
+Z39 !s110 1541711520
 !i10b 1
 !s100 1oY_631gb>C^P^N;VKKO^3
 InbTjfK7IAB1R]<AmG1RI31
@@ -397,7 +397,7 @@ R2
 !s105 lab7_soc_irq_mapper_sv_unit
 S1
 R0
-R31
+R28
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_irq_mapper.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_irq_mapper.sv
 L0 31
@@ -405,15 +405,15 @@ R5
 r1
 !s85 0
 31
-Z40 !s108 1541670007.000000
+Z40 !s108 1541711520.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_irq_mapper.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_irq_mapper.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_jtag_uart_0
-Z41 !s110 1541670007
+Z41 !s110 1541711518
 !i10b 1
 !s100 ?I:_Xh2mnoXZmH>jk88;O0
 ISb8Qld9QD?=JYhW=D1Ve51
@@ -427,9 +427,9 @@ R5
 r1
 !s85 0
 31
-R40
-Z45 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_jtag_uart_0.v|
-Z46 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_jtag_uart_0.v|
+Z45 !s108 1541711518.000000
+Z46 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_jtag_uart_0.v|
+Z47 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_jtag_uart_0.v|
 !i113 1
 R7
 R8
@@ -449,9 +449,9 @@ R5
 r1
 !s85 0
 31
-R40
 R45
 R46
+R47
 !i113 1
 R7
 R8
@@ -471,9 +471,9 @@ R5
 r1
 !s85 0
 31
-R40
 R45
 R46
+R47
 !i113 1
 R7
 R8
@@ -493,9 +493,9 @@ R5
 r1
 !s85 0
 31
-R40
 R45
 R46
+R47
 !i113 1
 R7
 R8
@@ -515,21 +515,21 @@ R5
 r1
 !s85 0
 31
-R40
 R45
 R46
+R47
 !i113 1
 R7
 R8
 R9
 vlab7_soc_mm_interconnect_0
-R1
+R27
 !i10b 1
 !s100 7GX8iJQXMBb[ciz>jWzPl2
 Ib<XhJhjoPZ^RYPW>Q?aTO2
 R2
 R0
-R31
+R28
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0.v
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0.v
 L0 9
@@ -537,7 +537,7 @@ R5
 r1
 !s85 0
 31
-R6
+R29
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0.v|
 !i113 1
@@ -545,7 +545,7 @@ R7
 R8
 R9
 vlab7_soc_mm_interconnect_0_avalon_st_adapter
-R1
+R27
 !i10b 1
 !s100 8zBozcDFYN;EiZ0ooSZ?B0
 IMig_GZ93RBb2XE2S8dMfS3
@@ -559,7 +559,7 @@ R5
 r1
 !s85 0
 31
-R6
+R29
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_avalon_st_adapter.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_avalon_st_adapter.v|
 !i113 1
@@ -568,7 +568,7 @@ R8
 R9
 vlab7_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0
 R15
-R10
+R39
 !i10b 1
 !s100 `ifJe[GCPgZhSQIz6_Leg3
 I2SiWE^QDM]hHRh95mlXVk3
@@ -584,16 +584,16 @@ R5
 r1
 !s85 0
 31
-R13
+R40
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_cmd_demux
 R15
-R25
+Z48 !s110 1541711523
 !i10b 1
 !s100 HMCEE6dYSY2XY3D3>i7h11
 I3e;IFUM1ImGc=[LDTT]4N0
@@ -604,21 +604,21 @@ R0
 R3
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_demux.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_demux.sv
-R37
+R35
 R5
 r1
 !s85 0
 31
-R20
+R26
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_demux.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_demux.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_cmd_demux_001
 R15
-R16
+Z49 !s110 1541711522
 !i10b 1
 !s100 CEGDYB>g^d[DaQlo7ZM`12
 I@1U:8UVD7W=KP2P7P_=E;0
@@ -629,21 +629,21 @@ R0
 R3
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_demux_001.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_demux_001.sv
-R37
+R35
 R5
 r1
 !s85 0
 31
-R20
+Z50 !s108 1541711522.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_demux_001.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_demux_001.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_cmd_mux
 R15
-R16
+R49
 !i10b 1
 !s100 b6AH:n1jcekmUPjSnC;[10
 Ib>:WdSZ:N`JWe2MKeE0If0
@@ -654,21 +654,21 @@ R0
 R3
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_mux.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_mux.sv
-Z47 L0 51
+Z51 L0 51
 R5
 r1
 !s85 0
 31
-R20
+R50
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_mux.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_mux.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_cmd_mux_002
 R15
-R16
+R49
 !i10b 1
 !s100 7]AlXZdna;0WVTS9Rbm5B2
 I[E]8OX92WXRj5BPIIKjh41
@@ -679,221 +679,221 @@ R0
 R3
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_mux_002.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_mux_002.sv
-R47
+R51
 R5
 r1
 !s85 0
 31
-R20
+R50
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_mux_002.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_cmd_mux_002.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_router
 R15
-R25
+R48
 !i10b 1
 !s100 zU8Y6]L9>B:93VS22L?6O0
 IY;f[bGOZUjI]]7hd8cFZ23
 R2
-Z48 !s105 lab7_soc_mm_interconnect_0_router_sv_unit
+Z52 !s105 lab7_soc_mm_interconnect_0_router_sv_unit
 S1
 R0
 R3
-Z49 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router.sv
-Z50 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router.sv
-Z51 L0 84
+Z53 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router.sv
+Z54 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router.sv
+Z55 L0 84
 R5
 r1
 !s85 0
 31
 R26
-Z52 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router.sv|
-Z53 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router.sv|
+Z56 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router.sv|
+Z57 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_router_001
 R15
-R25
+R48
 !i10b 1
 !s100 aeUK2lOO97f[WIYcM0?fO3
 IFiXYL_VR3[?a]Ged[NUbL1
 R2
-Z54 !s105 lab7_soc_mm_interconnect_0_router_001_sv_unit
+Z58 !s105 lab7_soc_mm_interconnect_0_router_001_sv_unit
 S1
 R0
 R3
-Z55 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_001.sv
-Z56 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_001.sv
-R51
+Z59 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_001.sv
+Z60 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_001.sv
+R55
 R5
 r1
 !s85 0
 31
 R26
-Z57 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_001.sv|
-Z58 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_001.sv|
+Z61 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_001.sv|
+Z62 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_001.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_router_001_default_decode
 R15
-R25
+R48
 !i10b 1
 !s100 hg`7Yzn?cDoY:EL9mWAk;0
 Ib2Jgc>9ViQ6P;@GG5B:`m2
 R2
-R54
+R58
 S1
 R0
 R3
-R55
-R56
-Z59 L0 45
+R59
+R60
+Z63 L0 45
 R5
 r1
 !s85 0
 31
 R26
-R57
-R58
+R61
+R62
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_router_002
 R15
-R25
+R48
 !i10b 1
 !s100 S4WEK3A7o4ehajM?U=R8W2
 IfVP3]29QH;j];>D<H6jGV3
 R2
-Z60 !s105 lab7_soc_mm_interconnect_0_router_002_sv_unit
+Z64 !s105 lab7_soc_mm_interconnect_0_router_002_sv_unit
 S1
 R0
 R3
-Z61 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_002.sv
-Z62 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_002.sv
-R51
+Z65 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_002.sv
+Z66 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_002.sv
+R55
 R5
 r1
 !s85 0
 31
 R26
-Z63 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_002.sv|
-Z64 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_002.sv|
+Z67 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_002.sv|
+Z68 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_002.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_router_002_default_decode
 R15
-R25
+R48
 !i10b 1
 !s100 7Po4YEBCCUD[oDiGSkmYS3
 Ij^Y^T6NeI^mBeh5gZGGcM2
 R2
-R60
+R64
 S1
 R0
 R3
-R61
-R62
-R59
+R65
+R66
+R63
 R5
 r1
 !s85 0
 31
 R26
-R63
-R64
+R67
+R68
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_router_004
 R15
-R25
+R48
 !i10b 1
 !s100 FNiC^[:[4g3Q`JXZ;]7lK0
 IB[mb3?1>dWOZXWEU6DY]k3
 R2
-Z65 !s105 lab7_soc_mm_interconnect_0_router_004_sv_unit
+Z69 !s105 lab7_soc_mm_interconnect_0_router_004_sv_unit
 S1
 R0
 R3
-Z66 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_004.sv
-Z67 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_004.sv
-R51
+Z70 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_004.sv
+Z71 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_004.sv
+R55
 R5
 r1
 !s85 0
 31
 R26
-Z68 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_004.sv|
-Z69 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_004.sv|
+Z72 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_004.sv|
+Z73 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_router_004.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_router_004_default_decode
 R15
-R25
+R48
 !i10b 1
 !s100 hBF4kHNPC`5a[ifo:5NU^3
 If4_N;K:Mf45FSUb1;k=hV0
 R2
-R65
+R69
 S1
 R0
 R3
-R66
-R67
-R59
+R70
+R71
+R63
 R5
 r1
 !s85 0
 31
 R26
-R68
-R69
+R72
+R73
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_router_default_decode
 R15
-R25
+R48
 !i10b 1
 !s100 >VP;SD[D6jTlB45HWzQoL1
 Idn7POMFhhlN8F2chjT:Cm2
 R2
-R48
+R52
 S1
 R0
 R3
-R49
-R50
-R59
+R53
+R54
+R63
 R5
 r1
 !s85 0
 31
 R26
-R52
-R53
+R56
+R57
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_rsp_demux
 R15
-R16
+R49
 !i10b 1
 !s100 EaWTkP=cf0jULT`LHb?<Y2
 IT:h:iQX39JNEAVVzO_PPK1
@@ -904,21 +904,21 @@ R0
 R3
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_demux.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_demux.sv
-R37
+R35
 R5
 r1
 !s85 0
 31
-R20
+R50
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_demux.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_demux.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_rsp_demux_002
 R15
-R16
+R49
 !i10b 1
 !s100 QaG5Y7=NM=17:QQ:Nb4PY1
 I?EK=NiSg9Wh]::`ZUIZgC3
@@ -929,21 +929,21 @@ R0
 R3
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_demux_002.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_demux_002.sv
-R37
+R35
 R5
 r1
 !s85 0
 31
-R20
+R50
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_demux_002.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_demux_002.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_rsp_mux
 R15
-R16
+R49
 !i10b 1
 !s100 DcJ0kE4<5XGaJnnSN9^ko0
 I5PkbTR13KhS8AhS4k74iJ2
@@ -954,21 +954,21 @@ R0
 R3
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_mux.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_mux.sv
-R47
+R51
 R5
 r1
 !s85 0
 31
-R20
+R13
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_mux.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_mux.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_mm_interconnect_0_rsp_mux_001
 R15
-R16
+R10
 !i10b 1
 !s100 mm;Wn77L[e^3D`:lTV4VC3
 I4YU8Eeo<W;]K:zOJlGj]50
@@ -979,7 +979,7 @@ R0
 R3
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_mux_001.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_mux_001.sv
-R47
+R51
 R5
 r1
 !s85 0
@@ -988,11 +988,11 @@ R13
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_mux_001.sv|
 !s90 -reportprogress|300|-sv|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_rsp_mux_001.sv|
 !i113 1
-R23
-R24
+R21
+R22
 R9
 vlab7_soc_nios2_gen2_0
-Z70 !s110 1541670006
+Z74 !s110 1541711517
 !i10b 1
 !s100 V]:3?BYD9YcjZk73cL0:_1
 I^GUVCbd@Tdl>4LSB]NK5Z3
@@ -1006,7 +1006,7 @@ R5
 r1
 !s85 0
 31
-Z71 !s108 1541670006.000000
+Z75 !s108 1541711517.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0.v|
 !i113 1
@@ -1014,23 +1014,23 @@ R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu
-R41
+R74
 !i10b 1
 !s100 SY;M]dB<L<<4;]c;c]^>>3
 I<6>[z?M:68OQZ21g?z5LU1
 R2
 R0
 R3
-Z72 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu.v
-Z73 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu.v
+Z76 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu.v
+Z77 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu.v
 L0 2834
 R5
 r1
 !s85 0
 31
-R71
-Z74 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu.v|
-Z75 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu.v|
+R75
+Z78 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu.v|
+Z79 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu.v|
 !i113 1
 R7
 R8
@@ -1050,7 +1050,7 @@ R5
 r1
 !s85 0
 31
-R40
+R45
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v|
 !i113 1
@@ -1072,7 +1072,7 @@ R5
 r1
 !s85 0
 31
-R40
+R45
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu_debug_slave_tck.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu_debug_slave_tck.v|
 !i113 1
@@ -1094,7 +1094,7 @@ R5
 r1
 !s85 0
 31
-R40
+R45
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v|
 !i113 1
@@ -1102,441 +1102,441 @@ R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_avalon_reg
-R70
+R74
 !i10b 1
 !s100 @U=T[iOJ79:UdIa>Ul2kS3
 IQ2a_3iH8TglWoP^73=Egi3
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 2023
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci
-R70
+R74
 !i10b 1
 !s100 :@k2bK[>T2WTd[hWoWW:Q1
 I;fWGmg_=>6Z1^WE4B>WmL2
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 2362
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_break
-R70
+R74
 !i10b 1
 !s100 KAdRBli83G83@I_2z:e;61
 IU7LO7?K7`]1DP8R3LPXGd0
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 295
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt
-R70
+R74
 !i10b 1
 !s100 Qa:]BC_GKN3TcOK76TG=S0
 IE=zMzAW>OfcddfGj^eTT20
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 1265
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_dbrk
-R70
+R74
 !i10b 1
 !s100 OY1n?`dfnlj;<=DHM@91U3
 I;MNMM1eekRDgla3TIzV2j0
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 795
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_debug
-R70
+R74
 !i10b 1
 !s100 9Y4OJQ7OO[0@N6>S0FUao1
 IILoa4Bb=oee0[9h]gl3?S3
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 153
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_dtrace
-R70
+R74
 !i10b 1
 !s100 SfG8BNV0>I]M=YbL?c<ZJ2
 IXb;DTY^HfACeb`>F0IilT2
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 1183
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_fifo
-R70
+R74
 !i10b 1
 !s100 0IJc:f8CMmEC3z?k]bR>n3
 I2Jzb2FQ`4oWBO>THzf2ge1
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 1427
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc
-R70
+R74
 !i10b 1
 !s100 i=LdeS^mfK>c1R`CMg2?L0
 I`7H=[3>O>0P94ziThXM4d0
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 1380
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc
-R70
+R74
 !i10b 1
 !s100 9;6jjoHW_NzG@2H_Doc]N2
 I8L6^^6b46WJQLRG1UXKRj1
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 1337
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_im
-R70
+R74
 !i10b 1
 !s100 Yl6RNB<4gnU?V?CRZeHCD3
 I^L2NJ3aC<5Sm2?jFOW1e=1
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 1936
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_itrace
-R70
+R74
 !i10b 1
 !s100 ?AFTa4OM9^ASdzXc<@TeN2
 IS4>Nj9;MX[HWZoC3;k=Pf0
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 982
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_pib
-R70
+R74
 !i10b 1
 !s100 =icdY70h2m>?6ZAkL5iVB1
 IdMTbjE4ocHK?CC`NCe`AN3
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 1913
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_td_mode
-R70
+R74
 !i10b 1
 !s100 :dzinn^DD1jFfV[TgzY`b0
 IYCQL[WQMg:MDTM3HfV[Tg0
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 1115
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_oci_xbrk
-R70
+R74
 !i10b 1
 !s100 DOG[@C<jdlM;_iKQjIBz40
 IH76UzSYecl>MMQkbAZUEb1
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 588
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_ocimem
-R70
+R74
 !i10b 1
 !s100 ]jO_bXG=mClXOAXOPES^T3
 IaPA`gUDFga9^RT3@HiRP60
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 2181
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_nios2_performance_monitors
-R70
+R74
 !i10b 1
 !s100 86V5K:VC<aE@klYcfLYC31
 Ib6z0`<a;U7hZANLoOEifh3
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 2006
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_ociram_sp_ram_module
-R70
+R74
 !i10b 1
 !s100 :Ma7mJ_EMlDX1WT7>3a:I1
 Id^dd=3z_YEkYgR<BD6fb:0
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 2116
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_register_bank_a_module
-R70
+R74
 !i10b 1
 !s100 zdY=6DB`;ecPTLETz45Ca2
 I5jgi6RoDl`FGjoC6K]OC91
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 R4
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
 R9
 vlab7_soc_nios2_gen2_0_cpu_register_bank_b_module
-R70
+R74
 !i10b 1
 !s100 >=DSGH8eMSgT8CckGW5O20
 ID24j2>g]Ro<90O7DEN2`13
 R2
 R0
 R3
-R72
-R73
+R76
+R77
 L0 87
 R5
 r1
 !s85 0
 31
-R71
-R74
 R75
+R78
+R79
 !i113 1
 R7
 R8
@@ -1556,7 +1556,7 @@ R5
 r1
 !s85 0
 31
-R40
+R45
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu_test_bench.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu_test_bench.v|
 !i113 1
@@ -1564,13 +1564,13 @@ R7
 R8
 R9
 vlab7_soc_onchip_memory2_0
-R70
+R74
 !i10b 1
 !s100 BBCU6oN5ocePVm5eSmQc@2
 I7nH4OX:YHlUc>2^5aG_3N0
 R2
 R0
-Z76 w1541129755
+Z80 w1541129755
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_onchip_memory2_0.v
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_onchip_memory2_0.v
 R4
@@ -1578,7 +1578,7 @@ R5
 r1
 !s85 0
 31
-R71
+R75
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_onchip_memory2_0.v|
 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_onchip_memory2_0.v|
 !i113 1
@@ -1586,148 +1586,148 @@ R7
 R8
 R9
 vlab7_soc_sdram
-R70
+R74
 !i10b 1
 !s100 QGYV=2MaBOUff<6Pd4A3@0
 IGZd?FC:OQIfEG^F7h7CZL0
 R2
 R0
-R76
-Z77 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram.v
-Z78 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram.v
+R80
+Z81 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram.v
+Z82 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram.v
 L0 159
 R5
 r1
 !s85 0
 31
-R71
-Z79 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram.v|
-Z80 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram.v|
+R6
+Z83 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram.v|
+Z84 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram.v|
 !i113 1
 R7
 R8
 R9
 vlab7_soc_sdram_input_efifo_module
-R70
+R1
 !i10b 1
 !s100 Q36LmMEB_hQ5j8K?>R7ij3
 IBL;Xa_N]n;W7cQG@nEG1`1
 R2
 R0
-R76
-R77
-R78
+R80
+R81
+R82
 R4
 R5
 r1
 !s85 0
 31
-R71
-R79
-R80
+R6
+R83
+R84
 !i113 1
 R7
 R8
 R9
 vlab7_soc_sdram_pll
-R70
+R1
 !i10b 1
 !s100 1]Qf?PO:=g8i5O_@jFA=S0
 Ihoi[ZMC_hJPY5nT]ALBF`0
 R2
 R0
-Z81 w1541129757
-Z82 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram_pll.v
-Z83 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram_pll.v
+Z85 w1541129757
+Z86 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram_pll.v
+Z87 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram_pll.v
 L0 217
 R5
 r1
 !s85 0
 31
-R71
-Z84 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram_pll.v|
-Z85 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram_pll.v|
+R6
+Z88 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram_pll.v|
+Z89 !s90 -reportprogress|300|-vlog01compat|-work|lab7_soc|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sdram_pll.v|
 !i113 1
 R7
 R8
 R9
 vlab7_soc_sdram_pll_altpll_lqa2
-R70
+R1
 !i10b 1
 !s100 Q3ASJX;;S`c9YzNCX@GRz0
 I@BdeB@@?R?1S90jG>@;IH1
 R2
 R0
-R81
-R82
-R83
+R85
+R86
+R87
 L0 130
 R5
 r1
 !s85 0
 31
-R71
-R84
-R85
+R6
+R88
+R89
 !i113 1
 R7
 R8
 R9
 vlab7_soc_sdram_pll_dffpipe_l2c
-R70
+R1
 !i10b 1
 !s100 6BWihgjUk;B9]>iIY?:dm3
 I@Wo58F^BLkCe^FP<<JNSk1
 R2
 R0
-R81
-R82
-R83
+R85
+R86
+R87
 L0 37
 R5
 r1
 !s85 0
 31
-R71
-R84
-R85
+R6
+R88
+R89
 !i113 1
 R7
 R8
 R9
 vlab7_soc_sdram_pll_stdsync_sv6
-R70
+R1
 !i10b 1
 !s100 6bP9LYg1SPSIl>9o7eiV13
 IY47nj?E5`WR[eQ30_zhdf1
 R2
 R0
-R81
-R82
-R83
+R85
+R86
+R87
 L0 98
 R5
 r1
 !s85 0
 31
-R71
-R84
-R85
+R6
+R88
+R89
 !i113 1
 R7
 R8
 R9
 vlab7_soc_sysid_qsys_0
-R70
+R1
 !i10b 1
 !s100 [GhLH9<WlACVhc;0N[5313
 I]5[9:6i26nbdjQ3UNZ[<g0
 R2
 R0
-R81
+R85
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sysid_qsys_0.v
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_sysid_qsys_0.v
-R29
+R25
 R5
 r1
 !s85 0
@@ -1746,7 +1746,7 @@ R1
 IeT>bHH^o[b7;=ENBm^iCL0
 R2
 R0
-R81
+R85
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_timer_0.v
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_timer_0.v
 R4

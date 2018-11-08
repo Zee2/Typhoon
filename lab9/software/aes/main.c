@@ -185,34 +185,24 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int 
 void decrypt(unsigned int * msg_enc, unsigned int * msg_dec, unsigned int * key)
 {
 	AES_PTR[14] = 0;
-	for(int i = 0; i < 100; i++){
+	AES_PTR[0] = key[3];
+	AES_PTR[1] = key[2];
+	AES_PTR[2] = key[1];
+	AES_PTR[3] = key[0];
+	AES_PTR[4] = msg_enc[3];
+	AES_PTR[5] = msg_enc[2];
+	AES_PTR[6] = msg_enc[1];
+	AES_PTR[7] = msg_enc[0];
 
-	}
-	printf("Done signal: " );
-	printf("%d", AES_PTR[15]);
-	AES_PTR[0] = key[0];
-	AES_PTR[1] = key[1];
-	AES_PTR[2] = key[2];
-	AES_PTR[3] = key[3];
-	AES_PTR[4] = msg_enc[0];
-	AES_PTR[5] = msg_enc[1];
-	AES_PTR[6] = msg_enc[2];
-	AES_PTR[7] = msg_enc[3];
-	printf("Done signal: " );
-	printf("%d", AES_PTR[15]);
-	printf("Done signal: " );
 	AES_PTR[14] = 1;
 
-	printf("%d", AES_PTR[15]);
-
-	while(AES_PTR[15] != 1){
-		printf("spin\n");
+	while(!AES_PTR[15]){
 	}
 
-	msg_dec[0] = AES_PTR[8];
-	msg_dec[1] = AES_PTR[9];
-	msg_dec[2] = AES_PTR[10];
-	msg_dec[3] = AES_PTR[11];
+	msg_dec[3] = AES_PTR[8];
+	msg_dec[2] = AES_PTR[9];
+	msg_dec[1] = AES_PTR[10];
+	msg_dec[0] = AES_PTR[11];
 
 }
 
@@ -235,6 +225,8 @@ int main()
 	msg_dec[2] = 0;
 	msg_dec[3] = 0;
 
+	AES_PTR[14] = 0; // AES start zero
+
 	printf("Select execution mode: 0 for testing, 1 for benchmarking: ");
 	scanf("%d", &run_mode);
 
@@ -248,6 +240,10 @@ int main()
 			printf("\nEnter Key:\n");
 			scanf("%s", key_ascii);
 			printf("\n");
+			printf("\n");
+			//sscanf("ece298dcece298dcece298dcece298dc", "%s", msg_ascii);
+			//sscanf("000102030405060708090a0b0c0d0e0f", "%s", key_ascii);
+//
 			encrypt(msg_ascii, key_ascii, msg_enc, key);
 			printf("\nEncrpted message is: \n");
 			for(i = 0; i < 4; i++){

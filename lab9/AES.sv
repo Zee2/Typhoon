@@ -18,10 +18,6 @@ module AES (
 	output logic [127:0] AES_MSG_DEC
 );
 
-logic contPulse = 0;
-logic lastContinue = 1;
-
-logic isFirstClock = 1;
 
 logic [7:0] expandCounter = 0;
 logic [7:0] decryptCounter = 0;
@@ -74,68 +70,64 @@ endgenerate
 
 enum logic [7:0] {
 
-	waiting,
-	done,
-	AESbegin,
-	expansion,
-	shiftRowsState,
-	subBytesState,
-	addRoundKeyState,
-	mixColumnsState
+	waiting = 8'd0,
+	done = 8'd1,
+	AESbegin = 8'd2,
+	expansion = 8'd3,
+	shiftRowsState = 8'd4,
+	subBytesState1 = 8'd5,
+	subBytesState2 = 8'd6,
+	addRoundKeyState = 8'd7,
+	mixColumnsState = 8'd8
 	
 	
 
-} state, nextState;
+} currentState, nextState;
 
-initial state = waiting;
+initial currentState = waiting;
 
+//assign AES_DONE = state == done;
 
 // Synchronous state latching
 always_ff @ (posedge CLK) begin
 
+	if(RESET)
+		currentState <= waiting;
+		//nextState <= waiting;
+		currentData <= 128'h0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f;
 
-	lastContinue <= CONTINUE;
+	currentState <= nextState;
+	currentData <= nextData;
+	//AES_MSG_DEC <= {8'h0f, 8'h0f, nextData[111:16], currentState, nextState}; //debug
 	
-	if(contPulse) begin
-		state <= nextState;
-		currentData <= nextData;
-		AES_MSG_DEC <= nextData;
-		contPulse <= 0;
-	end	
-	else begin
-		currentData <= currentData;
-	end
-	
-	if(~CONTINUE && CONTINUE != lastContinue) begin
-		contPulse <= 1;
-	end
-	
-	if(state == waiting) begin
-		AES_DONE <= 0;
+	if(currentState == waiting) begin
 		expandCounter <= 0;
 		decryptCounter <= 0;
 		mixCounter <= 0;
 	end
 	
-	if(state == expansion)
+	if(currentState == expansion)
 		expandCounter <= expandCounter + 1;
 	else
 		expandCounter <= 0;
 	
-	if(state == mixColumnsState)
+	if(currentState == mixColumnsState)
 		mixCounter <= mixCounter + 1;
 	else
 		mixCounter <= 0;
 		
 	// Make sure to increment decryptCounter even during the 
 	// AESbegin state, because we use decryptCounter as the roundKeySchedule index
-	if(state == addRoundKeyState || state == AESbegin)
+	if(currentState == addRoundKeyState || currentState == AESbegin)
 		decryptCounter <= decryptCounter + 1;
 		
-	if(state == done) begin
-		//AES_MSG_DEC <= nextData;
-		//AES_MSG_DEC <= {64'h0f0f0f0f0f0f0f0f, AES_MSG_ENC[63:0]};
+	if(currentState == done) begin
+		AES_MSG_DEC <= nextData;
+		
 		AES_DONE <= 1;
+	end
+	else begin
+		AES_DONE <= 0;
 	end
 	
 end
@@ -144,7 +136,7 @@ end
 // State behavior logic (separate from next state calc)
 always_comb begin
 
-	unique case (state)
+	unique case (currentState)
 		expansion: begin
 			
 			nextData = AES_MSG_ENC;
@@ -160,7 +152,11 @@ always_comb begin
 		
 		// Perform subBytes. All subBytes modules already have
 		// the currentData as their input. Simply set nextData to the output
-		subBytesState: begin
+		subBytesState1: begin
+			nextData = currentData;
+		end
+		
+		subBytesState2: begin
 			nextData = subBytesOut;
 		end
 		
@@ -229,7 +225,7 @@ end
 // Combinatorial next state calcs
 always_comb begin
 
-	unique case (state)
+	unique case (currentState)
 	
 		waiting: begin
 			if(AES_START == 0)
@@ -258,16 +254,19 @@ always_comb begin
 		
 		// AESbegin also performs the pre-loop AddRoundKey
 		AESbegin: begin
-			nextState = shiftRowsState;
+			nextState = shiftRowsState; // DEBUG
 		
 		end
 		
 		shiftRowsState: begin
-			nextState = subBytesState;
-		
+			nextState = subBytesState1;
 		end
 		
-		subBytesState: begin
+		subBytesState1: begin
+			nextState = subBytesState2;
+		end
+		
+		subBytesState2: begin
 			nextState = addRoundKeyState;
 		end
 		

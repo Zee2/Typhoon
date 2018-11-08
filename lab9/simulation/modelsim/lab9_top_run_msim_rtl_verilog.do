@@ -25,6 +25,14 @@ vlog -vlog01compat -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/
 vlog -vlog01compat -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v}
 vlog -vlog01compat -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_nios2_gen2_0_cpu_test_bench.v}
 vlog -vlog01compat -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_jtag_uart_0.v}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/SubBytes.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab9_top.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/InvShiftRows.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/InvMixColumns.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/hexdriver.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/AES.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/testbench.sv}
+vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/KeyExpansion.sv}
 vlog -sv -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_irq_mapper.sv}
 vlog -sv -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/lab7_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv}
 vlog -vlog01compat -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v}
@@ -49,13 +57,6 @@ vlog -sv -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_
 vlog -sv -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_slave_translator.sv}
 vlog -sv -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/altera_merlin_master_translator.sv}
 vlog -sv -work lab7_soc +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/submodules/avalon_aes_interface.sv}
-vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/SubBytes.sv}
-vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/lab9_top.sv}
-vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/KeyExpansion.sv}
-vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/InvShiftRows.sv}
-vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/InvMixColumns.sv}
-vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/hexdriver.sv}
-vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/AES.sv}
 
 vlog -sv -work work +incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9 {C:/Users/finnn/Documents/385/385_FPGA/lab9/testbench.sv}
 

@@ -61,13 +61,13 @@ module avalon_aes_interface (
 );
 
 logic[3:0] registerSelect;
-logic[31:0] Qout[16];
+logic [15:0][31:0]  Qout;
 logic[31:0] mask;
-logic[31:0] AES_MSG_DEC[4];
+logic[3:0][31:0] AES_MSG_DEC_AVALON;
 logic AES_DONE;
 
 assign AVL_READDATA = Qout[registerSelect];
-assign EXPORT_DATA = {Qout[8][31:16], Qout[11][15:0]};
+assign EXPORT_DATA = {Qout[11][31:16], Qout[8][15:0]} & {32{AES_DONE}};
 assign registerSelect = AVL_ADDR;
 					
 
@@ -83,7 +83,7 @@ generate
 													.Clk(CLK));
 	end
 	for (j=8;j<12;j++) begin: output_register_generate
-		internal_register #(32) register(.D(AES_MSG_DEC[j-8]),
+		internal_register #(32) register(.D(AES_MSG_DEC_AVALON[j-8]),
 													.Q(Qout[j]),
 													.Load(1'b1),
 													.Reset(RESET),
@@ -119,10 +119,10 @@ AES AES_module(
 	.CONTINUE(CONTINUE),
 	.AES_START(Qout[14][0]),
 	.AES_DONE(AES_DONE),
-	.AES_KEY({Qout[3],Qout[2],Qout[1],Qout[0]}),
-	.AES_MSG_ENC({Qout[7],Qout[6],Qout[5],Qout[4]}),
-	.AES_MSG_DEC({AES_MSG_DEC[3], AES_MSG_DEC[2], AES_MSG_DEC[1], AES_MSG_DEC[0]}),
-	.*
+	.AES_KEY(Qout[3:0]),
+	.AES_MSG_ENC(Qout[7:4]),
+	.AES_MSG_DEC(AES_MSG_DEC_AVALON[3:0])
+	
 
 );
 

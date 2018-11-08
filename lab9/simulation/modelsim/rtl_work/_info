@@ -10,15 +10,15 @@ cModel Technology
 Z0 dC:/Users/finnn/Documents/385/385_FPGA/lab9/simulation/modelsim
 vAES
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1541670012
+Z2 !s110 1541711520
 !i10b 1
-!s100 _H<[=7V8DMm8a8]UQX84]0
-I]AS_T9R]3E;G9@a`RD@Uh3
+!s100 2QYXc<Z8M;HJiF@@=2:T12
+IPhHBW6^D<@Zz=HcETWf3=2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 AES_sv_unit
 S1
 R0
-w1541668996
+w1541711462
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/AES.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/AES.sv
 L0 10
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1541670012.000000
+Z5 !s108 1541711520.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/AES.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9|C:/Users/finnn/Documents/385/385_FPGA/lab9/AES.sv|
 !i113 1
@@ -52,9 +52,9 @@ Z12 8C:/Users/finnn/Documents/385/385_FPGA/lab9/InvMixColumns.sv
 Z13 FC:/Users/finnn/Documents/385/385_FPGA/lab9/InvMixColumns.sv
 L0 74
 R4
-R5
-Z14 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/InvMixColumns.sv|
-Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9|C:/Users/finnn/Documents/385/385_FPGA/lab9/InvMixColumns.sv|
+Z14 !s108 1541711519.000000
+Z15 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/InvMixColumns.sv|
+Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9|C:/Users/finnn/Documents/385/385_FPGA/lab9/InvMixColumns.sv|
 !i113 1
 R6
 R7
@@ -76,11 +76,11 @@ R0
 R11
 R12
 R13
-Z16 L0 93
+Z17 L0 93
 R4
-R5
 R14
 R15
+R16
 !i113 1
 R6
 R7
@@ -104,9 +104,9 @@ R12
 R13
 L0 112
 R4
-R5
 R14
 R15
+R16
 !i113 1
 R6
 R7
@@ -130,9 +130,9 @@ R12
 R13
 L0 131
 R4
-R5
 R14
 R15
+R16
 !i113 1
 R6
 R7
@@ -140,7 +140,7 @@ R8
 n@g@f_@mul_e
 vhexdriver
 R1
-R2
+Z18 !s110 1541711519
 !i10b 1
 !s100 9aO?^i9QbIaBE;CD84;[50
 ICkfhcnMf?n7M;oBRMd`J^0
@@ -156,7 +156,7 @@ R4
 r1
 !s85 0
 31
-R5
+R14
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/hexdriver.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9|C:/Users/finnn/Documents/385/385_FPGA/lab9/hexdriver.sv|
 !i113 1
@@ -165,7 +165,7 @@ R7
 R8
 vInvMixColumns
 R1
-R2
+R18
 !i10b 1
 !s100 4o]QlL4?^EZ0IeL:kL;`V3
 ICiBKkWBN=oG]5<k7C^TmQ1
@@ -176,14 +176,14 @@ R0
 R11
 R12
 R13
-Z17 L0 14
+Z19 L0 14
 R4
 r1
 !s85 0
 31
-R5
 R14
 R15
+R16
 !i113 1
 R6
 R7
@@ -206,9 +206,9 @@ R12
 R13
 L0 65
 R4
-R5
 R14
 R15
+R16
 !i113 1
 R6
 R7
@@ -216,7 +216,7 @@ R8
 n@inv@mix@columns_sv_unit
 vInvShiftRows
 R1
-R2
+R18
 !i10b 1
 !s100 IGnkNoM>n=3VhTK>Jl2F=1
 IUmg[;[:0D5WR0=haGPhRb1
@@ -232,7 +232,7 @@ R4
 r1
 !s85 0
 31
-R5
+R14
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/InvShiftRows.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9|C:/Users/finnn/Documents/385/385_FPGA/lab9/InvShiftRows.sv|
 !i113 1
@@ -242,23 +242,23 @@ R8
 n@inv@shift@rows
 vInvSubBytes
 R1
-Z18 !s110 1541670011
+R18
 !i10b 1
 !s100 fYzzGZ]YiaT7z3;]GQMHB1
 IlAa>AO1onWmX;1[630oHA3
 R3
-Z19 !s105 SubBytes_sv_unit
+Z20 !s105 SubBytes_sv_unit
 S1
 R0
 R11
-Z20 8C:/Users/finnn/Documents/385/385_FPGA/lab9/SubBytes.sv
-Z21 FC:/Users/finnn/Documents/385/385_FPGA/lab9/SubBytes.sv
-R16
+Z21 8C:/Users/finnn/Documents/385/385_FPGA/lab9/SubBytes.sv
+Z22 FC:/Users/finnn/Documents/385/385_FPGA/lab9/SubBytes.sv
+R17
 R4
 r1
 !s85 0
 31
-Z22 !s108 1541670011.000000
+R14
 Z23 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/SubBytes.sv|
 Z24 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9|C:/Users/finnn/Documents/385/385_FPGA/lab9/SubBytes.sv|
 !i113 1
@@ -268,7 +268,7 @@ R8
 n@inv@sub@bytes
 vKeyExpansion
 R1
-R18
+R2
 !i10b 1
 !s100 Bdiae<klOdVNS3GLcDzdF2
 I7al6[;8o7I1<9mERTjZ>03
@@ -284,7 +284,7 @@ R4
 r1
 !s85 0
 31
-R22
+R5
 Z28 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/KeyExpansion.sv|
 Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9|C:/Users/finnn/Documents/385/385_FPGA/lab9/KeyExpansion.sv|
 !i113 1
@@ -294,7 +294,7 @@ R8
 n@key@expansion
 vKeyExpansionOne
 R1
-R18
+R2
 !i10b 1
 !s100 2i=U]i?z:7<e:gKRGRX`f2
 I?FgmMn>jKL0o3CO`W<bPR0
@@ -310,7 +310,7 @@ R4
 r1
 !s85 0
 31
-R22
+R5
 R28
 R29
 !i113 1
@@ -322,13 +322,13 @@ vlab9_top
 R1
 R18
 !i10b 1
-!s100 PM`K=L7@>@WmNDIkeBGYS2
-IDFXN=Ob]8^OZGGZYTLnLD2
+!s100 _7R[Z0A=F6Rma6`gIF[ZX2
+Ibz>a;mNh7ME7;4c?_`19n3
 R3
 !s105 lab9_top_sv_unit
 S1
 R0
-w1541102100
+w1541671585
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/lab9_top.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/lab9_top.sv
 L0 11
@@ -336,7 +336,7 @@ R4
 r1
 !s85 0
 31
-R22
+R14
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/lab9_top.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9|C:/Users/finnn/Documents/385/385_FPGA/lab9/lab9_top.sv|
 !i113 1
@@ -350,18 +350,18 @@ R18
 !s100 J7353OL5=^nSOQEV4PX_03
 I50X^j;DHf8i`2MU^dT;Rb2
 R3
-R19
+R20
 S1
 R0
 R11
-R20
 R21
-R17
+R22
+R19
 R4
 r1
 !s85 0
 31
-R22
+R14
 R23
 R24
 !i113 1
@@ -371,15 +371,15 @@ R8
 n@sub@bytes
 vtestbench
 R1
-R2
+!s110 1541711525
 !i10b 1
-!s100 @lgT^g2Dm>R@RflSQIZYD0
-ICneY`XBBlmXefmZEhW;1z2
+!s100 HCMj0zH4AA[2B^RbLzl@D0
+ISbeb6V:NB?UC=FVCP_bIE2
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1541667571
+w1541672026
 8C:/Users/finnn/Documents/385/385_FPGA/lab9/testbench.sv
 FC:/Users/finnn/Documents/385/385_FPGA/lab9/testbench.sv
 L0 1
@@ -387,7 +387,7 @@ R4
 r1
 !s85 0
 31
-R5
+!s108 1541711525.000000
 !s107 C:/Users/finnn/Documents/385/385_FPGA/lab9/testbench.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnn/Documents/385/385_FPGA/lab9|C:/Users/finnn/Documents/385/385_FPGA/lab9/testbench.sv|
 !i113 1
