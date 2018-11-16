@@ -5603,3 +5603,30 @@ Info: Building ../aes_bsp/
 C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../aes_bsp/
 [BSP build complete]
 [aes build complete]
+15:18:14 **** Incremental Build of configuration Nios II for project aes ****
+make all 
+Info: Building ../aes_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../aes_bsp/
+[BSP build complete]
+[aes build complete]
+15:18:17 **** Incremental Build of configuration Nios II for project aes_bsp ****
+make all 
+[BSP build complete]
+15:18:30 **** Incremental Build of configuration Nios II for project aes ****
+make all 
+Info: Building ../aes_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../aes_bsp/
+[BSP build complete]
+[aes build complete]
+15:34:19 **** Incremental Build of configuration Nios II for project aes ****
+make all 
+Info: Building ../aes_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../aes_bsp/
+[BSP build complete]
+[aes build complete]
+15:40:38 **** Incremental Build of configuration Nios II for project aes ****
+make all 
+Info: Building ../aes_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../aes_bsp/
+[BSP build complete]
+[aes build complete]
