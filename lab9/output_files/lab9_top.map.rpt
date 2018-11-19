@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab9_top
-Thu Nov 08 16:21:31 2018
+Fri Nov 16 00:01:05 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -415,7 +415,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 08 16:21:31 2018       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 16 00:01:05 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab9_top                                    ;
 ; Top-level Entity Name              ; lab9_top                                    ;
@@ -11203,7 +11203,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:23     ;
+; Top            ; 00:00:21     ;
 +----------------+--------------+
 
 
@@ -11213,35 +11213,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 08 16:19:45 2018
+    Info: Processing started: Thu Nov 15 23:59:24 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab9 -c lab9_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12248): Elaborating Platform Designer system entity "lab7_soc.qsys"
-Info (12250): 2018.11.08.16:20:02 Progress: Loading lab9/lab7_soc.qsys
-Info (12250): 2018.11.08.16:20:03 Progress: Reading input file
-Info (12250): 2018.11.08.16:20:03 Progress: Adding AES_Decryption_Core_0 [AES_Decryption_Core 1.0]
-Info (12250): 2018.11.08.16:20:04 Progress: Parameterizing module AES_Decryption_Core_0
-Info (12250): 2018.11.08.16:20:04 Progress: Adding clk_0 [clock_source 18.0]
-Info (12250): 2018.11.08.16:20:04 Progress: Parameterizing module clk_0
-Info (12250): 2018.11.08.16:20:04 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.0]
-Info (12250): 2018.11.08.16:20:04 Progress: Parameterizing module jtag_uart_0
-Info (12250): 2018.11.08.16:20:04 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.0]
-Info (12250): 2018.11.08.16:20:04 Progress: Parameterizing module nios2_gen2_0
-Info (12250): 2018.11.08.16:20:04 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.0]
-Info (12250): 2018.11.08.16:20:04 Progress: Parameterizing module onchip_memory2_0
-Info (12250): 2018.11.08.16:20:04 Progress: Adding sdram [altera_avalon_new_sdram_controller 18.0]
-Info (12250): 2018.11.08.16:20:04 Progress: Parameterizing module sdram
-Info (12250): 2018.11.08.16:20:04 Progress: Adding sdram_pll [altpll 18.0]
-Info (12250): 2018.11.08.16:20:04 Progress: Parameterizing module sdram_pll
-Info (12250): 2018.11.08.16:20:04 Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.0]
-Info (12250): 2018.11.08.16:20:04 Progress: Parameterizing module sysid_qsys_0
-Info (12250): 2018.11.08.16:20:04 Progress: Adding timer_0 [altera_avalon_timer 18.0]
-Info (12250): 2018.11.08.16:20:04 Progress: Parameterizing module timer_0
-Info (12250): 2018.11.08.16:20:04 Progress: Building connections
-Info (12250): 2018.11.08.16:20:04 Progress: Parameterizing connections
-Info (12250): 2018.11.08.16:20:04 Progress: Validating
-Info (12250): 2018.11.08.16:20:05 Progress: Done reading input file
+Info (12250): 2018.11.15.23:59:41 Progress: Loading lab9/lab7_soc.qsys
+Info (12250): 2018.11.15.23:59:41 Progress: Reading input file
+Info (12250): 2018.11.15.23:59:41 Progress: Adding AES_Decryption_Core_0 [AES_Decryption_Core 1.0]
+Info (12250): 2018.11.15.23:59:43 Progress: Parameterizing module AES_Decryption_Core_0
+Info (12250): 2018.11.15.23:59:43 Progress: Adding clk_0 [clock_source 18.0]
+Info (12250): 2018.11.15.23:59:43 Progress: Parameterizing module clk_0
+Info (12250): 2018.11.15.23:59:43 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.0]
+Info (12250): 2018.11.15.23:59:43 Progress: Parameterizing module jtag_uart_0
+Info (12250): 2018.11.15.23:59:43 Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.0]
+Info (12250): 2018.11.15.23:59:43 Progress: Parameterizing module nios2_gen2_0
+Info (12250): 2018.11.15.23:59:43 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.0]
+Info (12250): 2018.11.15.23:59:43 Progress: Parameterizing module onchip_memory2_0
+Info (12250): 2018.11.15.23:59:43 Progress: Adding sdram [altera_avalon_new_sdram_controller 18.0]
+Info (12250): 2018.11.15.23:59:43 Progress: Parameterizing module sdram
+Info (12250): 2018.11.15.23:59:43 Progress: Adding sdram_pll [altpll 18.0]
+Info (12250): 2018.11.15.23:59:43 Progress: Parameterizing module sdram_pll
+Info (12250): 2018.11.15.23:59:43 Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.0]
+Info (12250): 2018.11.15.23:59:43 Progress: Parameterizing module sysid_qsys_0
+Info (12250): 2018.11.15.23:59:43 Progress: Adding timer_0 [altera_avalon_timer 18.0]
+Info (12250): 2018.11.15.23:59:43 Progress: Parameterizing module timer_0
+Info (12250): 2018.11.15.23:59:43 Progress: Building connections
+Info (12250): 2018.11.15.23:59:43 Progress: Parameterizing connections
+Info (12250): 2018.11.15.23:59:43 Progress: Validating
+Info (12250): 2018.11.15.23:59:44 Progress: Done reading input file
 Warning (12251): Lab7_soc.AES_Decryption_Core: The SIM_VERILOG fileset must specify the top-level module name.
 Info (12250): Lab7_soc.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info (12250): Lab7_soc.sdram: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
@@ -11254,22 +11254,22 @@ Info (12250): Inserting clock-crossing logic between rsp_demux_006.src0 and rsp_
 Info (12250): Inserting clock-crossing logic between rsp_demux_006.src1 and rsp_mux_001.sink4
 Info (12250): AES_Decryption_Core_0: "lab7_soc" instantiated AES_Decryption_Core "AES_Decryption_Core_0"
 Info (12250): Jtag_uart_0: Starting RTL generation for module 'lab7_soc_jtag_uart_0'
-Info (12250): Jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=lab7_soc_jtag_uart_0 --dir=C:/Users/finnn/AppData/Local/Temp/alt7843_6272889356806757356.dir/0003_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/finnn/AppData/Local/Temp/alt7843_6272889356806757356.dir/0003_jtag_uart_0_gen//lab7_soc_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=lab7_soc_jtag_uart_0 --dir=C:/Users/finnn/AppData/Local/Temp/alt7851_6869883309045436534.dir/0003_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/finnn/AppData/Local/Temp/alt7851_6869883309045436534.dir/0003_jtag_uart_0_gen//lab7_soc_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Jtag_uart_0: Done RTL generation for module 'lab7_soc_jtag_uart_0'
 Info (12250): Jtag_uart_0: "lab7_soc" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info (12250): Nios2_gen2_0: "lab7_soc" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info (12250): Onchip_memory2_0: Starting RTL generation for module 'lab7_soc_onchip_memory2_0'
-Info (12250): Onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=lab7_soc_onchip_memory2_0 --dir=C:/Users/finnn/AppData/Local/Temp/alt7843_6272889356806757356.dir/0004_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/finnn/AppData/Local/Temp/alt7843_6272889356806757356.dir/0004_onchip_memory2_0_gen//lab7_soc_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=lab7_soc_onchip_memory2_0 --dir=C:/Users/finnn/AppData/Local/Temp/alt7851_6869883309045436534.dir/0004_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/finnn/AppData/Local/Temp/alt7851_6869883309045436534.dir/0004_onchip_memory2_0_gen//lab7_soc_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Onchip_memory2_0: Done RTL generation for module 'lab7_soc_onchip_memory2_0'
 Info (12250): Onchip_memory2_0: "lab7_soc" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info (12250): Sdram: Starting RTL generation for module 'lab7_soc_sdram'
-Info (12250): Sdram:   Generation command is [exec C:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=lab7_soc_sdram --dir=C:/Users/finnn/AppData/Local/Temp/alt7843_6272889356806757356.dir/0005_sdram_gen/ --quartus_dir=C:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/finnn/AppData/Local/Temp/alt7843_6272889356806757356.dir/0005_sdram_gen//lab7_soc_sdram_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Sdram:   Generation command is [exec C:/intelfpga_lite/18.0/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.0/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=lab7_soc_sdram --dir=C:/Users/finnn/AppData/Local/Temp/alt7851_6869883309045436534.dir/0005_sdram_gen/ --quartus_dir=C:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/finnn/AppData/Local/Temp/alt7851_6869883309045436534.dir/0005_sdram_gen//lab7_soc_sdram_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Sdram: Done RTL generation for module 'lab7_soc_sdram'
 Info (12250): Sdram: "lab7_soc" instantiated altera_avalon_new_sdram_controller "sdram"
 Info (12250): Sdram_pll: "lab7_soc" instantiated altpll "sdram_pll"
 Info (12250): Sysid_qsys_0: "lab7_soc" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
 Info (12250): Timer_0: Starting RTL generation for module 'lab7_soc_timer_0'
-Info (12250): Timer_0:   Generation command is [exec C:/intelFPGA_lite/18.0/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.0/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=lab7_soc_timer_0 --dir=C:/Users/finnn/AppData/Local/Temp/alt7843_6272889356806757356.dir/0009_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/finnn/AppData/Local/Temp/alt7843_6272889356806757356.dir/0009_timer_0_gen//lab7_soc_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Timer_0:   Generation command is [exec C:/intelFPGA_lite/18.0/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.0/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=lab7_soc_timer_0 --dir=C:/Users/finnn/AppData/Local/Temp/alt7851_6869883309045436534.dir/0009_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/18.0/quartus --verilog --config=C:/Users/finnn/AppData/Local/Temp/alt7851_6869883309045436534.dir/0009_timer_0_gen//lab7_soc_timer_0_component_configuration.pl  --do_build_sim=0  ]
 Info (12250): Timer_0: Done RTL generation for module 'lab7_soc_timer_0'
 Info (12250): Timer_0: "lab7_soc" instantiated altera_avalon_timer "timer_0"
 Info (12250): Avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -11284,19 +11284,19 @@ Info (12250): Mm_interconnect_0: "lab7_soc" instantiated altera_mm_interconnect 
 Info (12250): Irq_mapper: "lab7_soc" instantiated altera_irq_mapper "irq_mapper"
 Info (12250): Rst_controller: "lab7_soc" instantiated altera_reset_controller "rst_controller"
 Info (12250): Cpu: Starting RTL generation for module 'lab7_soc_nios2_gen2_0_cpu'
-Info (12250): Cpu:   Generation command is [exec C:/intelFPGA_lite/18.0/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.0/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=lab7_soc_nios2_gen2_0_cpu --dir=C:/Users/finnn/AppData/Local/Temp/alt7843_6272889356806757356.dir/0012_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.0/quartus/bin64/ --verilog --config=C:/Users/finnn/AppData/Local/Temp/alt7843_6272889356806757356.dir/0012_cpu_gen//lab7_soc_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info (12250): Cpu: # 2018.11.08 16:20:26 (*) Starting Nios II generation
-Info (12250): Cpu: # 2018.11.08 16:20:26 (*)   Checking for plaintext license.
-Info (12250): Cpu: # 2018.11.08 16:20:27 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.0/quartus/bin64/
-Info (12250): Cpu: # 2018.11.08 16:20:27 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info (12250): Cpu: # 2018.11.08 16:20:27 (*)   LM_LICENSE_FILE environment variable is empty
-Info (12250): Cpu: # 2018.11.08 16:20:27 (*)   Plaintext license not found.
-Info (12250): Cpu: # 2018.11.08 16:20:27 (*)   No license required to generate encrypted Nios II/e.
-Info (12250): Cpu: # 2018.11.08 16:20:27 (*)   Elaborating CPU configuration settings
-Info (12250): Cpu: # 2018.11.08 16:20:27 (*)   Creating all objects for CPU
-Info (12250): Cpu: # 2018.11.08 16:20:28 (*)   Generating RTL from CPU objects
-Info (12250): Cpu: # 2018.11.08 16:20:28 (*)   Creating plain-text RTL
-Info (12250): Cpu: # 2018.11.08 16:20:28 (*) Done Nios II generation
+Info (12250): Cpu:   Generation command is [exec C:/intelFPGA_lite/18.0/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.0/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.0/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.0/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=lab7_soc_nios2_gen2_0_cpu --dir=C:/Users/finnn/AppData/Local/Temp/alt7851_6869883309045436534.dir/0012_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.0/quartus/bin64/ --verilog --config=C:/Users/finnn/AppData/Local/Temp/alt7851_6869883309045436534.dir/0012_cpu_gen//lab7_soc_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info (12250): Cpu: # 2018.11.16 00:00:06 (*) Starting Nios II generation
+Info (12250): Cpu: # 2018.11.16 00:00:06 (*)   Checking for plaintext license.
+Info (12250): Cpu: # 2018.11.16 00:00:07 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.0/quartus/bin64/
+Info (12250): Cpu: # 2018.11.16 00:00:07 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info (12250): Cpu: # 2018.11.16 00:00:07 (*)   LM_LICENSE_FILE environment variable is empty
+Info (12250): Cpu: # 2018.11.16 00:00:07 (*)   Plaintext license not found.
+Info (12250): Cpu: # 2018.11.16 00:00:07 (*)   No license required to generate encrypted Nios II/e.
+Info (12250): Cpu: # 2018.11.16 00:00:07 (*)   Elaborating CPU configuration settings
+Info (12250): Cpu: # 2018.11.16 00:00:07 (*)   Creating all objects for CPU
+Info (12250): Cpu: # 2018.11.16 00:00:08 (*)   Generating RTL from CPU objects
+Info (12250): Cpu: # 2018.11.16 00:00:08 (*)   Creating plain-text RTL
+Info (12250): Cpu: # 2018.11.16 00:00:09 (*) Done Nios II generation
 Info (12250): Cpu: Done RTL generation for module 'lab7_soc_nios2_gen2_0_cpu'
 Info (12250): Cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info (12250): Nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -11739,7 +11739,7 @@ Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "lab7_s
 Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "lab7_soc:lab9_qsystem|altera_reset_controller:rst_controller_002" File: C:/Users/finnn/Documents/385/385_FPGA/lab9/lab7_soc/synthesis/lab7_soc.v Line: 495
 Info (12128): Elaborating entity "hexdriver" for hierarchy "hexdriver:hexdrv0" File: C:/Users/finnn/Documents/385/385_FPGA/lab9/lab9_top.sv Line: 61
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2018.11.08.16:20:53 Progress: Loading sldf8365540/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2018.11.16.00:00:29 Progress: Loading sldf8365540/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -12509,9 +12509,9 @@ Info (21057): Implemented 8229 device resources after synthesis - the final reso
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 139 warnings
     Info: Peak virtual memory: 5006 megabytes
-    Info: Processing ended: Thu Nov 08 16:21:31 2018
-    Info: Elapsed time: 00:01:46
-    Info: Total CPU time (on all processors): 00:02:37
+    Info: Processing ended: Fri Nov 16 00:01:06 2018
+    Info: Elapsed time: 00:01:42
+    Info: Total CPU time (on all processors): 00:02:22
 
 
 +------------------------------------------+
