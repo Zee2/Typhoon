@@ -10,7 +10,7 @@
 	controller, and then be notified when the information is available from that port.
 
 	Each port is both read and write. The nature of the operation is stored in the FIFO
-	next to the address bits. This saves on coding time for the customer module.
+	next to the address bits.
 
 	This SRAM controller allows the system to take advantage of the faster memory clock.
 	If the SRAM clock is twice the speed of the board clock, two board-clocked modules
@@ -24,7 +24,7 @@
 module SRAM_controller #(parameter numInputPorts = 4)(
 	inout wire[15:0] SRAM_DQ,
 	output logic[19:0] SRAM_ADDR,
-	output logic SRAM_UB_N, SRAM_LB_N, SRAM_CE_N, SRAM_OE_N, SRAM_WE_N,
+	output logic SRAM_UB_N, SRAM_LB_N, SRAM_CE_N, SRAM_OE_N, SRAM_WE_N = 1,
 
 	input logic[15:0] DataToSRAM[numInputPorts],
 	input logic[19:0] AddressToSRAM[numInputPorts],
@@ -49,6 +49,10 @@ logic[7:0] lastRoundRobin = 8'd0;
 logic[7:0] roundRobin = 8'd1; // Round robin counter 
 logic[7:0] nextRoundRobin = 8'd2;
 
+logic override = 0; // High-priority port 0 override
+logic nextOverride = 0;
+
+logic[7:0] roundRobinCache = 8'd0; // Cache current RR index when servicing high-priority port
 
 logic[15:0] DQ_buffer; // tri-state buffer
 
@@ -105,42 +109,45 @@ always_ff @(posedge SRAM_CLK) begin: mainblock
 
 	end
 
-	//Assert that the port we last touched is now done.
-	
 
 	//At clock edge, read data from SRAM if last operation was a read
 	if(lastOpRead && ~controllerIdle) begin
 		DataReady[lastRoundRobin] <= 1;
-		DataFromSRAM[lastRoundRobin] <= SRAM_DQ; // Latch in output, but the port output has already had this data for 2ns
+		DataFromSRAM[lastRoundRobin] <= SRAM_DQ; // Latch in output
 		
-	end 
+	end
 	
-	SRAM_ADDR <= FIFOaddr[roundRobin][19:0]; // Assert 20-bit address on SRAM, always
-	if(FIFOaddr[roundRobin][21] == 1  && ~controllerIdle) begin // It's a read request
-		//FIFOread[roundRobin] <= 1;
+	SRAM_ADDR <= FIFOaddr[override ? 0 : roundRobin][19:0]; // Assert 20-bit address on SRAM, always
+	if(FIFOaddr[override ? 0 : roundRobin][21] == 1  && ~controllerIdle) begin // It's a read request
+		
 		lastOpRead <= 1; // So we fetch data next clock
 
 		
-		//SRAM_OE_N <= 0; // Bring OE low to read, start 8ns countdown..!
 		SRAM_WE_N <= 1;
 	end
 	else begin
 		if(~controllerIdle) begin
 			lastOpRead <= 0; // This op was not a read, so don't read next clock
-			//FIFOread[roundRobin] <= 1;
-			DQ_buffer <= FIFOdata[roundRobin][15:0]; // Assert FIFO data on SRAM bus
-			//SRAM_OE_N <= 1;
+			
+			DQ_buffer <= FIFOdata[override ? 0 : roundRobin][15:0]; // Assert FIFO data on SRAM bus
+			
 			SRAM_WE_N <= 0; // Bring WE low to write
 		end
 	end
 
-	FIFOread[roundRobin] <= 0;
-	lastRoundRobin <= roundRobin;
-	controllerIdle <= controllerIdleNext;
+	FIFOread[override ? 0 : roundRobin] <= 0;
+	
+	lastRoundRobin <= override ? 0 : roundRobin;
+	
+	
 	roundRobin <= nextRoundRobin;
+	
+	controllerIdle <= controllerIdleNext;
+	override <= nextOverride;
+	
 	if(controllerIdleNext == 0) begin
 		 // nextRoundRobin should indicate valid FIFO
-		FIFOread[nextRoundRobin] <= 1;
+		FIFOread[nextOverride ? 0 : nextRoundRobin] <= 1;
 	end
 	else begin 
 		//SRAM_OE_N <= 1;
@@ -157,12 +164,35 @@ always_comb begin
 	
 	
 	for(int i = 1; i < numInputPorts+2; i++) begin
+	
+		// Memory port 0 is special; it's a high priority port
+		// that overrides all other ports in the round-robin scheduler
+		// If memory port 0 requests a transaction, the scheduler will service
+		// that transaction before all others.
+		//
+		// We use a separate "nextOverride" variable, as resetting the round robin
+		// counter back to zero would make the scheduler fundamentally unfair,
+		// giving more time to earlier-indexed ports.
+		/*
+		if(~FIFOempty[0] == -1) begin
+			nextOverride = 0;
+			nextRoundRobin = 0;
+			controllerIdleNext = 0;
+			break;
+		end
+		*/
+		// Wraparound case, no waiting ports, we idle
 		if(i == numInputPorts+1) begin
 			controllerIdleNext = 1;
+			nextOverride = 0;
 			nextRoundRobin = roundRobin;
 			break;
 		end
+		
+		// Standard case. Not sure how expensive modulo is, it seems
+		// to synthesize a LPM_divide module which seems... odd.
 		if(~FIFOempty[(roundRobin+i)%numInputPorts] == -1) begin
+			nextOverride = 0;
 			nextRoundRobin = (roundRobin+i)%numInputPorts;
 			controllerIdleNext = 0;
 			break;

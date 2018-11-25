@@ -69,24 +69,28 @@ module Typhoon #(parameter NUM_sHADER_CORES = 8)(
 			
 			store: begin
 				DataToSRAM[0] = SW;
-				AddressToSRAM[0] = 16'h000f;
+				AddressToSRAM[0] = 20'h000f;
 				QueueWriteReq[0] = 1;
 				QueueReadReq[0] = 0;
 				
-				//DataToSRAM[1] = 16'haaaaa;
-				//AddressToSRAM[1] = 16'h0f0f;
-				//QueueWriteReq[1] = 1;
-				//QueueReadReq[1] = 0;
+				DataToSRAM[1] = 16'hbaba;
+				AddressToSRAM[1] = 20'h0f0f;
+				QueueWriteReq[1] = 0;
+				QueueReadReq[1] = 0;
 				
 				
 				nextState = bigwait;
 			end
 			
 			bigwait: begin
-				DataToSRAM[0] = 16'haaaa;
-				AddressToSRAM[0] = 16'h00f0;
+				DataToSRAM[0] = 16'ha0a0;
+				AddressToSRAM[0] = 20'h00f0;
 				QueueWriteReq[0] = 0;
 				QueueReadReq[0] = 0;
+				
+				QueueWriteReq[1] = 0;
+				QueueReadReq[1] = 0;
+				
 				if(dummyCounter % 2 == 0)
 					nextState = fetch;
 				else
@@ -97,13 +101,15 @@ module Typhoon #(parameter NUM_sHADER_CORES = 8)(
 			
 			
 			fetch: begin
-				DataToSRAM[0] = 16'haaaa;
-				AddressToSRAM[0] = 16'h000e;
+				DataToSRAM[0] = 16'h0101;
+				AddressToSRAM[0] = KEY[0] ? 20'h000f : 20'hffff;
 				QueueWriteReq[0] = 0;
 				QueueReadReq[0] = 1;
 				
-				//QueueWriteReq[1] = 0;
-				//QueueReadReq[1] = 1;
+				DataToSRAM[1] = 16'hffff;
+				AddressToSRAM[1] = 20'h000f;
+				QueueWriteReq[1] = 0;
+				QueueReadReq[1] = 1;
 				
 				nextState = memFetchWait;
 			
@@ -111,13 +117,15 @@ module Typhoon #(parameter NUM_sHADER_CORES = 8)(
 			
 			memFetchWait: begin
 				
-				DataToSRAM[0] = 16'haaaa;
-				AddressToSRAM[0] = 16'h00f0;
+				DataToSRAM[0] = 16'heeee;
+				AddressToSRAM[0] = 20'h00f0;
 				QueueReadReq[0] = 0;
 				QueueWriteReq[0] = 0;
 				
-				//QueueWriteReq[1] = 0;
-				//QueueReadReq[1] = 0;
+				DataToSRAM[1] = 16'hfefe;
+				AddressToSRAM[1] = 20'h000f;
+				QueueWriteReq[1] = 0;
+				QueueReadReq[1] = 0;
 				
 				if(DataReady[0] == 1'b1) begin
 					nextState = check;
@@ -127,13 +135,13 @@ module Typhoon #(parameter NUM_sHADER_CORES = 8)(
 			end
 			
 			check: begin
-				DataToSRAM[0] = 16'haaaa;
-				AddressToSRAM[0] = 16'h00f0;
+				DataToSRAM[0] = 16'hafaf;
+				AddressToSRAM[0] = 20'h00f0;
 				QueueReadReq[0] = 0;
 				QueueWriteReq[0] = 0;
 				
-				//QueueWriteReq[1] = 0;
-				//QueueReadReq[1] = 0;
+				QueueWriteReq[1] = 0;
+				QueueReadReq[1] = 0;
 				
 				if(KEY[0] == 0)
 					nextState = init;
@@ -147,8 +155,8 @@ module Typhoon #(parameter NUM_sHADER_CORES = 8)(
 				AddressToSRAM[0] = 0;
 				QueueReadReq[0] = 0;
 				QueueWriteReq[0] = 0;
-				//QueueWriteReq[1] = 0;
-				//QueueReadReq[1] = 0;
+				QueueWriteReq[1] = 0;
+				QueueReadReq[1] = 0;
 				nextState = init;
 			end
 		

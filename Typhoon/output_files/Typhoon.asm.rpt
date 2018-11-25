@@ -1,5 +1,5 @@
 Assembler report for Typhoon
-Thu Nov 22 15:22:54 2018
+Sat Nov 24 22:10:44 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Nov 22 15:22:54 2018 ;
+; Assembler Status      ; Successful - Sat Nov 24 22:10:44 2018 ;
 ; Revision Name         ; Typhoon                               ;
 ; Top-level Entity Name ; Typhoon                               ;
 ; Family                ; Cyclone IV E                          ;
@@ -66,8 +66,8 @@ refer to the applicable agreement for further details.
 +----------------+---------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                         ;
 +----------------+---------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x005E7B80                                                                      ;
-; Checksum       ; 0x005E7B80                                                                      ;
+; JTAG usercode  ; 0x005EBC81                                                                      ;
+; Checksum       ; 0x005EBC81                                                                      ;
 +----------------+---------------------------------------------------------------------------------+
 
 
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 22 15:22:50 2018
+    Info: Processing started: Sat Nov 24 22:10:39 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Typhoon -c Typhoon
 Warning (125092): Tcl Script File testPLL.qip not found
     Info (125063): set_global_assignment -name QIP_FILE testPLL.qip
@@ -91,9 +91,9 @@ Warning (18236): Number of processors has not been specified which may cause ove
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4708 megabytes
-    Info: Processing ended: Thu Nov 22 15:22:54 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4709 megabytes
+    Info: Processing ended: Sat Nov 24 22:10:44 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

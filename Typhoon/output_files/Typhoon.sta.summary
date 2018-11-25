@@ -2,44 +2,68 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'myTest|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 1.806
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Setup 'BOARD_CLK'
-Slack : 6.049
+Slack : -1.446
+TNS   : -6.750
+
+Type  : Slow 1200mV 85C Model Setup 'debugState.bigwait'
+Slack : -0.903
+TNS   : -2.416
+
+Type  : Slow 1200mV 85C Model Setup 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.035
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'BOARD_CLK'
-Slack : 0.331
+Slack : 0.360
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'myTest|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.402
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'debugState.bigwait'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'debugState.bigwait'
+Slack : 0.395
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'myTest|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.705
+Slack : 4.707
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BOARD_CLK'
 Slack : 9.628
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'myTest|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 2.519
-TNS   : 0.000
-
 Type  : Slow 1200mV 0C Model Setup 'BOARD_CLK'
-Slack : 6.324
+Slack : -1.231
+TNS   : -5.716
+
+Type  : Slow 1200mV 0C Model Setup 'debugState.bigwait'
+Slack : -0.704
+TNS   : -1.920
+
+Type  : Slow 1200mV 0C Model Setup 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.666
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'BOARD_CLK'
-Slack : 0.338
+Slack : 0.349
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'myTest|altpll_component|auto_generated|pll1|clk[0]'
 Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'debugState.bigwait'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'debugState.bigwait'
+Slack : 0.430
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'myTest|altpll_component|auto_generated|pll1|clk[0]'
@@ -50,20 +74,32 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BOARD_CLK'
 Slack : 9.649
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'myTest|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 6.058
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Setup 'BOARD_CLK'
-Slack : 7.916
+Slack : -0.664
+TNS   : -2.128
+
+Type  : Fast 1200mV 0C Model Setup 'debugState.bigwait'
+Slack : -0.007
+TNS   : -0.007
+
+Type  : Fast 1200mV 0C Model Setup 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 6.072
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'BOARD_CLK'
-Slack : 0.127
+Slack : 0.147
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'myTest|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.181
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'debugState.bigwait'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'debugState.bigwait'
+Slack : 0.313
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'myTest|altpll_component|auto_generated|pll1|clk[0]'
