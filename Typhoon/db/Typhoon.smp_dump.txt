@@ -1,0 +1,9 @@
+
+State Machine - |Typhoon|debugState
+Name debugState.bigwait debugState.check debugState.memFetchWait debugState.fetch debugState.store debugState.init 
+debugState.init 0 0 0 0 0 0 
+debugState.store 0 0 0 0 1 1 
+debugState.fetch 0 0 0 1 0 1 
+debugState.memFetchWait 0 0 1 0 0 1 
+debugState.check 0 1 0 0 0 1 
+debugState.bigwait 1 0 0 0 0 1 
