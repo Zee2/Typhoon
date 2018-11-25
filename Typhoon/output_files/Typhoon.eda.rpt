@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Typhoon
-Mon Nov 05 18:34:54 2018
+Thu Nov 22 15:23:02 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Nov 05 18:34:54 2018 ;
+; EDA Netlist Writer Status ; Successful - Thu Nov 22 15:23:02 2018 ;
 ; Revision Name             ; Typhoon                               ;
 ; Top-level Entity Name     ; Typhoon                               ;
 ; Family                    ; Cyclone IV E                          ;
@@ -66,20 +66,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                             ;
-+--------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                        ;
-+--------------------------------------------------------------------------------------------------------+
-; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_7_1200mv_85c_slow.svo    ;
-; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_7_1200mv_0c_slow.svo     ;
-; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_min_1200mv_0c_fast.svo   ;
-; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon.svo                      ;
-; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_7_1200mv_85c_v_slow.sdo  ;
-; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_7_1200mv_0c_v_slow.sdo   ;
-; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_v.sdo                    ;
-+--------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                         ;
++----------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                    ;
++----------------------------------------------------------------------------------------------------+
+; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_7_1200mv_85c_slow.svo    ;
+; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_7_1200mv_0c_slow.svo     ;
+; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_min_1200mv_0c_fast.svo   ;
+; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon.svo                      ;
+; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_7_1200mv_85c_v_slow.sdo  ;
+; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_7_1200mv_0c_v_slow.sdo   ;
+; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_min_1200mv_0c_v_fast.sdo ;
+; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/Typhoon_v.sdo                    ;
++----------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,21 +88,29 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 05 18:34:52 2018
+    Info: Processing started: Thu Nov 22 15:23:00 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Typhoon -c Typhoon
+Warning (125092): Tcl Script File testPLL.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE testPLL.qip
+Warning (125092): Tcl Script File SysPLL.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE SysPLL.qip
+Warning (125092): Tcl Script File SRAMCLK.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE SRAMCLK.qip
+Warning (125092): Tcl Script File my_test.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE my_test.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Typhoon_7_1200mv_85c_slow.svo in folder "C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Typhoon_7_1200mv_0c_slow.svo in folder "C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Typhoon_min_1200mv_0c_fast.svo in folder "C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Typhoon.svo in folder "C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Typhoon_7_1200mv_85c_v_slow.sdo in folder "C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Typhoon_7_1200mv_0c_v_slow.sdo in folder "C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Typhoon_min_1200mv_0c_v_fast.sdo in folder "C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Typhoon_v.sdo in folder "C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4677 megabytes
-    Info: Processing ended: Mon Nov 05 18:34:54 2018
+Info (204019): Generated file Typhoon_7_1200mv_85c_slow.svo in folder "C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Typhoon_7_1200mv_0c_slow.svo in folder "C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Typhoon_min_1200mv_0c_fast.svo in folder "C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Typhoon.svo in folder "C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Typhoon_7_1200mv_85c_v_slow.sdo in folder "C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Typhoon_7_1200mv_0c_v_slow.sdo in folder "C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Typhoon_min_1200mv_0c_v_fast.sdo in folder "C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Typhoon_v.sdo in folder "C:/Users/finnn/Documents/385/385_FPGA/Typhoon/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4690 megabytes
+    Info: Processing ended: Thu Nov 22 15:23:02 2018
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

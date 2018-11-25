@@ -1,5 +1,5 @@
 Assembler report for Typhoon
-Mon Nov 05 18:34:49 2018
+Thu Nov 22 15:22:54 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.sof
+  5. Assembler Device Options: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Nov 05 18:34:49 2018 ;
+; Assembler Status      ; Successful - Thu Nov 22 15:22:54 2018 ;
 ; Revision Name         ; Typhoon                               ;
 ; Top-level Entity Name ; Typhoon                               ;
 ; Family                ; Cyclone IV E                          ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+----------------------------------------------------------------------------+
-; Assembler Generated Files                                                  ;
-+----------------------------------------------------------------------------+
-; File Name                                                                  ;
-+----------------------------------------------------------------------------+
-; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.sof ;
-+----------------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Assembler Generated Files                                              ;
++------------------------------------------------------------------------+
+; File Name                                                              ;
++------------------------------------------------------------------------+
+; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.sof ;
++------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.sof ;
-+----------------+-------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                             ;
-+----------------+-------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00594B5D                                                                          ;
-; Checksum       ; 0x00594B5D                                                                          ;
-+----------------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.sof ;
++----------------+---------------------------------------------------------------------------------+
+; Option         ; Setting                                                                         ;
++----------------+---------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x005E7B80                                                                      ;
+; Checksum       ; 0x005E7B80                                                                      ;
++----------------+---------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,15 +77,23 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Nov 05 18:34:46 2018
+    Info: Processing started: Thu Nov 22 15:22:50 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Typhoon -c Typhoon
+Warning (125092): Tcl Script File testPLL.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE testPLL.qip
+Warning (125092): Tcl Script File SysPLL.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE SysPLL.qip
+Warning (125092): Tcl Script File SRAMCLK.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE SRAMCLK.qip
+Warning (125092): Tcl Script File my_test.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE my_test.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4704 megabytes
-    Info: Processing ended: Mon Nov 05 18:34:49 2018
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus Prime Assembler was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4708 megabytes
+    Info: Processing ended: Thu Nov 22 15:22:54 2018
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

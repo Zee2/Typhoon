@@ -2,52 +2,76 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'SRAM_CLK'
-Slack : -2.858
-TNS   : -705.044
-
-Type  : Slow 1200mV 85C Model Hold 'SRAM_CLK'
-Slack : 0.388
+Type  : Slow 1200mV 85C Model Setup 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.806
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SRAM_CLK'
-Slack : -3.000
-TNS   : -636.418
+Type  : Slow 1200mV 85C Model Setup 'BOARD_CLK'
+Slack : 6.049
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'BOARD_CLK'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.705
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BOARD_CLK'
-Slack : -3.000
-TNS   : -46.088
-
-Type  : Slow 1200mV 0C Model Setup 'SRAM_CLK'
-Slack : -2.540
-TNS   : -611.486
-
-Type  : Slow 1200mV 0C Model Hold 'SRAM_CLK'
-Slack : 0.341
+Slack : 9.628
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SRAM_CLK'
-Slack : -3.000
-TNS   : -629.554
+Type  : Slow 1200mV 0C Model Setup 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.519
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'BOARD_CLK'
+Slack : 6.324
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'BOARD_CLK'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.709
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BOARD_CLK'
-Slack : -3.000
-TNS   : -45.384
-
-Type  : Fast 1200mV 0C Model Setup 'SRAM_CLK'
-Slack : -0.872
-TNS   : -175.674
-
-Type  : Fast 1200mV 0C Model Hold 'SRAM_CLK'
-Slack : 0.177
+Slack : 9.649
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SRAM_CLK'
-Slack : -3.000
-TNS   : -354.355
+Type  : Fast 1200mV 0C Model Setup 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 6.058
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'BOARD_CLK'
+Slack : 7.916
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'BOARD_CLK'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'myTest|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.754
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BOARD_CLK'
-Slack : -3.000
-TNS   : -20.988
+Slack : 9.373
+TNS   : 0.000
 
 ------------------------------------------------------------

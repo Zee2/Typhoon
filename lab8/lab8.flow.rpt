@@ -1,5 +1,5 @@
 Flow report for lab8
-Wed Oct 24 13:38:41 2018
+Tue Nov 20 20:08:08 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Oct 24 13:38:34 2018       ;
+; Flow Status                        ; Successful - Tue Nov 20 20:08:00 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab8                                        ;
 ; Top-level Entity Name              ; lab8                                        ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/24/2018 13:36:59 ;
+; Start date & time ; 11/20/2018 20:06:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab8                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
 ; Assignment Name                      ; Value                                                      ; Default Value ; Entity Name     ; Section Id     ;
 +--------------------------------------+------------------------------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 108223642620545.154040621909156                            ; --            ; --              ; --             ;
+; COMPILER_SIGNATURE_ID                ; 108223642620545.154277677416964                            ; --            ; --              ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                         ; --            ; --              ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                                                  ; --            ; --              ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; None                                                       ; --            ; --              ; eda_simulation ;
@@ -112,11 +112,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:45     ; 1.0                     ; 4978 MB             ; 00:01:09                           ;
-; Fitter               ; 00:00:36     ; 1.1                     ; 5861 MB             ; 00:00:57                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4722 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.2                     ; 4916 MB             ; 00:00:06                           ;
-; Total                ; 00:01:32     ; --                      ; --                  ; 00:02:17                           ;
+; Analysis & Synthesis ; 00:00:50     ; 1.0                     ; 4972 MB             ; 00:01:04                           ;
+; Fitter               ; 00:00:40     ; 1.1                     ; 5863 MB             ; 00:00:55                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4722 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.2                     ; 4915 MB             ; 00:00:06                           ;
+; Total                ; 00:01:43     ; --                      ; --                  ; 00:02:10                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
