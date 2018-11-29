@@ -1,5 +1,5 @@
 Fitter report for Typhoon
-Thu Nov 29 03:34:01 2018
+Thu Nov 29 05:18:29 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -71,17 +71,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Nov 29 03:34:01 2018       ;
+; Fitter Status                      ; Successful - Thu Nov 29 05:18:29 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Typhoon                                     ;
 ; Top-level Entity Name              ; Typhoon                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 326 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 267 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 171 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 171                                         ;
+; Total logic elements               ; 1,409 / 114,480 ( 1 % )                     ;
+;     Total combinational functions  ; 979 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 934 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 934                                         ;
 ; Total pins                         ; 175 / 529 ( 33 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -158,14 +158,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.05        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.6%      ;
-;     Processor 3            ;   0.3%      ;
-;     Processor 4            ;   0.3%      ;
+;     Processor 2            ;   2.5%      ;
+;     Processor 3            ;   1.1%      ;
+;     Processor 4            ;   1.1%      ;
 +----------------------------+-------------+
 
 
@@ -528,19 +528,19 @@ refer to the applicable agreement for further details.
 +--------------+----------------+--------------+------------------+---------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                     ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+--------------------+----------------------------+--------------------------+
-; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 816 ) ; 0.00 % ( 0 / 816 )         ; 0.00 % ( 0 / 816 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 816 ) ; 0.00 % ( 0 / 816 )         ; 0.00 % ( 0 / 816 )       ;
-;                     ;                    ;                            ;                          ;
-; Routing (by net)    ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+--------------------+----------------------------+--------------------------+
++---------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                      ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+---------------------+----------------------------+--------------------------+
+; Placement (by node) ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 2291 ) ; 0.00 % ( 0 / 2291 )        ; 0.00 % ( 0 / 2291 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 2291 ) ; 0.00 % ( 0 / 2291 )        ; 0.00 % ( 0 / 2291 )      ;
+;                     ;                     ;                            ;                          ;
+; Routing (by net)    ;                     ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+---------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -558,7 +558,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 804 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 2279 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 12 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -574,26 +574,26 @@ The pin-out file can be found in C:/Users/finnnorth/Documents/385/385_FPGA/Typho
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 326 / 114,480 ( < 1 % ) ;
-;     -- Combinational with no register       ; 155                     ;
-;     -- Register only                        ; 59                      ;
-;     -- Combinational with a register        ; 112                     ;
+; Total logic elements                        ; 1,409 / 114,480 ( 1 % ) ;
+;     -- Combinational with no register       ; 475                     ;
+;     -- Register only                        ; 430                     ;
+;     -- Combinational with a register        ; 504                     ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 72                      ;
-;     -- 3 input functions                    ; 76                      ;
-;     -- <=2 input functions                  ; 119                     ;
-;     -- Register only                        ; 59                      ;
+;     -- 4 input functions                    ; 715                     ;
+;     -- 3 input functions                    ; 110                     ;
+;     -- <=2 input functions                  ; 154                     ;
+;     -- Register only                        ; 430                     ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 142                     ;
-;     -- arithmetic mode                      ; 125                     ;
+;     -- normal mode                          ; 814                     ;
+;     -- arithmetic mode                      ; 165                     ;
 ;                                             ;                         ;
-; Total registers*                            ; 171 / 117,053 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 171 / 114,480 ( < 1 % ) ;
+; Total registers*                            ; 934 / 117,053 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 934 / 114,480 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 30 / 7,155 ( < 1 % )    ;
+; Total LABs:  partially or completely used   ; 126 / 7,155 ( 2 % )     ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 175 / 529 ( 33 % )      ;
 ;     -- Clock pins                           ; 1 / 7 ( 14 % )          ;
@@ -611,12 +611,12 @@ The pin-out file can be found in C:/Users/finnnorth/Documents/385/385_FPGA/Typho
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 0.3% / 0.3% / 0.4%      ;
-; Peak interconnect usage (total/H/V)         ; 3.4% / 3.1% / 4.5%      ;
-; Maximum fan-out                             ; 148                     ;
-; Highest non-global fan-out                  ; 37                      ;
-; Total fan-out                               ; 1586                    ;
-; Average fan-out                             ; 1.84                    ;
+; Average interconnect usage (total/H/V)      ; 0.7% / 0.6% / 0.8%      ;
+; Peak interconnect usage (total/H/V)         ; 12.9% / 12.3% / 13.8%   ;
+; Maximum fan-out                             ; 911                     ;
+; Highest non-global fan-out                  ; 153                     ;
+; Total fan-out                               ; 6981                    ;
+; Average fan-out                             ; 2.58                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -629,26 +629,26 @@ The pin-out file can be found in C:/Users/finnnorth/Documents/385/385_FPGA/Typho
 +---------------------------------------------+------------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                    ; Low                            ;
 ;                                             ;                        ;                                ;
-; Total logic elements                        ; 326 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 155                    ; 0                              ;
-;     -- Register only                        ; 59                     ; 0                              ;
-;     -- Combinational with a register        ; 112                    ; 0                              ;
+; Total logic elements                        ; 1409 / 114480 ( 1 % )  ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 475                    ; 0                              ;
+;     -- Register only                        ; 430                    ; 0                              ;
+;     -- Combinational with a register        ; 504                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic element usage by number of LUT inputs ;                        ;                                ;
-;     -- 4 input functions                    ; 72                     ; 0                              ;
-;     -- 3 input functions                    ; 76                     ; 0                              ;
-;     -- <=2 input functions                  ; 119                    ; 0                              ;
-;     -- Register only                        ; 59                     ; 0                              ;
+;     -- 4 input functions                    ; 715                    ; 0                              ;
+;     -- 3 input functions                    ; 110                    ; 0                              ;
+;     -- <=2 input functions                  ; 154                    ; 0                              ;
+;     -- Register only                        ; 430                    ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Logic elements by mode                      ;                        ;                                ;
-;     -- normal mode                          ; 142                    ; 0                              ;
-;     -- arithmetic mode                      ; 125                    ; 0                              ;
+;     -- normal mode                          ; 814                    ; 0                              ;
+;     -- arithmetic mode                      ; 165                    ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total registers                             ; 171                    ; 0                              ;
-;     -- Dedicated logic registers            ; 171 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
+; Total registers                             ; 934                    ; 0                              ;
+;     -- Dedicated logic registers            ; 934 / 114480 ( < 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
-; Total LABs:  partially or completely used   ; 30 / 7155 ( < 1 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 126 / 7155 ( 2 % )     ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                        ;                                ;
 ; Virtual pins                                ; 0                      ; 0                              ;
 ; I/O pins                                    ; 175                    ; 0                              ;
@@ -665,8 +665,8 @@ The pin-out file can be found in C:/Users/finnnorth/Documents/385/385_FPGA/Typho
 ;     -- Registered Output Connections        ; 0                      ; 0                              ;
 ;                                             ;                        ;                                ;
 ; Internal Connections                        ;                        ;                                ;
-;     -- Total Connections                    ; 1579                   ; 32                             ;
-;     -- Registered Connections               ; 528                    ; 0                              ;
+;     -- Total Connections                    ; 6974                   ; 32                             ;
+;     -- Registered Connections               ; 2508                   ; 0                              ;
 ;                                             ;                        ;                                ;
 ; External Connections                        ;                        ;                                ;
 ;     -- Top                                  ; 32                     ; 25                             ;
@@ -698,29 +698,29 @@ The pin-out file can be found in C:/Users/finnnorth/Documents/385/385_FPGA/Typho
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; BOARD_CLK ; Y2    ; 2        ; 0            ; 36           ; 14           ; 149                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; BOARD_CLK ; Y2    ; 2        ; 0            ; 36           ; 14           ; 912                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[0]    ; M23   ; 6        ; 115          ; 40           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[1]    ; M21   ; 6        ; 115          ; 53           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[2]    ; N21   ; 6        ; 115          ; 42           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; KEY[3]    ; R24   ; 5        ; 115          ; 35           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[0]     ; AB28  ; 5        ; 115          ; 17           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[10]    ; AC24  ; 5        ; 115          ; 4            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[11]    ; AB24  ; 5        ; 115          ; 5            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[12]    ; AB23  ; 5        ; 115          ; 7            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[13]    ; AA24  ; 5        ; 115          ; 9            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[14]    ; AA23  ; 5        ; 115          ; 10           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[15]    ; AA22  ; 5        ; 115          ; 6            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[0]     ; AB28  ; 5        ; 115          ; 17           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[10]    ; AC24  ; 5        ; 115          ; 4            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[11]    ; AB24  ; 5        ; 115          ; 5            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[12]    ; AB23  ; 5        ; 115          ; 7            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[13]    ; AA24  ; 5        ; 115          ; 9            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[14]    ; AA23  ; 5        ; 115          ; 10           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[15]    ; AA22  ; 5        ; 115          ; 6            ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[16]    ; Y24   ; 5        ; 115          ; 13           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; SW[17]    ; Y23   ; 5        ; 115          ; 14           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[1]     ; AC28  ; 5        ; 115          ; 14           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[2]     ; AC27  ; 5        ; 115          ; 15           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[3]     ; AD27  ; 5        ; 115          ; 13           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[4]     ; AB27  ; 5        ; 115          ; 18           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[5]     ; AC26  ; 5        ; 115          ; 11           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[6]     ; AD26  ; 5        ; 115          ; 10           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[7]     ; AB26  ; 5        ; 115          ; 15           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[8]     ; AC25  ; 5        ; 115          ; 4            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; SW[9]     ; AB25  ; 5        ; 115          ; 16           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[1]     ; AC28  ; 5        ; 115          ; 14           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[2]     ; AC27  ; 5        ; 115          ; 15           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[3]     ; AD27  ; 5        ; 115          ; 13           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[4]     ; AB27  ; 5        ; 115          ; 18           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[5]     ; AC26  ; 5        ; 115          ; 11           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[6]     ; AD26  ; 5        ; 115          ; 10           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[7]     ; AB26  ; 5        ; 115          ; 15           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[8]     ; AC25  ; 5        ; 115          ; 4            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; SW[9]     ; AB25  ; 5        ; 115          ; 16           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -1922,6 +1922,22 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; KEY[1]        ; Incomplete set of assignments ;
 ; KEY[2]        ; Incomplete set of assignments ;
 ; KEY[3]        ; Incomplete set of assignments ;
+; SW[0]         ; Incomplete set of assignments ;
+; SW[1]         ; Incomplete set of assignments ;
+; SW[2]         ; Incomplete set of assignments ;
+; SW[3]         ; Incomplete set of assignments ;
+; SW[4]         ; Incomplete set of assignments ;
+; SW[5]         ; Incomplete set of assignments ;
+; SW[6]         ; Incomplete set of assignments ;
+; SW[7]         ; Incomplete set of assignments ;
+; SW[8]         ; Incomplete set of assignments ;
+; SW[9]         ; Incomplete set of assignments ;
+; SW[10]        ; Incomplete set of assignments ;
+; SW[11]        ; Incomplete set of assignments ;
+; SW[12]        ; Incomplete set of assignments ;
+; SW[13]        ; Incomplete set of assignments ;
+; SW[14]        ; Incomplete set of assignments ;
+; SW[15]        ; Incomplete set of assignments ;
 ; SW[16]        ; Incomplete set of assignments ;
 ; SW[17]        ; Incomplete set of assignments ;
 ; KEY[0]        ; Incomplete set of assignments ;
@@ -1942,22 +1958,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; SRAM_DQ[14]   ; Missing drive strength        ;
 ; SRAM_DQ[15]   ; Missing drive strength        ;
 ; BOARD_CLK     ; Incomplete set of assignments ;
-; SW[0]         ; Incomplete set of assignments ;
-; SW[1]         ; Incomplete set of assignments ;
-; SW[2]         ; Incomplete set of assignments ;
-; SW[3]         ; Incomplete set of assignments ;
-; SW[4]         ; Incomplete set of assignments ;
-; SW[5]         ; Incomplete set of assignments ;
-; SW[6]         ; Incomplete set of assignments ;
-; SW[7]         ; Incomplete set of assignments ;
-; SW[8]         ; Incomplete set of assignments ;
-; SW[9]         ; Incomplete set of assignments ;
-; SW[10]        ; Incomplete set of assignments ;
-; SW[11]        ; Incomplete set of assignments ;
-; SW[12]        ; Incomplete set of assignments ;
-; SW[13]        ; Incomplete set of assignments ;
-; SW[14]        ; Incomplete set of assignments ;
-; SW[15]        ; Incomplete set of assignments ;
 +---------------+-------------------------------+
 
 
@@ -1966,29 +1966,30 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node                        ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                              ; Entity Name    ; Library Name ;
 +---------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |Typhoon                                          ; 326 (44)    ; 171 (29)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 175  ; 0            ; 155 (25)     ; 59 (2)            ; 112 (17)         ; |Typhoon                                                                                                                                         ; Typhoon        ; work         ;
-;    |VGA_controller:VGAtiming|                     ; 47 (47)     ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 23 (23)          ; |Typhoon|VGA_controller:VGAtiming                                                                                                                ; VGA_controller ; work         ;
-;    |framebuffer:SRAM|                             ; 201 (141)   ; 83 (83)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 106 (56)     ; 36 (36)           ; 59 (49)          ; |Typhoon|framebuffer:SRAM                                                                                                                        ; framebuffer    ; work         ;
-;       |lpm_mult:Mult0|                            ; 31 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (0)       ; 0 (0)             ; 9 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0                                                                                                         ; lpm_mult       ; work         ;
-;          |multcore:mult_core|                     ; 31 (15)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (13)      ; 0 (0)             ; 9 (2)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore       ; work         ;
-;             |mpar_add:padder|                     ; 16 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 7 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add       ; work         ;
+; |Typhoon                                          ; 1409 (70)   ; 934 (37)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 175  ; 0            ; 475 (34)     ; 430 (16)          ; 504 (21)         ; |Typhoon                                                                                                                                         ; Typhoon        ; work         ;
+;    |VGA_controller:VGAtiming|                     ; 49 (49)     ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 23 (23)          ; |Typhoon|VGA_controller:VGAtiming                                                                                                                ; VGA_controller ; work         ;
+;    |framebuffer:SRAM|                             ; 710 (650)   ; 87 (87)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 238 (179)    ; 41 (41)           ; 431 (430)        ; |Typhoon|framebuffer:SRAM                                                                                                                        ; framebuffer    ; work         ;
+;       |lpm_mult:Mult0|                            ; 31 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 1 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0                                                                                                         ; lpm_mult       ; work         ;
+;          |multcore:mult_core|                     ; 31 (15)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (14)      ; 0 (0)             ; 1 (1)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore       ; work         ;
+;             |mpar_add:padder|                     ; 16 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add       ; work         ;
 ;                |lpm_add_sub:adder[0]|             ; 9 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub    ; work         ;
 ;                   |add_sub_ngh:auto_generated|    ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated                      ; add_sub_ngh    ; work         ;
-;                |mpar_add:sub_par_add|             ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 7 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add       ; work         ;
-;                   |lpm_add_sub:adder[0]|          ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 7 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub    ; work         ;
-;                      |add_sub_rgh:auto_generated| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 7 (7)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_rgh:auto_generated ; add_sub_rgh    ; work         ;
-;       |lpm_mult:Mult1|                            ; 29 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 1 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1                                                                                                         ; lpm_mult       ; work         ;
-;          |multcore:mult_core|                     ; 29 (13)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (13)      ; 0 (0)             ; 1 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core                                                                                      ; multcore       ; work         ;
-;             |mpar_add:padder|                     ; 16 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (0)       ; 0 (0)             ; 1 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add       ; work         ;
+;                |mpar_add:sub_par_add|             ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add       ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub    ; work         ;
+;                      |add_sub_rgh:auto_generated| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_rgh:auto_generated ; add_sub_rgh    ; work         ;
+;       |lpm_mult:Mult1|                            ; 29 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1                                                                                                         ; lpm_mult       ; work         ;
+;          |multcore:mult_core|                     ; 29 (13)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (13)      ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core                                                                                      ; multcore       ; work         ;
+;             |mpar_add:padder|                     ; 16 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add       ; work         ;
 ;                |lpm_add_sub:adder[0]|             ; 9 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub    ; work         ;
 ;                   |add_sub_ngh:auto_generated|    ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated                      ; add_sub_ngh    ; work         ;
-;                |mpar_add:sub_par_add|             ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 1 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add       ; work         ;
-;                   |lpm_add_sub:adder[0]|          ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 1 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub    ; work         ;
-;                      |add_sub_rgh:auto_generated| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 1 (1)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_rgh:auto_generated ; add_sub_rgh    ; work         ;
+;                |mpar_add:sub_par_add|             ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add       ; work         ;
+;                   |lpm_add_sub:adder[0]|          ; 7 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub    ; work         ;
+;                      |add_sub_rgh:auto_generated| ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_rgh:auto_generated ; add_sub_rgh    ; work         ;
 ;    |mem_clk:myTest|                               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Typhoon|mem_clk:myTest                                                                                                                          ; mem_clk        ; work         ;
 ;       |altpll:altpll_component|                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Typhoon|mem_clk:myTest|altpll:altpll_component                                                                                                  ; altpll         ; work         ;
 ;          |mem_clk_altpll:auto_generated|          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |Typhoon|mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated                                                                    ; mem_clk_altpll ; work         ;
-;    |rasterizer:tiledRasterizer|                   ; 36 (36)     ; 36 (36)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 21 (21)           ; 15 (15)          ; |Typhoon|rasterizer:tiledRasterizer                                                                                                              ; rasterizer     ; work         ;
+;    |rasterizer:tiledRasterizer|                   ; 964 (5)     ; 787 (4)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 177 (1)      ; 373 (1)           ; 414 (3)          ; |Typhoon|rasterizer:tiledRasterizer                                                                                                              ; rasterizer     ; work         ;
+;       |pixel_shader:shader|                       ; 959 (959)   ; 783 (783)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 176 (176)    ; 372 (372)         ; 411 (411)        ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader                                                                                          ; pixel_shader   ; work         ;
 +---------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -2137,127 +2138,106 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; KEY[1]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; KEY[2]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; KEY[3]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[0]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[1]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[2]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[3]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[4]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[5]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[6]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[7]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[8]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[9]         ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[10]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[11]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[12]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[13]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[14]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
+; SW[15]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[16]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; SW[17]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
 ; KEY[0]        ; Input    ; --            ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[0]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SRAM_DQ[0]    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SRAM_DQ[1]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[2]    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[2]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SRAM_DQ[3]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[4]    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SRAM_DQ[5]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[6]    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SRAM_DQ[7]    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[4]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SRAM_DQ[5]    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[6]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SRAM_DQ[7]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SRAM_DQ[8]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[9]    ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[9]    ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SRAM_DQ[10]   ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[11]   ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SRAM_DQ[12]   ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SRAM_DQ[13]   ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SRAM_DQ[14]   ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[11]   ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SRAM_DQ[12]   ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SRAM_DQ[13]   ; Bidir    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; SRAM_DQ[14]   ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SRAM_DQ[15]   ; Bidir    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; BOARD_CLK     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; SW[0]         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[1]         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[2]         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[3]         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[4]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[5]         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[6]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[7]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[8]         ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[9]         ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[10]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[11]        ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[12]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[13]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[14]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[15]        ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 +---------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                               ;
-+----------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                            ; Pad To Core Index ; Setting ;
-+----------------------------------------------------------------+-------------------+---------+
-; KEY[1]                                                         ;                   ;         ;
-; KEY[2]                                                         ;                   ;         ;
-; KEY[3]                                                         ;                   ;         ;
-; SW[16]                                                         ;                   ;         ;
-; SW[17]                                                         ;                   ;         ;
-; KEY[0]                                                         ;                   ;         ;
-; SRAM_DQ[0]                                                     ;                   ;         ;
-;      - framebuffer:SRAM|VGA_R[3]                               ; 0                 ; 6       ;
-; SRAM_DQ[1]                                                     ;                   ;         ;
-;      - framebuffer:SRAM|VGA_R[4]                               ; 0                 ; 6       ;
-; SRAM_DQ[2]                                                     ;                   ;         ;
-;      - framebuffer:SRAM|VGA_R[5]~feeder                        ; 1                 ; 6       ;
-; SRAM_DQ[3]                                                     ;                   ;         ;
-;      - framebuffer:SRAM|VGA_R[6]                               ; 0                 ; 6       ;
-; SRAM_DQ[4]                                                     ;                   ;         ;
-;      - framebuffer:SRAM|VGA_R[7]~feeder                        ; 1                 ; 6       ;
-; SRAM_DQ[5]                                                     ;                   ;         ;
-;      - framebuffer:SRAM|VGA_G[2]~feeder                        ; 0                 ; 6       ;
-; SRAM_DQ[6]                                                     ;                   ;         ;
-;      - framebuffer:SRAM|VGA_G[3]~feeder                        ; 1                 ; 6       ;
-; SRAM_DQ[7]                                                     ;                   ;         ;
-;      - framebuffer:SRAM|VGA_G[4]~feeder                        ; 1                 ; 6       ;
-; SRAM_DQ[8]                                                     ;                   ;         ;
-;      - framebuffer:SRAM|VGA_G[5]~feeder                        ; 0                 ; 6       ;
-; SRAM_DQ[9]                                                     ;                   ;         ;
-;      - framebuffer:SRAM|VGA_G[6]~feeder                        ; 1                 ; 6       ;
-; SRAM_DQ[10]                                                    ;                   ;         ;
-;      - framebuffer:SRAM|VGA_G[7]                               ; 0                 ; 6       ;
-; SRAM_DQ[11]                                                    ;                   ;         ;
-;      - framebuffer:SRAM|VGA_B[3]~feeder                        ; 1                 ; 6       ;
-; SRAM_DQ[12]                                                    ;                   ;         ;
-;      - framebuffer:SRAM|VGA_B[4]~feeder                        ; 1                 ; 6       ;
-; SRAM_DQ[13]                                                    ;                   ;         ;
-;      - framebuffer:SRAM|VGA_B[5]~feeder                        ; 0                 ; 6       ;
-; SRAM_DQ[14]                                                    ;                   ;         ;
-;      - framebuffer:SRAM|VGA_B[6]~feeder                        ; 1                 ; 6       ;
-; SRAM_DQ[15]                                                    ;                   ;         ;
-;      - framebuffer:SRAM|VGA_B[7]~feeder                        ; 0                 ; 6       ;
-; BOARD_CLK                                                      ;                   ;         ;
-; SW[0]                                                          ;                   ;         ;
-;      - rasterizer:tiledRasterizer|cBufferTile1[1][1][0]        ; 1                 ; 6       ;
-;      - rasterizer:tiledRasterizer|cBufferTile0[0][1][0]        ; 1                 ; 6       ;
-; SW[1]                                                          ;                   ;         ;
-;      - rasterizer:tiledRasterizer|cBufferTile1[1][1][1]~feeder ; 1                 ; 6       ;
-;      - rasterizer:tiledRasterizer|cBufferTile0[0][1][1]~feeder ; 1                 ; 6       ;
-; SW[2]                                                          ;                   ;         ;
-;      - rasterizer:tiledRasterizer|cBufferTile1[1][1][2]        ; 1                 ; 6       ;
-;      - rasterizer:tiledRasterizer|cBufferTile0[0][1][2]~feeder ; 1                 ; 6       ;
-; SW[3]                                                          ;                   ;         ;
-;      - rasterizer:tiledRasterizer|cBufferTile1[1][1][3]        ; 1                 ; 6       ;
-;      - rasterizer:tiledRasterizer|cBufferTile0[0][1][3]        ; 1                 ; 6       ;
-; SW[4]                                                          ;                   ;         ;
-;      - rasterizer:tiledRasterizer|cBufferTile1[1][1][4]        ; 0                 ; 6       ;
-;      - rasterizer:tiledRasterizer|cBufferTile0[0][1][4]        ; 0                 ; 6       ;
-; SW[5]                                                          ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~0                       ; 1                 ; 6       ;
-; SW[6]                                                          ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~2                       ; 0                 ; 6       ;
-; SW[7]                                                          ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~4                       ; 0                 ; 6       ;
-; SW[8]                                                          ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~6                       ; 0                 ; 6       ;
-; SW[9]                                                          ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~8                       ; 1                 ; 6       ;
-; SW[10]                                                         ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~10                      ; 0                 ; 6       ;
-; SW[11]                                                         ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~12                      ; 1                 ; 6       ;
-; SW[12]                                                         ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~14                      ; 0                 ; 6       ;
-; SW[13]                                                         ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~16                      ; 0                 ; 6       ;
-; SW[14]                                                         ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~18                      ; 0                 ; 6       ;
-; SW[15]                                                         ;                   ;         ;
-;      - rasterizer:tiledRasterizer|Add0~20                      ; 0                 ; 6       ;
-+----------------------------------------------------------------+-------------------+---------+
++-----------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                        ;
++-----------------------------------------+-------------------+---------+
+; Source Pin / Fanout                     ; Pad To Core Index ; Setting ;
++-----------------------------------------+-------------------+---------+
+; KEY[1]                                  ;                   ;         ;
+; KEY[2]                                  ;                   ;         ;
+; KEY[3]                                  ;                   ;         ;
+; SW[0]                                   ;                   ;         ;
+; SW[1]                                   ;                   ;         ;
+; SW[2]                                   ;                   ;         ;
+; SW[3]                                   ;                   ;         ;
+; SW[4]                                   ;                   ;         ;
+; SW[5]                                   ;                   ;         ;
+; SW[6]                                   ;                   ;         ;
+; SW[7]                                   ;                   ;         ;
+; SW[8]                                   ;                   ;         ;
+; SW[9]                                   ;                   ;         ;
+; SW[10]                                  ;                   ;         ;
+; SW[11]                                  ;                   ;         ;
+; SW[12]                                  ;                   ;         ;
+; SW[13]                                  ;                   ;         ;
+; SW[14]                                  ;                   ;         ;
+; SW[15]                                  ;                   ;         ;
+; SW[16]                                  ;                   ;         ;
+; SW[17]                                  ;                   ;         ;
+; KEY[0]                                  ;                   ;         ;
+; SRAM_DQ[0]                              ;                   ;         ;
+;      - framebuffer:SRAM|VGA_R[3]~feeder ; 1                 ; 6       ;
+; SRAM_DQ[1]                              ;                   ;         ;
+;      - framebuffer:SRAM|VGA_R[4]~feeder ; 0                 ; 6       ;
+; SRAM_DQ[2]                              ;                   ;         ;
+;      - framebuffer:SRAM|VGA_R[5]        ; 0                 ; 6       ;
+; SRAM_DQ[3]                              ;                   ;         ;
+;      - framebuffer:SRAM|VGA_R[6]        ; 0                 ; 6       ;
+; SRAM_DQ[4]                              ;                   ;         ;
+;      - framebuffer:SRAM|VGA_R[7]~feeder ; 0                 ; 6       ;
+; SRAM_DQ[5]                              ;                   ;         ;
+;      - framebuffer:SRAM|VGA_G[2]~feeder ; 1                 ; 6       ;
+; SRAM_DQ[6]                              ;                   ;         ;
+;      - framebuffer:SRAM|VGA_G[3]~feeder ; 0                 ; 6       ;
+; SRAM_DQ[7]                              ;                   ;         ;
+;      - framebuffer:SRAM|VGA_G[4]        ; 0                 ; 6       ;
+; SRAM_DQ[8]                              ;                   ;         ;
+;      - framebuffer:SRAM|VGA_G[5]~feeder ; 0                 ; 6       ;
+; SRAM_DQ[9]                              ;                   ;         ;
+;      - framebuffer:SRAM|VGA_G[6]        ; 0                 ; 6       ;
+; SRAM_DQ[10]                             ;                   ;         ;
+;      - framebuffer:SRAM|VGA_G[7]        ; 0                 ; 6       ;
+; SRAM_DQ[11]                             ;                   ;         ;
+;      - framebuffer:SRAM|VGA_B[3]~feeder ; 0                 ; 6       ;
+; SRAM_DQ[12]                             ;                   ;         ;
+;      - framebuffer:SRAM|VGA_B[4]~feeder ; 0                 ; 6       ;
+; SRAM_DQ[13]                             ;                   ;         ;
+;      - framebuffer:SRAM|VGA_B[5]        ; 1                 ; 6       ;
+; SRAM_DQ[14]                             ;                   ;         ;
+;      - framebuffer:SRAM|VGA_B[6]~feeder ; 0                 ; 6       ;
+; SRAM_DQ[15]                             ;                   ;         ;
+;      - framebuffer:SRAM|VGA_B[7]        ; 0                 ; 6       ;
+; BOARD_CLK                               ;                   ;         ;
++-----------------------------------------+-------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2266,20 +2246,150 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                  ; Location           ; Fan-Out ; Usage                       ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------------------------+--------------------+---------+-----------------------------+--------+----------------------+------------------+---------------------------+
 ; BOARD_CLK                                                                             ; PIN_Y2             ; 2       ; Clock                       ; no     ; --                   ; --               ; --                        ;
-; BOARD_CLK                                                                             ; PIN_Y2             ; 148     ; Clock                       ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; LessThan0~1                                                                           ; LCCOMB_X42_Y13_N16 ; 12      ; Sync. clear                 ; no     ; --                   ; --               ; --                        ;
-; framebuffer:SRAM|Equal1~2                                                             ; LCCOMB_X35_Y14_N30 ; 11      ; Sync. clear                 ; no     ; --                   ; --               ; --                        ;
-; framebuffer:SRAM|SRAM_ADDR[5]~16                                                      ; LCCOMB_X32_Y13_N6  ; 20      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
-; framebuffer:SRAM|SRAM_WE_N                                                            ; FF_X32_Y13_N21     ; 34      ; Clock enable, Output enable ; no     ; --                   ; --               ; --                        ;
-; framebuffer:SRAM|always0~1                                                            ; LCCOMB_X36_Y13_N6  ; 16      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
-; framebuffer:SRAM|nextTilePointerX~6                                                   ; LCCOMB_X34_Y13_N14 ; 8       ; Sync. load                  ; no     ; --                   ; --               ; --                        ;
-; framebuffer:SRAM|state.feedingVGA                                                     ; FF_X33_Y14_N9      ; 37      ; Clock enable, Sync. load    ; no     ; --                   ; --               ; --                        ;
-; framebuffer:SRAM|tileOffsetX[5]~0                                                     ; LCCOMB_X36_Y13_N26 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
-; framebuffer:SRAM|tilePointerY[0]~10                                                   ; LCCOMB_X36_Y13_N4  ; 8       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; BOARD_CLK                                                                             ; PIN_Y2             ; 911     ; Clock                       ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; LessThan0~2                                                                           ; LCCOMB_X50_Y28_N0  ; 9       ; Sync. clear                 ; no     ; --                   ; --               ; --                        ;
+; always1~2                                                                             ; LCCOMB_X50_Y30_N2  ; 8       ; Sync. clear                 ; no     ; --                   ; --               ; --                        ;
+; framebuffer:SRAM|Equal1~2                                                             ; LCCOMB_X48_Y29_N12 ; 11      ; Sync. clear                 ; no     ; --                   ; --               ; --                        ;
+; framebuffer:SRAM|SRAM_ADDR[10]~16                                                     ; LCCOMB_X46_Y25_N12 ; 20      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; framebuffer:SRAM|SRAM_WE_N                                                            ; FF_X46_Y25_N25     ; 34      ; Clock enable, Output enable ; no     ; --                   ; --               ; --                        ;
+; framebuffer:SRAM|always0~1                                                            ; LCCOMB_X48_Y28_N28 ; 16      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; framebuffer:SRAM|nextTilePointerX~6                                                   ; LCCOMB_X48_Y28_N0  ; 8       ; Sync. load                  ; no     ; --                   ; --               ; --                        ;
+; framebuffer:SRAM|state.feedingVGA                                                     ; FF_X48_Y29_N7      ; 37      ; Clock enable, Sync. load    ; no     ; --                   ; --               ; --                        ;
+; framebuffer:SRAM|tileOffsetX[3]~0                                                     ; LCCOMB_X48_Y29_N14 ; 14      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; framebuffer:SRAM|tilePointerY[0]~10                                                   ; LCCOMB_X48_Y28_N26 ; 8       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
 ; mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated|wire_pll1_clk[1] ; PLL_1              ; 24      ; Clock                       ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; rasterTileID                                                                          ; FF_X43_Y13_N27     ; 35      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
-; rasteryOffset[9]~0                                                                    ; LCCOMB_X42_Y13_N30 ; 5       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
-; state.moveTile                                                                        ; FF_X36_Y14_N13     ; 22      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterTileID                                                                          ; FF_X50_Y29_N9      ; 26      ; Sync. load                  ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|LessThan2~1                            ; LCCOMB_X62_Y27_N26 ; 18      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[0][0][0]~0                ; LCCOMB_X60_Y29_N10 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[0][1][0]~0                ; LCCOMB_X60_Y29_N8  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[0][2][0]~0                ; LCCOMB_X57_Y31_N28 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[0][3][0]~0                ; LCCOMB_X60_Y29_N0  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[0][4][0]~0                ; LCCOMB_X62_Y31_N4  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[0][5][0]~1                ; LCCOMB_X60_Y29_N4  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[0][6][0]~0                ; LCCOMB_X62_Y31_N14 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[0][7][0]~0                ; LCCOMB_X65_Y31_N14 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[1][0][0]~0                ; LCCOMB_X60_Y29_N6  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[1][1][0]~0                ; LCCOMB_X55_Y31_N16 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[1][2][0]~0                ; LCCOMB_X60_Y29_N14 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[1][3][0]~0                ; LCCOMB_X58_Y31_N4  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[1][4][0]~1                ; LCCOMB_X63_Y30_N14 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[1][5][0]~0                ; LCCOMB_X61_Y31_N4  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[1][6][0]~0                ; LCCOMB_X60_Y29_N30 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[1][7][0]~0                ; LCCOMB_X60_Y27_N28 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[2][0][0]~0                ; LCCOMB_X61_Y34_N30 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[2][1][0]~0                ; LCCOMB_X61_Y34_N20 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[2][2][0]~0                ; LCCOMB_X57_Y31_N18 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[2][3][0]~0                ; LCCOMB_X65_Y35_N30 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[2][4][0]~0                ; LCCOMB_X61_Y34_N18 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[2][5][0]~1                ; LCCOMB_X57_Y31_N16 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[2][6][0]~0                ; LCCOMB_X60_Y30_N30 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[2][7][0]~0                ; LCCOMB_X62_Y33_N6  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[3][0][0]~0                ; LCCOMB_X59_Y29_N4  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[3][1][0]~0                ; LCCOMB_X57_Y30_N22 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[3][2][0]~0                ; LCCOMB_X59_Y29_N24 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[3][3][0]~0                ; LCCOMB_X59_Y29_N10 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[3][4][0]~1                ; LCCOMB_X59_Y29_N12 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[3][5][0]~0                ; LCCOMB_X59_Y29_N22 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[3][6][0]~0                ; LCCOMB_X62_Y30_N28 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[3][7][0]~0                ; LCCOMB_X60_Y26_N20 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[4][0][0]~0                ; LCCOMB_X57_Y33_N14 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[4][1][0]~0                ; LCCOMB_X60_Y29_N26 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[4][2][0]~0                ; LCCOMB_X55_Y31_N6  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[4][3][0]~0                ; LCCOMB_X61_Y29_N24 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[4][4][0]~0                ; LCCOMB_X58_Y33_N4  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[4][5][0]~1                ; LCCOMB_X56_Y33_N4  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[4][6][0]~0                ; LCCOMB_X58_Y33_N22 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[4][7][0]~0                ; LCCOMB_X63_Y31_N30 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[5][0][0]~0                ; LCCOMB_X59_Y35_N12 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[5][1][0]~0                ; LCCOMB_X60_Y29_N12 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[5][2][0]~0                ; LCCOMB_X59_Y35_N0  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[5][3][0]~0                ; LCCOMB_X59_Y35_N26 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[5][4][0]~1                ; LCCOMB_X58_Y32_N4  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[5][5][0]~0                ; LCCOMB_X59_Y35_N30 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[5][6][0]~0                ; LCCOMB_X58_Y32_N30 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[5][7][0]~0                ; LCCOMB_X60_Y29_N20 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[6][0][0]~0                ; LCCOMB_X61_Y29_N18 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[6][1][0]~0                ; LCCOMB_X60_Y33_N14 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[6][2][0]~0                ; LCCOMB_X56_Y35_N2  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[6][3][0]~0                ; LCCOMB_X63_Y35_N14 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[6][4][0]~0                ; LCCOMB_X55_Y34_N20 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[6][5][0]~1                ; LCCOMB_X63_Y34_N12 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[6][6][0]~0                ; LCCOMB_X61_Y29_N10 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[6][7][0]~0                ; LCCOMB_X61_Y29_N30 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[7][0][0]~0                ; LCCOMB_X61_Y35_N14 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[7][1][0]~0                ; LCCOMB_X61_Y29_N12 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[7][2][0]~0                ; LCCOMB_X61_Y35_N2  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[7][3][0]~0                ; LCCOMB_X61_Y35_N4  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[7][4][0]~1                ; LCCOMB_X61_Y35_N30 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[7][5][0]~0                ; LCCOMB_X61_Y35_N24 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[7][6][0]~0                ; LCCOMB_X61_Y29_N8  ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile0[7][7][0]~0                ; LCCOMB_X61_Y29_N28 ; 10      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[0][0][0]~0                ; LCCOMB_X55_Y28_N14 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[0][1][0]~0                ; LCCOMB_X57_Y28_N14 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[0][2][0]~0                ; LCCOMB_X55_Y28_N28 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[0][3][0]~0                ; LCCOMB_X55_Y28_N20 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[0][4][0]~0                ; LCCOMB_X55_Y28_N26 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[0][5][0]~1                ; LCCOMB_X55_Y28_N30 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[0][6][0]~0                ; LCCOMB_X55_Y28_N16 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[0][7][0]~0                ; LCCOMB_X55_Y28_N8  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[1][0][0]~0                ; LCCOMB_X57_Y28_N26 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[1][1][0]~0                ; LCCOMB_X57_Y28_N28 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[1][2][0]~0                ; LCCOMB_X57_Y28_N8  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[1][3][0]~0                ; LCCOMB_X57_Y28_N16 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[1][4][0]~1                ; LCCOMB_X61_Y28_N28 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[1][5][0]~0                ; LCCOMB_X57_Y28_N10 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[1][6][0]~0                ; LCCOMB_X57_Y28_N4  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[1][7][0]~0                ; LCCOMB_X57_Y28_N6  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[2][0][0]~0                ; LCCOMB_X59_Y27_N26 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[2][1][0]~0                ; LCCOMB_X60_Y26_N30 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[2][2][0]~0                ; LCCOMB_X59_Y27_N0  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[2][3][0]~0                ; LCCOMB_X59_Y27_N2  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[2][4][0]~0                ; LCCOMB_X59_Y27_N22 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[2][5][0]~1                ; LCCOMB_X60_Y26_N12 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[2][6][0]~0                ; LCCOMB_X59_Y27_N28 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[2][7][0]~0                ; LCCOMB_X59_Y27_N4  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[3][0][0]~0                ; LCCOMB_X59_Y27_N8  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[3][1][0]~0                ; LCCOMB_X60_Y26_N10 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[3][2][0]~0                ; LCCOMB_X58_Y25_N16 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[3][3][0]~0                ; LCCOMB_X60_Y27_N8  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[3][4][0]~1                ; LCCOMB_X60_Y26_N24 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[3][5][0]~0                ; LCCOMB_X60_Y26_N8  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[3][6][0]~0                ; LCCOMB_X60_Y26_N26 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[3][7][0]~0                ; LCCOMB_X60_Y27_N2  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[4][0][0]~0                ; LCCOMB_X55_Y26_N28 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[4][1][0]~0                ; LCCOMB_X54_Y26_N6  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[4][2][0]~0                ; LCCOMB_X54_Y29_N26 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[4][3][0]~0                ; LCCOMB_X55_Y25_N8  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[4][4][0]~0                ; LCCOMB_X54_Y29_N0  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[4][5][0]~1                ; LCCOMB_X54_Y26_N12 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[4][6][0]~0                ; LCCOMB_X55_Y26_N22 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[4][7][0]~0                ; LCCOMB_X55_Y29_N24 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[5][0][0]~0                ; LCCOMB_X56_Y26_N8  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[5][1][0]~0                ; LCCOMB_X56_Y26_N26 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[5][2][0]~0                ; LCCOMB_X55_Y28_N0  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[5][3][0]~0                ; LCCOMB_X58_Y25_N14 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[5][4][0]~1                ; LCCOMB_X55_Y27_N24 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[5][5][0]~0                ; LCCOMB_X55_Y27_N10 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[5][6][0]~0                ; LCCOMB_X55_Y25_N26 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[5][7][0]~0                ; LCCOMB_X55_Y28_N10 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[6][0][0]~0                ; LCCOMB_X54_Y26_N0  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[6][1][0]~0                ; LCCOMB_X57_Y28_N24 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[6][2][0]~0                ; LCCOMB_X54_Y29_N20 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[6][3][0]~0                ; LCCOMB_X55_Y26_N16 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[6][4][0]~0                ; LCCOMB_X57_Y29_N8  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[6][5][0]~1                ; LCCOMB_X57_Y29_N14 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[6][6][0]~0                ; LCCOMB_X55_Y25_N12 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[6][7][0]~0                ; LCCOMB_X60_Y29_N18 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[7][0][0]~0                ; LCCOMB_X54_Y26_N14 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[7][1][0]~0                ; LCCOMB_X54_Y26_N26 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[7][2][0]~0                ; LCCOMB_X54_Y26_N10 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[7][3][0]~0                ; LCCOMB_X54_Y26_N28 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[7][4][0]~1                ; LCCOMB_X54_Y26_N8  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[7][5][0]~0                ; LCCOMB_X55_Y28_N2  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[7][6][0]~0                ; LCCOMB_X54_Y26_N4  ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|cBufferTile1[7][7][0]~0                ; LCCOMB_X54_Y26_N30 ; 2       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; rasteryOffset[3]~10                                                                   ; LCCOMB_X49_Y28_N28 ; 7       ; Clock enable                ; no     ; --                   ; --               ; --                        ;
+; state.moveTile                                                                        ; FF_X50_Y30_N15     ; 36      ; Clock enable                ; no     ; --                   ; --               ; --                        ;
 +---------------------------------------------------------------------------------------+--------------------+---------+-----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -2288,180 +2398,180 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                                                                  ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; BOARD_CLK                                                                             ; PIN_Y2   ; 148     ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; BOARD_CLK                                                                             ; PIN_Y2   ; 911     ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
 ; mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated|wire_pll1_clk[1] ; PLL_1    ; 24      ; 0                                    ; Global Clock         ; GCLK3            ; --                        ;
 +---------------------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------+
-; Routing Usage Summary                           ;
-+-----------------------+-------------------------+
-; Routing Resource Type ; Usage                   ;
-+-----------------------+-------------------------+
-; Block interconnects   ; 425 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 101 / 10,120 ( < 1 % )  ;
-; C4 interconnects      ; 489 / 209,544 ( < 1 % ) ;
-; Direct links          ; 103 / 342,891 ( < 1 % ) ;
-; Global clocks         ; 2 / 20 ( 10 % )         ;
-; Local interconnects   ; 130 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 124 / 9,963 ( 1 % )     ;
-; R4 interconnects      ; 430 / 289,782 ( < 1 % ) ;
-+-----------------------+-------------------------+
-
-
-+----------------------------------------------------------------------------+
-; LAB Logic Elements                                                         ;
-+---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 10.87) ; Number of LABs  (Total = 30) ;
-+---------------------------------------------+------------------------------+
-; 1                                           ; 3                            ;
-; 2                                           ; 3                            ;
-; 3                                           ; 2                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 0                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 2                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 3                            ;
-; 16                                          ; 13                           ;
-+---------------------------------------------+------------------------------+
-
-
-+-------------------------------------------------------------------+
-; LAB-wide Signals                                                  ;
-+------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.47) ; Number of LABs  (Total = 30) ;
-+------------------------------------+------------------------------+
-; 1 Clock                            ; 24                           ;
-; 1 Clock enable                     ; 14                           ;
-; 1 Sync. clear                      ; 2                            ;
-; 1 Sync. load                       ; 2                            ;
-; 2 Clock enables                    ; 2                            ;
-+------------------------------------+------------------------------+
++---------------------------------------------------+
+; Routing Usage Summary                             ;
++-----------------------+---------------------------+
+; Routing Resource Type ; Usage                     ;
++-----------------------+---------------------------+
+; Block interconnects   ; 2,229 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 109 / 10,120 ( 1 % )      ;
+; C4 interconnects      ; 1,443 / 209,544 ( < 1 % ) ;
+; Direct links          ; 218 / 342,891 ( < 1 % )   ;
+; Global clocks         ; 2 / 20 ( 10 % )           ;
+; Local interconnects   ; 440 / 119,088 ( < 1 % )   ;
+; R24 interconnects     ; 97 / 9,963 ( < 1 % )      ;
+; R4 interconnects      ; 1,375 / 289,782 ( < 1 % ) ;
++-----------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------+
-; LAB Signals Sourced                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.13) ; Number of LABs  (Total = 30) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 2                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 3                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 2                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 2                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 2                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 5                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 1                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 2                            ;
-; 32                                           ; 1                            ;
-+----------------------------------------------+------------------------------+
+; LAB Logic Elements                                                          ;
++---------------------------------------------+-------------------------------+
+; Number of Logic Elements  (Average = 11.18) ; Number of LABs  (Total = 126) ;
++---------------------------------------------+-------------------------------+
+; 1                                           ; 6                             ;
+; 2                                           ; 6                             ;
+; 3                                           ; 5                             ;
+; 4                                           ; 12                            ;
+; 5                                           ; 5                             ;
+; 6                                           ; 3                             ;
+; 7                                           ; 4                             ;
+; 8                                           ; 0                             ;
+; 9                                           ; 1                             ;
+; 10                                          ; 4                             ;
+; 11                                          ; 4                             ;
+; 12                                          ; 1                             ;
+; 13                                          ; 6                             ;
+; 14                                          ; 8                             ;
+; 15                                          ; 14                            ;
+; 16                                          ; 47                            ;
++---------------------------------------------+-------------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                        ;
-+-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.30) ; Number of LABs  (Total = 30) ;
-+-------------------------------------------------+------------------------------+
-; 0                                               ; 0                            ;
-; 1                                               ; 4                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 1                            ;
-; 5                                               ; 0                            ;
-; 6                                               ; 0                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 3                            ;
-; 9                                               ; 4                            ;
-; 10                                              ; 2                            ;
-; 11                                              ; 0                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 1                            ;
-; 14                                              ; 2                            ;
-; 15                                              ; 3                            ;
-; 16                                              ; 3                            ;
-; 17                                              ; 1                            ;
-; 18                                              ; 0                            ;
-; 19                                              ; 0                            ;
-; 20                                              ; 0                            ;
-; 21                                              ; 0                            ;
-; 22                                              ; 0                            ;
-; 23                                              ; 1                            ;
-+-------------------------------------------------+------------------------------+
++--------------------------------------------------------------------+
+; LAB-wide Signals                                                   ;
++------------------------------------+-------------------------------+
+; LAB-wide Signals  (Average = 1.69) ; Number of LABs  (Total = 126) ;
++------------------------------------+-------------------------------+
+; 1 Clock                            ; 121                           ;
+; 1 Clock enable                     ; 39                            ;
+; 1 Sync. clear                      ; 1                             ;
+; 1 Sync. load                       ; 1                             ;
+; 2 Clock enables                    ; 51                            ;
++------------------------------------+-------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 11.03) ; Number of LABs  (Total = 30) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 3                            ;
-; 4                                            ; 3                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 2                            ;
-; 8                                            ; 3                            ;
-; 9                                            ; 3                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 1                            ;
-; 32                                           ; 0                            ;
-; 33                                           ; 0                            ;
-; 34                                           ; 0                            ;
-; 35                                           ; 0                            ;
-; 36                                           ; 1                            ;
-+----------------------------------------------+------------------------------+
++------------------------------------------------------------------------------+
+; LAB Signals Sourced                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Signals Sourced  (Average = 18.47) ; Number of LABs  (Total = 126) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 0                             ;
+; 2                                            ; 7                             ;
+; 3                                            ; 0                             ;
+; 4                                            ; 5                             ;
+; 5                                            ; 3                             ;
+; 6                                            ; 2                             ;
+; 7                                            ; 0                             ;
+; 8                                            ; 13                            ;
+; 9                                            ; 3                             ;
+; 10                                           ; 4                             ;
+; 11                                           ; 5                             ;
+; 12                                           ; 0                             ;
+; 13                                           ; 2                             ;
+; 14                                           ; 2                             ;
+; 15                                           ; 4                             ;
+; 16                                           ; 5                             ;
+; 17                                           ; 3                             ;
+; 18                                           ; 4                             ;
+; 19                                           ; 4                             ;
+; 20                                           ; 3                             ;
+; 21                                           ; 4                             ;
+; 22                                           ; 2                             ;
+; 23                                           ; 2                             ;
+; 24                                           ; 6                             ;
+; 25                                           ; 3                             ;
+; 26                                           ; 2                             ;
+; 27                                           ; 5                             ;
+; 28                                           ; 3                             ;
+; 29                                           ; 5                             ;
+; 30                                           ; 5                             ;
+; 31                                           ; 12                            ;
+; 32                                           ; 8                             ;
++----------------------------------------------+-------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                         ;
++-------------------------------------------------+-------------------------------+
+; Number of Signals Sourced Out  (Average = 8.57) ; Number of LABs  (Total = 126) ;
++-------------------------------------------------+-------------------------------+
+; 0                                               ; 0                             ;
+; 1                                               ; 6                             ;
+; 2                                               ; 8                             ;
+; 3                                               ; 22                            ;
+; 4                                               ; 7                             ;
+; 5                                               ; 7                             ;
+; 6                                               ; 3                             ;
+; 7                                               ; 2                             ;
+; 8                                               ; 5                             ;
+; 9                                               ; 4                             ;
+; 10                                              ; 3                             ;
+; 11                                              ; 12                            ;
+; 12                                              ; 7                             ;
+; 13                                              ; 15                            ;
+; 14                                              ; 11                            ;
+; 15                                              ; 8                             ;
+; 16                                              ; 3                             ;
+; 17                                              ; 0                             ;
+; 18                                              ; 2                             ;
+; 19                                              ; 0                             ;
+; 20                                              ; 0                             ;
+; 21                                              ; 0                             ;
+; 22                                              ; 1                             ;
++-------------------------------------------------+-------------------------------+
+
+
++------------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                          ;
++----------------------------------------------+-------------------------------+
+; Number of Distinct Inputs  (Average = 17.36) ; Number of LABs  (Total = 126) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 1                             ;
+; 2                                            ; 0                             ;
+; 3                                            ; 8                             ;
+; 4                                            ; 3                             ;
+; 5                                            ; 1                             ;
+; 6                                            ; 4                             ;
+; 7                                            ; 7                             ;
+; 8                                            ; 4                             ;
+; 9                                            ; 4                             ;
+; 10                                           ; 5                             ;
+; 11                                           ; 6                             ;
+; 12                                           ; 4                             ;
+; 13                                           ; 5                             ;
+; 14                                           ; 3                             ;
+; 15                                           ; 4                             ;
+; 16                                           ; 2                             ;
+; 17                                           ; 6                             ;
+; 18                                           ; 4                             ;
+; 19                                           ; 2                             ;
+; 20                                           ; 3                             ;
+; 21                                           ; 5                             ;
+; 22                                           ; 0                             ;
+; 23                                           ; 6                             ;
+; 24                                           ; 1                             ;
+; 25                                           ; 5                             ;
+; 26                                           ; 4                             ;
+; 27                                           ; 7                             ;
+; 28                                           ; 2                             ;
+; 29                                           ; 3                             ;
+; 30                                           ; 8                             ;
+; 31                                           ; 3                             ;
+; 32                                           ; 0                             ;
+; 33                                           ; 2                             ;
+; 34                                           ; 1                             ;
+; 35                                           ; 1                             ;
+; 36                                           ; 1                             ;
+; 37                                           ; 1                             ;
++----------------------------------------------+-------------------------------+
 
 
 +------------------------------------------+
@@ -2664,6 +2774,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; KEY[1]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[2]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[3]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[5]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[6]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[8]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[9]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[10]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[11]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[12]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[13]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[14]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SW[15]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[16]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SW[17]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2684,22 +2810,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SRAM_DQ[14]        ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SRAM_DQ[15]        ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; BOARD_CLK          ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[0]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[1]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[2]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[3]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[4]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[5]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[6]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[7]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[8]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[9]              ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[10]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[11]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[12]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[13]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[14]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; SW[15]             ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
 
@@ -2744,7 +2854,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; BOARD_CLK       ; BOARD_CLK            ; 76.8              ;
+; BOARD_CLK       ; BOARD_CLK            ; 74.0              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -2755,44 +2865,50 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------------------+----------------------------------------------+-------------------+
 ; Source Register                              ; Destination Register                         ; Delay Added in ns ;
 +----------------------------------------------+----------------------------------------------+-------------------+
-; VGA_controller:VGAtiming|h_counter[7]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 4.592             ;
-; VGA_controller:VGAtiming|h_counter[5]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 4.577             ;
-; VGA_controller:VGAtiming|v_counter[2]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 4.418             ;
-; VGA_controller:VGAtiming|h_counter[6]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 4.403             ;
-; VGA_controller:VGAtiming|v_counter[1]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 4.157             ;
-; VGA_controller:VGAtiming|h_counter[3]        ; framebuffer:SRAM|SRAM_ADDR[3]                ; 4.139             ;
-; VGA_controller:VGAtiming|h_counter[0]        ; framebuffer:SRAM|SRAM_ADDR[0]                ; 4.134             ;
-; VGA_controller:VGAtiming|h_counter[4]        ; framebuffer:SRAM|SRAM_ADDR[4]                ; 4.129             ;
-; VGA_controller:VGAtiming|h_counter[2]        ; framebuffer:SRAM|SRAM_ADDR[2]                ; 4.125             ;
-; VGA_controller:VGAtiming|h_counter[1]        ; framebuffer:SRAM|SRAM_ADDR[1]                ; 4.063             ;
-; VGA_controller:VGAtiming|v_counter[0]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 4.009             ;
-; VGA_controller:VGAtiming|VGA_BLANK_N         ; framebuffer:SRAM|state.feedingVGA            ; 3.649             ;
-; VGA_controller:VGAtiming|h_counter[8]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 3.428             ;
-; VGA_controller:VGAtiming|h_counter[9]        ; framebuffer:SRAM|SRAM_ADDR[9]                ; 3.253             ;
-; VGA_controller:VGAtiming|v_counter[9]        ; framebuffer:SRAM|SRAM_ADDR[19]               ; 3.112             ;
-; VGA_controller:VGAtiming|v_counter[8]        ; framebuffer:SRAM|SRAM_ADDR[19]               ; 3.110             ;
-; framebuffer:SRAM|tilePointerX[4]             ; framebuffer:SRAM|SRAM_ADDR[4]                ; 2.754             ;
-; framebuffer:SRAM|state.feedingVGA            ; framebuffer:SRAM|SRAM_ADDR[4]                ; 2.754             ;
-; VGA_controller:VGAtiming|v_counter[3]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 2.723             ;
-; framebuffer:SRAM|tilePointerX[3]             ; framebuffer:SRAM|SRAM_ADDR[3]                ; 2.688             ;
-; framebuffer:SRAM|tilePointerX[0]             ; framebuffer:SRAM|SRAM_ADDR[0]                ; 2.688             ;
-; framebuffer:SRAM|tilePointerX[2]             ; framebuffer:SRAM|SRAM_ADDR[2]                ; 2.686             ;
-; framebuffer:SRAM|tilePointerX[1]             ; framebuffer:SRAM|SRAM_ADDR[1]                ; 2.679             ;
-; VGA_controller:VGAtiming|v_counter[4]        ; framebuffer:SRAM|SRAM_ADDR[9]                ; 2.258             ;
-; VGA_controller:VGAtiming|v_counter[5]        ; framebuffer:SRAM|SRAM_ADDR[10]               ; 1.984             ;
-; VGA_controller:VGAtiming|v_counter[7]        ; framebuffer:SRAM|SRAM_ADDR[12]               ; 1.916             ;
-; VGA_controller:VGAtiming|v_counter[6]        ; framebuffer:SRAM|SRAM_ADDR[12]               ; 1.916             ;
-; rasteryOffset[5]                             ; state.endState                               ; 0.195             ;
-; rasterizer:tiledRasterizer|state.rasterizing ; rasterizer:tiledRasterizer|state.done        ; 0.195             ;
-; rasterTrigger                                ; rasterizer:tiledRasterizer|state.init        ; 0.180             ;
-; state.rasterTile                             ; rasterTrigger                                ; 0.172             ;
-; state.initState                              ; state.rasterTile                             ; 0.168             ;
-; framebuffer:SRAM|doneStreaming               ; state.moveTile                               ; 0.132             ;
+; VGA_controller:VGAtiming|h_counter[7]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 4.402             ;
+; VGA_controller:VGAtiming|h_counter[6]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 4.234             ;
+; VGA_controller:VGAtiming|h_counter[5]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 4.155             ;
+; VGA_controller:VGAtiming|v_counter[2]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 4.103             ;
+; VGA_controller:VGAtiming|h_counter[1]        ; framebuffer:SRAM|SRAM_ADDR[1]                ; 4.043             ;
+; VGA_controller:VGAtiming|h_counter[2]        ; framebuffer:SRAM|SRAM_ADDR[2]                ; 4.034             ;
+; VGA_controller:VGAtiming|h_counter[0]        ; framebuffer:SRAM|SRAM_ADDR[0]                ; 4.034             ;
+; VGA_controller:VGAtiming|v_counter[1]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 3.965             ;
+; VGA_controller:VGAtiming|h_counter[3]        ; framebuffer:SRAM|SRAM_ADDR[3]                ; 3.955             ;
+; VGA_controller:VGAtiming|h_counter[4]        ; framebuffer:SRAM|SRAM_ADDR[4]                ; 3.954             ;
+; VGA_controller:VGAtiming|v_counter[0]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 3.855             ;
+; VGA_controller:VGAtiming|VGA_BLANK_N         ; framebuffer:SRAM|state.feedingVGA            ; 3.606             ;
+; VGA_controller:VGAtiming|h_counter[8]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 3.233             ;
+; VGA_controller:VGAtiming|h_counter[9]        ; framebuffer:SRAM|SRAM_ADDR[9]                ; 3.226             ;
+; VGA_controller:VGAtiming|v_counter[9]        ; framebuffer:SRAM|SRAM_ADDR[19]               ; 2.866             ;
+; VGA_controller:VGAtiming|v_counter[8]        ; framebuffer:SRAM|SRAM_ADDR[19]               ; 2.856             ;
+; framebuffer:SRAM|state.feedingVGA            ; framebuffer:SRAM|state.feedingVGA            ; 2.741             ;
+; framebuffer:SRAM|tilePointerX[2]             ; framebuffer:SRAM|SRAM_ADDR[2]                ; 2.466             ;
+; framebuffer:SRAM|tilePointerX[0]             ; framebuffer:SRAM|SRAM_ADDR[0]                ; 2.464             ;
+; framebuffer:SRAM|tilePointerX[1]             ; framebuffer:SRAM|SRAM_ADDR[1]                ; 2.459             ;
+; framebuffer:SRAM|tileOffsetX[3]              ; framebuffer:SRAM|SRAM_ADDR[3]                ; 2.184             ;
+; framebuffer:SRAM|tilePointerX[3]             ; framebuffer:SRAM|SRAM_ADDR[3]                ; 2.184             ;
+; VGA_controller:VGAtiming|v_counter[3]        ; framebuffer:SRAM|SRAM_ADDR[8]                ; 2.180             ;
+; framebuffer:SRAM|tileOffsetX[4]              ; framebuffer:SRAM|SRAM_ADDR[4]                ; 2.055             ;
+; framebuffer:SRAM|tilePointerX[4]             ; framebuffer:SRAM|SRAM_ADDR[4]                ; 2.055             ;
+; VGA_controller:VGAtiming|v_counter[6]        ; framebuffer:SRAM|SRAM_ADDR[12]               ; 1.975             ;
+; VGA_controller:VGAtiming|v_counter[5]        ; framebuffer:SRAM|SRAM_ADDR[12]               ; 1.975             ;
+; VGA_controller:VGAtiming|v_counter[4]        ; framebuffer:SRAM|SRAM_ADDR[12]               ; 1.975             ;
+; VGA_controller:VGAtiming|v_counter[7]        ; framebuffer:SRAM|SRAM_ADDR[12]               ; 1.943             ;
+; rasterTrigger                                ; rasterizer:tiledRasterizer|state.rasterizing ; 0.195             ;
+; rasteryOffset[9]                             ; rasteryOffset[9]                             ; 0.194             ;
+; rasterxOffset[9]                             ; rasterxOffset[9]                             ; 0.194             ;
+; framebuffer:SRAM|tilePointerY[7]             ; framebuffer:SRAM|tilePointerY[7]             ; 0.194             ;
+; rasterizer:tiledRasterizer|state.rasterizing ; rasterizer:tiledRasterizer|state.init        ; 0.183             ;
+; state.rasterTile                             ; rasterTrigger                                ; 0.173             ;
+; state.initState                              ; state.rasterTile                             ; 0.172             ;
+; streamingTileID                              ; framebuffer:SRAM|DataToSRAM[11]              ; 0.171             ;
 ; rasterizer:tiledRasterizer|doneRasterizing   ; state.moveTile                               ; 0.129             ;
-; rasterizer:tiledRasterizer|state.init        ; rasterizer:tiledRasterizer|state.rasterizing ; 0.064             ;
-; lastDoneStreaming                            ; state.moveTile                               ; 0.064             ;
+; rasterizer:tiledRasterizer|state.init        ; rasterizer:tiledRasterizer|state.rasterizing ; 0.089             ;
+; state.moveTile                               ; state.rasterTile                             ; 0.088             ;
+; lastDoneStreaming                            ; state.moveTile                               ; 0.063             ;
+; rasteryOffset[4]                             ; streamingyOffset[4]                          ; 0.046             ;
 +----------------------------------------------+----------------------------------------------+-------------------+
-Note: This table only shows the top 36 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 42 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -3216,17 +3332,17 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X23_Y12 to location X33_Y23
+    Info (170196): Router estimated peak interconnect usage is 12% of the available device resources in the region that extends from location X58_Y24 to location X68_Y36
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.12 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 17 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin SRAM_DQ[0] uses I/O standard 3.3-V LVCMOS at AH3 File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 7
@@ -3248,10 +3364,10 @@ Warning (169177): 17 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin BOARD_CLK uses I/O standard 2.5 V at Y2 File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 20
 Info (144001): Generated suppressed messages file C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 374 warnings
-    Info: Peak virtual memory: 5745 megabytes
-    Info: Processing ended: Thu Nov 29 03:34:01 2018
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 5765 megabytes
+    Info: Processing ended: Thu Nov 29 05:18:30 2018
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +----------------------------+

@@ -1,7 +1,7 @@
 
 
 
-module Typhoon #(parameter tileDim = 8'd32)(
+module Typhoon #(parameter tileDim = 8'd8)(
 	
 	
 	inout wire[15:0] SRAM_DQ,
@@ -24,12 +24,12 @@ module Typhoon #(parameter tileDim = 8'd32)(
 	logic [15:0] dummyCounter = 0;
 	logic DataReady;
 	logic doneStreaming;
-	logic doneRasterizing;
+	logic doneRasterizing = 1;
 	//assign doneRasterizing = 1;
 	logic VGA_reset;
 	
-	(* ramstyle="M9K" *) reg [15:0] tileAinput [tileDim][tileDim]; /* synthesis ramstyle = M9K */
-	(* ramstyle="M9K" *) reg [15:0] tileBinput [tileDim][tileDim]; /* synthesis ramstyle = M9K */
+	reg [15:0] tileAinput [tileDim][tileDim];
+	reg [15:0] tileBinput [tileDim][tileDim];
 	
 	rasterizer #(tileDim) tiledRasterizer(.cBufferTile0(tileAinput),
 													  .cBufferTile1(tileBinput),
@@ -79,7 +79,7 @@ module Typhoon #(parameter tileDim = 8'd32)(
 		generate
 		for(x = 0; x < tileDim; x++) begin: fillX
 			for(y = 0; y < tileDim; y++) begin: fillY
-				debug_shader shader(.x(rasterxOffset), .pixel0(tileAinput[x][y]),.pixel1(tileBinput[x][y]), .rasterTile(rasterTileID), .*);
+				debug_shader #(x,y) shader(.screenx(rasterxOffset), .pixel0(tileAinput[x][y]),.pixel1(tileBinput[x][y]), .rasterTile(rasterTileID), .*);
 			end
 			
 		end
@@ -117,7 +117,7 @@ module Typhoon #(parameter tileDim = 8'd32)(
 		nextStreamingTileID = streamingTileID;
 		unique case(state)
 			initState: begin
-				
+				nextRasterTileID = 0;
 				nextState = rasterTile;
 			end
 			

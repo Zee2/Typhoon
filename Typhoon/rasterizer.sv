@@ -12,13 +12,16 @@ module rasterizer (
 
 parameter tileDim = 8'd8;
 parameter numPixelShaders = 8'd1;
+
+
 logic nextDoneRasterizing;
 logic[9:0] box [4];
-logic startShadersRasterizing; // To pixel shaders
+logic startShadersRasterizing;
+logic nextStartShadersRasterizing; // To pixel shaders
 logic shadersDoneRasterizing = 1; // From pixel shaders
 reg[15:0] zBufferTile [tileDim][tileDim];
 
-//pixel_shader #(tileDim, numPixelShaders) shader(.start_x(0), .start_y(0), .startRasterizing(startShadersRasterizing), .doneRasterizing(shadersDoneRasterizing), .*);
+pixel_shader #(tileDim, numPixelShaders) shader(.start_x(0), .start_y(0), .startRasterizing(startShadersRasterizing), .doneRasterizing(shadersDoneRasterizing), .*);
 //assign LEDR = state | (startRasterizing << 4);
 
 enum logic [4:0] {
@@ -31,11 +34,12 @@ enum logic [4:0] {
 always_ff @(posedge BOARD_CLK) begin
 	state <= nextState;
 	doneRasterizing <= nextDoneRasterizing;
+	startShadersRasterizing <= nextStartShadersRasterizing;
 	//doneRasterizing <= 1;
-	if(rasterTileID == 0)
-		cBufferTile0[0][1] <= SW + rasterxOffset;
-	else
-		cBufferTile1[1][1] <= SW + rasterxOffset;
+	//if(rasterTileID == 0)
+		//cBufferTile0[0][1] <= SW + rasterxOffset;
+	//else
+		//cBufferTile1[1][1] <= SW + rasterxOffset;
 end
 
 always_comb begin
@@ -44,10 +48,11 @@ always_comb begin
 			nextDoneRasterizing = 0;
 			nextState = startRasterizing ? rasterizing : init;
 			//nextState = rasterizing;
-			startShadersRasterizing = startRasterizing;
+			nextStartShadersRasterizing = 0;
 		end
 		
 		rasterizing: begin
+			nextStartShadersRasterizing = 1;
 			nextDoneRasterizing = 0;
 			if(shadersDoneRasterizing == 1) begin
 				nextState = done;
@@ -58,6 +63,7 @@ always_comb begin
 		end
 		
 		done: begin
+			nextStartShadersRasterizing = 0;
 			nextDoneRasterizing = 1;
 			nextState = startRasterizing ? done : init;
 		end
