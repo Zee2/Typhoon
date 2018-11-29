@@ -1,5 +1,5 @@
 Flow report for Typhoon
-Thu Nov 29 03:20:16 2018
+Thu Nov 29 03:34:09 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 29 03:20:16 2018       ;
+; Flow Status                        ; Successful - Thu Nov 29 03:34:09 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Typhoon                                     ;
 ; Top-level Entity Name              ; Typhoon                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 329 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 262 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 166 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 166                                         ;
+; Total logic elements               ; 326 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 267 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 171 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 171                                         ;
 ; Total pins                         ; 175 / 529 ( 33 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/29/2018 03:19:46 ;
+; Start date & time ; 11/29/2018 03:33:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Typhoon             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 105852884987815.154348318613128        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 105852884987815.154348401916624        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                              ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
@@ -108,10 +108,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4889 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:09     ; 1.0                     ; 5750 MB             ; 00:00:13                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4706 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4870 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4890 MB             ; 00:00:21                           ;
+; Fitter               ; 00:00:09     ; 1.0                     ; 5745 MB             ; 00:00:13                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4708 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4869 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4682 MB             ; 00:00:01                           ;
 ; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:39                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
