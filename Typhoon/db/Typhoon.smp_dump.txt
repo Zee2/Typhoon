@@ -1,9 +1,19 @@
 
-State Machine - |Typhoon|debugState
-Name debugState.bigwait debugState.check debugState.memFetchWait debugState.fetch debugState.store debugState.init 
-debugState.init 0 0 0 0 0 0 
-debugState.store 0 0 0 0 1 1 
-debugState.fetch 0 0 0 1 0 1 
-debugState.memFetchWait 0 0 1 0 0 1 
-debugState.check 0 1 0 0 0 1 
-debugState.bigwait 1 0 0 0 0 1 
+State Machine - |Typhoon|state
+Name state.endState state.moveTile state.rasterTile state.initState state.endState2 
+state.rasterTile 0 0 0 0 0 
+state.moveTile 0 1 1 0 0 
+state.endState 1 0 1 0 0 
+state.endState2 0 0 1 0 1 
+state.initState 0 0 1 1 0 
+
+State Machine - |Typhoon|framebuffer:SRAM|state
+Name state.feedingVGA 
+state.streaming 0 
+state.feedingVGA 1 
+
+State Machine - |Typhoon|rasterizer:tiledRasterizer|state
+Name state.init state.done state.rasterizing 
+state.init 0 0 0 
+state.rasterizing 1 0 1 
+state.done 1 1 0 

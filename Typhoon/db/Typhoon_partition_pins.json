@@ -88,18 +88,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDG[0]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDG[1]",
-					"strict" : false
-				},
-				{
-					"name" : "LEDG[2]",
-					"strict" : false
-				},
-				{
 					"name" : "LEDR[0]",
 					"strict" : false
 				},
@@ -108,59 +96,83 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[2]",
-					"strict" : false
-				},
-				{
 					"name" : "LEDR[3]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[4]",
+					"name" : "VGA_R[3]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[5]",
+					"name" : "VGA_R[4]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[6]",
+					"name" : "VGA_R[5]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[7]",
+					"name" : "VGA_R[6]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[8]",
+					"name" : "VGA_R[7]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[9]",
+					"name" : "VGA_G[2]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[10]",
+					"name" : "VGA_G[3]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[11]",
+					"name" : "VGA_G[4]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[12]",
+					"name" : "VGA_G[5]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[13]",
+					"name" : "VGA_G[6]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[14]",
+					"name" : "VGA_G[7]",
 					"strict" : false
 				},
 				{
-					"name" : "LEDR[15]",
+					"name" : "VGA_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_BLANK_N",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_HS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS",
 					"strict" : false
 				},
 				{
@@ -229,10 +241,6 @@
 				},
 				{
 					"name" : "BOARD_CLK",
-					"strict" : false
-				},
-				{
-					"name" : "KEY[0]",
 					"strict" : false
 				},
 				{

@@ -117,8 +117,8 @@ always_ff @(posedge SRAM_CLK) begin: mainblock
 		
 	end
 	
-	SRAM_ADDR <= FIFOaddr[override ? 0 : roundRobin][19:0]; // Assert 20-bit address on SRAM, always
-	if(FIFOaddr[override ? 0 : roundRobin][21] == 1  && ~controllerIdle) begin // It's a read request
+	SRAM_ADDR <= FIFOaddr[roundRobin][19:0]; // Assert 20-bit address on SRAM, always
+	if(FIFOaddr[roundRobin][21] == 1  && ~controllerIdle) begin // It's a read request
 		
 		lastOpRead <= 1; // So we fetch data next clock
 
@@ -129,15 +129,15 @@ always_ff @(posedge SRAM_CLK) begin: mainblock
 		if(~controllerIdle) begin
 			lastOpRead <= 0; // This op was not a read, so don't read next clock
 			
-			DQ_buffer <= FIFOdata[override ? 0 : roundRobin][15:0]; // Assert FIFO data on SRAM bus
+			DQ_buffer <= FIFOdata[roundRobin][15:0]; // Assert FIFO data on SRAM bus
 			
 			SRAM_WE_N <= 0; // Bring WE low to write
 		end
 	end
 
-	FIFOread[override ? 0 : roundRobin] <= 0;
+	FIFOread[roundRobin] <= 0;
 	
-	lastRoundRobin <= override ? 0 : roundRobin;
+	lastRoundRobin <= roundRobin;
 	
 	
 	roundRobin <= nextRoundRobin;
@@ -147,7 +147,7 @@ always_ff @(posedge SRAM_CLK) begin: mainblock
 	
 	if(controllerIdleNext == 0) begin
 		 // nextRoundRobin should indicate valid FIFO
-		FIFOread[nextOverride ? 0 : nextRoundRobin] <= 1;
+		FIFOread[nextRoundRobin] <= 1;
 	end
 	else begin 
 		//SRAM_OE_N <= 1;

@@ -13,8 +13,8 @@ module testbench();
 	wire[15:0] SRAM_DQ;
 	logic[19:0] SRAM_ADDR;
 	logic SRAM_UB_N, SRAM_LB_N, SRAM_CE_N, SRAM_OE_N, SRAM_WE_N;
-	
-	
+	logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7;
+	logic VGA_CLK, VGA_BLANK_N, VGA_SYNC_N, VGA_HS, VGA_VS;
 	Typhoon GPU(.*);
 	
 	always begin : BOARD_CLOCK_GENERATION

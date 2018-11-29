@@ -1,7 +1,7 @@
 
 
 
-module Typhoon #(parameter NUM_sHADER_CORES = 8)(
+module Typhoon #(parameter tileDim = 8'd32)(
 	
 	
 	inout wire[15:0] SRAM_DQ,
@@ -10,167 +10,177 @@ module Typhoon #(parameter NUM_sHADER_CORES = 8)(
 	output logic[7:0] LEDG,
 	output logic[17:0] LEDR,
 	output logic[7:0] VGA_R, VGA_G, VGA_B,
-	
+	output logic VGA_CLK, VGA_BLANK_N, VGA_SYNC_N, VGA_HS, VGA_VS,
+	output logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7,
 	input logic[3:0] KEY,
 	input logic[17:0] SW,
 	input logic BOARD_CLK
 	
 	
-	
 );
 
-
 	logic SRAM_CLK;
-	logic[15:0] DataToSRAM[NUM_sHADER_CORES];
-	logic[19:0] AddressToSRAM[NUM_sHADER_CORES];
-	logic [NUM_sHADER_CORES-1:0] QueueReadReq, QueueWriteReq;
-	logic [9:0] dummyCounter = 0;
-	logic [NUM_sHADER_CORES-1:0] DataReady;
+	logic QueueReadReq;
+	logic [15:0] dummyCounter = 0;
+	logic DataReady;
+	logic doneStreaming;
+	logic doneRasterizing;
+	//assign doneRasterizing = 1;
+	logic VGA_reset;
+	
+	(* ramstyle="M9K" *) reg [15:0] tileAinput [tileDim][tileDim]; /* synthesis ramstyle = M9K */
+	(* ramstyle="M9K" *) reg [15:0] tileBinput [tileDim][tileDim]; /* synthesis ramstyle = M9K */
+	
+	rasterizer #(tileDim) tiledRasterizer(.cBufferTile0(tileAinput),
+													  .cBufferTile1(tileBinput),
+													  .doneRasterizing(doneRasterizing),
+													  .startRasterizing(rasterTrigger),
+													  .*);
+	
+	logic rasterTrigger = 0;
+	logic nextRasterTrigger = 0;
+	
+	logic[19:0] WriteAddress;
+	logic[19:0] ReadAddress;
+	
+	logic[9:0] streamingxOffset = 0, streamingyOffset = 0;
+	logic[9:0] nextStreamingxOffset = 0, nextStreamingyOffset = 0;
+	logic[9:0] rasterxOffset = 0, rasteryOffset = 0;
+	logic[9:0] nextRasterxOffset, nextRasteryOffset;
+	
+	//debug
+	logic lastDoneStreaming = 0;
+	
+	logic streamTileTrigger = 0;
+	logic nextStreamTileTrigger = 0;
 	
 	logic isDoubleBuffering;
 	
-	logic[15:0] DataFromSRAM[NUM_sHADER_CORES];
+	logic rasterTileID = 0;
+	logic nextRasterTileID = 0;
+	
+	logic streamingTileID = 0;
+	logic nextStreamingTileID = 0;
+	
+	logic[15:0] DataFromSRAM;
 
 	enum logic [7:0] {
-		init = 8'd0,
-		store = 8'd1,
-		fetch = 8'd2,
-		memFetchWait = 8'd3,
-		check = 8'd4,
-		bigwait = 8'd5
-	} debugState = init, nextState = init;
+		initState = 8'd8,
+		rasterTile = 8'd1,
+		moveTile = 8'd2,
+		endState = 8'd3,
+		endState2 = 8'd4
+	} state = initState, nextState = initState;
 	
-	assign LEDG = debugState;
-	
+	assign LEDR = state;
+	/*
+	genvar x;
+		genvar y;
+		generate
+		for(x = 0; x < tileDim; x++) begin: fillX
+			for(y = 0; y < tileDim; y++) begin: fillY
+				debug_shader shader(.x(rasterxOffset), .pixel0(tileAinput[x][y]),.pixel1(tileBinput[x][y]), .rasterTile(rasterTileID), .*);
+			end
+			
+		end
+		
+		
+		endgenerate
+	*/
 	
 	always_ff @(posedge BOARD_CLK) begin
-		debugState <= nextState;
-		if(debugState == check)
-			LEDR <= DataFromSRAM[0];
-		//LEDR <= KEY;
 		dummyCounter <= dummyCounter + 1;
+		state <= nextState;
+		streamingxOffset <= nextStreamingxOffset;
+		streamingyOffset <= nextStreamingyOffset;
+		streamTileTrigger <= nextStreamTileTrigger;
+		rasterTileID <= nextRasterTileID;
+		rasterxOffset <= nextRasterxOffset;
+		rasteryOffset <= nextRasteryOffset;
+		
+		streamingTileID <= nextStreamingTileID;
+		rasterTrigger <= nextRasterTrigger;
+		
+		lastDoneStreaming <= doneStreaming;
 	end
 	
+	
 	always_comb begin
-		QueueReadReq[0] = 0;
-		QueueWriteReq[0] = 0;
-		
-		QueueWriteReq[1] = 0;
-		QueueReadReq[1] = 0;
-		
-		unique case(debugState)
-			init: begin
-				DataToSRAM[0] = 0;
-				AddressToSRAM[0] = 0;
-				QueueReadReq[0] = 0;
-				QueueWriteReq[0] = 0;
-				nextState = store;
+		nextRasterTileID = rasterTileID;
+		nextRasterxOffset = rasterxOffset;
+		nextRasteryOffset = rasteryOffset;
+		nextStreamingxOffset = streamingxOffset;
+		nextStreamingyOffset = streamingyOffset;
+		nextStreamTileTrigger = 1;
+		nextRasterTrigger = 0;
+		nextState = initState;
+		nextStreamingTileID = streamingTileID;
+		unique case(state)
+			initState: begin
+				
+				nextState = rasterTile;
 			end
 			
-			store: begin
-				DataToSRAM[0] = SW;
-				AddressToSRAM[0] = 20'h000f;
-				QueueWriteReq[0] = 1;
-				QueueReadReq[0] = 0;
-				
-				DataToSRAM[1] = 16'hbaba;
-				AddressToSRAM[1] = 20'h0f0f;
-				QueueWriteReq[1] = 0;
-				QueueReadReq[1] = 0;
-				
-				
-				nextState = bigwait;
-			end
-			
-			bigwait: begin
-				DataToSRAM[0] = 16'ha0a0;
-				AddressToSRAM[0] = 20'h00f0;
-				QueueWriteReq[0] = 0;
-				QueueReadReq[0] = 0;
-				
-				QueueWriteReq[1] = 0;
-				QueueReadReq[1] = 0;
-				
-				if(dummyCounter % 2 == 0)
-					nextState = fetch;
+			rasterTile: begin
+				//nextState = initState;
+				nextRasterTrigger = 1;
+				//if(doneStreaming == 1 && lastDoneStreaming != 1 && doneRasterizing == 1)
+				if(doneStreaming == 1 && lastDoneStreaming != 1 && doneRasterizing == 1)
+					nextState = moveTile;
 				else
-					nextState = bigwait;
-			
+					nextState = rasterTile;
+				
 			end
 			
-			
-			
-			fetch: begin
-				DataToSRAM[0] = 16'h0101;
-				AddressToSRAM[0] = KEY[0] ? 20'h000f : 20'hffff;
-				QueueWriteReq[0] = 0;
-				QueueReadReq[0] = 1;
+			moveTile: begin
+				nextRasterTrigger = 0;
+				nextStreamingxOffset = rasterxOffset; // Set streaming offset to last rasterized tile offset
+				nextStreamingyOffset = rasteryOffset;
+				nextStreamTileTrigger = 1;
+				nextStreamingTileID = rasterTileID;
+				nextRasterTileID = ~rasterTileID;
+				if((10'd640-rasterxOffset + tileDim) < 2*tileDim && (10'd480 - rasteryOffset) < tileDim) begin // at bottom right corner
+					nextRasterxOffset = 0;
+					nextRasteryOffset = 0;
+					nextState = endState;
+				end
+				else
+				if((10'd640 - rasterxOffset + tileDim) < 2*tileDim) begin // at right edge
+					nextRasterxOffset = 0;
+					nextRasteryOffset = rasteryOffset + tileDim;
+					nextState = rasterTile;
+				end
+				else begin
 				
-				DataToSRAM[1] = 16'hffff;
-				AddressToSRAM[1] = 20'h000f;
-				QueueWriteReq[1] = 0;
-				QueueReadReq[1] = 1;
-				
-				nextState = memFetchWait;
-			
-			end
-			
-			memFetchWait: begin
-				
-				DataToSRAM[0] = 16'heeee;
-				AddressToSRAM[0] = 20'h00f0;
-				QueueReadReq[0] = 0;
-				QueueWriteReq[0] = 0;
-				
-				DataToSRAM[1] = 16'hfefe;
-				AddressToSRAM[1] = 20'h000f;
-				QueueWriteReq[1] = 0;
-				QueueReadReq[1] = 0;
-				
-				if(DataReady[0] == 1'b1) begin
-					nextState = check;
-				end else begin
-					nextState = memFetchWait;
+					nextRasterxOffset = rasterxOffset + tileDim; // in middle of screen somewhere
+					nextRasteryOffset = rasteryOffset;
+					nextState = rasterTile;
 				end
 			end
 			
-			check: begin
-				DataToSRAM[0] = 16'hafaf;
-				AddressToSRAM[0] = 20'h00f0;
-				QueueReadReq[0] = 0;
-				QueueWriteReq[0] = 0;
-				
-				QueueWriteReq[1] = 0;
-				QueueReadReq[1] = 0;
-				
-				if(KEY[0] == 0)
-					nextState = init;
-				else
-					nextState = init;
-
+			
+			endState: begin
+				nextState = initState;
+				//nextState = endState;
+			end
+			
+			endState2: begin
+				nextState = KEY[0] ? initState : endState2;
 			end
 			
 			default: begin
-				DataToSRAM[0] = 0;
-				AddressToSRAM[0] = 0;
-				QueueReadReq[0] = 0;
-				QueueWriteReq[0] = 0;
-				QueueWriteReq[1] = 0;
-				QueueReadReq[1] = 0;
-				nextState = init;
+			
 			end
 		
 		endcase
 	end
-
+	
 
 	// Various specced system clocks
 
-	logic VGA_CLK, SDRAM_CLK;
+	logic SDRAM_CLK;
 
 	// VGA timing signals
-	
-	logic VGA_reset, VGA_HS, VGA_VS, VGA_BLANK_N, VGA_SYNC_N;
 	
 	// VGA x-y scan coords, used for framebuffer polling
 	
@@ -187,15 +197,23 @@ module Typhoon #(parameter NUM_sHADER_CORES = 8)(
 								.VGA_SCAN_X(VGA_SCAN_X),
 								.VGA_SCAN_Y(VGA_SCAN_Y),
 								.doubleBuffer(isDoubleBuffering),
-								.framebufferData(DataFromSRAM[1]),
-								.dataReady(DataReady[1]),
-								.framebufferAddress(AddressToSRAM[1]),
-								.queueRead(QueueReadReq[1]),
+								.framebufferData(DataFromSRAM),
+								.dataReady(DataReady),
+								.framebufferAddress(ReadAddress),
+								.queueRead(QueueReadReq),
 								.R(VGA_R),
 								.G(VGA_G),
 								.B(VGA_B));
-								
 	*/
-	SRAM_controller #(NUM_sHADER_CORES) SRAM(.SRAM_DQ(SRAM_DQ), .*);
+	//assign VGA_R = -1;
+	//assign VGA_G = -1;
+	//assign VGA_B = -1;
+	
+	framebuffer #(tileDim) SRAM(.streamingTileID(streamingTileID), .xOffset(streamingxOffset), .yOffset(streamingyOffset), .SRAM_DQ(SRAM_DQ), .*);
+	
+	//HexDriver hex_driver3 (DataFromSRAM[1][15:12], HEX3);
+	//HexDriver hex_driver2 (DataFromSRAM[1][11:8], HEX2);
+	//HexDriver hex_driver1 (DataFromSRAM[1][7:4], HEX1);
+	//HexDriver hex_driver0 (DataFromSRAM[1][3:0], HEX0);
 
 endmodule
