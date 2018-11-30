@@ -6,10 +6,11 @@ module pixel_shader (
 	input reg[15:0] zBufferTile [tileDim][tileDim],
 	input logic[9:0] box [4], // x,y,w,h
 	input logic BOARD_CLK,
-	input [3:0] start_x, start_y,
+	input logic[9:0] rasterxOffset, rasteryOffset, // offset of tile we are rasterizing
+	input [9:0] start_x, start_y,
 	
 	input logic startRasterizing,
-	output logic doneRasterizing
+	output logic doneRasterizing = 0
 );
 
 parameter tileDim = 8'd8;
@@ -20,13 +21,28 @@ logic nextDoneRasterizing;
 logic[9:0] x_temp;
 logic[9:0] y_temp;
 
-logic [15:0] x = 0, y = 0, nextX = 0, nextY = 0;
+logic [9:0] x = 0, y = 0, nextX = 0, nextY = 0;
+
+
+enum logic [4:0]{
+
+	start,
+	chooseNextPixel,
+	done
+
+} state, nextState;
 
 always_ff @(posedge BOARD_CLK) begin
-	if(rasterTileID == 0)
-		cBufferTile0[x][y] <= x*3;
-	else
-		cBufferTile1[x][y] <= y*3;
+	if(x >= rasterxOffset && x < rasterxOffset+tileDim && y >= rasteryOffset && y < rasteryOffset+tileDim) begin
+		if(rasterTileID == 0)
+			cBufferTile0[x-rasterxOffset][y-rasteryOffset] <= SW;
+		else
+			cBufferTile1[x-rasterxOffset][y-rasteryOffset] <= SW;
+	end
+	
+		
+		
+	state <= nextState;
 	x <= nextX;
 	y <= nextY;
 	doneRasterizing <= nextDoneRasterizing;
@@ -44,14 +60,65 @@ always_comb begin
 	*/
 	
 	x_temp = x+numPixelShaders;
-	y_temp = x_temp >= tileDim ? y + 1 : y;
+	if(x_temp >= box[2] || x_temp >= rasterxOffset + tileDim) begin
+		y_temp = y+1;
+	end
+	else begin
+		y_temp = y;
+	end
 	
-	if(x_temp >= tileDim && y_temp >= tileDim) begin
-		nextX = 0;
-		nextY = 0;
+	unique case(state)
+	
+		start: begin
+			nextState = startRasterizing ? chooseNextPixel : start;
+			nextX = start_x;
+			nextY = start_y;
+			nextDoneRasterizing = 0;
+		end
+		
+		chooseNextPixel: begin
+			nextDoneRasterizing = 0;
+			if((x_temp >= box[2] || x_temp >= rasterxOffset + tileDim) && (y_temp >= box[3] || y_temp >= rasteryOffset + tileDim)) begin // Done with bounding box
+				nextX = start_x;
+				nextY = start_y;
+				nextState = done;
+			end	
+			else if(x_temp >= box[2] || x_temp >= rasterxOffset + tileDim) begin
+				nextX = start_x + x_temp - tileDim;
+				nextY = y+1;
+				nextState = chooseNextPixel;
+			end
+			else begin
+				nextX = x_temp;
+				nextY = y_temp;
+				nextState = chooseNextPixel;
+	
+			end
+		end
+		
+		done: begin
+			nextDoneRasterizing = 1;
+			nextState = start;
+			nextX = start_x;
+			nextY = start_y;
+		end
+		
+		default: begin
+			nextX = start_x;
+			nextY = start_y;
+			nextState = start;
+		end
+	
+	endcase
+	
+	
+	/*
+	if(x_temp >= box[2] && y_temp >= box[3]) begin
+		nextX = start_x;
+		nextY = start_y;
 		nextDoneRasterizing = 1;
 	end
-	else if(x_temp >= tileDim) begin
+	else if(x_temp >= box[2]) begin
 		nextX = x_temp - tileDim;
 		nextY = y+1;
 		nextDoneRasterizing = 0;
@@ -62,7 +129,7 @@ always_comb begin
 		nextDoneRasterizing = 0;
 	
 	end
-	
+	*/
 
 end
 

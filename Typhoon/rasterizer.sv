@@ -15,14 +15,25 @@ parameter numPixelShaders = 8'd1;
 
 
 logic nextDoneRasterizing;
-logic[9:0] box [4];
 logic startShadersRasterizing;
 logic nextStartShadersRasterizing; // To pixel shaders
 logic shadersDoneRasterizing = 1; // From pixel shaders
 reg[15:0] zBufferTile [tileDim][tileDim];
 
-pixel_shader #(tileDim, numPixelShaders) shader(.start_x(0), .start_y(0), .startRasterizing(startShadersRasterizing), .doneRasterizing(shadersDoneRasterizing), .*);
+pixel_shader #(tileDim, numPixelShaders) shader(.start_x(box[0]), .start_y(box[1]), .startRasterizing(startShadersRasterizing), .doneRasterizing(shadersDoneRasterizing), .*);
 //assign LEDR = state | (startRasterizing << 4);
+
+// Current polygon data cache
+
+// Bounding box
+logic[9:0] box [4]; // x,y,w,h
+logic[9:0] x1,y1,z1,x2,y2,z2,x3,y3,z3;
+
+assign box[0] = 100;
+assign box[1] = 100;
+assign box[2] = 50;
+assign box[3] = 50;
+
 
 enum logic [4:0] {
 	init = 5'd0,
