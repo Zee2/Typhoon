@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Typhoon
-Thu Nov 29 17:56:45 2018
+Fri Nov 30 03:11:34 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -13,32 +13,39 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |Typhoon|state
- 10. State Machine - |Typhoon|framebuffer:SRAM|state
- 11. State Machine - |Typhoon|rasterizer:tiledRasterizer|state
- 12. State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|state
- 13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
- 15. General Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Parameter Settings for User Entity Instance: Top-level Entity: |Typhoon
- 18. Parameter Settings for User Entity Instance: rasterizer:tiledRasterizer
- 19. Parameter Settings for User Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader
- 20. Parameter Settings for User Entity Instance: mem_clk:myTest|altpll:altpll_component
- 21. Parameter Settings for User Entity Instance: VGA_controller:VGAtiming
- 22. Parameter Settings for User Entity Instance: framebuffer:SRAM
- 23. Parameter Settings for Inferred Entity Instance: framebuffer:SRAM|lpm_mult:Mult0
- 24. Parameter Settings for Inferred Entity Instance: framebuffer:SRAM|lpm_mult:Mult1
- 25. altpll Parameter Settings by Entity Instance
- 26. lpm_mult Parameter Settings by Entity Instance
- 27. Port Connectivity Checks: "VGA_controller:VGAtiming"
- 28. Port Connectivity Checks: "mem_clk:myTest"
- 29. Port Connectivity Checks: "rasterizer:tiledRasterizer|pixel_shader:shader"
- 30. Post-Synthesis Netlist Statistics for Top Partition
- 31. Elapsed Time Per Partition
- 32. Analysis & Synthesis Messages
- 33. Analysis & Synthesis Suppressed Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |Typhoon|state
+ 11. State Machine - |Typhoon|framebuffer:SRAM|state
+ 12. State Machine - |Typhoon|rasterizer:tiledRasterizer|state
+ 13. State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|state
+ 14. Registers Removed During Synthesis
+ 15. Removed Registers Triggering Further Register Optimizations
+ 16. General Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Parameter Settings for User Entity Instance: Top-level Entity: |Typhoon
+ 19. Parameter Settings for User Entity Instance: rasterizer:tiledRasterizer
+ 20. Parameter Settings for User Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader
+ 21. Parameter Settings for User Entity Instance: mem_clk:myTest|altpll:altpll_component
+ 22. Parameter Settings for User Entity Instance: VGA_controller:VGAtiming
+ 23. Parameter Settings for User Entity Instance: framebuffer:SRAM
+ 24. Parameter Settings for Inferred Entity Instance: framebuffer:SRAM|lpm_mult:Mult0
+ 25. Parameter Settings for Inferred Entity Instance: framebuffer:SRAM|lpm_mult:Mult1
+ 26. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0
+ 27. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1
+ 28. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5
+ 29. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4
+ 30. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3
+ 31. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2
+ 32. altpll Parameter Settings by Entity Instance
+ 33. lpm_mult Parameter Settings by Entity Instance
+ 34. Port Connectivity Checks: "VGA_controller:VGAtiming"
+ 35. Port Connectivity Checks: "mem_clk:myTest"
+ 36. Port Connectivity Checks: "rasterizer:tiledRasterizer|pixel_shader:shader"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
+ 40. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -64,19 +71,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 29 17:56:45 2018       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 30 03:11:34 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Typhoon                                     ;
 ; Top-level Entity Name              ; Typhoon                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,982                                       ;
-;     Total combinational functions  ; 1,883                                       ;
-;     Dedicated logic registers      ; 2,224                                       ;
-; Total registers                    ; 2224                                        ;
+; Total logic elements               ; 4,173                                       ;
+;     Total combinational functions  ; 2,076                                       ;
+;     Dedicated logic registers      ; 2,234                                       ;
+; Total registers                    ; 2234                                        ;
 ; Total pins                         ; 175                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 8                                           ;
 ; Total PLLs                         ; 1                                           ;
 +------------------------------------+---------------------------------------------+
 
@@ -225,6 +232,9 @@ refer to the applicable agreement for further details.
 ; db/add_sub_ngh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_ngh.tdf           ;         ;
 ; db/add_sub_rgh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_rgh.tdf           ;         ;
 ; altshift.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altshift.tdf            ;         ;
+; db/add_sub_h9h.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_h9h.tdf           ;         ;
+; db/add_sub_fkh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_fkh.tdf           ;         ;
+; db/mult_aft.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mult_aft.tdf              ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
@@ -233,67 +243,109 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 3,982           ;
+; Estimated Total logic elements              ; 4,173           ;
 ;                                             ;                 ;
-; Total combinational functions               ; 1883            ;
+; Total combinational functions               ; 2076            ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 1571            ;
-;     -- 3 input functions                    ; 137             ;
-;     -- <=2 input functions                  ; 175             ;
+;     -- 4 input functions                    ; 1598            ;
+;     -- 3 input functions                    ; 246             ;
+;     -- <=2 input functions                  ; 232             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 1681            ;
-;     -- arithmetic mode                      ; 202             ;
+;     -- normal mode                          ; 1774            ;
+;     -- arithmetic mode                      ; 302             ;
 ;                                             ;                 ;
-; Total registers                             ; 2224            ;
-;     -- Dedicated logic registers            ; 2224            ;
+; Total registers                             ; 2234            ;
+;     -- Dedicated logic registers            ; 2234            ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
 ; I/O pins                                    ; 175             ;
 ;                                             ;                 ;
-; Embedded Multiplier 9-bit elements          ; 0               ;
+; Embedded Multiplier 9-bit elements          ; 8               ;
 ;                                             ;                 ;
 ; Total PLLs                                  ; 1               ;
 ;     -- PLLs                                 ; 1               ;
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; BOARD_CLK~input ;
-; Maximum fan-out                             ; 2202            ;
-; Total fan-out                               ; 13964           ;
-; Average fan-out                             ; 3.12            ;
+; Maximum fan-out                             ; 2212            ;
+; Total fan-out                               ; 14558           ;
+; Average fan-out                             ; 3.10            ;
 +---------------------------------------------+-----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                             ;
-+---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node                        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                              ; Entity Name    ; Library Name ;
-+---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |Typhoon                                          ; 1883 (52)           ; 2224 (37)                 ; 0           ; 0            ; 0       ; 0         ; 175  ; 0            ; |Typhoon                                                                                                                                         ; Typhoon        ; work         ;
-;    |VGA_controller:VGAtiming|                     ; 50 (50)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|VGA_controller:VGAtiming                                                                                                                ; VGA_controller ; work         ;
-;    |framebuffer:SRAM|                             ; 1509 (1449)         ; 87 (87)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM                                                                                                                        ; framebuffer    ; work         ;
-;       |lpm_mult:Mult0|                            ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0                                                                                                         ; lpm_mult       ; work         ;
-;          |multcore:mult_core|                     ; 31 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore       ; work         ;
-;             |mpar_add:padder|                     ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add       ; work         ;
-;                |lpm_add_sub:adder[0]|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub    ; work         ;
-;                   |add_sub_ngh:auto_generated|    ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated                      ; add_sub_ngh    ; work         ;
-;                |mpar_add:sub_par_add|             ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add       ; work         ;
-;                   |lpm_add_sub:adder[0]|          ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub    ; work         ;
-;                      |add_sub_rgh:auto_generated| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_rgh:auto_generated ; add_sub_rgh    ; work         ;
-;       |lpm_mult:Mult1|                            ; 29 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1                                                                                                         ; lpm_mult       ; work         ;
-;          |multcore:mult_core|                     ; 29 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core                                                                                      ; multcore       ; work         ;
-;             |mpar_add:padder|                     ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add       ; work         ;
-;                |lpm_add_sub:adder[0]|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub    ; work         ;
-;                   |add_sub_ngh:auto_generated|    ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated                      ; add_sub_ngh    ; work         ;
-;                |mpar_add:sub_par_add|             ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add       ; work         ;
-;                   |lpm_add_sub:adder[0]|          ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub    ; work         ;
-;                      |add_sub_rgh:auto_generated| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_rgh:auto_generated ; add_sub_rgh    ; work         ;
-;    |mem_clk:myTest|                               ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|mem_clk:myTest                                                                                                                          ; mem_clk        ; work         ;
-;       |altpll:altpll_component|                   ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|mem_clk:myTest|altpll:altpll_component                                                                                                  ; altpll         ; work         ;
-;          |mem_clk_altpll:auto_generated|          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated                                                                    ; mem_clk_altpll ; work         ;
-;    |rasterizer:tiledRasterizer|                   ; 272 (3)             ; 2077 (5)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer                                                                                                              ; rasterizer     ; work         ;
-;       |pixel_shader:shader|                       ; 269 (269)           ; 2072 (2072)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader                                                                                          ; pixel_shader   ; work         ;
-+---------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                              ;
++------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node                           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                            ; Entity Name    ; Library Name ;
++------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
+; |Typhoon                                             ; 2076 (55)           ; 2234 (38)                 ; 0           ; 8            ; 0       ; 4         ; 175  ; 0            ; |Typhoon                                                                                                                                                                       ; Typhoon        ; work         ;
+;    |VGA_controller:VGAtiming|                        ; 49 (49)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|VGA_controller:VGAtiming                                                                                                                                              ; VGA_controller ; work         ;
+;    |framebuffer:SRAM|                                ; 1540 (1480)         ; 87 (87)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM                                                                                                                                                      ; framebuffer    ; work         ;
+;       |lpm_mult:Mult0|                               ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0                                                                                                                                       ; lpm_mult       ; work         ;
+;          |multcore:mult_core|                        ; 31 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core                                                                                                                    ; multcore       ; work         ;
+;             |mpar_add:padder|                        ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                                                    ; mpar_add       ; work         ;
+;                |lpm_add_sub:adder[0]|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                                               ; lpm_add_sub    ; work         ;
+;                   |add_sub_ngh:auto_generated|       ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated                                                    ; add_sub_ngh    ; work         ;
+;                |mpar_add:sub_par_add|                ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                                               ; mpar_add       ; work         ;
+;                   |lpm_add_sub:adder[0]|             ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                                                          ; lpm_add_sub    ; work         ;
+;                      |add_sub_rgh:auto_generated|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_rgh:auto_generated                               ; add_sub_rgh    ; work         ;
+;       |lpm_mult:Mult1|                               ; 29 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1                                                                                                                                       ; lpm_mult       ; work         ;
+;          |multcore:mult_core|                        ; 29 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core                                                                                                                    ; multcore       ; work         ;
+;             |mpar_add:padder|                        ; 16 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder                                                                                                    ; mpar_add       ; work         ;
+;                |lpm_add_sub:adder[0]|                ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                                               ; lpm_add_sub    ; work         ;
+;                   |add_sub_ngh:auto_generated|       ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_ngh:auto_generated                                                    ; add_sub_ngh    ; work         ;
+;                |mpar_add:sub_par_add|                ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                                               ; mpar_add       ; work         ;
+;                   |lpm_add_sub:adder[0]|             ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                                                          ; lpm_add_sub    ; work         ;
+;                      |add_sub_rgh:auto_generated|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_rgh:auto_generated                               ; add_sub_rgh    ; work         ;
+;    |mem_clk:myTest|                                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|mem_clk:myTest                                                                                                                                                        ; mem_clk        ; work         ;
+;       |altpll:altpll_component|                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|mem_clk:myTest|altpll:altpll_component                                                                                                                                ; altpll         ; work         ;
+;          |mem_clk_altpll:auto_generated|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated                                                                                                  ; mem_clk_altpll ; work         ;
+;    |rasterizer:tiledRasterizer|                      ; 432 (4)             ; 2086 (20)                 ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer                                                                                                                                            ; rasterizer     ; work         ;
+;       |pixel_shader:shader|                          ; 428 (340)           ; 2066 (2066)               ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader                                                                                                                        ; pixel_shader   ; work         ;
+;          |lpm_mult:Mult0|                            ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0                                                                                                         ; lpm_mult       ; work         ;
+;             |multcore:mult_core|                     ; 44 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore       ; work         ;
+;                |mpar_add:padder|                     ; 19 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add       ; work         ;
+;                   |lpm_add_sub:adder[0]|             ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub    ; work         ;
+;                      |add_sub_h9h:auto_generated|    ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_h9h:auto_generated                      ; add_sub_h9h    ; work         ;
+;                   |mpar_add:sub_par_add|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add       ; work         ;
+;                      |lpm_add_sub:adder[0]|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub    ; work         ;
+;                         |add_sub_fkh:auto_generated| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_fkh:auto_generated ; add_sub_fkh    ; work         ;
+;          |lpm_mult:Mult1|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1                                                                                                         ; lpm_mult       ; work         ;
+;             |mult_aft:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1|mult_aft:auto_generated                                                                                 ; mult_aft       ; work         ;
+;          |lpm_mult:Mult2|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2                                                                                                         ; lpm_mult       ; work         ;
+;             |mult_aft:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2|mult_aft:auto_generated                                                                                 ; mult_aft       ; work         ;
+;          |lpm_mult:Mult3|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3                                                                                                         ; lpm_mult       ; work         ;
+;             |mult_aft:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3|mult_aft:auto_generated                                                                                 ; mult_aft       ; work         ;
+;          |lpm_mult:Mult4|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4                                                                                                         ; lpm_mult       ; work         ;
+;             |mult_aft:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4|mult_aft:auto_generated                                                                                 ; mult_aft       ; work         ;
+;          |lpm_mult:Mult5|                            ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5                                                                                                         ; lpm_mult       ; work         ;
+;             |multcore:mult_core|                     ; 44 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core                                                                                      ; multcore       ; work         ;
+;                |mpar_add:padder|                     ; 19 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add       ; work         ;
+;                   |lpm_add_sub:adder[0]|             ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub    ; work         ;
+;                      |add_sub_h9h:auto_generated|    ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_h9h:auto_generated                      ; add_sub_h9h    ; work         ;
+;                   |mpar_add:sub_par_add|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add       ; work         ;
+;                      |lpm_add_sub:adder[0]|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub    ; work         ;
+;                         |add_sub_fkh:auto_generated| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_fkh:auto_generated ; add_sub_fkh    ; work         ;
++------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 4           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 8           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 4           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -331,81 +383,97 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------+
-; State Machine - |Typhoon|rasterizer:tiledRasterizer|state       ;
-+-------------------+------------+------------+-------------------+
-; Name              ; state.init ; state.done ; state.rasterizing ;
-+-------------------+------------+------------+-------------------+
-; state.init        ; 0          ; 0          ; 0                 ;
-; state.rasterizing ; 1          ; 0          ; 1                 ;
-; state.done        ; 1          ; 1          ; 0                 ;
-+-------------------+------------+------------+-------------------+
++-----------------------------------------------------------------------------------------------+
+; State Machine - |Typhoon|rasterizer:tiledRasterizer|state                                     ;
++------------------------+------------+-------------------+------------------------+------------+
+; Name                   ; state.done ; state.rasterizing ; state.rasterizingBegin ; state.init ;
++------------------------+------------+-------------------+------------------------+------------+
+; state.init             ; 0          ; 0                 ; 0                      ; 0          ;
+; state.rasterizingBegin ; 0          ; 0                 ; 1                      ; 1          ;
+; state.rasterizing      ; 0          ; 1                 ; 0                      ; 1          ;
+; state.done             ; 1          ; 0                 ; 0                      ; 1          ;
++------------------------+------------+-------------------+------------------------+------------+
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------+
-; State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|state ;
-+-----------------------+-------------+------------+----------------------------+
-; Name                  ; state.start ; state.done ; state.chooseNextPixel      ;
-+-----------------------+-------------+------------+----------------------------+
-; state.start           ; 0           ; 0          ; 0                          ;
-; state.chooseNextPixel ; 1           ; 0          ; 1                          ;
-; state.done            ; 1           ; 1          ; 0                          ;
-+-----------------------+-------------+------------+----------------------------+
++----------------------------------------------------------------------------------------------+
+; State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|state                ;
++-----------------------+------------+-----------------------+-------------------+-------------+
+; Name                  ; state.done ; state.chooseNextPixel ; state.rasterPixel ; state.start ;
++-----------------------+------------+-----------------------+-------------------+-------------+
+; state.start           ; 0          ; 0                     ; 0                 ; 0           ;
+; state.rasterPixel     ; 0          ; 0                     ; 1                 ; 1           ;
+; state.chooseNextPixel ; 0          ; 1                     ; 0                 ; 1           ;
+; state.done            ; 1          ; 0                     ; 0                 ; 1           ;
++-----------------------+------------+-----------------------+-------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                   ;
-+--------------------------------------------------------+---------------------------------------------+
-; Register name                                          ; Reason for Removal                          ;
-+--------------------------------------------------------+---------------------------------------------+
-; framebuffer:SRAM|VGA_B[0..2]                           ; Stuck at GND due to stuck port data_in      ;
-; framebuffer:SRAM|VGA_G[0,1]                            ; Stuck at GND due to stuck port data_in      ;
-; framebuffer:SRAM|VGA_R[0..2]                           ; Stuck at GND due to stuck port data_in      ;
-; rasteryOffset[0..2]                                    ; Stuck at GND due to stuck port data_in      ;
-; framebuffer:SRAM|tileOffsetY[10..19]                   ; Stuck at GND due to stuck port data_in      ;
-; framebuffer:SRAM|tileOffsetX[10..19]                   ; Stuck at GND due to stuck port data_in      ;
-; streamingyOffset[0..2]                                 ; Stuck at GND due to stuck port data_in      ;
-; framebuffer:SRAM|tileOffsetY[0..2]                     ; Stuck at GND due to stuck port data_in      ;
-; rasterxOffset[0,1]                                     ; Merged with rasterxOffset[2]                ;
-; framebuffer:SRAM|lastOpRead                            ; Merged with framebuffer:SRAM|SRAM_WE_N      ;
-; streamingxOffset[0,1]                                  ; Merged with streamingxOffset[2]             ;
-; framebuffer:SRAM|tileOffsetX[1,2]                      ; Merged with framebuffer:SRAM|tileOffsetX[0] ;
-; rasterxOffset[2]                                       ; Stuck at GND due to stuck port data_in      ;
-; streamingxOffset[2]                                    ; Stuck at GND due to stuck port data_in      ;
-; framebuffer:SRAM|tileOffsetX[0]                        ; Stuck at GND due to stuck port data_in      ;
-; state~2                                                ; Lost fanout                                 ;
-; state~3                                                ; Lost fanout                                 ;
-; state~6                                                ; Lost fanout                                 ;
-; state~7                                                ; Lost fanout                                 ;
-; state~8                                                ; Lost fanout                                 ;
-; state~9                                                ; Lost fanout                                 ;
-; framebuffer:SRAM|state~3                               ; Lost fanout                                 ;
-; rasterizer:tiledRasterizer|state~4                     ; Lost fanout                                 ;
-; rasterizer:tiledRasterizer|state~5                     ; Lost fanout                                 ;
-; rasterizer:tiledRasterizer|state~6                     ; Lost fanout                                 ;
-; rasterizer:tiledRasterizer|pixel_shader:shader|state~4 ; Lost fanout                                 ;
-; rasterizer:tiledRasterizer|pixel_shader:shader|state~5 ; Lost fanout                                 ;
-; rasterizer:tiledRasterizer|pixel_shader:shader|state~6 ; Lost fanout                                 ;
-; state.endState2                                        ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 61                 ;                                             ;
-+--------------------------------------------------------+---------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++--------------------------------------------------------+-------------------------------------------------------+
+; Register name                                          ; Reason for Removal                                    ;
++--------------------------------------------------------+-------------------------------------------------------+
+; framebuffer:SRAM|VGA_B[0..2]                           ; Stuck at GND due to stuck port data_in                ;
+; framebuffer:SRAM|VGA_G[0,1]                            ; Stuck at GND due to stuck port data_in                ;
+; framebuffer:SRAM|VGA_R[0..2]                           ; Stuck at GND due to stuck port data_in                ;
+; rasteryOffset[0..2]                                    ; Stuck at GND due to stuck port data_in                ;
+; framebuffer:SRAM|tileOffsetY[10..19]                   ; Stuck at GND due to stuck port data_in                ;
+; framebuffer:SRAM|tileOffsetX[10..19]                   ; Stuck at GND due to stuck port data_in                ;
+; rasterizer:tiledRasterizer|tileOffsetY[0..2]           ; Stuck at GND due to stuck port data_in                ;
+; streamingyOffset[0..2]                                 ; Stuck at GND due to stuck port data_in                ;
+; framebuffer:SRAM|tileOffsetY[0..2]                     ; Stuck at GND due to stuck port data_in                ;
+; rasterxOffset[0,1]                                     ; Merged with rasterxOffset[2]                          ;
+; framebuffer:SRAM|lastOpRead                            ; Merged with framebuffer:SRAM|SRAM_WE_N                ;
+; rasterizer:tiledRasterizer|tileOffsetX[1,2]            ; Merged with rasterizer:tiledRasterizer|tileOffsetX[0] ;
+; streamingxOffset[0,1]                                  ; Merged with streamingxOffset[2]                       ;
+; framebuffer:SRAM|tileOffsetX[1,2]                      ; Merged with framebuffer:SRAM|tileOffsetX[0]           ;
+; rasterxOffset[2]                                       ; Stuck at GND due to stuck port data_in                ;
+; rasterizer:tiledRasterizer|tileOffsetX[0]              ; Stuck at GND due to stuck port data_in                ;
+; streamingxOffset[2]                                    ; Stuck at GND due to stuck port data_in                ;
+; framebuffer:SRAM|tileOffsetX[0]                        ; Stuck at GND due to stuck port data_in                ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|y[9]    ; Stuck at GND due to stuck port data_in                ;
+; state~2                                                ; Lost fanout                                           ;
+; state~3                                                ; Lost fanout                                           ;
+; state~6                                                ; Lost fanout                                           ;
+; state~7                                                ; Lost fanout                                           ;
+; state~8                                                ; Lost fanout                                           ;
+; state~9                                                ; Lost fanout                                           ;
+; framebuffer:SRAM|state~3                               ; Lost fanout                                           ;
+; rasterizer:tiledRasterizer|state~2                     ; Lost fanout                                           ;
+; rasterizer:tiledRasterizer|state~3                     ; Lost fanout                                           ;
+; rasterizer:tiledRasterizer|state~4                     ; Lost fanout                                           ;
+; rasterizer:tiledRasterizer|state~5                     ; Lost fanout                                           ;
+; rasterizer:tiledRasterizer|state~6                     ; Lost fanout                                           ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|state~2 ; Lost fanout                                           ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|state~3 ; Lost fanout                                           ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|state~4 ; Lost fanout                                           ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|state~5 ; Lost fanout                                           ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|state~6 ; Lost fanout                                           ;
+; state.endState2                                        ; Stuck at GND due to stuck port data_in                ;
+; rasterizer:tiledRasterizer|pixel_shader:shader|y[3..8] ; Stuck at GND due to stuck port data_in                ;
+; Total Number of Removed Registers = 78                 ;                                                       ;
++--------------------------------------------------------+-------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                         ;
-+------------------+---------------------------+------------------------------------------------------+
-; Register name    ; Reason for Removal        ; Registers Removed due to This Register               ;
-+------------------+---------------------------+------------------------------------------------------+
-; rasteryOffset[2] ; Stuck at GND              ; streamingyOffset[2], framebuffer:SRAM|tileOffsetY[2] ;
-;                  ; due to stuck port data_in ;                                                      ;
-; rasteryOffset[1] ; Stuck at GND              ; streamingyOffset[1], framebuffer:SRAM|tileOffsetY[1] ;
-;                  ; due to stuck port data_in ;                                                      ;
-; rasteryOffset[0] ; Stuck at GND              ; streamingyOffset[0], framebuffer:SRAM|tileOffsetY[0] ;
-;                  ; due to stuck port data_in ;                                                      ;
-; rasterxOffset[2] ; Stuck at GND              ; streamingxOffset[2], framebuffer:SRAM|tileOffsetX[0] ;
-;                  ; due to stuck port data_in ;                                                      ;
-+------------------+---------------------------+------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                       ;
++-----------------------------------------------------+---------------------------+-----------------------------------------------------------------+
+; Register name                                       ; Reason for Removal        ; Registers Removed due to This Register                          ;
++-----------------------------------------------------+---------------------------+-----------------------------------------------------------------+
+; rasterizer:tiledRasterizer|pixel_shader:shader|y[9] ; Stuck at GND              ; rasterizer:tiledRasterizer|pixel_shader:shader|y[4],            ;
+;                                                     ; due to stuck port data_in ; rasterizer:tiledRasterizer|pixel_shader:shader|y[3],            ;
+;                                                     ;                           ; rasterizer:tiledRasterizer|pixel_shader:shader|y[5],            ;
+;                                                     ;                           ; rasterizer:tiledRasterizer|pixel_shader:shader|y[6],            ;
+;                                                     ;                           ; rasterizer:tiledRasterizer|pixel_shader:shader|y[7]             ;
+; rasteryOffset[2]                                    ; Stuck at GND              ; rasterizer:tiledRasterizer|tileOffsetY[2], streamingyOffset[2], ;
+;                                                     ; due to stuck port data_in ; framebuffer:SRAM|tileOffsetY[2]                                 ;
+; rasteryOffset[1]                                    ; Stuck at GND              ; rasterizer:tiledRasterizer|tileOffsetY[1], streamingyOffset[1], ;
+;                                                     ; due to stuck port data_in ; framebuffer:SRAM|tileOffsetY[1]                                 ;
+; rasteryOffset[0]                                    ; Stuck at GND              ; rasterizer:tiledRasterizer|tileOffsetY[0], streamingyOffset[0], ;
+;                                                     ; due to stuck port data_in ; framebuffer:SRAM|tileOffsetY[0]                                 ;
+; rasterxOffset[2]                                    ; Stuck at GND              ; rasterizer:tiledRasterizer|tileOffsetX[0], streamingxOffset[2], ;
+;                                                     ; due to stuck port data_in ; framebuffer:SRAM|tileOffsetX[0]                                 ;
++-----------------------------------------------------+---------------------------+-----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -413,29 +481,29 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2224  ;
+; Total registers                              ; 2234  ;
 ; Number of registers using Synchronous Clear  ; 22    ;
-; Number of registers using Synchronous Load   ; 25    ;
+; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2159  ;
+; Number of registers using Clock Enable       ; 2173  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Typhoon|framebuffer:SRAM|SRAM_ADDR[8]                       ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|x[0] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Typhoon|rasteryOffset[9]                                    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Typhoon|rasterxOffset[3]                                    ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|x[5] ;
-; 128:1              ; 16 bits   ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; Yes        ; |Typhoon|framebuffer:SRAM|DataToSRAM[12]                     ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Typhoon|VGA_controller:VGAtiming|v_counter_in[5]            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Typhoon|framebuffer:SRAM|SRAM_ADDR[0]                                    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Typhoon|rasteryOffset[3]                                                 ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Typhoon|rasterxOffset[8]                                                 ;
+; 128:1              ; 16 bits   ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; Yes        ; |Typhoon|framebuffer:SRAM|DataToSRAM[14]                                  ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Typhoon|VGA_controller:VGAtiming|v_counter_in[3]                         ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|basicTestColor[0] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|nextY             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -935,6 +1003,216 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                           ;
++------------------------------------------------+--------------+------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                 ;
+; LPM_WIDTHA                                     ; 11           ; Untyped                                        ;
+; LPM_WIDTHB                                     ; 7            ; Untyped                                        ;
+; LPM_WIDTHP                                     ; 18           ; Untyped                                        ;
+; LPM_WIDTHR                                     ; 18           ; Untyped                                        ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                        ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                        ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                        ;
+; LATENCY                                        ; 0            ; Untyped                                        ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                        ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                        ;
+; USE_EAB                                        ; OFF          ; Untyped                                        ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped                                        ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                        ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                        ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                            ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                        ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                                        ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                        ;
++------------------------------------------------+--------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1 ;
++------------------------------------------------+--------------+------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                           ;
++------------------------------------------------+--------------+------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                 ;
+; LPM_WIDTHA                                     ; 18           ; Untyped                                        ;
+; LPM_WIDTHB                                     ; 5            ; Untyped                                        ;
+; LPM_WIDTHP                                     ; 23           ; Untyped                                        ;
+; LPM_WIDTHR                                     ; 23           ; Untyped                                        ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                        ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                        ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                        ;
+; LATENCY                                        ; 0            ; Untyped                                        ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                        ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                        ;
+; USE_EAB                                        ; OFF          ; Untyped                                        ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                        ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                        ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                        ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                            ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                        ;
+; CBXI_PARAMETER                                 ; mult_aft     ; Untyped                                        ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                        ;
++------------------------------------------------+--------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5 ;
++------------------------------------------------+--------------+------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                           ;
++------------------------------------------------+--------------+------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                 ;
+; LPM_WIDTHA                                     ; 11           ; Untyped                                        ;
+; LPM_WIDTHB                                     ; 7            ; Untyped                                        ;
+; LPM_WIDTHP                                     ; 18           ; Untyped                                        ;
+; LPM_WIDTHR                                     ; 18           ; Untyped                                        ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                        ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                        ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                        ;
+; LATENCY                                        ; 0            ; Untyped                                        ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                        ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                        ;
+; USE_EAB                                        ; OFF          ; Untyped                                        ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped                                        ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                        ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                        ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                            ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                        ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                                        ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                        ;
++------------------------------------------------+--------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4 ;
++------------------------------------------------+--------------+------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                           ;
++------------------------------------------------+--------------+------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                 ;
+; LPM_WIDTHA                                     ; 18           ; Untyped                                        ;
+; LPM_WIDTHB                                     ; 5            ; Untyped                                        ;
+; LPM_WIDTHP                                     ; 23           ; Untyped                                        ;
+; LPM_WIDTHR                                     ; 23           ; Untyped                                        ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                        ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                        ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                        ;
+; LATENCY                                        ; 0            ; Untyped                                        ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                        ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                        ;
+; USE_EAB                                        ; OFF          ; Untyped                                        ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                        ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                        ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                        ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                            ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                        ;
+; CBXI_PARAMETER                                 ; mult_aft     ; Untyped                                        ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                        ;
++------------------------------------------------+--------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3 ;
++------------------------------------------------+--------------+------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                           ;
++------------------------------------------------+--------------+------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                 ;
+; LPM_WIDTHA                                     ; 18           ; Untyped                                        ;
+; LPM_WIDTHB                                     ; 5            ; Untyped                                        ;
+; LPM_WIDTHP                                     ; 23           ; Untyped                                        ;
+; LPM_WIDTHR                                     ; 23           ; Untyped                                        ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                        ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                        ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                        ;
+; LATENCY                                        ; 0            ; Untyped                                        ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                        ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                        ;
+; USE_EAB                                        ; OFF          ; Untyped                                        ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                        ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                        ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                        ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                            ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                        ;
+; CBXI_PARAMETER                                 ; mult_aft     ; Untyped                                        ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                        ;
++------------------------------------------------+--------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2 ;
++------------------------------------------------+--------------+------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                           ;
++------------------------------------------------+--------------+------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                 ;
+; LPM_WIDTHA                                     ; 18           ; Untyped                                        ;
+; LPM_WIDTHB                                     ; 5            ; Untyped                                        ;
+; LPM_WIDTHP                                     ; 23           ; Untyped                                        ;
+; LPM_WIDTHR                                     ; 23           ; Untyped                                        ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                        ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                        ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                        ;
+; LATENCY                                        ; 0            ; Untyped                                        ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                        ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                        ;
+; USE_EAB                                        ; OFF          ; Untyped                                        ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                        ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                        ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                        ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                            ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                        ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                        ;
+; CBXI_PARAMETER                                 ; mult_aft     ; Untyped                                        ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                        ;
++------------------------------------------------+--------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                           ;
 +-------------------------------+----------------------------------------+
@@ -952,35 +1230,101 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+----------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance                          ;
-+---------------------------------------+---------------------------------+
-; Name                                  ; Value                           ;
-+---------------------------------------+---------------------------------+
-; Number of entity instances            ; 2                               ;
-; Entity Instance                       ; framebuffer:SRAM|lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 11                              ;
-;     -- LPM_WIDTHB                     ; 10                              ;
-;     -- LPM_WIDTHP                     ; 21                              ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                        ;
-;     -- INPUT_A_IS_CONSTANT            ; NO                              ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                             ;
-;     -- USE_EAB                        ; OFF                             ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                            ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                              ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                              ;
-; Entity Instance                       ; framebuffer:SRAM|lpm_mult:Mult1 ;
-;     -- LPM_WIDTHA                     ; 10                              ;
-;     -- LPM_WIDTHB                     ; 10                              ;
-;     -- LPM_WIDTHP                     ; 20                              ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                        ;
-;     -- INPUT_A_IS_CONSTANT            ; YES                             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO                              ;
-;     -- USE_EAB                        ; OFF                             ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                            ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx                              ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx                              ;
-+---------------------------------------+---------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                        ;
++---------------------------------------+---------------------------------------------------------------+
+; Name                                  ; Value                                                         ;
++---------------------------------------+---------------------------------------------------------------+
+; Number of entity instances            ; 8                                                             ;
+; Entity Instance                       ; framebuffer:SRAM|lpm_mult:Mult0                               ;
+;     -- LPM_WIDTHA                     ; 11                                                            ;
+;     -- LPM_WIDTHB                     ; 10                                                            ;
+;     -- LPM_WIDTHP                     ; 21                                                            ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                           ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
+; Entity Instance                       ; framebuffer:SRAM|lpm_mult:Mult1                               ;
+;     -- LPM_WIDTHA                     ; 10                                                            ;
+;     -- LPM_WIDTHB                     ; 10                                                            ;
+;     -- LPM_WIDTHP                     ; 20                                                            ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                      ;
+;     -- INPUT_A_IS_CONSTANT            ; YES                                                           ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                            ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
+; Entity Instance                       ; rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 11                                                            ;
+;     -- LPM_WIDTHB                     ; 7                                                             ;
+;     -- LPM_WIDTHP                     ; 18                                                            ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                        ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                           ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
+; Entity Instance                       ; rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1 ;
+;     -- LPM_WIDTHA                     ; 18                                                            ;
+;     -- LPM_WIDTHB                     ; 5                                                             ;
+;     -- LPM_WIDTHP                     ; 23                                                            ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                           ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
+; Entity Instance                       ; rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5 ;
+;     -- LPM_WIDTHA                     ; 11                                                            ;
+;     -- LPM_WIDTHB                     ; 7                                                             ;
+;     -- LPM_WIDTHP                     ; 18                                                            ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                        ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                           ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
+; Entity Instance                       ; rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4 ;
+;     -- LPM_WIDTHA                     ; 18                                                            ;
+;     -- LPM_WIDTHB                     ; 5                                                             ;
+;     -- LPM_WIDTHP                     ; 23                                                            ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                           ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
+; Entity Instance                       ; rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3 ;
+;     -- LPM_WIDTHA                     ; 18                                                            ;
+;     -- LPM_WIDTHB                     ; 5                                                             ;
+;     -- LPM_WIDTHP                     ; 23                                                            ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                           ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
+; Entity Instance                       ; rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2 ;
+;     -- LPM_WIDTHA                     ; 18                                                            ;
+;     -- LPM_WIDTHB                     ; 5                                                             ;
+;     -- LPM_WIDTHP                     ; 23                                                            ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                      ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                           ;
+;     -- USE_EAB                        ; OFF                                                           ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
++---------------------------------------+---------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -1003,41 +1347,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +----------------------------------------------------------------------------+
 ; Port Connectivity Checks: "rasterizer:tiledRasterizer|pixel_shader:shader" ;
-+---------------+-------+----------+-----------------------------------------+
-; Port          ; Type  ; Severity ; Details                                 ;
-+---------------+-------+----------+-----------------------------------------+
-; start_x[6..5] ; Input ; Info     ; Stuck at VCC                            ;
-; start_x[9..7] ; Input ; Info     ; Stuck at GND                            ;
-; start_x[4..3] ; Input ; Info     ; Stuck at GND                            ;
-; start_x[1..0] ; Input ; Info     ; Stuck at GND                            ;
-; start_x[2]    ; Input ; Info     ; Stuck at VCC                            ;
-; start_y[6..5] ; Input ; Info     ; Stuck at VCC                            ;
-; start_y[9..7] ; Input ; Info     ; Stuck at GND                            ;
-; start_y[4..3] ; Input ; Info     ; Stuck at GND                            ;
-; start_y[1..0] ; Input ; Info     ; Stuck at GND                            ;
-; start_y[2]    ; Input ; Info     ; Stuck at VCC                            ;
-; zBufferTile   ; Input ; Info     ; Stuck at GND                            ;
-; box[0][6..5]  ; Input ; Info     ; Stuck at VCC                            ;
-; box[0][9..7]  ; Input ; Info     ; Stuck at GND                            ;
-; box[0][4..3]  ; Input ; Info     ; Stuck at GND                            ;
-; box[0][1..0]  ; Input ; Info     ; Stuck at GND                            ;
-; box[0][2]     ; Input ; Info     ; Stuck at VCC                            ;
-; box[1][6..5]  ; Input ; Info     ; Stuck at VCC                            ;
-; box[1][9..7]  ; Input ; Info     ; Stuck at GND                            ;
-; box[1][4..3]  ; Input ; Info     ; Stuck at GND                            ;
-; box[1][1..0]  ; Input ; Info     ; Stuck at GND                            ;
-; box[1][2]     ; Input ; Info     ; Stuck at VCC                            ;
-; box[2][5..4]  ; Input ; Info     ; Stuck at VCC                            ;
-; box[2][9..6]  ; Input ; Info     ; Stuck at GND                            ;
-; box[2][3..2]  ; Input ; Info     ; Stuck at GND                            ;
-; box[2][1]     ; Input ; Info     ; Stuck at VCC                            ;
-; box[2][0]     ; Input ; Info     ; Stuck at GND                            ;
-; box[3][5..4]  ; Input ; Info     ; Stuck at VCC                            ;
-; box[3][9..6]  ; Input ; Info     ; Stuck at GND                            ;
-; box[3][3..2]  ; Input ; Info     ; Stuck at GND                            ;
-; box[3][1]     ; Input ; Info     ; Stuck at VCC                            ;
-; box[3][0]     ; Input ; Info     ; Stuck at GND                            ;
-+---------------+-------+----------+-----------------------------------------+
++--------------+-------+----------+------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                  ;
++--------------+-------+----------+------------------------------------------+
+; start_x      ; Input ; Info     ; Stuck at GND                             ;
+; start_y      ; Input ; Info     ; Stuck at GND                             ;
+; zBufferTile  ; Input ; Info     ; Stuck at GND                             ;
+; box[0][6..5] ; Input ; Info     ; Stuck at VCC                             ;
+; box[0][9..7] ; Input ; Info     ; Stuck at GND                             ;
+; box[0][4..3] ; Input ; Info     ; Stuck at GND                             ;
+; box[0][1..0] ; Input ; Info     ; Stuck at GND                             ;
+; box[0][2]    ; Input ; Info     ; Stuck at VCC                             ;
+; box[1][6..5] ; Input ; Info     ; Stuck at VCC                             ;
+; box[1][9..7] ; Input ; Info     ; Stuck at GND                             ;
+; box[1][4..3] ; Input ; Info     ; Stuck at GND                             ;
+; box[1][1..0] ; Input ; Info     ; Stuck at GND                             ;
+; box[1][2]    ; Input ; Info     ; Stuck at VCC                             ;
+; box[2][5..4] ; Input ; Info     ; Stuck at VCC                             ;
+; box[2][9..6] ; Input ; Info     ; Stuck at GND                             ;
+; box[2][3..2] ; Input ; Info     ; Stuck at GND                             ;
+; box[2][1]    ; Input ; Info     ; Stuck at VCC                             ;
+; box[2][0]    ; Input ; Info     ; Stuck at GND                             ;
+; box[3][5..4] ; Input ; Info     ; Stuck at VCC                             ;
+; box[3][9..6] ; Input ; Info     ; Stuck at GND                             ;
+; box[3][3..2] ; Input ; Info     ; Stuck at GND                             ;
+; box[3][1]    ; Input ; Info     ; Stuck at VCC                             ;
+; box[3][0]    ; Input ; Info     ; Stuck at GND                             ;
+; x0[6..5]     ; Input ; Info     ; Stuck at VCC                             ;
+; x0[9..7]     ; Input ; Info     ; Stuck at GND                             ;
+; x0[4..3]     ; Input ; Info     ; Stuck at GND                             ;
+; x0[1..0]     ; Input ; Info     ; Stuck at GND                             ;
+; x0[2]        ; Input ; Info     ; Stuck at VCC                             ;
+; y0[2..1]     ; Input ; Info     ; Stuck at VCC                             ;
+; y0[9..8]     ; Input ; Info     ; Stuck at GND                             ;
+; y0[6..5]     ; Input ; Info     ; Stuck at GND                             ;
+; y0[7]        ; Input ; Info     ; Stuck at VCC                             ;
+; y0[4]        ; Input ; Info     ; Stuck at VCC                             ;
+; y0[3]        ; Input ; Info     ; Stuck at GND                             ;
+; y0[0]        ; Input ; Info     ; Stuck at GND                             ;
+; z0           ; Input ; Info     ; Stuck at GND                             ;
+; x1[6..2]     ; Input ; Info     ; Stuck at VCC                             ;
+; x1[9..7]     ; Input ; Info     ; Stuck at GND                             ;
+; x1[1]        ; Input ; Info     ; Stuck at GND                             ;
+; x1[0]        ; Input ; Info     ; Stuck at VCC                             ;
+; y1[6..5]     ; Input ; Info     ; Stuck at VCC                             ;
+; y1[9..7]     ; Input ; Info     ; Stuck at GND                             ;
+; y1[4..3]     ; Input ; Info     ; Stuck at GND                             ;
+; y1[1..0]     ; Input ; Info     ; Stuck at GND                             ;
+; y1[2]        ; Input ; Info     ; Stuck at VCC                             ;
+; z1           ; Input ; Info     ; Stuck at GND                             ;
+; x2[2..1]     ; Input ; Info     ; Stuck at VCC                             ;
+; x2[9..8]     ; Input ; Info     ; Stuck at GND                             ;
+; x2[6..5]     ; Input ; Info     ; Stuck at GND                             ;
+; x2[7]        ; Input ; Info     ; Stuck at VCC                             ;
+; x2[4]        ; Input ; Info     ; Stuck at VCC                             ;
+; x2[3]        ; Input ; Info     ; Stuck at GND                             ;
+; x2[0]        ; Input ; Info     ; Stuck at GND                             ;
+; y2[6..2]     ; Input ; Info     ; Stuck at VCC                             ;
+; y2[9..7]     ; Input ; Info     ; Stuck at GND                             ;
+; y2[1..0]     ; Input ; Info     ; Stuck at GND                             ;
+; z2           ; Input ; Info     ; Stuck at GND                             ;
++--------------+-------+----------+------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1046,28 +1416,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 175                         ;
-; cycloneiii_ff         ; 2224                        ;
-;     ENA               ; 2122                        ;
+; cycloneiii_ff         ; 2234                        ;
+;     ENA               ; 2151                        ;
 ;     ENA SCLR          ; 14                          ;
 ;     ENA SCLR SLD      ; 8                           ;
-;     ENA SLD           ; 15                          ;
-;     SLD               ; 2                           ;
-;     plain             ; 63                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 60                          ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 1883                        ;
-;     arith             ; 202                         ;
-;         2 data inputs ; 119                         ;
-;         3 data inputs ; 83                          ;
-;     normal            ; 1681                        ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 19                          ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 54                          ;
-;         4 data inputs ; 1571                        ;
+; cycloneiii_lcell_comb ; 2083                        ;
+;     arith             ; 302                         ;
+;         2 data inputs ; 161                         ;
+;         3 data inputs ; 141                         ;
+;     normal            ; 1781                        ;
+;         0 data inputs ; 11                          ;
+;         1 data inputs ; 24                          ;
+;         2 data inputs ; 43                          ;
+;         3 data inputs ; 105                         ;
+;         4 data inputs ; 1598                        ;
+; cycloneiii_mac_mult   ; 4                           ;
+; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 9.80                        ;
-; Average LUT depth     ; 5.54                        ;
+; Max LUT depth         ; 9.30                        ;
+; Average LUT depth     ; 5.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1076,7 +1447,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1086,7 +1457,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 29 17:56:33 2018
+    Info: Processing started: Fri Nov 30 03:11:21 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Typhoon -c Typhoon
 Warning (125092): Tcl Script File testPLL.qip not found
     Info (125063): set_global_assignment -name QIP_FILE testPLL.qip
@@ -1128,8 +1499,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file rasteri
     Info (12023): Found entity 1: rasterizer File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file debug_shader.sv
     Info (12023): Found entity 1: debug_shader File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/debug_shader.sv Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at framebuffer.sv(41): Parameter Declaration in module "framebuffer" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 41
 Info (12127): Elaborating entity "Typhoon" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Typhoon.sv(92): truncated value with size 32 to match size of target (16) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 92
+Warning (10230): Verilog HDL assignment warning at Typhoon.sv(98): truncated value with size 32 to match size of target (16) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 98
 Warning (10030): Net "VGA_reset" at Typhoon.sv(29) has no driver or initial value, using a default initial value '0' File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 29
 Warning (10034): Output port "LEDG" at Typhoon.sv(10) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
 Warning (10034): Output port "HEX0" at Typhoon.sv(14) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
@@ -1145,23 +1517,26 @@ Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup
 Info (12128): Elaborating entity "rasterizer" for hierarchy "rasterizer:tiledRasterizer" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 38
 Warning (10858): Verilog HDL warning at rasterizer.sv(21): object zBufferTile used but never assigned File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 21
 Warning (10030): Net "zBufferTile" at rasterizer.sv(21) has no driver or initial value, using a default initial value '0' File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 21
+Warning (10030): Net "z0" at rasterizer.sv(31) has no driver or initial value, using a default initial value '0' File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 31
+Warning (10030): Net "z1" at rasterizer.sv(31) has no driver or initial value, using a default initial value '0' File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 31
+Warning (10030): Net "z2" at rasterizer.sv(31) has no driver or initial value, using a default initial value '0' File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 31
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile0" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "zBufferTile" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile0" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile1" into its bus
-Info (12128): Elaborating entity "pixel_shader" for hierarchy "rasterizer:tiledRasterizer|pixel_shader:shader" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 23
-Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(38): truncated value with size 18 to match size of target (16) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 38
-Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(40): truncated value with size 18 to match size of target (16) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 40
-Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(64): truncated value with size 32 to match size of target (10) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 64
-Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(88): truncated value with size 32 to match size of target (10) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 88
+Info (12128): Elaborating entity "pixel_shader" for hierarchy "rasterizer:tiledRasterizer|pixel_shader:shader" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(76): truncated value with size 32 to match size of target (10) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 76
+Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(77): truncated value with size 32 to match size of target (10) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 77
+Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(125): truncated value with size 18 to match size of target (16) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 125
+Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(151): truncated value with size 32 to match size of target (10) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 151
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile0" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "zBufferTile" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile0" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "zBufferTile" into its bus
-Info (12128): Elaborating entity "mem_clk" for hierarchy "mem_clk:myTest" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 191
+Info (12128): Elaborating entity "mem_clk" for hierarchy "mem_clk:myTest" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 200
 Info (12128): Elaborating entity "altpll" for hierarchy "mem_clk:myTest|altpll:altpll_component" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 94
 Info (12130): Elaborated megafunction instantiation "mem_clk:myTest|altpll:altpll_component" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 94
 Info (12133): Instantiated megafunction "mem_clk:myTest|altpll:altpll_component" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 94
@@ -1226,23 +1601,29 @@ Info (12133): Instantiated megafunction "mem_clk:myTest|altpll:altpll_component"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mem_clk_altpll.v
     Info (12023): Found entity 1: mem_clk_altpll File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v Line: 29
 Info (12128): Elaborating entity "mem_clk_altpll" for hierarchy "mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:VGAtiming" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 193
-Info (12128): Elaborating entity "framebuffer" for hierarchy "framebuffer:SRAM" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 212
-Warning (10036): Verilog HDL or VHDL warning at framebuffer.sv(45): object "funDemo" assigned a value but never read File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 45
-Warning (10036): Verilog HDL or VHDL warning at framebuffer.sv(67): object "readSync" assigned a value but never read File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 67
-Warning (10230): Verilog HDL assignment warning at framebuffer.sv(82): truncated value with size 32 to match size of target (20) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 82
-Warning (10230): Verilog HDL assignment warning at framebuffer.sv(103): truncated value with size 32 to match size of target (20) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 103
-Warning (10230): Verilog HDL assignment warning at framebuffer.sv(176): truncated value with size 32 to match size of target (8) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 176
-Warning (10230): Verilog HDL assignment warning at framebuffer.sv(180): truncated value with size 32 to match size of target (8) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 180
+Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:VGAtiming" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 202
+Info (12128): Elaborating entity "framebuffer" for hierarchy "framebuffer:SRAM" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 221
+Warning (10036): Verilog HDL or VHDL warning at framebuffer.sv(50): object "funDemo" assigned a value but never read File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 50
+Warning (10036): Verilog HDL or VHDL warning at framebuffer.sv(72): object "readSync" assigned a value but never read File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 72
+Warning (10230): Verilog HDL assignment warning at framebuffer.sv(87): truncated value with size 32 to match size of target (20) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
+Warning (10230): Verilog HDL assignment warning at framebuffer.sv(108): truncated value with size 32 to match size of target (20) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
+Warning (10230): Verilog HDL assignment warning at framebuffer.sv(178): truncated value with size 32 to match size of target (8) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 178
+Warning (10230): Verilog HDL assignment warning at framebuffer.sv(182): truncated value with size 32 to match size of target (8) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 182
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "tileAinput" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "tileBinput" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "tileAinput" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "tileBinput" into its bus
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "framebuffer:SRAM|Mult0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 82
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "framebuffer:SRAM|Mult1" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 103
-Info (12130): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 82
-Info (12133): Instantiated megafunction "framebuffer:SRAM|lpm_mult:Mult0" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 82
+Info (278001): Inferred 8 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "framebuffer:SRAM|Mult0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "framebuffer:SRAM|Mult1" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult1" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult5" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult4" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult3" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult2" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+Info (12130): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
+Info (12133): Instantiated megafunction "framebuffer:SRAM|lpm_mult:Mult0" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
     Info (12134): Parameter "LPM_WIDTHA" = "11"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "21"
@@ -1262,8 +1643,8 @@ Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:M
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_rgh.tdf
     Info (12023): Found entity 1: add_sub_rgh File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_rgh.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
-Info (12130): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 103
-Info (12133): Instantiated megafunction "framebuffer:SRAM|lpm_mult:Mult1" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 103
+Info (12130): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
+Info (12133): Instantiated megafunction "framebuffer:SRAM|lpm_mult:Mult1" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "20"
@@ -1276,6 +1657,73 @@ Info (12133): Instantiated megafunction "framebuffer:SRAM|lpm_mult:Mult1" with t
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1|altshift:external_latency_ffs", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+    Info (12134): Parameter "LPM_WIDTHA" = "11"
+    Info (12134): Parameter "LPM_WIDTHB" = "7"
+    Info (12134): Parameter "LPM_WIDTHP" = "18"
+    Info (12134): Parameter "LPM_WIDTHR" = "18"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_h9h.tdf
+    Info (12023): Found entity 1: add_sub_h9h File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_h9h.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_fkh.tdf
+    Info (12023): Found entity 1: add_sub_fkh File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_fkh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+    Info (12134): Parameter "LPM_WIDTHA" = "18"
+    Info (12134): Parameter "LPM_WIDTHB" = "5"
+    Info (12134): Parameter "LPM_WIDTHP" = "23"
+    Info (12134): Parameter "LPM_WIDTHR" = "23"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_aft.tdf
+    Info (12023): Found entity 1: mult_aft File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mult_aft.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
+    Info (12134): Parameter "LPM_WIDTHA" = "18"
+    Info (12134): Parameter "LPM_WIDTHB" = "5"
+    Info (12134): Parameter "LPM_WIDTHP" = "23"
+    Info (12134): Parameter "LPM_WIDTHR" = "23"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+    Info (12134): Parameter "LPM_WIDTHA" = "18"
+    Info (12134): Parameter "LPM_WIDTHB" = "5"
+    Info (12134): Parameter "LPM_WIDTHP" = "23"
+    Info (12134): Parameter "LPM_WIDTHR" = "23"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+    Info (12134): Parameter "LPM_WIDTHA" = "18"
+    Info (12134): Parameter "LPM_WIDTHB" = "5"
+    Info (12134): Parameter "LPM_WIDTHP" = "23"
+    Info (12134): Parameter "LPM_WIDTHR" = "23"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SRAM_UB_N" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 9
     Warning (13410): Pin "SRAM_LB_N" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 9
@@ -1370,7 +1818,15 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
     Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (17049): 17 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[4]~0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[3]~2" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[5]~4" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[6]~6" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[7]~8" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[9]~10" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[8]~12" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
 Info (144001): Generated suppressed messages file C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
@@ -1383,17 +1839,18 @@ Warning (21074): Design contains 6 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 16
     Warning (15610): No output dependent on input pin "SW[17]" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 16
     Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 15
-Info (21057): Implemented 4172 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4396 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 136 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 3996 logic cells
+    Info (21061): Implemented 4212 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 132 warnings
-    Info: Peak virtual memory: 4827 megabytes
-    Info: Processing ended: Thu Nov 29 17:56:45 2018
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:20
+    Info (21062): Implemented 8 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 136 warnings
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Fri Nov 30 03:11:34 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+

@@ -13,13 +13,15 @@ state.streaming 0
 state.feedingVGA 1 
 
 State Machine - |Typhoon|rasterizer:tiledRasterizer|state
-Name state.init state.done state.rasterizing 
-state.init 0 0 0 
-state.rasterizing 1 0 1 
-state.done 1 1 0 
+Name state.done state.rasterizing state.rasterizingBegin state.init 
+state.init 0 0 0 0 
+state.rasterizingBegin 0 0 1 1 
+state.rasterizing 0 1 0 1 
+state.done 1 0 0 1 
 
 State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|state
-Name state.start state.done state.chooseNextPixel 
-state.start 0 0 0 
-state.chooseNextPixel 1 0 1 
-state.done 1 1 0 
+Name state.done state.chooseNextPixel state.rasterPixel state.start 
+state.start 0 0 0 0 
+state.rasterPixel 0 0 1 1 
+state.chooseNextPixel 0 1 0 1 
+state.done 1 0 0 1 

@@ -21,7 +21,7 @@ module framebuffer #(parameter tileDim = 8'd8)(
 	input logic VGA_BLANK_N,
 	input logic streamTileTrigger, // Trigger to begin streaming tile at (xOffset, yOffset)
 	
-	
+	input logic doubleBuffer,
 	
 	input logic streamingTileID,
 	input logic nextStreamingTileID,
@@ -38,7 +38,12 @@ module framebuffer #(parameter tileDim = 8'd8)(
 	
 );
 
+parameter doubleBufferOffset = 800*525;
+
 logic lastTrigger = 0; // Single clock delayed trigger signal
+
+
+
 
 logic nextDoneStreaming;
 logic[15:0] DataToSRAM;
@@ -79,7 +84,7 @@ assign SRAM_DQ = ~SRAM_WE_N ? DataToSRAM : 16'bz;
 
 //assign DataToSRAM = tileA[tilePointerX][tilePointerY];
 //assign WriteAddress = 0;
-assign WriteAddress = (tileOffsetX+tilePointerX) + (tileOffsetY+tilePointerY)*800;
+assign WriteAddress = (tileOffsetX+tilePointerX) + (tileOffsetY+tilePointerY)*800 + (doubleBuffer == 1 ? doubleBufferOffset : 0);
 
 //assign SRAM_ADDR = (state == feedingVGA) ? ReadAddress : WriteAddress;
 //assign SRAM_ADDR = ReadAddress;
@@ -100,7 +105,7 @@ always_ff @(posedge BOARD_CLK) begin: mainblock
 	if(state == feedingVGA) begin
 	
 		lastOpRead <= 1; // So we fetch data next clock
-		SRAM_ADDR <= VGA_SCAN_X + 800 * VGA_SCAN_Y;
+		SRAM_ADDR <= VGA_SCAN_X + 800 * VGA_SCAN_Y  + (doubleBuffer == 1 ? 0 : doubleBufferOffset);
 		
 		SRAM_WE_N <= 1;
 	end
@@ -122,9 +127,6 @@ always_ff @(posedge BOARD_CLK) begin: mainblock
 	tileOffsetY <= newTileOffsetY;
 end
 
-
-// Intelligent round-robin queueing. Cascades to the next non-empty FIFO
-// if the immediately adjacent FIFO is empty. 
 
 always_comb begin
 

@@ -19,15 +19,25 @@ logic startShadersRasterizing;
 logic nextStartShadersRasterizing; // To pixel shaders
 logic shadersDoneRasterizing = 1; // From pixel shaders
 reg[15:0] zBufferTile [tileDim][tileDim];
+logic[9:0] tileOffsetX, tileOffsetY;
 
-pixel_shader #(tileDim, numPixelShaders) shader(.start_x(box[0]), .start_y(box[1]), .startRasterizing(startShadersRasterizing), .doneRasterizing(shadersDoneRasterizing), .*);
+pixel_shader #(tileDim, numPixelShaders) shader(.start_x(0), .start_y(0), .startRasterizing(startShadersRasterizing), .doneRasterizing(shadersDoneRasterizing), .*);
 //assign LEDR = state | (startRasterizing << 4);
 
 // Current polygon data cache
 
 // Bounding box
 logic[9:0] box [4]; // x,y,w,h
-logic[9:0] x1,y1,z1,x2,y2,z2,x3,y3,z3;
+logic[9:0] x0,y0,z0,x1,y1,z1,x2,y2,z2;
+
+assign x0 = 100;
+assign y0 = 150;
+
+assign x1 = 125;
+assign y1 = 100;
+
+assign x2 = 150;
+assign y2 = 124;
 
 assign box[0] = 100;
 assign box[1] = 100;
@@ -37,39 +47,55 @@ assign box[3] = 50;
 
 enum logic [4:0] {
 	init = 5'd0,
-	rasterizing = 5'd1,
-	done = 5'd2
+	rasterizingBegin = 5'd1,
+	rasterizing = 5'd2,
+	done = 5'd3
 
 } state = init, nextState = init;
 
 always_ff @(posedge BOARD_CLK) begin
 	state <= nextState;
 	doneRasterizing <= nextDoneRasterizing;
+	
+	
+
 	startShadersRasterizing <= nextStartShadersRasterizing;
+	if(state==rasterizingBegin)begin
+		tileOffsetX <= rasterxOffset;
+		tileOffsetY <= rasteryOffset;
+	end
 	//doneRasterizing <= 1;
-	//if(rasterTileID == 0)
-		//cBufferTile0[0][1] <= SW + rasterxOffset;
-	//else
-		//cBufferTile1[1][1] <= SW + rasterxOffset;
+	/*
+	if(rasterTileID == 0)
+		cBufferTile0[0][1] <= SW;
+	else
+		cBufferTile1[1][1] <= SW;
+	*/
 end
 
 always_comb begin
 	case(state)
 		init: begin
 			nextDoneRasterizing = 0;
-			nextState = startRasterizing ? rasterizing : init;
+			nextState = startRasterizing ? rasterizingBegin : init;
 			//nextState = rasterizing;
 			nextStartShadersRasterizing = 0;
 		end
 		
-		rasterizing: begin
+		rasterizingBegin: begin
 			nextStartShadersRasterizing = 1;
 			nextDoneRasterizing = 0;
-			if(shadersDoneRasterizing == 1) begin
-				nextState = done;
+			nextState = rasterizing;
+		end
+		
+		rasterizing: begin
+			nextStartShadersRasterizing = 0;
+			nextDoneRasterizing = 0;
+			if(shadersDoneRasterizing == 0) begin
+				nextState = rasterizing;
 			end else begin
 			
-				nextState = rasterizing;
+				nextState = done;
 			end
 		end
 		

@@ -54,7 +54,8 @@ module Typhoon #(parameter tileDim = 8'd8)(
 	logic streamTileTrigger = 0;
 	logic nextStreamTileTrigger = 0;
 	
-	logic isDoubleBuffering;
+	logic doubleBuffer = 0;
+	logic nextDoubleBuffer = 0;
 	
 	logic rasterTileID = 0;
 	logic nextRasterTileID = 0;
@@ -89,6 +90,11 @@ module Typhoon #(parameter tileDim = 8'd8)(
 	*/
 	
 	always_ff @(posedge BOARD_CLK) begin
+	
+		
+		doubleBuffer <= nextDoubleBuffer;
+		
+	
 		dummyCounter <= dummyCounter + 1;
 		state <= nextState;
 		streamingxOffset <= nextStreamingxOffset;
@@ -115,6 +121,8 @@ module Typhoon #(parameter tileDim = 8'd8)(
 		nextRasterTrigger = 0;
 		nextState = initState;
 		nextStreamingTileID = streamingTileID;
+		
+		nextDoubleBuffer = doubleBuffer;
 		unique case(state)
 			initState: begin
 				nextRasterTileID = 0;
@@ -160,6 +168,7 @@ module Typhoon #(parameter tileDim = 8'd8)(
 			
 			
 			endState: begin
+				nextDoubleBuffer = ~doubleBuffer;
 				nextState = initState;
 				//nextState = endState;
 			end
