@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/output_files/") File("Typhoon.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("C:/Users/finnn/Documents/385/385_FPGA/Typhoon/output_files/") File("Typhoon.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

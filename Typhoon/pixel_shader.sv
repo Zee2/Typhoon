@@ -122,7 +122,7 @@ always_comb begin
 				trueY >= box[1] && trueY < box[1] + box[3] &&
 				line01[17] == 1 && line12[17] == 1 && line20[17] == 1) begin
 				
-				basicTestColor = SW;
+				basicTestColor = SW | trueX[5:0]>>2;
 			end
 			
 			/*

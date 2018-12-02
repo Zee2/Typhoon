@@ -4,6 +4,7 @@ module rasterizer (
 	input logic rasterTileID,
 	input logic startRasterizing,
 	input logic[9:0] rasterxOffset, rasteryOffset,
+	input logic[3:0] KEY,
 	output logic doneRasterizing,
 	output reg[15:0] cBufferTile0 [tileDim][tileDim],
 	output reg[15:0] cBufferTile1 [tileDim][tileDim]
@@ -20,7 +21,7 @@ logic nextStartShadersRasterizing; // To pixel shaders
 logic shadersDoneRasterizing = 1; // From pixel shaders
 reg[15:0] zBufferTile [tileDim][tileDim];
 logic[9:0] tileOffsetX, tileOffsetY;
-
+logic[3:0] lastKey;
 pixel_shader #(tileDim, numPixelShaders) shader(.start_x(0), .start_y(0), .startRasterizing(startShadersRasterizing), .doneRasterizing(shadersDoneRasterizing), .*);
 //assign LEDR = state | (startRasterizing << 4);
 
@@ -30,19 +31,21 @@ pixel_shader #(tileDim, numPixelShaders) shader(.start_x(0), .start_y(0), .start
 logic[9:0] box [4]; // x,y,w,h
 logic[9:0] x0,y0,z0,x1,y1,z1,x2,y2,z2;
 
+logic[9:0] debugX = 10'd50;
+
 assign x0 = 100;
 assign y0 = 150;
 
 assign x1 = 125;
 assign y1 = 100;
 
-assign x2 = 150;
+assign x2 = box[0] + debugX;
 assign y2 = 124;
 
-assign box[0] = 100;
-assign box[1] = 100;
-assign box[2] = 50;
-assign box[3] = 50;
+assign box[0] = 100;//x
+assign box[1] = 100;//y
+assign box[2] = debugX;//w
+assign box[3] = 50;//h
 
 
 enum logic [4:0] {
@@ -54,10 +57,16 @@ enum logic [4:0] {
 } state = init, nextState = init;
 
 always_ff @(posedge BOARD_CLK) begin
+	lastKey <= KEY;
 	state <= nextState;
 	doneRasterizing <= nextDoneRasterizing;
 	
-	
+	if(KEY[0]==0 && KEY != lastKey) begin
+		debugX <= debugX + 10;
+	end
+	else if(KEY[1]==0 && KEY != lastKey) begin
+		debugX <= debugX - 10;
+	end
 
 	startShadersRasterizing <= nextStartShadersRasterizing;
 	if(state==rasterizingBegin)begin

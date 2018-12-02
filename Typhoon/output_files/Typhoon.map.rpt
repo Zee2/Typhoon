@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Typhoon
-Fri Nov 30 03:11:34 2018
+Fri Nov 30 16:33:05 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -22,30 +22,31 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  14. Registers Removed During Synthesis
  15. Removed Registers Triggering Further Register Optimizations
  16. General Register Statistics
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Parameter Settings for User Entity Instance: Top-level Entity: |Typhoon
- 19. Parameter Settings for User Entity Instance: rasterizer:tiledRasterizer
- 20. Parameter Settings for User Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader
- 21. Parameter Settings for User Entity Instance: mem_clk:myTest|altpll:altpll_component
- 22. Parameter Settings for User Entity Instance: VGA_controller:VGAtiming
- 23. Parameter Settings for User Entity Instance: framebuffer:SRAM
- 24. Parameter Settings for Inferred Entity Instance: framebuffer:SRAM|lpm_mult:Mult0
- 25. Parameter Settings for Inferred Entity Instance: framebuffer:SRAM|lpm_mult:Mult1
- 26. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0
- 27. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1
- 28. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5
- 29. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4
- 30. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3
- 31. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2
- 32. altpll Parameter Settings by Entity Instance
- 33. lpm_mult Parameter Settings by Entity Instance
- 34. Port Connectivity Checks: "VGA_controller:VGAtiming"
- 35. Port Connectivity Checks: "mem_clk:myTest"
- 36. Port Connectivity Checks: "rasterizer:tiledRasterizer|pixel_shader:shader"
- 37. Post-Synthesis Netlist Statistics for Top Partition
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
- 40. Analysis & Synthesis Suppressed Messages
+ 17. Inverted Register Statistics
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Parameter Settings for User Entity Instance: Top-level Entity: |Typhoon
+ 20. Parameter Settings for User Entity Instance: rasterizer:tiledRasterizer
+ 21. Parameter Settings for User Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader
+ 22. Parameter Settings for User Entity Instance: mem_clk:myTest|altpll:altpll_component
+ 23. Parameter Settings for User Entity Instance: VGA_controller:VGAtiming
+ 24. Parameter Settings for User Entity Instance: framebuffer:SRAM
+ 25. Parameter Settings for Inferred Entity Instance: framebuffer:SRAM|lpm_mult:Mult0
+ 26. Parameter Settings for Inferred Entity Instance: framebuffer:SRAM|lpm_mult:Mult1
+ 27. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0
+ 28. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1
+ 29. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5
+ 30. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4
+ 31. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3
+ 32. Parameter Settings for Inferred Entity Instance: rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2
+ 33. altpll Parameter Settings by Entity Instance
+ 34. lpm_mult Parameter Settings by Entity Instance
+ 35. Port Connectivity Checks: "VGA_controller:VGAtiming"
+ 36. Port Connectivity Checks: "mem_clk:myTest"
+ 37. Port Connectivity Checks: "rasterizer:tiledRasterizer|pixel_shader:shader"
+ 38. Post-Synthesis Netlist Statistics for Top Partition
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
+ 41. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -71,19 +72,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 30 03:11:34 2018       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 30 16:33:05 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Typhoon                                     ;
 ; Top-level Entity Name              ; Typhoon                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,173                                       ;
-;     Total combinational functions  ; 2,076                                       ;
-;     Dedicated logic registers      ; 2,234                                       ;
-; Total registers                    ; 2234                                        ;
+; Total logic elements               ; 4,206                                       ;
+;     Total combinational functions  ; 2,105                                       ;
+;     Dedicated logic registers      ; 2,247                                       ;
+; Total registers                    ; 2247                                        ;
 ; Total pins                         ; 175                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 8                                           ;
+; Embedded Multiplier 9-bit elements ; 10                                          ;
 ; Total PLLs                         ; 1                                           ;
 +------------------------------------+---------------------------------------------+
 
@@ -179,7 +180,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -187,7 +188,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
@@ -198,18 +199,18 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; framebuffer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv               ;         ;
-; VGA_controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/VGA_controller.sv            ;         ;
-; Typhoon.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv                   ;         ;
-; mem_clk.v                        ; yes             ; User Wizard-Generated File   ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v                    ;         ;
-; pixel_shader.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv              ;         ;
-; rasterizer.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv                ;         ;
+; framebuffer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv                   ;         ;
+; VGA_controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/VGA_controller.sv                ;         ;
+; Typhoon.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv                       ;         ;
+; mem_clk.v                        ; yes             ; User Wizard-Generated File   ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/mem_clk.v                        ;         ;
+; pixel_shader.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv                  ;         ;
+; rasterizer.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/rasterizer.sv                    ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf              ;         ;
 ; aglobal180.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc          ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_pll.inc         ;         ;
 ; stratixii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratixii_pll.inc       ;         ;
 ; cycloneii_pll.inc                ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/cycloneii_pll.inc       ;         ;
-; db/mem_clk_altpll.v              ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v          ;         ;
+; db/mem_clk_altpll.v              ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v              ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.inc            ;         ;
@@ -229,12 +230,13 @@ refer to the applicable agreement for further details.
 ; addcore.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/addcore.inc             ;         ;
 ; look_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/look_add.inc            ;         ;
 ; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_ngh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_ngh.tdf           ;         ;
-; db/add_sub_rgh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_rgh.tdf           ;         ;
+; db/add_sub_ngh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/add_sub_ngh.tdf               ;         ;
+; db/add_sub_rgh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/add_sub_rgh.tdf               ;         ;
 ; altshift.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altshift.tdf            ;         ;
-; db/add_sub_h9h.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_h9h.tdf           ;         ;
-; db/add_sub_fkh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_fkh.tdf           ;         ;
-; db/mult_aft.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mult_aft.tdf              ;         ;
+; db/add_sub_h9h.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/add_sub_h9h.tdf               ;         ;
+; db/add_sub_fkh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/add_sub_fkh.tdf               ;         ;
+; db/mult_aft.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/mult_aft.tdf                  ;         ;
+; db/mult_p5t.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/mult_p5t.tdf                  ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
@@ -243,32 +245,32 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 4,173           ;
+; Estimated Total logic elements              ; 4,206           ;
 ;                                             ;                 ;
-; Total combinational functions               ; 2076            ;
+; Total combinational functions               ; 2105            ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 1598            ;
-;     -- 3 input functions                    ; 246             ;
-;     -- <=2 input functions                  ; 232             ;
+;     -- 4 input functions                    ; 1602            ;
+;     -- 3 input functions                    ; 241             ;
+;     -- <=2 input functions                  ; 262             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 1774            ;
-;     -- arithmetic mode                      ; 302             ;
+;     -- normal mode                          ; 1771            ;
+;     -- arithmetic mode                      ; 334             ;
 ;                                             ;                 ;
-; Total registers                             ; 2234            ;
-;     -- Dedicated logic registers            ; 2234            ;
+; Total registers                             ; 2247            ;
+;     -- Dedicated logic registers            ; 2247            ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
 ; I/O pins                                    ; 175             ;
 ;                                             ;                 ;
-; Embedded Multiplier 9-bit elements          ; 8               ;
+; Embedded Multiplier 9-bit elements          ; 10              ;
 ;                                             ;                 ;
 ; Total PLLs                                  ; 1               ;
 ;     -- PLLs                                 ; 1               ;
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; BOARD_CLK~input ;
-; Maximum fan-out                             ; 2212            ;
-; Total fan-out                               ; 14558           ;
+; Maximum fan-out                             ; 2225            ;
+; Total fan-out                               ; 14676           ;
 ; Average fan-out                             ; 3.10            ;
 +---------------------------------------------+-----------------+
 
@@ -278,7 +280,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node                           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                            ; Entity Name    ; Library Name ;
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
-; |Typhoon                                             ; 2076 (55)           ; 2234 (38)                 ; 0           ; 8            ; 0       ; 4         ; 175  ; 0            ; |Typhoon                                                                                                                                                                       ; Typhoon        ; work         ;
+; |Typhoon                                             ; 2105 (56)           ; 2247 (38)                 ; 0           ; 10           ; 0       ; 5         ; 175  ; 0            ; |Typhoon                                                                                                                                                                       ; Typhoon        ; work         ;
 ;    |VGA_controller:VGAtiming|                        ; 49 (49)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|VGA_controller:VGAtiming                                                                                                                                              ; VGA_controller ; work         ;
 ;    |framebuffer:SRAM|                                ; 1540 (1480)         ; 87 (87)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM                                                                                                                                                      ; framebuffer    ; work         ;
 ;       |lpm_mult:Mult0|                               ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|framebuffer:SRAM|lpm_mult:Mult0                                                                                                                                       ; lpm_mult       ; work         ;
@@ -300,8 +302,8 @@ refer to the applicable agreement for further details.
 ;    |mem_clk:myTest|                                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|mem_clk:myTest                                                                                                                                                        ; mem_clk        ; work         ;
 ;       |altpll:altpll_component|                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|mem_clk:myTest|altpll:altpll_component                                                                                                                                ; altpll         ; work         ;
 ;          |mem_clk_altpll:auto_generated|             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated                                                                                                  ; mem_clk_altpll ; work         ;
-;    |rasterizer:tiledRasterizer|                      ; 432 (4)             ; 2086 (20)                 ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer                                                                                                                                            ; rasterizer     ; work         ;
-;       |pixel_shader:shader|                          ; 428 (340)           ; 2066 (2066)               ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader                                                                                                                        ; pixel_shader   ; work         ;
+;    |rasterizer:tiledRasterizer|                      ; 460 (28)            ; 2099 (33)                 ; 0           ; 10           ; 0       ; 5         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer                                                                                                                                            ; rasterizer     ; work         ;
+;       |pixel_shader:shader|                          ; 432 (388)           ; 2066 (2066)               ; 0           ; 10           ; 0       ; 5         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader                                                                                                                        ; pixel_shader   ; work         ;
 ;          |lpm_mult:Mult0|                            ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0                                                                                                         ; lpm_mult       ; work         ;
 ;             |multcore:mult_core|                     ; 44 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core                                                                                      ; multcore       ; work         ;
 ;                |mpar_add:padder|                     ; 19 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add       ; work         ;
@@ -315,17 +317,11 @@ refer to the applicable agreement for further details.
 ;          |lpm_mult:Mult2|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2                                                                                                         ; lpm_mult       ; work         ;
 ;             |mult_aft:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2|mult_aft:auto_generated                                                                                 ; mult_aft       ; work         ;
 ;          |lpm_mult:Mult3|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3                                                                                                         ; lpm_mult       ; work         ;
-;             |mult_aft:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3|mult_aft:auto_generated                                                                                 ; mult_aft       ; work         ;
+;             |mult_p5t:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3|mult_p5t:auto_generated                                                                                 ; mult_p5t       ; work         ;
 ;          |lpm_mult:Mult4|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4                                                                                                         ; lpm_mult       ; work         ;
 ;             |mult_aft:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4|mult_aft:auto_generated                                                                                 ; mult_aft       ; work         ;
-;          |lpm_mult:Mult5|                            ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5                                                                                                         ; lpm_mult       ; work         ;
-;             |multcore:mult_core|                     ; 44 (25)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core                                                                                      ; multcore       ; work         ;
-;                |mpar_add:padder|                     ; 19 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder                                                                      ; mpar_add       ; work         ;
-;                   |lpm_add_sub:adder[0]|             ; 10 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                 ; lpm_add_sub    ; work         ;
-;                      |add_sub_h9h:auto_generated|    ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_h9h:auto_generated                      ; add_sub_h9h    ; work         ;
-;                   |mpar_add:sub_par_add|             ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; mpar_add       ; work         ;
-;                      |lpm_add_sub:adder[0]|          ; 9 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; lpm_add_sub    ; work         ;
-;                         |add_sub_fkh:auto_generated| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_fkh:auto_generated ; add_sub_fkh    ; work         ;
+;          |lpm_mult:Mult5|                            ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5                                                                                                         ; lpm_mult       ; work         ;
+;             |mult_p5t:auto_generated|                ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5|mult_p5t:auto_generated                                                                                 ; mult_p5t       ; work         ;
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -336,11 +332,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                             ; Number Used ;
 +---------------------------------------+-------------+
 ; Simple Multipliers (9-bit)            ; 0           ;
-; Simple Multipliers (18-bit)           ; 4           ;
+; Simple Multipliers (18-bit)           ; 5           ;
 ; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 8           ;
-; Signed Embedded Multipliers           ; 0           ;
-; Unsigned Embedded Multipliers         ; 4           ;
+; Embedded Multiplier 9-bit elements    ; 10          ;
+; Signed Embedded Multipliers           ; 2           ;
+; Unsigned Embedded Multipliers         ; 3           ;
 ; Mixed Sign Embedded Multipliers       ; 0           ;
 ; Variable Sign Embedded Multipliers    ; 0           ;
 ; Dedicated Input Shift Register Chains ; 0           ;
@@ -481,14 +477,26 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2234  ;
+; Total registers                              ; 2247  ;
 ; Number of registers using Synchronous Clear  ; 22    ;
 ; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2173  ;
+; Number of registers using Clock Enable       ; 2182  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; rasterizer:tiledRasterizer|debugX[5]   ; 3       ;
+; rasterizer:tiledRasterizer|debugX[4]   ; 3       ;
+; rasterizer:tiledRasterizer|debugX[1]   ; 6       ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -496,13 +504,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Typhoon|framebuffer:SRAM|SRAM_ADDR[0]                                    ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Typhoon|framebuffer:SRAM|SRAM_ADDR[2]                                    ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Typhoon|rasteryOffset[3]                                                 ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Typhoon|rasterxOffset[8]                                                 ;
-; 128:1              ; 16 bits   ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; Yes        ; |Typhoon|framebuffer:SRAM|DataToSRAM[14]                                  ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Typhoon|VGA_controller:VGAtiming|v_counter_in[3]                         ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|basicTestColor[0] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|nextY             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Typhoon|rasterxOffset[7]                                                 ;
+; 128:1              ; 16 bits   ; 1360 LEs      ; 1360 LEs             ; 0 LEs                  ; Yes        ; |Typhoon|framebuffer:SRAM|DataToSRAM[4]                                   ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Typhoon|VGA_controller:VGAtiming|v_counter_in[6]                         ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|basicTestColor[4] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shader|nextX             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
 
@@ -1083,15 +1091,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                   ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                 ;
 ; LPM_WIDTHA                                     ; 11           ; Untyped                                        ;
-; LPM_WIDTHB                                     ; 7            ; Untyped                                        ;
-; LPM_WIDTHP                                     ; 18           ; Untyped                                        ;
-; LPM_WIDTHR                                     ; 18           ; Untyped                                        ;
+; LPM_WIDTHB                                     ; 11           ; Untyped                                        ;
+; LPM_WIDTHP                                     ; 22           ; Untyped                                        ;
+; LPM_WIDTHR                                     ; 22           ; Untyped                                        ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped                                        ;
 ; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                        ;
 ; LPM_PIPELINE                                   ; 0            ; Untyped                                        ;
 ; LATENCY                                        ; 0            ; Untyped                                        ;
 ; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                        ;
-; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                        ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                                        ;
 ; USE_EAB                                        ; OFF          ; Untyped                                        ;
 ; MAXIMIZE_SPEED                                 ; 6            ; Untyped                                        ;
 ; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                        ;
@@ -1100,7 +1108,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                        ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                        ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                        ;
-; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                                        ;
+; CBXI_PARAMETER                                 ; mult_p5t     ; Untyped                                        ;
 ; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                        ;
@@ -1152,25 +1160,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                   ;
 ; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                   ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                 ;
-; LPM_WIDTHA                                     ; 18           ; Untyped                                        ;
-; LPM_WIDTHB                                     ; 5            ; Untyped                                        ;
-; LPM_WIDTHP                                     ; 23           ; Untyped                                        ;
-; LPM_WIDTHR                                     ; 23           ; Untyped                                        ;
+; LPM_WIDTHA                                     ; 11           ; Untyped                                        ;
+; LPM_WIDTHB                                     ; 11           ; Untyped                                        ;
+; LPM_WIDTHP                                     ; 22           ; Untyped                                        ;
+; LPM_WIDTHR                                     ; 22           ; Untyped                                        ;
 ; LPM_WIDTHS                                     ; 1            ; Untyped                                        ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                        ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                        ;
 ; LPM_PIPELINE                                   ; 0            ; Untyped                                        ;
 ; LATENCY                                        ; 0            ; Untyped                                        ;
 ; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                        ;
-; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                        ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                                        ;
 ; USE_EAB                                        ; OFF          ; Untyped                                        ;
-; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                        ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped                                        ;
 ; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                        ;
 ; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                        ;
 ; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                            ;
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                        ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                        ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                        ;
-; CBXI_PARAMETER                                 ; mult_aft     ; Untyped                                        ;
+; CBXI_PARAMETER                                 ; mult_p5t     ; Untyped                                        ;
 ; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                        ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                        ;
@@ -1282,11 +1290,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
 ; Entity Instance                       ; rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5 ;
 ;     -- LPM_WIDTHA                     ; 11                                                            ;
-;     -- LPM_WIDTHB                     ; 7                                                             ;
-;     -- LPM_WIDTHP                     ; 18                                                            ;
+;     -- LPM_WIDTHB                     ; 11                                                            ;
+;     -- LPM_WIDTHP                     ; 22                                                            ;
 ;     -- LPM_REPRESENTATION             ; SIGNED                                                        ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                                           ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                            ;
 ;     -- USE_EAB                        ; OFF                                                           ;
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
@@ -1303,12 +1311,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                                            ;
 ; Entity Instance                       ; rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3 ;
-;     -- LPM_WIDTHA                     ; 18                                                            ;
-;     -- LPM_WIDTHB                     ; 5                                                             ;
-;     -- LPM_WIDTHP                     ; 23                                                            ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED                                                      ;
+;     -- LPM_WIDTHA                     ; 11                                                            ;
+;     -- LPM_WIDTHB                     ; 11                                                            ;
+;     -- LPM_WIDTHP                     ; 22                                                            ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                        ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO                                                            ;
-;     -- INPUT_B_IS_CONSTANT            ; YES                                                           ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                            ;
 ;     -- USE_EAB                        ; OFF                                                           ;
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                          ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                                            ;
@@ -1363,10 +1371,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; box[1][4..3] ; Input ; Info     ; Stuck at GND                             ;
 ; box[1][1..0] ; Input ; Info     ; Stuck at GND                             ;
 ; box[1][2]    ; Input ; Info     ; Stuck at VCC                             ;
-; box[2][5..4] ; Input ; Info     ; Stuck at VCC                             ;
-; box[2][9..6] ; Input ; Info     ; Stuck at GND                             ;
-; box[2][3..2] ; Input ; Info     ; Stuck at GND                             ;
-; box[2][1]    ; Input ; Info     ; Stuck at VCC                             ;
 ; box[2][0]    ; Input ; Info     ; Stuck at GND                             ;
 ; box[3][5..4] ; Input ; Info     ; Stuck at VCC                             ;
 ; box[3][9..6] ; Input ; Info     ; Stuck at GND                             ;
@@ -1396,13 +1400,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; y1[1..0]     ; Input ; Info     ; Stuck at GND                             ;
 ; y1[2]        ; Input ; Info     ; Stuck at VCC                             ;
 ; z1           ; Input ; Info     ; Stuck at GND                             ;
-; x2[2..1]     ; Input ; Info     ; Stuck at VCC                             ;
-; x2[9..8]     ; Input ; Info     ; Stuck at GND                             ;
-; x2[6..5]     ; Input ; Info     ; Stuck at GND                             ;
-; x2[7]        ; Input ; Info     ; Stuck at VCC                             ;
-; x2[4]        ; Input ; Info     ; Stuck at VCC                             ;
-; x2[3]        ; Input ; Info     ; Stuck at GND                             ;
-; x2[0]        ; Input ; Info     ; Stuck at GND                             ;
 ; y2[6..2]     ; Input ; Info     ; Stuck at VCC                             ;
 ; y2[9..7]     ; Input ; Info     ; Stuck at GND                             ;
 ; y2[1..0]     ; Input ; Info     ; Stuck at GND                             ;
@@ -1416,29 +1413,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 175                         ;
-; cycloneiii_ff         ; 2234                        ;
-;     ENA               ; 2151                        ;
+; cycloneiii_ff         ; 2247                        ;
+;     ENA               ; 2160                        ;
 ;     ENA SCLR          ; 14                          ;
 ;     ENA SCLR SLD      ; 8                           ;
 ;     SLD               ; 1                           ;
-;     plain             ; 60                          ;
+;     plain             ; 64                          ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 2083                        ;
-;     arith             ; 302                         ;
-;         2 data inputs ; 161                         ;
-;         3 data inputs ; 141                         ;
-;     normal            ; 1781                        ;
-;         0 data inputs ; 11                          ;
-;         1 data inputs ; 24                          ;
-;         2 data inputs ; 43                          ;
-;         3 data inputs ; 105                         ;
-;         4 data inputs ; 1598                        ;
-; cycloneiii_mac_mult   ; 4                           ;
-; cycloneiii_mac_out    ; 4                           ;
+; cycloneiii_lcell_comb ; 2112                        ;
+;     arith             ; 334                         ;
+;         2 data inputs ; 186                         ;
+;         3 data inputs ; 148                         ;
+;     normal            ; 1778                        ;
+;         0 data inputs ; 14                          ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 93                          ;
+;         4 data inputs ; 1602                        ;
+; cycloneiii_mac_mult   ; 5                           ;
+; cycloneiii_mac_out    ; 5                           ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.30                        ;
-; Average LUT depth     ; 5.48                        ;
+; Average LUT depth     ; 5.35                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1447,7 +1444,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -1457,7 +1454,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 30 03:11:21 2018
+    Info: Processing started: Fri Nov 30 16:32:45 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Typhoon -c Typhoon
 Warning (125092): Tcl Script File testPLL.qip not found
     Info (125063): set_global_assignment -name QIP_FILE testPLL.qip
@@ -1470,76 +1467,78 @@ Warning (125092): Tcl Script File my_test.qip not found
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file framebuffer.sv
-    Info (12023): Found entity 1: framebuffer File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 12
+    Info (12023): Found entity 1: framebuffer File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file sram_thin_controller.sv
-    Info (12023): Found entity 1: SRAM_thin_controller File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/SRAM_thin_controller.sv Line: 14
+    Info (12023): Found entity 1: SRAM_thin_controller File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/SRAM_thin_controller.sv Line: 14
 Warning (12019): Can't analyze file -- file testPLL.v is missing
 Warning (12019): Can't analyze file -- file SRAMCLK.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file vga_clk.v
-    Info (12023): Found entity 1: vga_clk File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vga_clk.v Line: 39
+    Info (12023): Found entity 1: vga_clk File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/vga_clk.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file tristate.sv
-    Info (12023): Found entity 1: tristate File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/tristate.sv Line: 16
+    Info (12023): Found entity 1: tristate File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/tristate.sv Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.sv
-    Info (12023): Found entity 1: VGA_controller File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/VGA_controller.sv Line: 26
+    Info (12023): Found entity 1: VGA_controller File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/VGA_controller.sv Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file typhoon.sv
-    Info (12023): Found entity 1: Typhoon File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 4
+    Info (12023): Found entity 1: Typhoon File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file sram_controller.sv
-    Info (12023): Found entity 1: SRAM_controller File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/SRAM_controller.sv Line: 24
+    Info (12023): Found entity 1: SRAM_controller File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/SRAM_controller.sv Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file sram_fifo.v
-    Info (12023): Found entity 1: SRAM_FIFO File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/SRAM_FIFO.v Line: 39
+    Info (12023): Found entity 1: SRAM_FIFO File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/SRAM_FIFO.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
-    Info (12023): Found entity 1: testbench File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/testbench.sv Line: 1
+    Info (12023): Found entity 1: testbench File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/testbench.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mem_clk.v
-    Info (12023): Found entity 1: mem_clk File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 39
+    Info (12023): Found entity 1: mem_clk File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file vga_port.sv
-    Info (12023): Found entity 1: VGA_port File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/VGA_port.sv Line: 3
+    Info (12023): Found entity 1: VGA_port File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/VGA_port.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file pixel_shader.sv
-    Info (12023): Found entity 1: pixel_shader File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 1
+    Info (12023): Found entity 1: pixel_shader File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rasterizer.sv
-    Info (12023): Found entity 1: rasterizer File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 1
+    Info (12023): Found entity 1: rasterizer File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file debug_shader.sv
-    Info (12023): Found entity 1: debug_shader File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/debug_shader.sv Line: 1
-Warning (10222): Verilog HDL Parameter Declaration warning at framebuffer.sv(41): Parameter Declaration in module "framebuffer" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 41
+    Info (12023): Found entity 1: debug_shader File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/debug_shader.sv Line: 1
+Warning (10222): Verilog HDL Parameter Declaration warning at framebuffer.sv(41): Parameter Declaration in module "framebuffer" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 41
 Info (12127): Elaborating entity "Typhoon" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at Typhoon.sv(98): truncated value with size 32 to match size of target (16) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 98
-Warning (10030): Net "VGA_reset" at Typhoon.sv(29) has no driver or initial value, using a default initial value '0' File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 29
-Warning (10034): Output port "LEDG" at Typhoon.sv(10) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
-Warning (10034): Output port "HEX0" at Typhoon.sv(14) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-Warning (10034): Output port "HEX1" at Typhoon.sv(14) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-Warning (10034): Output port "HEX2" at Typhoon.sv(14) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-Warning (10034): Output port "HEX3" at Typhoon.sv(14) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-Warning (10034): Output port "HEX4" at Typhoon.sv(14) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-Warning (10034): Output port "HEX5" at Typhoon.sv(14) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-Warning (10034): Output port "HEX6" at Typhoon.sv(14) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-Warning (10034): Output port "HEX7" at Typhoon.sv(14) has no driver File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at Typhoon.sv(98): truncated value with size 32 to match size of target (16) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 98
+Warning (10030): Net "VGA_reset" at Typhoon.sv(29) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 29
+Warning (10034): Output port "LEDG" at Typhoon.sv(10) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
+Warning (10034): Output port "HEX0" at Typhoon.sv(14) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+Warning (10034): Output port "HEX1" at Typhoon.sv(14) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+Warning (10034): Output port "HEX2" at Typhoon.sv(14) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+Warning (10034): Output port "HEX3" at Typhoon.sv(14) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+Warning (10034): Output port "HEX4" at Typhoon.sv(14) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+Warning (10034): Output port "HEX5" at Typhoon.sv(14) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+Warning (10034): Output port "HEX6" at Typhoon.sv(14) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+Warning (10034): Output port "HEX7" at Typhoon.sv(14) has no driver File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "tileAinput" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "tileBinput" into its bus
-Info (12128): Elaborating entity "rasterizer" for hierarchy "rasterizer:tiledRasterizer" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 38
-Warning (10858): Verilog HDL warning at rasterizer.sv(21): object zBufferTile used but never assigned File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 21
-Warning (10030): Net "zBufferTile" at rasterizer.sv(21) has no driver or initial value, using a default initial value '0' File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 21
-Warning (10030): Net "z0" at rasterizer.sv(31) has no driver or initial value, using a default initial value '0' File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 31
-Warning (10030): Net "z1" at rasterizer.sv(31) has no driver or initial value, using a default initial value '0' File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 31
-Warning (10030): Net "z2" at rasterizer.sv(31) has no driver or initial value, using a default initial value '0' File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 31
+Info (12128): Elaborating entity "rasterizer" for hierarchy "rasterizer:tiledRasterizer" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 38
+Warning (10858): Verilog HDL warning at rasterizer.sv(22): object zBufferTile used but never assigned File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at rasterizer.sv(65): truncated value with size 32 to match size of target (10) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 65
+Warning (10230): Verilog HDL assignment warning at rasterizer.sv(68): truncated value with size 32 to match size of target (10) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 68
+Warning (10030): Net "zBufferTile" at rasterizer.sv(22) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 22
+Warning (10030): Net "z0" at rasterizer.sv(32) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 32
+Warning (10030): Net "z1" at rasterizer.sv(32) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 32
+Warning (10030): Net "z2" at rasterizer.sv(32) has no driver or initial value, using a default initial value '0' File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 32
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile0" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "zBufferTile" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile0" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile1" into its bus
-Info (12128): Elaborating entity "pixel_shader" for hierarchy "rasterizer:tiledRasterizer|pixel_shader:shader" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 24
-Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(76): truncated value with size 32 to match size of target (10) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 76
-Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(77): truncated value with size 32 to match size of target (10) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 77
-Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(125): truncated value with size 18 to match size of target (16) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 125
-Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(151): truncated value with size 32 to match size of target (10) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 151
+Info (12128): Elaborating entity "pixel_shader" for hierarchy "rasterizer:tiledRasterizer|pixel_shader:shader" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/rasterizer.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(76): truncated value with size 32 to match size of target (10) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 76
+Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(77): truncated value with size 32 to match size of target (10) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 77
+Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(125): truncated value with size 18 to match size of target (16) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 125
+Warning (10230): Verilog HDL assignment warning at pixel_shader.sv(151): truncated value with size 32 to match size of target (10) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 151
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile0" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "zBufferTile" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile0" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "cBufferTile1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "zBufferTile" into its bus
-Info (12128): Elaborating entity "mem_clk" for hierarchy "mem_clk:myTest" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 200
-Info (12128): Elaborating entity "altpll" for hierarchy "mem_clk:myTest|altpll:altpll_component" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 94
-Info (12130): Elaborated megafunction instantiation "mem_clk:myTest|altpll:altpll_component" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 94
-Info (12133): Instantiated megafunction "mem_clk:myTest|altpll:altpll_component" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 94
+Info (12128): Elaborating entity "mem_clk" for hierarchy "mem_clk:myTest" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 200
+Info (12128): Elaborating entity "altpll" for hierarchy "mem_clk:myTest|altpll:altpll_component" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 94
+Info (12130): Elaborated megafunction instantiation "mem_clk:myTest|altpll:altpll_component" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 94
+Info (12133): Instantiated megafunction "mem_clk:myTest|altpll:altpll_component" with the following parameter: File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/mem_clk.v Line: 94
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "10"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1599,31 +1598,31 @@ Info (12133): Instantiated megafunction "mem_clk:myTest|altpll:altpll_component"
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mem_clk_altpll.v
-    Info (12023): Found entity 1: mem_clk_altpll File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v Line: 29
+    Info (12023): Found entity 1: mem_clk_altpll File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v Line: 29
 Info (12128): Elaborating entity "mem_clk_altpll" for hierarchy "mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:VGAtiming" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 202
-Info (12128): Elaborating entity "framebuffer" for hierarchy "framebuffer:SRAM" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 221
-Warning (10036): Verilog HDL or VHDL warning at framebuffer.sv(50): object "funDemo" assigned a value but never read File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 50
-Warning (10036): Verilog HDL or VHDL warning at framebuffer.sv(72): object "readSync" assigned a value but never read File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 72
-Warning (10230): Verilog HDL assignment warning at framebuffer.sv(87): truncated value with size 32 to match size of target (20) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
-Warning (10230): Verilog HDL assignment warning at framebuffer.sv(108): truncated value with size 32 to match size of target (20) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
-Warning (10230): Verilog HDL assignment warning at framebuffer.sv(178): truncated value with size 32 to match size of target (8) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 178
-Warning (10230): Verilog HDL assignment warning at framebuffer.sv(182): truncated value with size 32 to match size of target (8) File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 182
+Info (12128): Elaborating entity "VGA_controller" for hierarchy "VGA_controller:VGAtiming" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 202
+Info (12128): Elaborating entity "framebuffer" for hierarchy "framebuffer:SRAM" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 221
+Warning (10036): Verilog HDL or VHDL warning at framebuffer.sv(50): object "funDemo" assigned a value but never read File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 50
+Warning (10036): Verilog HDL or VHDL warning at framebuffer.sv(72): object "readSync" assigned a value but never read File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 72
+Warning (10230): Verilog HDL assignment warning at framebuffer.sv(87): truncated value with size 32 to match size of target (20) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
+Warning (10230): Verilog HDL assignment warning at framebuffer.sv(108): truncated value with size 32 to match size of target (20) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
+Warning (10230): Verilog HDL assignment warning at framebuffer.sv(178): truncated value with size 32 to match size of target (8) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 178
+Warning (10230): Verilog HDL assignment warning at framebuffer.sv(182): truncated value with size 32 to match size of target (8) File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 182
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "tileAinput" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "tileBinput" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "tileAinput" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "tileBinput" into its bus
 Info (278001): Inferred 8 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "framebuffer:SRAM|Mult0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "framebuffer:SRAM|Mult1" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult1" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult5" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult4" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult3" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult2" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
-Info (12130): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
-Info (12133): Instantiated megafunction "framebuffer:SRAM|lpm_mult:Mult0" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "framebuffer:SRAM|Mult0" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "framebuffer:SRAM|Mult1" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult0" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult1" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult5" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult4" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult3" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "rasterizer:tiledRasterizer|pixel_shader:shader|Mult2" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+Info (12130): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
+Info (12133): Instantiated megafunction "framebuffer:SRAM|lpm_mult:Mult0" with the following parameter: File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 87
     Info (12134): Parameter "LPM_WIDTHA" = "11"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "21"
@@ -1637,14 +1636,14 @@ Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:M
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ngh.tdf
-    Info (12023): Found entity 1: add_sub_ngh File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_ngh.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_ngh File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/add_sub_ngh.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 78
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_rgh.tdf
-    Info (12023): Found entity 1: add_sub_rgh File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_rgh.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_rgh File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/add_sub_rgh.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
-Info (12130): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
-Info (12133): Instantiated megafunction "framebuffer:SRAM|lpm_mult:Mult1" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
+Info (12130): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
+Info (12133): Instantiated megafunction "framebuffer:SRAM|lpm_mult:Mult1" with the following parameter: File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/framebuffer.sv Line: 108
     Info (12134): Parameter "LPM_WIDTHA" = "10"
     Info (12134): Parameter "LPM_WIDTHB" = "10"
     Info (12134): Parameter "LPM_WIDTHP" = "20"
@@ -1657,8 +1656,8 @@ Info (12133): Instantiated megafunction "framebuffer:SRAM|lpm_mult:Mult1" with t
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
 Info (12131): Elaborated megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1|altshift:external_latency_ffs", which is child of megafunction instantiation "framebuffer:SRAM|lpm_mult:Mult1" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
-Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
-Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" with the following parameter: File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
     Info (12134): Parameter "LPM_WIDTHA" = "11"
     Info (12134): Parameter "LPM_WIDTHB" = "7"
     Info (12134): Parameter "LPM_WIDTHP" = "18"
@@ -1672,14 +1671,14 @@ Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|
 Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
 Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_h9h.tdf
-    Info (12023): Found entity 1: add_sub_h9h File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_h9h.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_h9h File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/add_sub_h9h.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
 Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_fkh.tdf
-    Info (12023): Found entity 1: add_sub_fkh File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/add_sub_fkh.tdf Line: 22
+    Info (12023): Found entity 1: add_sub_fkh File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/add_sub_fkh.tdf Line: 22
 Info (12131): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
-Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
-Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult1" with the following parameter: File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 102
     Info (12134): Parameter "LPM_WIDTHA" = "18"
     Info (12134): Parameter "LPM_WIDTHB" = "5"
     Info (12134): Parameter "LPM_WIDTHP" = "23"
@@ -1690,9 +1689,22 @@ Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_aft.tdf
-    Info (12023): Found entity 1: mult_aft File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mult_aft.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
-Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
+    Info (12023): Found entity 1: mult_aft File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/mult_aft.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult5" with the following parameter: File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
+    Info (12134): Parameter "LPM_WIDTHA" = "11"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "22"
+    Info (12134): Parameter "LPM_WIDTHR" = "22"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_p5t.tdf
+    Info (12023): Found entity 1: mult_p5t File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/mult_p5t.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult4" with the following parameter: File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 104
     Info (12134): Parameter "LPM_WIDTHA" = "18"
     Info (12134): Parameter "LPM_WIDTHB" = "5"
     Info (12134): Parameter "LPM_WIDTHP" = "23"
@@ -1702,19 +1714,19 @@ Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
-Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
-    Info (12134): Parameter "LPM_WIDTHA" = "18"
-    Info (12134): Parameter "LPM_WIDTHB" = "5"
-    Info (12134): Parameter "LPM_WIDTHP" = "23"
-    Info (12134): Parameter "LPM_WIDTHR" = "23"
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult3" with the following parameter: File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+    Info (12134): Parameter "LPM_WIDTHA" = "11"
+    Info (12134): Parameter "LPM_WIDTHB" = "11"
+    Info (12134): Parameter "LPM_WIDTHP" = "22"
+    Info (12134): Parameter "LPM_WIDTHR" = "22"
     Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
-Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2" with the following parameter: File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12130): Elaborated megafunction instantiation "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
+Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader:shader|lpm_mult:Mult2" with the following parameter: File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 103
     Info (12134): Parameter "LPM_WIDTHA" = "18"
     Info (12134): Parameter "LPM_WIDTHB" = "5"
     Info (12134): Parameter "LPM_WIDTHP" = "23"
@@ -1725,137 +1737,133 @@ Info (12133): Instantiated megafunction "rasterizer:tiledRasterizer|pixel_shader
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SRAM_UB_N" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 9
-    Warning (13410): Pin "SRAM_LB_N" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 9
-    Warning (13410): Pin "SRAM_CE_N" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 9
-    Warning (13410): Pin "SRAM_OE_N" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 9
-    Warning (13410): Pin "LEDG[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
-    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
-    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
-    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
-    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
-    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
-    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
-    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
-    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
-    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
-    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
-    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
-    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
-    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
-    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 13
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX6[4]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX6[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX6[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
-    Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "SRAM_UB_N" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 9
+    Warning (13410): Pin "SRAM_LB_N" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 9
+    Warning (13410): Pin "SRAM_CE_N" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 9
+    Warning (13410): Pin "SRAM_OE_N" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 9
+    Warning (13410): Pin "LEDG[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
+    Warning (13410): Pin "LEDG[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 10
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[15]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 11
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 12
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 13
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX6[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX6[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX6[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX6[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX6[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX6[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX7[0]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX7[3]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX7[4]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX7[5]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
+    Warning (13410): Pin "HEX7[6]" is stuck at GND File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 14
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 17 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[4]~0" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
-    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[3]~2" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
-    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[5]~4" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
-    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[6]~6" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
-    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[7]~8" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
-    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[9]~10" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
-    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[8]~12" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
-Info (144001): Generated suppressed messages file C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.map.smsg
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[5]~0" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[6]~2" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[7]~4" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[3]~6" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[4]~8" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[9]~10" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+    Info (17048): Logic cell "rasterizer:tiledRasterizer|pixel_shader:shader|trueY[8]~12" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/pixel_shader.sv Line: 32
+Info (144001): Generated suppressed messages file C:/Users/finnn/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (15897): PLL "mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated|pll1" has parameter compensate_clock set to clock0 but port CLK[0] is not connected File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v Line: 43
-Warning (15899): PLL "mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated|pll1" has parameters clk0_multiply_by and clk0_divide_by specified but port CLK[0] is not connected File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v Line: 43
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 15
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 15
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 15
-    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 16
-    Warning (15610): No output dependent on input pin "SW[17]" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 16
-    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 15
-Info (21057): Implemented 4396 device resources after synthesis - the final resource count might be different
+Warning (15897): PLL "mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated|pll1" has parameter compensate_clock set to clock0 but port CLK[0] is not connected File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v Line: 43
+Warning (15899): PLL "mem_clk:myTest|altpll:altpll_component|mem_clk_altpll:auto_generated|pll1" has parameters clk0_multiply_by and clk0_divide_by specified but port CLK[0] is not connected File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v Line: 43
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[16]" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 16
+    Warning (15610): No output dependent on input pin "SW[17]" File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sv Line: 16
+Info (21057): Implemented 4431 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 136 output pins
     Info (21060): Implemented 16 bidirectional pins
-    Info (21061): Implemented 4212 logic cells
+    Info (21061): Implemented 4245 logic cells
     Info (21065): Implemented 1 PLLs
-    Info (21062): Implemented 8 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 136 warnings
-    Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Fri Nov 30 03:11:34 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:21
+    Info (21062): Implemented 10 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 134 warnings
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Fri Nov 30 16:33:05 2018
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:32
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.map.smsg.
+The suppressed messages can be found in C:/Users/finnn/Documents/385/385_FPGA/Typhoon/output_files/Typhoon.map.smsg.
 
 
