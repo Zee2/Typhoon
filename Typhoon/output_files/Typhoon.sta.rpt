@@ -1,5 +1,5 @@
 Timing Analyzer report for Typhoon
-Fri Nov 30 16:33:43 2018
+Wed Dec 05 05:34:58 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -94,17 +94,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.23        ;
+; Average used               ; 1.29        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  12.1%      ;
-;     Processor 3            ;   6.2%      ;
-;     Processor 4            ;   4.8%      ;
+;     Processor 2            ;  16.2%      ;
+;     Processor 3            ;   7.1%      ;
+;     Processor 4            ;   5.4%      ;
 +----------------------------+-------------+
 
 
@@ -113,7 +113,7 @@ refer to the applicable agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; Typhoon.sdc   ; OK     ; Fri Nov 30 16:33:41 2018 ;
+; Typhoon.sdc   ; OK     ; Wed Dec 05 05:34:55 2018 ;
 +---------------+--------+--------------------------+
 
 
@@ -1794,7 +1794,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 30 16:33:38 2018
+    Info: Processing started: Wed Dec 05 05:34:53 2018
 Info: Command: quartus_sta Typhoon -c Typhoon
 Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1802,18 +1802,18 @@ Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332104): Reading SDC File: 'Typhoon.sdc'
-Warning (332174): Ignored filter at Typhoon.sdc(7): myTest|altpll_component|auto_generated|pll1|clk[0] could not be matched with a port or pin or register or keeper or net or combinational node or node File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 7
-Critical Warning (332049): Ignored create_generated_clock at Typhoon.sdc(7): Argument <targets> is not an object ID File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 7
-    Info (332050): create_generated_clock -source {myTest|altpll_component|auto_generated|pll1|inclk[0]} -multiply_by 8 -divide_by 5 -duty_cycle 50.00 -name {sram} {myTest|altpll_component|auto_generated|pll1|clk[0]} File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 7
-Warning (332174): Ignored filter at Typhoon.sdc(13): sram could not be matched with a clock File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 13
-Warning (332049): Ignored set_input_delay at Typhoon.sdc(13): Argument -clock is an empty collection File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 13
-    Info (332050): set_input_delay -max -clock [get_clocks {sram}]  3.000 [get_ports {SRAM_DQ*}] File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 13
-Warning (332049): Ignored set_input_delay at Typhoon.sdc(14): Argument -clock is an empty collection File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 14
-    Info (332050): set_input_delay -min -clock [get_clocks {sram}]  2.000 [get_ports {SRAM_DQ*}] File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 14
-Warning (332049): Ignored set_output_delay at Typhoon.sdc(16): Argument -clock is an empty collection File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 16
-    Info (332050): set_output_delay -max -clock [get_clocks {sram}]  3.000 [get_ports {SRAM_ADDR*}] File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 16
-Warning (332049): Ignored set_output_delay at Typhoon.sdc(17): Argument -clock is an empty collection File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 17
-    Info (332050): set_output_delay -min -clock [get_clocks {sram}]  2.000 [get_ports {SRAM_ADDR*}] File: C:/Users/finnn/Documents/385/385_FPGA/Typhoon/Typhoon.sdc Line: 17
+Warning (332174): Ignored filter at Typhoon.sdc(7): myTest|altpll_component|auto_generated|pll1|clk[0] could not be matched with a port or pin or register or keeper or net or combinational node or node File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 7
+Critical Warning (332049): Ignored create_generated_clock at Typhoon.sdc(7): Argument <targets> is not an object ID File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 7
+    Info (332050): create_generated_clock -source {myTest|altpll_component|auto_generated|pll1|inclk[0]} -multiply_by 8 -divide_by 5 -duty_cycle 50.00 -name {sram} {myTest|altpll_component|auto_generated|pll1|clk[0]} File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 7
+Warning (332174): Ignored filter at Typhoon.sdc(13): sram could not be matched with a clock File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 13
+Warning (332049): Ignored set_input_delay at Typhoon.sdc(13): Argument -clock is an empty collection File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 13
+    Info (332050): set_input_delay -max -clock [get_clocks {sram}]  3.000 [get_ports {SRAM_DQ*}] File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 13
+Warning (332049): Ignored set_input_delay at Typhoon.sdc(14): Argument -clock is an empty collection File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 14
+    Info (332050): set_input_delay -min -clock [get_clocks {sram}]  2.000 [get_ports {SRAM_DQ*}] File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 14
+Warning (332049): Ignored set_output_delay at Typhoon.sdc(16): Argument -clock is an empty collection File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 16
+    Info (332050): set_output_delay -max -clock [get_clocks {sram}]  3.000 [get_ports {SRAM_ADDR*}] File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 16
+Warning (332049): Ignored set_output_delay at Typhoon.sdc(17): Argument -clock is an empty collection File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 17
+    Info (332050): set_output_delay -min -clock [get_clocks {sram}]  2.000 [get_ports {SRAM_ADDR*}] File: C:/Users/kuilin/Desktop/385/385_FPGA/Typhoon/Typhoon.sdc Line: 17
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Node: myTest|altpll_component|auto_generated|pll1|clk[1] was found missing 1 generated clock that corresponds to a base clock with a period of: 20.000
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
@@ -1880,8 +1880,8 @@ Info (332146): Worst-case minimum pulse width slack is 9.392
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4904 megabytes
-    Info: Processing ended: Fri Nov 30 16:33:43 2018
+    Info: Peak virtual memory: 735 megabytes
+    Info: Processing ended: Wed Dec 05 05:34:58 2018
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
