@@ -73,7 +73,7 @@ module Typhoon #(parameter tileDim = 8'd8)(
 		endState2 = 8'd4
 	} state = initState, nextState = initState;
 	
-	assign LEDR = state;
+	//assign LEDR = state;
 	/*
 	genvar x;
 		genvar y;
