@@ -13,153 +13,62 @@ state.streaming 0
 state.feedingVGA 1 
 
 State Machine - |Typhoon|rasterizer:tiledRasterizer|state
-Name state.rasterizing state.rasterizingBegin state.reciprocalState state.init state.done 
-state.init 0 0 0 0 0 
-state.reciprocalState 0 0 1 1 0 
-state.rasterizingBegin 0 1 0 1 0 
-state.rasterizing 1 0 0 1 0 
-state.done 0 0 0 1 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[3].shaderLoopX[3].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[3].shaderLoopX[2].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[3].shaderLoopX[1].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[3].shaderLoopX[0].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[2].shaderLoopX[3].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[2].shaderLoopX[2].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[2].shaderLoopX[1].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[2].shaderLoopX[0].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[1].shaderLoopX[3].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[1].shaderLoopX[2].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
+Name state.done state.rasterizing state.rasterizingLatency2 state.rasterizingLatency1 state.rasterizingBegin state.setupWait state.setupLatency2 state.setupLatency1 state.setupBegin state.init 
+state.init 0 0 0 0 0 0 0 0 0 0 
+state.setupBegin 0 0 0 0 0 0 0 0 1 1 
+state.setupLatency1 0 0 0 0 0 0 0 1 0 1 
+state.setupLatency2 0 0 0 0 0 0 1 0 0 1 
+state.setupWait 0 0 0 0 0 1 0 0 0 1 
+state.rasterizingBegin 0 0 0 0 1 0 0 0 0 1 
+state.rasterizingLatency1 0 0 0 1 0 0 0 0 0 1 
+state.rasterizingLatency2 0 0 1 0 0 0 0 0 0 1 
+state.rasterizing 0 1 0 0 0 0 0 0 0 1 
+state.done 1 0 0 0 0 0 0 0 0 1 
 
 State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[1].shaderLoopX[1].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
+Name state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.resetBuffers state.interpolateState2 state.interpolateState1 state.start state.done 
+state.start 0 0 0 0 0 0 0 0 0 
+state.interpolateState1 0 0 0 0 0 0 1 1 0 
+state.interpolateState2 0 0 0 0 0 1 0 1 0 
+state.resetBuffers 0 0 0 0 1 0 0 1 0 
+state.zcheck 0 0 0 1 0 0 0 1 0 
+state.rasterPixel 0 0 1 0 0 0 0 1 0 
+state.rasterDebug 0 1 0 0 0 0 0 1 0 
+state.chooseNextPixel 1 0 0 0 0 0 0 1 0 
+state.done 0 0 0 0 0 0 0 1 1 
 
 State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[1].shaderLoopX[0].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[0].shaderLoopX[3].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
-
-State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[0].shaderLoopX[2].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
+Name state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.resetBuffers state.interpolateState2 state.interpolateState1 state.start state.done 
+state.start 0 0 0 0 0 0 0 0 0 
+state.interpolateState1 0 0 0 0 0 0 1 1 0 
+state.interpolateState2 0 0 0 0 0 1 0 1 0 
+state.resetBuffers 0 0 0 0 1 0 0 1 0 
+state.zcheck 0 0 0 1 0 0 0 1 0 
+state.rasterPixel 0 0 1 0 0 0 0 1 0 
+state.rasterDebug 0 1 0 0 0 0 0 1 0 
+state.chooseNextPixel 1 0 0 0 0 0 0 1 0 
+state.done 0 0 0 0 0 0 0 1 1 
 
 State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[0].shaderLoopX[1].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
+Name state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.resetBuffers state.interpolateState2 state.interpolateState1 state.start state.done 
+state.start 0 0 0 0 0 0 0 0 0 
+state.interpolateState1 0 0 0 0 0 0 1 1 0 
+state.interpolateState2 0 0 0 0 0 1 0 1 0 
+state.resetBuffers 0 0 0 0 1 0 0 1 0 
+state.zcheck 0 0 0 1 0 0 0 1 0 
+state.rasterPixel 0 0 1 0 0 0 0 1 0 
+state.rasterDebug 0 1 0 0 0 0 0 1 0 
+state.chooseNextPixel 1 0 0 0 0 0 0 1 0 
+state.done 0 0 0 0 0 0 0 1 1 
 
 State Machine - |Typhoon|rasterizer:tiledRasterizer|pixel_shader:shaderLoopY[0].shaderLoopX[0].shader|state
-Name state.done state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.start 
-state.start 0 0 0 0 0 0 
-state.zcheck 0 0 0 0 1 1 
-state.rasterPixel 0 0 0 1 0 1 
-state.rasterDebug 0 0 1 0 0 1 
-state.chooseNextPixel 0 1 0 0 0 1 
-state.done 1 0 0 0 0 1 
+Name state.chooseNextPixel state.rasterDebug state.rasterPixel state.zcheck state.resetBuffers state.interpolateState2 state.interpolateState1 state.start state.done 
+state.start 0 0 0 0 0 0 0 0 0 
+state.interpolateState1 0 0 0 0 0 0 1 1 0 
+state.interpolateState2 0 0 0 0 0 1 0 1 0 
+state.resetBuffers 0 0 0 0 1 0 0 1 0 
+state.zcheck 0 0 0 1 0 0 0 1 0 
+state.rasterPixel 0 0 1 0 0 0 0 1 0 
+state.rasterDebug 0 1 0 0 0 0 0 1 0 
+state.chooseNextPixel 1 0 0 0 0 0 0 1 0 
+state.done 0 0 0 0 0 0 0 1 1 

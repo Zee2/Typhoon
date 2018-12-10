@@ -1,4 +1,9 @@
-module rasterizer (
+module rasterizer #(
+	tileDim = 8'd8,
+	nanoTileDim = 8'd4,
+	nanoTilesSide = tileDim/nanoTileDim
+
+	)(
 	input logic[17:0] SW,
 	input logic BOARD_CLK,
 	input logic rasterTileID,
@@ -11,9 +16,7 @@ module rasterizer (
 	output logic[17:0] LEDR
 );
 
-parameter tileDim = 8'd8;
-parameter nanoTileDim = 8'd2;
-parameter nanoTilesSide = tileDim/nanoTileDim;
+
 
 logic nextDoneRasterizing;
 logic startShadersRasterizing;
@@ -28,6 +31,9 @@ reg[15:0] nanoTiles0 [tileDim/nanoTileDim][tileDim/nanoTileDim][nanoTileDim][nan
 reg[15:0] nanoTiles1 [tileDim/nanoTileDim][tileDim/nanoTileDim][nanoTileDim][nanoTileDim];
 
 logic clearZ; // signal to pixel shaders to clear their Z nano-tiles
+//assign clearZ = 1;
+logic nextClearZ;
+//assign clearZ = 1;
 
 generate
 genvar x;
@@ -54,7 +60,7 @@ for(yShader = 0; yShader<nanoTilesSide; yShader++) begin: shaderLoopY
 																.doneRasterizing(shadersDoneRasterizing[xShader+nanoTilesSide*yShader]),
 																.nanoTile0(nanoTiles0[xShader][yShader]),
 																.nanoTile1(nanoTiles1[xShader][yShader]),
-																.debug(area_recip),
+																.areaRecip(area_recip),
 																.*);
 	end
 end
@@ -96,9 +102,11 @@ logic[15:0] z0,z1,z2;
 
 logic[9:0] debugX = 10'd50;
 
-logic signed [31:0] area;
-logic signed [31:0] quotientResult;
-logic signed [31:0] area_recip;
+logic signed [23:0] area;
+logic signed [23:0] quotientResult;
+logic signed [23:0] area_recip;
+
+logic [9:0] currentTriangleAddress = 1023;
 
 assign x0 = 100;
 assign y0 = 200;
@@ -170,11 +178,18 @@ reciprocal areaDivider(.denom(area),
 
 
 enum logic [4:0] {
-	init = 5'd0,
-	reciprocalState = 5'd1,
-	rasterizingBegin = 5'd2,
-	rasterizing = 5'd3,
-	done = 5'd4
+	init,
+	setupBegin,
+	setupLatency1,
+	setupLatency2,
+	setupWait,
+	loadTriangle,
+	recipState,
+	rasterizingBegin,
+	rasterizingLatency1,
+	rasterizingLatency2,
+	rasterizing,
+	done
 
 } state = init, nextState = init;
 
@@ -208,41 +223,69 @@ always_ff @(posedge BOARD_CLK) begin
 		cBufferTile1[1][1] <= SW;
 	*/
 	
-	
+	clearZ <= nextClearZ;
 end
 
 always_comb begin
-	clearZ = 0;
+	nextClearZ = 0;
 	DIVIDE_EN = 0;
 	nextTileOffsetX = tileOffsetX;
 	nextTileOffsetY = tileOffsetY;
+	nextDoneRasterizing = 0;
+	nextStartShadersRasterizing = 0;
 	case(state)
 		init: begin
-			clearZ = 1;
 			nextDoneRasterizing = 0;
-			nextState = startRasterizing ? reciprocalState : init;
+			nextState = startRasterizing ? setupBegin : init;
 			//nextState = rasterizing;
 			nextStartShadersRasterizing = 0;
-			DIVIDE_EN = startRasterizing;
-			
+			DIVIDE_EN = 0;
+			nextClearZ = 1;
 		end
 		
-		reciprocalState: begin
+		setupBegin: begin
 			nextTileOffsetX = rasterxOffset;
 			nextTileOffsetY = rasteryOffset;
 			DIVIDE_EN = 1;
-			nextStartShadersRasterizing = 0;
+			nextStartShadersRasterizing = 1;
 			nextDoneRasterizing = 0;
+			nextClearZ = 1;
+			nextState = setupLatency1;
+		end
+		setupLatency1: begin
+			nextClearZ = 1;
+			DIVIDE_EN = 1;
+			nextState = setupLatency2;
+		end
+		setupLatency2: begin
+			nextClearZ = 1;
+			DIVIDE_EN = 1;
+			nextState = setupWait;
+		end
+		
+		setupWait: begin
 			
-			if(divideCounter < 16)
-				nextState = reciprocalState;
-			else
+			DIVIDE_EN = 1;
+			if(divideCounter < 6 || shadersDoneRasterizing != {(nanoTilesSide*nanoTilesSide){1'b1}}) begin
+				nextState = setupWait;
+				nextClearZ = 1;
+			end
+			else begin
 				nextState = rasterizingBegin;
+				nextClearZ = 0;
+			end
 		end
 		
 		rasterizingBegin: begin
 			nextStartShadersRasterizing = 1;
 			nextDoneRasterizing = 0;
+			nextState = rasterizingLatency1;
+		end
+		
+		rasterizingLatency1: begin
+			nextState = rasterizingLatency2;
+		end
+		rasterizingLatency2: begin
 			nextState = rasterizing;
 		end
 		
@@ -250,7 +293,7 @@ always_comb begin
 			nextStartShadersRasterizing = 0;
 			nextDoneRasterizing = 0;
 			if(shadersDoneRasterizing != {(nanoTilesSide*nanoTilesSide){1'b1}}) begin
-			//if(shadersDoneRasterizing[0] != 1'b1) begin
+			
 				nextState = rasterizing;
 			end else begin
 			
@@ -259,6 +302,7 @@ always_comb begin
 		end
 		
 		done: begin
+			nextClearZ = 1;
 			nextStartShadersRasterizing = 0;
 			nextDoneRasterizing = 1;
 			nextState = startRasterizing ? done : init;

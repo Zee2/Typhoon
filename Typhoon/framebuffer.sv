@@ -49,7 +49,7 @@ logic nextDoneStreaming;
 logic[15:0] DataToSRAM;
 logic[15:0] funDemo = 0;
 //assign DataToSRAM = SW;
-logic[19:0] WriteAddress = 0;
+logic[19:0] WriteAddress;
 logic[7:0] tilePointerX = 0, tilePointerY = 0, nextTilePointerX = 0, nextTilePointerY = 0;
 
 logic[19:0] tileOffsetX, tileOffsetY;

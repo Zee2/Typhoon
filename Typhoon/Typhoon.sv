@@ -31,14 +31,16 @@ module Typhoon #(parameter tileDim = 8'd8)(
 	reg [15:0] tileAinput [tileDim][tileDim];
 	reg [15:0] tileBinput [tileDim][tileDim];
 	
+	logic rasterTrigger = 0;
+	logic nextRasterTrigger = 0;
+	
 	rasterizer #(tileDim) tiledRasterizer(.cBufferTile0(tileAinput),
 													  .cBufferTile1(tileBinput),
 													  .doneRasterizing(doneRasterizing),
 													  .startRasterizing(rasterTrigger),
 													  .*);
 	
-	logic rasterTrigger = 0;
-	logic nextRasterTrigger = 0;
+	
 	
 	logic[19:0] WriteAddress;
 	logic[19:0] ReadAddress;

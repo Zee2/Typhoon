@@ -5,7 +5,8 @@ create_clock -name {BOARD_CLK} -period 20.000 -waveform { 0.000 10.000 } [get_po
 
 #create_generated_clock -name {sram} -source [get_pins {myTest|altpll_component|auto_generated|wire_pll1_inclk[0]}] -duty_cycle 50.000 -multiply_by 1 -master_clock {BOARD_CLK} [get_pins {myTest|altpll_component|auto_generated|wire_pll1_clk[0]}]
 #create_generated_clock -source {myTest|altpll_component|auto_generated|pll1|inclk[0]} -multiply_by 8 -divide_by 5 -duty_cycle 50.00 -name {sram} {myTest|altpll_component|auto_generated|pll1|clk[0]}
-set_output_delay -clock {BOARD_CLK} 3 [all_outputs]
+set_output_delay -clock {BOARD_CLK} -max 3 [all_outputs]
+set_output_delay -clock {BOARD_CLK} -min 2 [all_outputs]
 # Constrain the input I/O path
 set_input_delay -clock {BOARD_CLK} -max 3 [all_inputs]
 set_input_delay -clock {BOARD_CLK} -min 2 [all_inputs]
