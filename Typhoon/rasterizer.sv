@@ -17,7 +17,7 @@ module rasterizer #(
 );
 
 logic[143:0] geometry_data_out; // Data lines to/from bin memory
-logic[10:0] geometry_addr_in = 9;
+logic[10:0] geometry_addr_in = 11;
 
 vertex_memory_bins geometry_memory(
 	.clock(BOARD_CLK),
@@ -121,7 +121,7 @@ logic signed [23:0] area;
 logic signed [23:0] quotientResult;
 logic signed [23:0] area_recip;
 
-logic [10:0] baseTriangleAddress = 9;
+logic [10:0] baseTriangleAddress = 11;
 
 assign x0 = geometry_data_out[9:0];
 assign y0 = geometry_data_out[19:10];
@@ -185,7 +185,7 @@ assign LEDR = shadersDoneRasterizing;
 logic[7:0] divideCounter = 0;
 logic DIVIDE_EN = 0;
 reciprocal areaDivider(.denom(area),
-				.numer(32'h7FFFFF),
+				.numer(24'h7FFFFF),
 				.quotient(quotientResult),
 				.remain(),
 				.clock(BOARD_CLK),
@@ -304,7 +304,7 @@ always_comb begin
 		recipState: begin
 			
 			DIVIDE_EN = 1;
-			if(divideCounter < 6) begin
+			if(divideCounter < 7) begin
 				nextState = recipState;
 			end
 			else begin

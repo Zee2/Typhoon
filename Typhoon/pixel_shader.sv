@@ -32,9 +32,9 @@ logic signed [16:0] line01;
 logic signed [16:0] line12;
 logic signed [16:0] line20;
 
-logic [16:0] z0_sx;
-logic [16:0] z1_sx;
-logic [16:0] z2_sx;
+logic signed [16:0] z0_sx;
+logic signed [16:0] z1_sx;
+logic signed [16:0] z2_sx;
 assign z0_sx = $signed({1'b0, z0});
 assign z1_sx = $signed({1'b0, z1});
 assign z2_sx = $signed({1'b0, z2});
@@ -119,13 +119,13 @@ always_ff @(posedge BOARD_CLK) begin
 	if(state == resetBuffers && clearZ == 1'b1) begin
 		zBuffer[x-start_x][y-start_y] <= 16'hffff;
 		if(rasterTileID == 0)
-			nanoTile0[x-start_x][y-start_y] <= 16'hF81F;
+			nanoTile0[x-start_x][y-start_y] <= 16'b0 | (trueX[5:0] << 5) | (trueY[4:0] << 11);
 		else
-			nanoTile1[x-start_x][y-start_y] <= 16'hF81F;
+			nanoTile1[x-start_x][y-start_y] <= 16'b0 | (trueX[5:0] << 5) | (trueY[4:0] << 11);
 	end
 	
 	if(state == rasterPixel && clearZ == 1'b0) begin
-		zBuffer[x-start_x][y-start_y] <= curZ[23:8];
+		zBuffer[x-start_x][y-start_y] <= curZ[15:0];
 		if(rasterTileID == 0)
 			nanoTile0[x-start_x][y-start_y] <= basicTestColor;
 		else
@@ -154,7 +154,7 @@ always_ff @(posedge BOARD_CLK) begin
 		myTileY <= tileOffsetY;
 	end
 	if(state == interpolateState2) begin
-		curZ <= (z0 + (line20 * areaRecip)*(z1-z0) + (line01 * areaRecip)*(z2-z0))>>SW;
+		curZ <= (z0_sx + (line20 * areaRecip)*(z1_sx-z0_sx) + (line01 * areaRecip)*(z2_sx-z0_sx))>>SW;
 	end
 	if(state == interpolateState1) begin
 		line01 <= (trueX - x0_sx)*(y1_sx - y0_sx) - (trueY - y0_sx)*(x1_sx - x0_sx);
@@ -252,15 +252,15 @@ always_comb begin
 			if(trueX >= box[0] && trueX < box[2] &&
 				trueY >= box[1] && trueY < box[3] &&
 				line01[16] == 0 && line12[16] == 0 && line20[16] == 0) begin
-					//nextState = rasterPixel;
-					
-					if(curZ[23:8] < zBuffer[x-start_x][y-start_y]) begin
+					nextState = rasterPixel;
+					/*
+					if(curZ[15:0] < zBuffer[x-start_x][y-start_y]) begin
 						nextState = rasterPixel;
 					end
 					else begin
 						nextState = rasterDebug;
 					end
-					
+					*/
 					//nextState = rasterPixel;
 					//basicTestColor = 16'b0 | (trueX[0] << 4);
 					//basicTestColor = 16'h0000 | ((curZ[23:18])<<5);
@@ -299,7 +299,7 @@ always_comb begin
 			nextY = y;
 			//basicTestColor = 16'h0000 | ((curZ[31:27])<<5);
 			//basicTestColor = 16'b0 | (trueX[5:0] << 5) | (trueY[4:0] << 11);
-			basicTestColor = 16'h0000 | ((curZ[22:17])<<5);
+			basicTestColor = 16'h0000 | (curZ[15:10]<<5);
 			nextState = chooseNextPixel;
 		
 		end

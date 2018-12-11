@@ -636,6 +636,7 @@ set_global_assignment -name IOBANK_VCCIO 3.3V -section_id 2
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to HEX7[6]
 set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
 set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
+set_global_assignment -name MIF_FILE Python/worldGeo.mif
 set_global_assignment -name SYSTEMVERILOG_FILE framebuffer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE SRAM_thin_controller.sv
 set_global_assignment -name SDC_FILE Typhoon.sdc

@@ -68,7 +68,7 @@ module reciprocal (
 		LPM_DIVIDE_component.lpm_drepresentation = "SIGNED",
 		LPM_DIVIDE_component.lpm_hint = "LPM_REMAINDERPOSITIVE=TRUE",
 		LPM_DIVIDE_component.lpm_nrepresentation = "UNSIGNED",
-		LPM_DIVIDE_component.lpm_pipeline = 5,
+		LPM_DIVIDE_component.lpm_pipeline = 6,
 		LPM_DIVIDE_component.lpm_type = "LPM_DIVIDE",
 		LPM_DIVIDE_component.lpm_widthd = 24,
 		LPM_DIVIDE_component.lpm_widthn = 24;
@@ -90,7 +90,7 @@ endmodule
 // Retrieval info: CONSTANT: LPM_DREPRESENTATION STRING "SIGNED"
 // Retrieval info: CONSTANT: LPM_HINT STRING "LPM_REMAINDERPOSITIVE=TRUE"
 // Retrieval info: CONSTANT: LPM_NREPRESENTATION STRING "UNSIGNED"
-// Retrieval info: CONSTANT: LPM_PIPELINE NUMERIC "5"
+// Retrieval info: CONSTANT: LPM_PIPELINE NUMERIC "6"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_DIVIDE"
 // Retrieval info: CONSTANT: LPM_WIDTHD NUMERIC "24"
 // Retrieval info: CONSTANT: LPM_WIDTHN NUMERIC "24"
