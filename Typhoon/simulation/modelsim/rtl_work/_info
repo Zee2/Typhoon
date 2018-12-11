@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim
 vframebuffer
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1544449525
+Z2 !s110 1544458505
 !i10b 1
 !s100 M__FbYZi_Xj0;ZU^NiVi<3
 ICSJA6WP<gSW`1ZSgo^bk70
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1544449525.000000
+Z5 !s108 1544458505.000000
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv|
 !i113 1
@@ -48,7 +48,7 @@ R4
 r1
 !s85 0
 31
-!s108 1544449524.000000
+R5
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v|
 !i113 1
@@ -81,13 +81,13 @@ vpixel_shader
 R1
 R2
 !i10b 1
-!s100 12Pakg4Z=lTXRK:ES[;^I2
-IWc@^fhZ9i6dPNZmKnZfM32
+!s100 N]ROJT@K7TNod`LESS6]U3
+IE<1L;J9RIMJ9<RKdYCL[J1
 R3
 !s105 pixel_shader_sv_unit
 S1
 R0
-w1544449507
+w1544456836
 8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv
 FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv
 L0 1
@@ -106,13 +106,13 @@ vrasterizer
 R1
 R2
 !i10b 1
-!s100 :[17daPb0[aG5UST`IB`T3
-I0M;]iV?XSLfe209d3zGeO0
+!s100 Tb_ieHglQMUOQFXTz^WFT0
+I3NLA3HzQW6nZ4CzPDgfCo3
 R3
 !s105 rasterizer_sv_unit
 S1
 R0
-w1544448540
+w1544456356
 8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv
 FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv
 L0 1
@@ -130,11 +130,11 @@ R8
 vreciprocal
 R2
 !i10b 1
-!s100 ;GYB;@c>Tgm:6>hAP^]U52
-IJaK@PK==?Wh4nBIUFR?Bc2
+!s100 d:7z84PXFKjMW3HYkQK0E2
+I[jT>kM`2B4dc1AM>fbobJ0
 R3
 R0
-w1544427631
+w1544450695
 8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/reciprocal.v
 FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/reciprocal.v
 R9
@@ -200,6 +200,28 @@ R6
 R7
 R8
 n@typhoon
+vvertex_memory_bins
+R2
+!i10b 1
+!s100 @=W>M<8n^T?>cj2h1644c3
+I5THKAB0WYeCWFMn_bSaJ13
+R3
+R0
+w1544453252
+8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_bins.v
+FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_bins.v
+R9
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_bins.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_bins.v|
+!i113 1
+R10
+R11
+R8
 vVGA_controller
 R1
 R2

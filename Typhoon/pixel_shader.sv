@@ -125,6 +125,7 @@ always_ff @(posedge BOARD_CLK) begin
 	end
 	
 	if(state == rasterPixel && clearZ == 1'b0) begin
+		zBuffer[x-start_x][y-start_y] <= curZ[23:8];
 		if(rasterTileID == 0)
 			nanoTile0[x-start_x][y-start_y] <= basicTestColor;
 		else
@@ -253,13 +254,14 @@ always_comb begin
 				line01[16] == 0 && line12[16] == 0 && line20[16] == 0) begin
 					//nextState = rasterPixel;
 					
-					if(curZ[15:0] < zBuffer[x-start_x][y-start_y]) begin
+					if(curZ[23:8] < zBuffer[x-start_x][y-start_y]) begin
 						nextState = rasterPixel;
 					end
 					else begin
 						nextState = rasterDebug;
 					end
 					
+					//nextState = rasterPixel;
 					//basicTestColor = 16'b0 | (trueX[0] << 4);
 					//basicTestColor = 16'h0000 | ((curZ[23:18])<<5);
 					//basicTestColor = 0;

@@ -1,5 +1,5 @@
 Flow report for Typhoon
-Mon Dec 10 08:06:48 2018
+Mon Dec 10 10:38:34 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Dec 10 08:06:48 2018       ;
+; Flow Status                        ; Successful - Mon Dec 10 10:38:34 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Typhoon                                     ;
 ; Top-level Entity Name              ; Typhoon                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 6,225 / 114,480 ( 5 % )                     ;
-;     Total combinational functions  ; 6,076 / 114,480 ( 5 % )                     ;
-;     Dedicated logic registers      ; 1,705 / 114,480 ( 1 % )                     ;
-; Total registers                    ; 1705                                        ;
+; Total logic elements               ; 9,299 / 114,480 ( 8 % )                     ;
+;     Total combinational functions  ; 8,976 / 114,480 ( 8 % )                     ;
+;     Dedicated logic registers      ; 2,750 / 114,480 ( 2 % )                     ;
+; Total registers                    ; 2750                                        ;
 ; Total pins                         ; 175 / 529 ( 33 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 92 / 532 ( 17 % )                           ;
+; Total memory bits                  ; 221,184 / 3,981,312 ( 6 % )                 ;
+; Embedded Multiplier 9-bit elements ; 228 / 532 ( 43 % )                          ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 +------------------------------------+---------------------------------------------+
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/10/2018 08:05:25 ;
+; Start date & time ; 12/10/2018 10:36:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Typhoon             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 105852884987815.154445072512072        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 105852884987815.154445980733372        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                              ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
@@ -116,13 +116,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:26     ; 1.0                     ; 4957 MB             ; 00:00:36                           ;
-; Fitter               ; 00:00:30     ; 1.1                     ; 5829 MB             ; 00:00:54                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4728 MB             ; 00:00:03                           ;
-; Power Analyzer       ; 00:00:08     ; 1.1                     ; 4951 MB             ; 00:00:09                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.5                     ; 4934 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 4743 MB             ; 00:00:05                           ;
-; Total                ; 00:01:16     ; --                      ; --                  ; 00:01:51                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4918 MB             ; 00:00:32                           ;
+; Fitter               ; 00:00:49     ; 1.1                     ; 5954 MB             ; 00:01:38                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4740 MB             ; 00:00:03                           ;
+; Power Analyzer       ; 00:00:11     ; 1.1                     ; 4976 MB             ; 00:00:12                           ;
+; Timing Analyzer      ; 00:00:05     ; 2.1                     ; 4977 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 4773 MB             ; 00:00:08                           ;
+; Total                ; 00:01:39     ; --                      ; --                  ; 00:02:40                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -16,6 +16,21 @@ module rasterizer #(
 	output logic[17:0] LEDR
 );
 
+logic[143:0] geometry_data_out; // Data lines to/from bin memory
+logic[10:0] geometry_addr_in = 9;
+
+vertex_memory_bins geometry_memory(
+	.clock(BOARD_CLK),
+	.data(0),
+	.rdaddress(geometry_addr_in),
+	.wraddress(0),
+	.wren(0),
+	.q(geometry_data_out)
+);
+
+
+
+
 
 
 logic nextDoneRasterizing;
@@ -106,19 +121,19 @@ logic signed [23:0] area;
 logic signed [23:0] quotientResult;
 logic signed [23:0] area_recip;
 
-logic [9:0] currentTriangleAddress = 1023;
+logic [10:0] baseTriangleAddress = 9;
 
-assign x0 = 100;
-assign y0 = 200;
-assign z0 = 1;
+assign x0 = geometry_data_out[9:0];
+assign y0 = geometry_data_out[19:10];
+assign z0 = geometry_data_out[35:20];
 
-assign x2 = 125;
-assign y2 = 100;
-assign z2 = 400;
+assign x1 = geometry_data_out[45:36];
+assign y1 = geometry_data_out[55:46];
+assign z1 = geometry_data_out[71:56];
 
-assign x1 = 100 + debugX;
-assign y1 = 124;
-assign z1 = 800;
+assign x2 = geometry_data_out[81:72];
+assign y2 = geometry_data_out[91:82];
+assign z2 = geometry_data_out[107:92];
 
 assign box[0] = x0 < x1
 			 ? x0 < x2
@@ -183,12 +198,14 @@ enum logic [4:0] {
 	setupLatency1,
 	setupLatency2,
 	setupWait,
-	loadTriangle,
+	loadTriangle1,
+	loadTriangle2,
 	recipState,
 	rasterizingBegin,
 	rasterizingLatency1,
 	rasterizingLatency2,
 	rasterizing,
+	singleRasterComplete,
 	done
 
 } state = init, nextState = init;
@@ -223,6 +240,14 @@ always_ff @(posedge BOARD_CLK) begin
 		cBufferTile1[1][1] <= SW;
 	*/
 	
+	if(state == setupBegin) begin
+		geometry_addr_in <= baseTriangleAddress;
+	end
+	
+	if(state == singleRasterComplete) begin
+		geometry_addr_in <= geometry_addr_in -1;
+	end
+	
 	clearZ <= nextClearZ;
 end
 
@@ -246,7 +271,6 @@ always_comb begin
 		setupBegin: begin
 			nextTileOffsetX = rasterxOffset;
 			nextTileOffsetY = rasteryOffset;
-			DIVIDE_EN = 1;
 			nextStartShadersRasterizing = 1;
 			nextDoneRasterizing = 0;
 			nextClearZ = 1;
@@ -254,25 +278,37 @@ always_comb begin
 		end
 		setupLatency1: begin
 			nextClearZ = 1;
-			DIVIDE_EN = 1;
 			nextState = setupLatency2;
 		end
 		setupLatency2: begin
 			nextClearZ = 1;
-			DIVIDE_EN = 1;
 			nextState = setupWait;
 		end
 		
 		setupWait: begin
 			
-			DIVIDE_EN = 1;
-			if(divideCounter < 6 || shadersDoneRasterizing != {(nanoTilesSide*nanoTilesSide){1'b1}}) begin
+			if(shadersDoneRasterizing != {(nanoTilesSide*nanoTilesSide){1'b1}}) begin
 				nextState = setupWait;
 				nextClearZ = 1;
 			end
 			else begin
-				nextState = rasterizingBegin;
+				nextState = loadTriangle1;
 				nextClearZ = 0;
+			end
+		end
+		
+		loadTriangle1: begin
+			nextState = recipState;
+		end
+		
+		recipState: begin
+			
+			DIVIDE_EN = 1;
+			if(divideCounter < 6) begin
+				nextState = recipState;
+			end
+			else begin
+				nextState = rasterizingBegin;
 			end
 		end
 		
@@ -297,8 +333,15 @@ always_comb begin
 				nextState = rasterizing;
 			end else begin
 			
-				nextState = done;
+				nextState = singleRasterComplete;
 			end
+		end
+		
+		singleRasterComplete: begin
+			if(geometry_addr_in == 0)
+				nextState = done;
+			else
+				nextState = loadTriangle1;
 		end
 		
 		done: begin
