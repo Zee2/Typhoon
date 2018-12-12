@@ -150,6 +150,8 @@ always_comb begin
 	if(state == streaming) begin
 		nextIdle = 0;
 		if(idle == 1) begin //If we are idling...
+			nextDoneStreaming = 1;
+			nextIdle = 1;
 			// If streamTileTrigger == 1, we stop idling
 			if(streamTileTrigger || lastTrigger) begin
 				nextIdle = 0;
@@ -157,6 +159,7 @@ always_comb begin
 				newTileOffsetX = xOffset;
 				newTileOffsetY = yOffset;
 			end
+			
 			nextTilePointerX = 0;
 			nextTilePointerY = 0;
 		end

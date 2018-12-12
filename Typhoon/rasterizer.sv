@@ -17,7 +17,7 @@ module rasterizer #(
 );
 
 logic[143:0] geometry_data_out; // Data lines to/from bin memory
-logic[10:0] geometry_addr_in = 11;
+logic[10:0] geometry_addr_in = 11'h57;
 
 vertex_memory_bins geometry_memory(
 	.clock(BOARD_CLK),
@@ -102,7 +102,7 @@ endgenerate
 // Current polygon data cache
 
 // Bounding box
-logic[9:0] box [4]; // x,y,w,h
+logic [9:0] box [4]; // x,y,w,h
 logic[9:0] x0,y0,x1,y1,x2,y2;
 logic signed [10:0] x0_sx,y0_sx,x1_sx,y1_sx,x2_sx,y2_sx;
 
@@ -121,7 +121,7 @@ logic signed [23:0] area;
 logic signed [23:0] quotientResult;
 logic signed [23:0] area_recip;
 
-logic [10:0] baseTriangleAddress = 11;
+logic [10:0] baseTriangleAddress = 11'h57;
 
 assign x0 = geometry_data_out[9:0];
 assign y0 = geometry_data_out[19:10];
@@ -152,20 +152,20 @@ assign box[1] = y0 < y1
 			  : y2;
 			  
 assign box[2] = (x0 > x1
-		 ? x0 > x2
+		 ? ( x0 > x2
 			  ? x0
-			  : x2
-		 : x1 > x2
+			  : x2 )
+		 : ( x1 > x2
 			  ? x1
-			  : x2);
+			  : x2 ));
 			  
 assign box[3] = (y0 > y1
-		 ? y0 > y2
+		 ? ( y0 > y2
 			  ? y0
-			  : y2
-		 : y1 > y2
+			  : y2 )
+		 : ( y1 > y2
 			  ? y1
-			  : y2);
+			  : y2 ));
 
 /*					  
 assign area = (x1_sx - x0_sx)*
@@ -198,8 +198,7 @@ enum logic [4:0] {
 	setupLatency1,
 	setupLatency2,
 	setupWait,
-	loadTriangle1,
-	loadTriangle2,
+	checkTriangle,
 	recipState,
 	rasterizingBegin,
 	rasterizingLatency1,
@@ -258,7 +257,7 @@ always_comb begin
 	nextTileOffsetY = tileOffsetY;
 	nextDoneRasterizing = 0;
 	nextStartShadersRasterizing = 0;
-	case(state)
+	unique case(state)
 		init: begin
 			nextDoneRasterizing = 0;
 			nextState = startRasterizing ? setupBegin : init;
@@ -292,30 +291,33 @@ always_comb begin
 				nextClearZ = 1;
 			end
 			else begin
-				nextState = loadTriangle1;
+				nextState = recipState;
 				nextClearZ = 0;
 			end
 		end
 		
-		loadTriangle1: begin
+		checkTriangle: begin
 			nextState = recipState;
 		end
 		
 		recipState: begin
-			
-			DIVIDE_EN = 1;
-			if(divideCounter < 7) begin
-				nextState = recipState;
-			end
+			if((box[2] < tileOffsetX) || (box[3] < tileOffsetY))
+				nextState = singleRasterComplete;
 			else begin
-				nextState = rasterizingBegin;
+				DIVIDE_EN = 1;
+				if(divideCounter < 7) begin
+					nextState = recipState;
+				end
+				else begin
+					nextStartShadersRasterizing = 1;
+					nextState = rasterizingBegin;
+				end
 			end
 		end
 		
 		rasterizingBegin: begin
-			nextStartShadersRasterizing = 1;
 			nextDoneRasterizing = 0;
-			nextState = rasterizingLatency1;
+			nextState = rasterizingLatency2;
 		end
 		
 		rasterizingLatency1: begin
@@ -341,7 +343,7 @@ always_comb begin
 			if(geometry_addr_in == 0)
 				nextState = done;
 			else
-				nextState = loadTriangle1;
+				nextState = checkTriangle;
 		end
 		
 		done: begin

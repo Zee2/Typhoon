@@ -73,7 +73,7 @@ module Typhoon #(parameter tileDim = 8'd8)(
 		moveTile = 8'd2,
 		endState = 8'd3,
 		endState2 = 8'd4
-	} state = initState, nextState = initState;
+	} state = initState, nextState = initState, lastState = initState;
 	
 	//assign LEDR = state;
 	/*
@@ -99,6 +99,7 @@ module Typhoon #(parameter tileDim = 8'd8)(
 	
 		dummyCounter <= dummyCounter + 1;
 		state <= nextState;
+		lastState <= state;
 		streamingxOffset <= nextStreamingxOffset;
 		streamingyOffset <= nextStreamingyOffset;
 		streamTileTrigger <= nextStreamTileTrigger;
@@ -119,7 +120,7 @@ module Typhoon #(parameter tileDim = 8'd8)(
 		nextRasteryOffset = rasteryOffset;
 		nextStreamingxOffset = streamingxOffset;
 		nextStreamingyOffset = streamingyOffset;
-		nextStreamTileTrigger = 1;
+		nextStreamTileTrigger = 0;
 		nextRasterTrigger = 0;
 		nextState = initState;
 		nextStreamingTileID = streamingTileID;
@@ -135,7 +136,7 @@ module Typhoon #(parameter tileDim = 8'd8)(
 				//nextState = initState;
 				nextRasterTrigger = 1;
 				//if(doneStreaming == 1 && lastDoneStreaming != 1 && doneRasterizing == 1)
-				if(doneStreaming == 1 && lastDoneStreaming != 1 && doneRasterizing == 1)
+				if(doneStreaming == 1 && doneRasterizing == 1 && lastState != moveTile)
 					nextState = moveTile;
 				else
 					nextState = rasterTile;

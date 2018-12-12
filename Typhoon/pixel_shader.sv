@@ -3,6 +3,7 @@ module pixel_shader #(
 	nanoTileDim = 8'd8
 	)(
 	input logic[17:0] SW,
+	input logic[3:0] KEY,
 	input logic rasterTileID,
 	output reg[15:0] nanoTile0 [nanoTileDim][nanoTileDim],
 	output reg[15:0] nanoTile1 [nanoTileDim][nanoTileDim],
@@ -32,9 +33,16 @@ logic signed [16:0] line01;
 logic signed [16:0] line12;
 logic signed [16:0] line20;
 
+logic signed [31:0] line20div;
+logic signed [31:0] line01div;
+
 logic signed [16:0] z0_sx;
 logic signed [16:0] z1_sx;
 logic signed [16:0] z2_sx;
+logic signed [16:0] z10_sx;
+assign z10_sx = z1_sx-z0_sx;
+logic signed [16:0] z20_sx;
+assign z20_sx = z2_sx-z0_sx;
 assign z0_sx = $signed({1'b0, z0});
 assign z1_sx = $signed({1'b0, z1});
 assign z2_sx = $signed({1'b0, z2});
@@ -44,6 +52,20 @@ logic signed [63:0] curZ;
 logic signed [15:0] trueX, trueY;
 
 logic [9:0] x = 0, y = 0, nextX = 0, nextY = 0;
+
+logic signed [48:0] line20zmultResult;
+logic signed [48:0] line01zmultResult;
+
+zmult_32 line20zmult(
+	.dataa(line20div),
+	.datab(z10_sx),
+	.result(line20zmultResult)
+);
+zmult_32 line01zmult(
+	.dataa(line01div),
+	.datab(z20_sx),
+	.result(line01zmultResult)
+);
 
 /*
 generate
@@ -72,6 +94,7 @@ enum logic [4:0]{
 	start,
 	interpolateState1,
 	interpolateState2,
+	interpolateState3,
 	resetBuffers,
 	zcheck,
 	rasterPixel,
@@ -153,13 +176,20 @@ always_ff @(posedge BOARD_CLK) begin
 		myTileX <= tileOffsetX;
 		myTileY <= tileOffsetY;
 	end
-	if(state == interpolateState2) begin
-		curZ <= (z0_sx + (line20 * areaRecip)*(z1_sx-z0_sx) + (line01 * areaRecip)*(z2_sx-z0_sx))>>SW;
-	end
+	
 	if(state == interpolateState1) begin
 		line01 <= (trueX - x0_sx)*(y1_sx - y0_sx) - (trueY - y0_sx)*(x1_sx - x0_sx);
 		line12 <= (trueX - x1_sx)*(y2_sx - y1_sx) - (trueY - y1_sx)*(x2_sx - x1_sx);
 		line20 <= (trueX - x2_sx)*(y0_sx - y2_sx) - (trueY - y2_sx)*(x0_sx - x2_sx);
+	end
+	if(state == interpolateState2) begin
+		line20div <= line20 * areaRecip;
+		line01div <= line01 * areaRecip;
+	end
+	if(state == interpolateState3) begin
+		//curZ <= (z0_sx + line20zmultResult + line01zmultResult)>>SW;
+		curZ <= (z0_sx + (line01zmultResult>>>23) + (line20zmultResult>>>23));
+		//curZ <= (z0_sx);
 	end
 	
 	
@@ -238,6 +268,12 @@ always_comb begin
 		end
 		interpolateState2: begin
 			nextDoneRasterizing = 0;
+			nextState = interpolateState3;
+			nextX = x;
+			nextY = y;
+		end
+		interpolateState3: begin
+			nextDoneRasterizing = 0;
 			nextState = zcheck;
 			nextX = x;
 			nextY = y;
@@ -252,15 +288,15 @@ always_comb begin
 			if(trueX >= box[0] && trueX < box[2] &&
 				trueY >= box[1] && trueY < box[3] &&
 				line01[16] == 0 && line12[16] == 0 && line20[16] == 0) begin
-					nextState = rasterPixel;
-					/*
+					//nextState = rasterPixel;
+					
 					if(curZ[15:0] < zBuffer[x-start_x][y-start_y]) begin
 						nextState = rasterPixel;
 					end
 					else begin
 						nextState = rasterDebug;
 					end
-					*/
+					
 					//nextState = rasterPixel;
 					//basicTestColor = 16'b0 | (trueX[0] << 4);
 					//basicTestColor = 16'h0000 | ((curZ[23:18])<<5);
@@ -299,7 +335,8 @@ always_comb begin
 			nextY = y;
 			//basicTestColor = 16'h0000 | ((curZ[31:27])<<5);
 			//basicTestColor = 16'b0 | (trueX[5:0] << 5) | (trueY[4:0] << 11);
-			basicTestColor = 16'h0000 | (curZ[15:10]<<5);
+			//basicTestColor = 16'h0000 | (curZ[15:10]<<5);
+			basicTestColor = 16'h0000 | (KEY[1] ? (curZ[8:3]<<5) : (((line01zmultResult>>>SW) & 9'b11111100)<<5));
 			nextState = chooseNextPixel;
 		
 		end
