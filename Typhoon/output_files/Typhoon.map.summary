@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Wed Dec 12 00:46:44 2018
+Analysis & Synthesis Status : Successful - Fri Dec 14 04:48:03 2018
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : Typhoon
 Top-level Entity Name : Typhoon
 Family : Cyclone IV E
-Total logic elements : 8,540
-    Total combinational functions : 8,056
-    Dedicated logic registers : 3,528
-Total registers : 3528
+Total logic elements : 22,957
+    Total combinational functions : 22,230
+    Dedicated logic registers : 8,675
+Total registers : 8675
 Total pins : 175
 Total virtual pins : 0
-Total memory bits : 221,184
-Embedded Multiplier 9-bit elements : 116
+Total memory bits : 1,146,916
+Embedded Multiplier 9-bit elements : 488
 Total PLLs : 1

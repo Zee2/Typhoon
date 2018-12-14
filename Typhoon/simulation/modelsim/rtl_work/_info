@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim
 vframebuffer
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1544595886
+Z2 !s110 1544780387
 !i10b 1
 !s100 IhBC:@mG8F2G`JjJANg=91
 I[HH6hmgEjP:`5<baVd_OO3
@@ -26,9 +26,9 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1544595886.000000
+Z5 !s108 1544780387.000000
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/framebuffer.sv|
 !i113 1
 Z6 o-sv -work work
 Z7 !s92 -sv -work work +incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon
@@ -48,9 +48,9 @@ R4
 r1
 !s85 0
 31
-R5
+!s108 1544780386.000000
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/mem_clk.v|
 !i113 1
 Z10 o-vlog01compat -work work
 Z11 !s92 -vlog01compat -work work +incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon
@@ -72,22 +72,44 @@ r1
 31
 R5
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db/mem_clk_altpll.v|
 !i113 1
 R10
 !s92 -vlog01compat -work work +incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/db
 R8
+vperspective_divide
+R2
+!i10b 1
+!s100 bEbZR=fJH?P@Azk4]L@US1
+IMgK[3d`eiSiBc8F7HYU=90
+R3
+R0
+w1544696803
+8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/perspective_divide.v
+FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/perspective_divide.v
+R9
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/perspective_divide.v|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/perspective_divide.v|
+!i113 1
+R10
+R11
+R8
 vpixel_shader
 R1
-Z12 !s110 1544595887
+R2
 !i10b 1
-!s100 Y[o8iMJ;6BjBgCKYR:_Ek0
-ITi2cYLMQG_cAX?dbCAWR[1
+!s100 ^@DGZZJoV0o6GDDcUbb^A3
+I0NAjAm0DiK3k5@fLA7m<`0
 R3
 !s105 pixel_shader_sv_unit
 S1
 R0
-w1544591272
+w1544777357
 8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv
 FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv
 L0 1
@@ -97,22 +119,22 @@ r1
 31
 R5
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/pixel_shader.sv|
 !i113 1
 R6
 R7
 R8
 vrasterizer
 R1
-R12
+R2
 !i10b 1
-!s100 G?OPPB>HHB3c`]EiJFn@k1
-IU1_<l_D27]]T=G[IQg7<M2
+!s100 bh:Oh@UiVz3M9eMXom=6^2
+I?2LAm8]H:U_6XWUDoAhdj3
 R3
 !s105 rasterizer_sv_unit
 S1
 R0
-w1544594252
+w1544780352
 8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv
 FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv
 L0 1
@@ -120,9 +142,9 @@ R4
 r1
 !s85 0
 31
-Z13 !s108 1544595887.000000
+R5
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/rasterizer.sv|
 !i113 1
 R6
 R7
@@ -130,11 +152,11 @@ R8
 vreciprocal
 R2
 !i10b 1
-!s100 C]BC_0nIQ9@O:T;ZJ[8G12
-I3;`lkDhhD9gj7]k]12LdS2
+!s100 Qzn_N_IDBD3COSoVfJ5]D2
+If=9:BV`0F8R;CBMKVi0>f0
 R3
 R0
-w1544499837
+w1544674608
 8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/reciprocal.v
 FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/reciprocal.v
 R9
@@ -144,22 +166,22 @@ r1
 31
 R5
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/reciprocal.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/reciprocal.v|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/reciprocal.v|
 !i113 1
 R10
 R11
 R8
 vtestbench
 R1
-R12
+R2
 !i10b 1
-!s100 GDBB6ea7h<Ldga=MOh0fl0
-I8i=9iT>L[fPcH]_d4PD2F0
+!s100 om^h``UIg`zb?8<>J2zLL3
+InQ]BOG7M=WJcR7^[EWnCU1
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1544421677
+w1544771802
 8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/testbench.sv
 FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/testbench.sv
 L0 1
@@ -167,24 +189,24 @@ R4
 r1
 !s85 0
 31
-R13
+R5
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/testbench.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/testbench.sv|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/testbench.sv|
 !i113 1
 R6
 R7
 R8
 vTyphoon
 R1
-R12
+R2
 !i10b 1
-!s100 XEz4S;^@Lnm0`:<Z^<OOE2
-Ifh=lCaA:BD?NoN3FCzECM3
+!s100 d@>kZIo?Kjdni=J]aaS043
+ICT2cN]9R46oQP`5_1a?nX2
 R3
 !s105 Typhoon_sv_unit
 S1
 R0
-w1544595559
+w1544779246
 8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv
 FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv
 L0 4
@@ -192,9 +214,9 @@ R4
 r1
 !s85 0
 31
-R13
+R5
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/Typhoon.sv|
 !i113 1
 R6
 R7
@@ -203,11 +225,11 @@ n@typhoon
 vvertex_memory_bins
 R2
 !i10b 1
-!s100 >]HMoa[I=jXz4<8D^]bWh2
-IXOPemFoeCMPT55n_?aJTE3
+!s100 67J;>4=NJ@ANJ8>Wl5nno2
+IK@BVz0h[QJFhe_mQV5Wj21
 R3
 R0
-w1544499130
+w1544772928
 8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_bins.v
 FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_bins.v
 R9
@@ -217,10 +239,57 @@ r1
 31
 R5
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_bins.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_bins.v|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_bins.v|
 !i113 1
 R10
 R11
+R8
+vvertex_memory_input
+R2
+!i10b 1
+!s100 k2_Fz3CahaD03b9=T52PY1
+IVOoe0:0:<aJk3ECE:BS7o1
+R3
+R0
+w1544755099
+8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_input.v
+FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_input.v
+R9
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_input.v|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_memory_input.v|
+!i113 1
+R10
+R11
+R8
+vvertex_transform_new
+R1
+R2
+!i10b 1
+!s100 [J6JQ>0gRo>6aBiVDK86A3
+I^`C;J>c7bUVl]Q`KH<[@V3
+R3
+!s105 vertex_transform_new_sv_unit
+S1
+R0
+w1544779874
+8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_transform_new.sv
+FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_transform_new.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_transform_new.sv|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/vertex_transform_new.sv|
+!i113 1
+R6
+R7
 R8
 vVGA_controller
 R1
@@ -242,31 +311,9 @@ r1
 31
 R5
 !s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/VGA_controller.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/VGA_controller.sv|
+!s90 -##implicit##push_minusfile_path##|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/simulation/modelsim/vlog.opt|-##implicit##pop_minusfile_path##|-reportprogress|300|-sv|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/VGA_controller.sv|
 !i113 1
 R6
 R7
 R8
 n@v@g@a_controller
-vzmult_32
-R2
-!i10b 1
-!s100 af0C4>41[fB8Jf7[cag9:3
-If]XBL;IQTBO`cY6N:]SNM2
-R3
-R0
-w1544585003
-8C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/zmult_32.v
-FC:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/zmult_32.v
-R9
-R4
-r1
-!s85 0
-31
-R5
-!s107 C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/zmult_32.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon|C:/Users/finnnorth/Documents/385/385_FPGA/Typhoon/zmult_32.v|
-!i113 1
-R10
-R11
-R8

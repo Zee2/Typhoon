@@ -1,8 +1,11 @@
 module rasterizer #(
-	tileDim = 8'd8,
-	nanoTileDim = 8'd4,
-	nanoTilesSide = tileDim/nanoTileDim
-
+	tileDim = 8'd4,
+	binFactor = 6,
+	nanoTileDim = 8'd2,
+	nanoTilesSide = tileDim/nanoTileDim,
+	binBits = 11-binFactor,
+	numBinsSideX = 2**(binBits-1),
+	numBinsSideY = 2**(binBits-1)
 	)(
 	input logic[17:0] SW,
 	input logic BOARD_CLK,
@@ -10,24 +13,21 @@ module rasterizer #(
 	input logic startRasterizing,
 	input logic[9:0] rasterxOffset, rasteryOffset,
 	input logic[3:0] KEY,
+	input logic[11:0] linkedListHeadPointers[numBinsSideX][numBinsSideY],
+	
+	input logic[143:0] binMemoryQ,
+	output logic[11:0] binMemoryReadAddress,
+	
 	output logic doneRasterizing,
 	output reg[15:0] cBufferTile0 [tileDim][tileDim],
-	output reg[15:0] cBufferTile1 [tileDim][tileDim],
-	output logic[17:0] LEDR
+	output reg[15:0] cBufferTile1 [tileDim][tileDim]
+	//output logic[17:0] LEDR
 );
 
-logic[143:0] geometry_data_out; // Data lines to/from bin memory
-logic[10:0] geometry_addr_in = 11'h57;
 
-vertex_memory_bins geometry_memory(
-	.clock(BOARD_CLK),
-	.data(0),
-	.rdaddress(geometry_addr_in),
-	.wraddress(0),
-	.wren(0),
-	.q(geometry_data_out)
-);
+logic[11:0] nextBinMemoryReadAddress;
 
+logic[11:0] nextPointer;
 
 
 
@@ -105,7 +105,7 @@ endgenerate
 logic [9:0] box [4]; // x,y,w,h
 logic[9:0] x0,y0,x1,y1,x2,y2;
 logic signed [10:0] x0_sx,y0_sx,x1_sx,y1_sx,x2_sx,y2_sx;
-
+logic [7:0] n0_sx, n1_sx, n2_sx;
 assign x0_sx = $signed({1'b0,x0});
 assign y0_sx = $signed({1'b0,y0});
 assign x1_sx = $signed({1'b0,x1});
@@ -117,23 +117,27 @@ logic[15:0] z0,z1,z2;
 
 logic[9:0] debugX = 10'd50;
 
-logic signed [23:0] area;
-logic signed [23:0] quotientResult;
-logic signed [23:0] area_recip;
+logic signed [18:0] area;
+logic signed [18:0] quotientResult;
+logic signed [18:0] area_recip;
 
-logic [10:0] baseTriangleAddress = 11'h57;
 
-assign x0 = geometry_data_out[9:0];
-assign y0 = geometry_data_out[19:10];
-assign z0 = geometry_data_out[35:20];
 
-assign x1 = geometry_data_out[45:36];
-assign y1 = geometry_data_out[55:46];
-assign z1 = geometry_data_out[71:56];
+assign x0 = binMemoryQ[9:0];
+assign y0 = binMemoryQ[19:10];
+assign z0 = binMemoryQ[35:20];
+assign x1 = binMemoryQ[45:36];
+assign y1 = binMemoryQ[55:46];
+assign z1 = binMemoryQ[71:56];
+assign x2 = binMemoryQ[81:72];
+assign y2 = binMemoryQ[91:82];
+assign z2 = binMemoryQ[107:92];
 
-assign x2 = geometry_data_out[81:72];
-assign y2 = geometry_data_out[91:82];
-assign z2 = geometry_data_out[107:92];
+assign n0_sx = binMemoryQ[115:108];
+assign n1_sx = binMemoryQ[123:116];
+assign n2_sx = binMemoryQ[131:124];
+
+assign nextPointer = binMemoryQ[143:132];
 
 assign box[0] = x0 < x1
 			 ? x0 < x2
@@ -179,13 +183,13 @@ assign area = (x2_sx - x0_sx)*(y1_sx - y0_sx) - (y2_sx - y0_sx)*(x1_sx - x0_sx);
 //assign area = ({22'b0, box[2]}-{22'b0, box[0]})*({22'b0, box[3]}-{22'b0, box[1]});
 
 
-assign LEDR = shadersDoneRasterizing;
+
 
 
 logic[7:0] divideCounter = 0;
 logic DIVIDE_EN = 0;
 reciprocal areaDivider(.denom(area),
-				.numer(24'h7FFFFF),
+				.numer({1'b0,-18'd1}),
 				.quotient(quotientResult),
 				.remain(),
 				.clock(BOARD_CLK),
@@ -198,7 +202,7 @@ enum logic [4:0] {
 	setupLatency1,
 	setupLatency2,
 	setupWait,
-	checkTriangle,
+	triangleLoad,
 	recipState,
 	rasterizingBegin,
 	rasterizingLatency1,
@@ -209,10 +213,13 @@ enum logic [4:0] {
 
 } state = init, nextState = init;
 
+//assign LEDR = state;
+
 always_ff @(posedge BOARD_CLK) begin
 	lastKey <= KEY;
 	state <= nextState;
 	doneRasterizing <= nextDoneRasterizing;
+	binMemoryReadAddress <= nextBinMemoryReadAddress;
 	
 	if(KEY[0]==0 && KEY != lastKey) begin
 		debugX <= debugX + 10;
@@ -239,12 +246,57 @@ always_ff @(posedge BOARD_CLK) begin
 		cBufferTile1[1][1] <= SW;
 	*/
 	
-	if(state == setupBegin) begin
-		geometry_addr_in <= baseTriangleAddress;
-	end
 	
-	if(state == singleRasterComplete) begin
-		geometry_addr_in <= geometry_addr_in -1;
+	if(state == recipState || setupWait) begin
+		/*
+		x0 <= geometry_data_out[9:0];
+		y0 <= geometry_data_out[19:10];
+		z0 <= geometry_data_out[35:20];
+		x1 <= geometry_data_out[45:36];
+		y1 <= geometry_data_out[55:46];
+		z1 <= geometry_data_out[71:56];
+		x2 <= geometry_data_out[81:72];
+		y2 <= geometry_data_out[91:82];
+		z2 <= geometry_data_out[107:92];
+		
+		n0_sx <= geometry_data_out[115:108];
+		n1_sx <= geometry_data_out[123:116];
+		n2_sx <= geometry_data_out[131:124];
+		*/
+		/*
+		box[0] <= x0 < x1
+			 ? x0 < x2
+				  ? x0
+				  : x2
+			 : x1 < x2
+				  ? x1
+				  : x2;
+
+		box[1] <= y0 < y1
+				 ? y0 < y2
+					  ? y0
+					  : y2
+				 : y1 < y2
+					  ? y1
+					  : y2;
+					  
+		box[2] <= (x0 > x1
+				 ? ( x0 > x2
+					  ? x0
+					  : x2 )
+				 : ( x1 > x2
+					  ? x1
+					  : x2 ));
+					  
+		box[3] <= (y0 > y1
+				 ? ( y0 > y2
+					  ? y0
+					  : y2 )
+				 : ( y1 > y2
+					  ? y1
+					  : y2 ));
+		*/
+	
 	end
 	
 	clearZ <= nextClearZ;
@@ -257,6 +309,7 @@ always_comb begin
 	nextTileOffsetY = tileOffsetY;
 	nextDoneRasterizing = 0;
 	nextStartShadersRasterizing = 0;
+	nextBinMemoryReadAddress = binMemoryReadAddress;
 	unique case(state)
 		init: begin
 			nextDoneRasterizing = 0;
@@ -274,6 +327,7 @@ always_comb begin
 			nextDoneRasterizing = 0;
 			nextClearZ = 1;
 			nextState = setupLatency1;
+			nextBinMemoryReadAddress = linkedListHeadPointers[rasterxOffset >> binFactor][rasteryOffset >> binFactor];
 		end
 		setupLatency1: begin
 			nextClearZ = 1;
@@ -291,18 +345,27 @@ always_comb begin
 				nextClearZ = 1;
 			end
 			else begin
-				nextState = recipState;
+				nextState = triangleLoad;
 				nextClearZ = 0;
 			end
 		end
 		
-		checkTriangle: begin
-			nextState = recipState;
+		triangleLoad: begin
+			if(binMemoryReadAddress == 0)
+				nextState = done;
+			else
+				nextState = recipState;
+			
 		end
 		
 		recipState: begin
-			if((box[2] < tileOffsetX) || (box[3] < tileOffsetY))
-				nextState = singleRasterComplete;
+			if((box[2] < tileOffsetX) || (box[3] < tileOffsetY) || (box[0] > tileOffsetX + tileDim) || (box[1] > tileOffsetY + tileDim)) begin
+				nextBinMemoryReadAddress = nextPointer;
+				if(nextPointer == 0)
+					nextState = done;
+				else
+					nextState = triangleLoad;
+			end
 			else begin
 				DIVIDE_EN = 1;
 				if(divideCounter < 7) begin
@@ -340,10 +403,11 @@ always_comb begin
 		end
 		
 		singleRasterComplete: begin
-			if(geometry_addr_in == 0)
+			nextBinMemoryReadAddress = nextPointer;
+			if(nextPointer == 0)
 				nextState = done;
 			else
-				nextState = checkTriangle;
+				nextState = triangleLoad;
 		end
 		
 		done: begin

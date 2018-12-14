@@ -10,11 +10,12 @@ module pixel_shader #(
 	//input reg[15:0] zBufferTile [nanoTileDim][nanoTileDim],
 	input logic[9:0] box [4], // x,y,w,h
 	input logic signed [10:0] x0_sx,y0_sx,x1_sx,y1_sx,x2_sx,y2_sx, 
+	input logic [7:0] n0_sx,n1_sx,n2_sx,
 	input logic[15:0] z0,z1,z2,
 	input logic BOARD_CLK,
 	input logic[9:0] tileOffsetX, tileOffsetY, // offset of tile we are rasterizing
 	input [9:0] start_x, start_y,
-	input logic signed [23:0] areaRecip,
+	input logic signed [18:0] areaRecip,
 	input logic startRasterizing,
 	input logic clearZ,
 	output logic doneRasterizing = 0
@@ -52,7 +53,7 @@ logic signed [63:0] curZ;
 logic signed [15:0] trueX, trueY;
 
 logic [9:0] x = 0, y = 0, nextX = 0, nextY = 0;
-
+/*
 logic signed [48:0] line20zmultResult;
 logic signed [48:0] line01zmultResult;
 
@@ -66,7 +67,7 @@ zmult_32 line01zmult(
 	.datab(z20_sx),
 	.result(line01zmultResult)
 );
-
+*/
 /*
 generate
 	genvar xZ;
@@ -142,24 +143,30 @@ always_ff @(posedge BOARD_CLK) begin
 	if(state == resetBuffers && clearZ == 1'b1) begin
 		zBuffer[x-start_x][y-start_y] <= 16'hffff;
 		if(rasterTileID == 0)
-			nanoTile0[x-start_x][y-start_y] <= 16'b0 | (trueX[5:0] << 5) | (trueY[4:0] << 11);
+			//nanoTile0[x-start_x][y-start_y] <= 16'b0 | (trueX[5:0] << 5) | (trueY[4:0] << 11);
+			nanoTile0[x-start_x][y-start_y] <= 16'b0 | (trueY[9:5] << 11);
 		else
-			nanoTile1[x-start_x][y-start_y] <= 16'b0 | (trueX[5:0] << 5) | (trueY[4:0] << 11);
+			nanoTile1[x-start_x][y-start_y] <= 16'b0 | (trueY[9:5] << 11);
 	end
 	
 	if(state == rasterPixel && clearZ == 1'b0) begin
 		zBuffer[x-start_x][y-start_y] <= curZ[15:0];
 		if(rasterTileID == 0)
+			
 			nanoTile0[x-start_x][y-start_y] <= basicTestColor;
 		else
 			nanoTile1[x-start_x][y-start_y] <= basicTestColor;
 	end
 	/*
 	if(state == rasterDebug && clearZ == 1'b0) begin
-		if(rasterTileID == 0)
-			nanoTile0[x-start_x][y-start_y] <= nanoTile0[x-start_x][y-start_y];
-		else
-			nanoTile1[x-start_x][y-start_y] <= nanoTile0[x-start_x][y-start_y];
+		if(rasterTileID == 0) begin
+			if(trueX == box[0] || trueX == box[2] || trueY == box[1] || trueY == box[3])
+				nanoTile0[x-start_x][y-start_y] <= -1;
+		end
+		else begin
+			if(trueX == box[0] || trueX == box[2] || trueY == box[1] || trueY == box[3])
+				nanoTile1[x-start_x][y-start_y] <= -1;
+		end
 	end
 	*/
 	/*
@@ -183,12 +190,13 @@ always_ff @(posedge BOARD_CLK) begin
 		line20 <= (trueX - x2_sx)*(y0_sx - y2_sx) - (trueY - y2_sx)*(x0_sx - x2_sx);
 	end
 	if(state == interpolateState2) begin
-		line20div <= line20 * areaRecip;
-		line01div <= line01 * areaRecip;
+		//line20div <= line20 * areaRecip;
+		//line01div <= line01 * areaRecip;
+		curZ <= (z0_sx + (((line01 * areaRecip) * z20_sx) >>>18) + (((line20 * areaRecip) * z10_sx)>>>18));
 	end
 	if(state == interpolateState3) begin
-		//curZ <= (z0_sx + line20zmultResult + line01zmultResult)>>SW;
-		curZ <= (z0_sx + (line01zmultResult>>>23) + (line20zmultResult>>>23));
+		
+		//curZ <= (z0_sx + (line01zmultResult>>>23) + (line20zmultResult>>>23));
 		//curZ <= (z0_sx);
 	end
 	
@@ -268,11 +276,11 @@ always_comb begin
 		end
 		interpolateState2: begin
 			nextDoneRasterizing = 0;
-			nextState = interpolateState3;
+			nextState = zcheck;
 			nextX = x;
 			nextY = y;
 		end
-		interpolateState3: begin
+		interpolateState3: begin // This interp state has been optimized out! Woohoo
 			nextDoneRasterizing = 0;
 			nextState = zcheck;
 			nextX = x;
@@ -294,7 +302,7 @@ always_comb begin
 						nextState = rasterPixel;
 					end
 					else begin
-						nextState = rasterDebug;
+						nextState = chooseNextPixel;
 					end
 					
 					//nextState = rasterPixel;
@@ -336,7 +344,35 @@ always_comb begin
 			//basicTestColor = 16'h0000 | ((curZ[31:27])<<5);
 			//basicTestColor = 16'b0 | (trueX[5:0] << 5) | (trueY[4:0] << 11);
 			//basicTestColor = 16'h0000 | (curZ[15:10]<<5);
-			basicTestColor = 16'h0000 | (KEY[1] ? (curZ[8:3]<<5) : (((line01zmultResult>>>SW) & 9'b11111100)<<5));
+			//basicTestColor = 16'h0000 | (KEY[1] ? (curZ[8:3]<<5) : (((line01zmultResult>>>SW) & 9'b11111100)<<5));
+			unique case(SW[2:0])
+				3'b000: begin
+					basicTestColor = 16'h0000 | ((5'b11111 << 11) | (6'd35 << 5) | (n0_sx[7:3]));
+				end
+				
+				3'b010: begin
+					basicTestColor = 16'h0000 | ((x == 0 || y == 0) ? -1 : (curZ[9:4]<<5));
+					
+				end
+				
+				3'b011: begin
+					basicTestColor = 16'h0000 | ((x == start_x || y == start_y || x == 0 || y == 0) ? -1 : (curZ[9:4]<<5));
+				end
+				
+				3'b100: begin
+					basicTestColor = 16'h0000 | ((curZ[9:4]<<5));
+				end
+				
+				3'b101: begin
+					basicTestColor = 16'h0000 | ((n0_sx[7:3] << 11) | (n1_sx[7:2] << 5) | (n2_sx[7:3]));
+				end
+				
+				default: begin
+					basicTestColor = 16'h0000 | (trueX[5:0] << 5) | (trueY[4:0] << 11);
+				end
+			
+			endcase
+			//basicTestColor = 16'h0000 | (SW[0] ? ((n0_sx[7:3] << 11) | (n1_sx[7:2] << 5) | (n2_sx[7:3])) : (SW[1] ? (curZ[9:4]<<5)));
 			nextState = chooseNextPixel;
 		
 		end

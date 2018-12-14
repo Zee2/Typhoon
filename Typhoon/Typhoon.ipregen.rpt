@@ -1,5 +1,5 @@
 IP Upgrade report for Typhoon
-Mon Dec 10 08:49:26 2018
+Wed Dec 12 23:26:49 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -34,7 +34,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; IP Upgrade Summary                                                         ;
 +------------------------------+---------------------------------------------+
-; IP Components Upgrade Status ; Failed - Mon Dec 10 08:49:26 2018           ;
+; IP Components Upgrade Status ; Failed - Wed Dec 12 23:26:49 2018           ;
 ; Quartus Prime Version        ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                ; Typhoon                                     ;
 ; Top-level Entity Name        ; Typhoon                                     ;
@@ -47,9 +47,9 @@ refer to the applicable agreement for further details.
 +---------------------+
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/18.0/quartus/common/tcl/internal/ip_regen/ip_regen.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4911 megabytes
-    Info: Processing ended: Mon Dec 10 08:49:26 2018
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 4910 megabytes
+    Info: Processing ended: Wed Dec 12 23:26:50 2018
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:16
 
 

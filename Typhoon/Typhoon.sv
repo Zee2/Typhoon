@@ -1,7 +1,7 @@
 
 
 
-module Typhoon #(parameter tileDim = 8'd8)(
+module Typhoon #(tileDim = 8'd8, binFactor = 6)(
 	
 	
 	inout wire[15:0] SRAM_DQ,
@@ -19,6 +19,11 @@ module Typhoon #(parameter tileDim = 8'd8)(
 	
 );
 
+	parameter binBits = 11-binFactor;
+	parameter numBinsSideX = 2**(binBits-1);
+	parameter numBinsSideY = 2**(binBits-1);
+	
+
 	logic SRAM_CLK;
 	logic QueueReadReq;
 	logic [15:0] dummyCounter = 0;
@@ -34,10 +39,28 @@ module Typhoon #(parameter tileDim = 8'd8)(
 	logic rasterTrigger = 0;
 	logic nextRasterTrigger = 0;
 	
-	rasterizer #(tileDim) tiledRasterizer(.cBufferTile0(tileAinput),
+	logic startTransformTrigger;
+	logic nextStartTransformTrigger;
+	logic doneBinning;
+	
+	
+	// Interconnect signals between the rasterizer core and the vertex transform core
+	logic[143:0] binMemoryQ;
+	logic[11:0] binMemoryReadAddress;
+	logic[11:0] linkedListHeadPointers[numBinsSideX][numBinsSideY];
+	
+	vertex_transform_new #(binFactor) transform_core(
+		.startTrigger(startTransformTrigger),
+		.doneBinning(doneBinning),
+		.listRegisters(linkedListHeadPointers),
+		.*
+	);
+	
+	rasterizer #(tileDim, binFactor) tiledRasterizer(.cBufferTile0(tileAinput),
 													  .cBufferTile1(tileBinput),
 													  .doneRasterizing(doneRasterizing),
 													  .startRasterizing(rasterTrigger),
+													  .linkedListHeadPointers(linkedListHeadPointers),
 													  .*);
 	
 	
@@ -68,11 +91,13 @@ module Typhoon #(parameter tileDim = 8'd8)(
 	logic[15:0] DataFromSRAM;
 
 	enum logic [7:0] {
-		initState = 8'd8,
-		rasterTile = 8'd1,
-		moveTile = 8'd2,
-		endState = 8'd3,
-		endState2 = 8'd4
+		initState,
+		startBinTiles,
+		binTiles,
+		rasterTile,
+		moveTile,
+		endState,
+		endState2
 	} state = initState, nextState = initState, lastState = initState;
 	
 	//assign LEDR = state;
@@ -124,12 +149,26 @@ module Typhoon #(parameter tileDim = 8'd8)(
 		nextRasterTrigger = 0;
 		nextState = initState;
 		nextStreamingTileID = streamingTileID;
-		
+		startTransformTrigger = 0;
 		nextDoubleBuffer = doubleBuffer;
 		unique case(state)
 			initState: begin
 				nextRasterTileID = 0;
-				nextState = rasterTile;
+				nextState = startBinTiles;
+			end
+			
+			startBinTiles: begin
+				startTransformTrigger = 1;
+				nextState = binTiles;
+			end
+			
+			binTiles: begin
+				if(doneBinning)begin
+					nextState = rasterTile;
+				end
+				else begin
+					nextState = binTiles;
+				end
 			end
 			
 			rasterTile: begin

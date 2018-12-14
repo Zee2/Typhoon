@@ -41,7 +41,7 @@ with open("rasterTest.obj", 'r') as f:
             mats.append(currentMat);
 
 with open("worldGeo.mif", 'w') as f:
-    f.write("DEPTH = 1024;\n")
+    f.write("DEPTH = 4096;\n")
     f.write("WIDTH = 144;\n")
     f.write("ADDRESS_RADIX = HEX;\n")
     f.write("DATA_RADIX = HEX;\n")
@@ -67,6 +67,9 @@ with open("worldGeo.mif", 'w') as f:
         f.write("-- ^ area = " + str(area) + "\n")
         #f.write("-- ^ mat - " + mats[address] + "\n")
         address += 1;
+
+
+    f.write("{0:0X}".format(address) + ":  " + "{0:0{1}X}".format(0,36) + ";\n");
     f.write("END;\n");
 
 

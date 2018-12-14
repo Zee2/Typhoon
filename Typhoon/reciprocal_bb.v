@@ -41,10 +41,10 @@ module reciprocal (
 
 	input	  clken;
 	input	  clock;
-	input	[23:0]  denom;
-	input	[23:0]  numer;
-	output	[23:0]  quotient;
-	output	[23:0]  remain;
+	input	[18:0]  denom;
+	input	[18:0]  numer;
+	output	[18:0]  quotient;
+	output	[18:0]  remain;
 
 endmodule
 
@@ -64,20 +64,20 @@ endmodule
 // Retrieval info: CONSTANT: LPM_NREPRESENTATION STRING "UNSIGNED"
 // Retrieval info: CONSTANT: LPM_PIPELINE NUMERIC "6"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_DIVIDE"
-// Retrieval info: CONSTANT: LPM_WIDTHD NUMERIC "24"
-// Retrieval info: CONSTANT: LPM_WIDTHN NUMERIC "24"
+// Retrieval info: CONSTANT: LPM_WIDTHD NUMERIC "19"
+// Retrieval info: CONSTANT: LPM_WIDTHN NUMERIC "19"
 // Retrieval info: USED_PORT: clken 0 0 0 0 INPUT NODEFVAL "clken"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
-// Retrieval info: USED_PORT: denom 0 0 24 0 INPUT NODEFVAL "denom[23..0]"
-// Retrieval info: USED_PORT: numer 0 0 24 0 INPUT NODEFVAL "numer[23..0]"
-// Retrieval info: USED_PORT: quotient 0 0 24 0 OUTPUT NODEFVAL "quotient[23..0]"
-// Retrieval info: USED_PORT: remain 0 0 24 0 OUTPUT NODEFVAL "remain[23..0]"
+// Retrieval info: USED_PORT: denom 0 0 19 0 INPUT NODEFVAL "denom[18..0]"
+// Retrieval info: USED_PORT: numer 0 0 19 0 INPUT NODEFVAL "numer[18..0]"
+// Retrieval info: USED_PORT: quotient 0 0 19 0 OUTPUT NODEFVAL "quotient[18..0]"
+// Retrieval info: USED_PORT: remain 0 0 19 0 OUTPUT NODEFVAL "remain[18..0]"
 // Retrieval info: CONNECT: @clken 0 0 0 0 clken 0 0 0 0
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
-// Retrieval info: CONNECT: @denom 0 0 24 0 denom 0 0 24 0
-// Retrieval info: CONNECT: @numer 0 0 24 0 numer 0 0 24 0
-// Retrieval info: CONNECT: quotient 0 0 24 0 @quotient 0 0 24 0
-// Retrieval info: CONNECT: remain 0 0 24 0 @remain 0 0 24 0
+// Retrieval info: CONNECT: @denom 0 0 19 0 denom 0 0 19 0
+// Retrieval info: CONNECT: @numer 0 0 19 0 numer 0 0 19 0
+// Retrieval info: CONNECT: quotient 0 0 19 0 @quotient 0 0 19 0
+// Retrieval info: CONNECT: remain 0 0 19 0 @remain 0 0 19 0
 // Retrieval info: GEN_FILE: TYPE_NORMAL reciprocal.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL reciprocal.inc FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL reciprocal.cmp FALSE
