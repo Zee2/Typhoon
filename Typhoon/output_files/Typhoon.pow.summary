@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Fri Dec 14 04:50:40 2018
+Power Analyzer Status : Successful - Fri Dec 14 06:38:11 2018
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : Typhoon
 Top-level Entity Name : Typhoon
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Power Models : Final
-Total Thermal Power Dissipation : 452.84 mW
-Core Dynamic Thermal Power Dissipation : 264.73 mW
-Core Static Thermal Power Dissipation : 104.84 mW
+Total Thermal Power Dissipation : 496.48 mW
+Core Dynamic Thermal Power Dissipation : 307.11 mW
+Core Static Thermal Power Dissipation : 106.10 mW
 I/O Thermal Power Dissipation : 83.27 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data

@@ -1,7 +1,7 @@
 module rasterizer #(
 	tileDim = 8'd4,
 	binFactor = 6,
-	nanoTileDim = 8'd2,
+	nanoTileDim = 8'd4,
 	nanoTilesSide = tileDim/nanoTileDim,
 	binBits = 11-binFactor,
 	numBinsSideX = 2**(binBits-1),

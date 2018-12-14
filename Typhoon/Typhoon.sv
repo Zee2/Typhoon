@@ -1,7 +1,7 @@
 
 
 
-module Typhoon #(tileDim = 8'd8, binFactor = 6)(
+module Typhoon #(tileDim = 8'd16, binFactor = 7)(
 	
 	
 	inout wire[15:0] SRAM_DQ,

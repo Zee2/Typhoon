@@ -215,22 +215,38 @@ always_ff @(posedge BOARD_CLK) begin
 	divCounter <= nextDivCounter;
 	lastKEY <= KEY;
 	
-	
-	if(state == adjust_state && KEY[0] == 0) begin
-		cameraX <= cameraX + 4;
+	if(state == adjust_state) begin
+		cameraX <= cameraX + momentumX;
+		cameraY <= cameraY + momentumY;
+		
+		if(KEY[0] == 0) begin
+			momentumX <= momentumX + 1;
+		end
+		else if(KEY[1] == 0) begin
+			momentumX <= momentumX - 1;
+		end
+		else begin
+			if(momentumX > 0)
+				momentumX <= momentumX - 1;
+			else if(momentumX < 0)
+				momentumX <= momentumX + 1;
+		end
+		
+		if(KEY[2] == 0) begin
+			momentumY <= momentumY + 1;
+		end
+		else
+		if(KEY[3] == 0) begin
+			momentumY <= momentumY - 1;
+		end
+		else begin
+			if(momentumY > 0)
+				momentumY <= momentumY - 1;
+			else if(momentumY < 0)
+				momentumY <= momentumY + 1;
+		end
 	end
 	
-	if(state == adjust_state && KEY[1] == 0) begin
-		cameraX <= cameraX - 4;
-	end
-	
-	if(state == adjust_state && KEY[2] == 0) begin
-		cameraY <= cameraY + 4;
-	end
-	
-	if(state == adjust_state && KEY[3] == 0) begin
-		cameraY <= cameraY - 4;
-	end
 	
 	if(state == adjust_state) begin
 		for(int x = 0; x < numBinsSideX; x++) begin

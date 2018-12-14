@@ -360,7 +360,7 @@ always_comb begin
 				end
 				
 				3'b100: begin
-					basicTestColor = 16'h0000 | ((curZ[9:4]<<5));
+					basicTestColor = 16'h0000 | ((curZ[7:2]<<5));
 				end
 				
 				3'b101: begin

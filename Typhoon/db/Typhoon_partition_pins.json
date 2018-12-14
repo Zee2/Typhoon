@@ -324,19 +324,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[3]",
-					"strict" : false
-				},
-				{
 					"name" : "KEY[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[14]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[13]",
+					"name" : "KEY[3]",
 					"strict" : false
 				},
 				{
@@ -349,6 +341,14 @@
 				},
 				{
 					"name" : "SW[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[13]",
 					"strict" : false
 				},
 				{
