@@ -1,9 +1,0 @@
-module registerFile(
-
-	input logic Clk
-	
-);
-
-	internal_register #(16) registers[7:0]
-
-endmodule

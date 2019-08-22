@@ -1,5 +1,0 @@
-Exploration Summary
-Exploration Point,Quality of Fit,f(MAX) Geomean,WC Slack: Setup,WC Slack: Hold,WC Slack: Recovery,WC Slack: Removal,Logic Utilization,Compilation Time
-dse1_1,-11.780,85.560 MHz,-11.686,-0.097,No Data,No Data,109,00:01:09
-dse1_2,-11.830,85.220 MHz,-11.733,-0.097,No Data,No Data,105,00:01:08
-dse1_base,-9.530,105.970 MHz,-9.435,-0.097,No Data,No Data,101,00:01:05

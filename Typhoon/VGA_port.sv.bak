@@ -1,5 +1,0 @@
-module VGA_port(
-	input logic[9:0] VGA_SCAN_X, VGA_SCAN_Y,
-	
-
-)

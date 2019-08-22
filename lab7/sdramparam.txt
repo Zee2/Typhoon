@@ -1,7 +1,0 @@
-SDRAM Params:
-
-Data Width: width = 32
-# of Rows: 8192
-# of Columns: 1024
-# of Chip Selects: 1
-# of Banks: 4
